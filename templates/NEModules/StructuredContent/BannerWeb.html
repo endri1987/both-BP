@@ -1,0 +1,35 @@
+<Grid gridId="Grid_StructuredContent">
+	<Header>
+<div id="banner-slider" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	</Header>
+	<If condition="'{{key}}' == '1'">
+    <div class="item active">
+	</If>
+	<If condition="'{{key}}' != '1'">
+    <div class="item">
+	</If>
+      <img class="img-responsive" src="{{img_small_id_src}}" alt="{{titulli}}" />
+      <div class="carousel-caption">{{titulli}}</div>
+    </div>
+    
+   <Footer>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#banner-slider" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+   </Footer>
+</Grid>

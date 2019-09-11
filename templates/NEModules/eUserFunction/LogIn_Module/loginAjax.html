@@ -1,0 +1,67 @@
+<div id="loginscreen" class="login-module">
+	<If condition="'{{loginProccess}}'=='ok'">
+		<h3><i class="fa fa-fw fa-lock"></i>{{login_headline}}</h3>
+		<div class="alert alert-success fade in">
+			<span class="fa-fw fa fa-check"></span>
+			{{succes_login_message}}
+		</div>
+		<script>
+			GoTo('thisPage?event=none.rfr(action=login;uni={{uniNew}}{{gotToTargetPageSucces}})');
+		</script>
+	</If>
+	<If condition="'{{loginProccess}}'!='ok'">
+	<div>
+		<h3><i class="fa fa-fw fa-lock"></i>{{login_headline}}</h3>
+		<If condition="'{{loginProccess}}'=='failed'">
+			<div class="alert alert-danger fade in">
+				<span class="fa-fw fa fa-warning"></span>
+				{{error_login_message}}
+			</div>
+			<If condition="'{{isset_page_failure}}'=='yes'">
+			<script>
+				GoTo('thisPage?event=none.rfr({{gotToTargetPageError}})');
+			</script>
+			</If>
+		</If>
+		<form name="loginFrm" class="validate"  novalidate="novalidate" id="loginFrm"  dt-cashed="no"
+			action="&idstemp={{idstempLogin}}&apprcss=eUserLogin#loginscreen"
+			data-bs-modal="true"
+			data-modal-size="modal-sm"
+			data-modal-ajax="true"
+		>
+			<div class="form-group">
+				<label class="label sr-only" for="username">{{usrname_label}}</label>
+				<input type="text" class="form-control required" placeholder="{{usrname_label}}" name="usrname" id="username"
+					data-msg-required="{{fill_username_label}}" autofocus  autocomplete="off" />
+			</div>
+			<div class="form-group">
+				<label class="label sr-only" for="passwordP">{{password_label}}</label>
+				<input type="password" name="usrpassd" class="form-control required" placeholder="{{password_label}}" id="passwordP"
+					data-msg-required="{{fill_password_label}}"  autocomplete="off" />
+
+				<If condition="'{{forgot_password_isset}}'=='yes'">
+				<a title="{{_forgot_pass}}" style="display: block;" class="no-padding margin-top-10" href="javascript:void(0);"
+					data-bs-modal="true"
+					data-modal-size="modal-sm"
+					data-modal-ajax="true"
+					data-url="&apprcss=forgotPassModule&cis={{forgot_password_ci}}#forgotPassModule"
+				>{{forgot_password_label}}</a>
+				</If>
+			</div>
+			<button type="submit" class="btn btn-primary block full-width margin-bottom-5">{{sign_in_label}}</button>
+			<If condition="'{{register_target_isset}}'=='yes'">
+			<a class="btn btn-default block full-width"
+				 data-bs-modal="true"
+				 data-modal-size="modal-lg"
+				 data-modal-ajax="true"
+				 data-url="&amp;apprcss=registerModule&amp;cis={{register_target_ci}}#RegisterUserModule"
+				 data-title="{{register_target_label}}"
+			>{{register_target_label}}</a>
+			</If>
+		</form>
+	</div>
+	<script>
+		modules.push('login_post', 'focus-input', 'validate');
+	</script>
+	</If>
+</div>

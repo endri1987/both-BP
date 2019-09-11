@@ -1,0 +1,132 @@
+
+<If condition="'{{RSSList}}'=='yes'">
+
+
+		<If condition="'{{error_code_to_html}}'=='FoundResults'">
+
+		<Grid gridId="gridDataSrc">
+			<IfEmpty>
+				<div class="system_promt">
+					<div class="heading">{{_items_list_header}}</div>
+					<div class="message">{{_list_ResultsEmtpy}}</div>
+				</div>
+			</IfEmpty>
+
+			<Header>
+			<If condition="'{{HeaderNavT}}'=='yes'">
+				{{include_HeaderNav}}
+			</If>
+
+				<div class="standardList">
+			</Header>
+				<div class="list_item">
+							<div class="item_title">
+								<If condition="'{{linkToTitle}}' == 'yes'">
+									<a href="{{hrefToDoc}}" title="{{titleToAlt}}" target="{{hrefToDocTarget}}">{{titleToDisplay}}</a>
+								</If>
+								<If condition="'{{linkToTitle}}' != 'yes'">
+									{{titleToDisplay}}
+								</If>
+							</div>
+							<If condition="'{{dp_image}}' == 'yes'">
+								<div class="item_thumb">
+									<If condition="'{{linkToimage}}' == 'yes'">
+										<a href="{{hrefToDoc}}" target="{{hrefToDocTarget}}" title="{{titleToAlt}}">
+											<img src="{{srcImageToDisplay}}"  alt="{{titleToAlt}}"/>
+										</a>
+									</If>
+
+									<If condition="'{{linkToimage}}' != 'yes'">
+										<img src="{{srcImageToDisplay}}" alt="{{titleToAlt}}" />
+									</If>
+								</div>
+							</If>
+
+							<If condition="'{{dp_keywords}}' == 'yes'">
+									<Grid gridId="gridDataSrcKeywords_{{alias}}">
+										<div class="listpadditem"><span class="lb_list">{{family_name}}:</span> {{docKeywords}}</div>
+									</Grid>
+							</If>
+
+							<If condition="'{{dp_abst}}' == 'yes'">
+						 		<div class="item_abstract">{{abstractToDisplay}}
+
+								<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+									 <a class="more" href="{{hrefToDoc}}" title="{{titleToAlt}}" target="{{hrefToDocTarget}}">{{linkTolabelUserDefined}}</a>
+								</If>
+								</div>
+
+							</If>
+
+
+							<If condition="'{{dp_source}}' == 'yes' || '{{dp_author}}' == 'yes' || '{{dp_date}}' == 'yes'">
+								<div class="listpadditem">
+
+									<If condition="'{{dp_date}}' == 'yes'">
+										<div class="item_date">{{dateToDisplay}}</div>
+									</If>
+
+									<If condition="'{{dp_source}}' == 'yes'">
+										<span class="ds_block"><span class="lb_list">{{_source}}: </span>{{sourceToDisplay}}</span>
+
+									</If>
+									<If condition="'{{dp_author}}' == 'yes'">
+										<span class="ds_block"><span class="lb_list">{{_author}}:  </span>{{AuthorToDisplay}}</span>
+									</If>
+								</div>
+							</If>
+
+
+							<If condition="'{{dp_linkNivelLabel}}' == 'yes'">
+								<div class="listpadditem nd_list"><a title="{{linkNivelLabelAlt}}"
+									href="{{hrefToNodeTarget}}" >{{linkNivelLabel}}</a></div>
+							</If>
+
+				</div>
+			<Separator>
+			</Separator>
+
+
+			<Footer>
+
+				</div>
+				<If condition="'{{FooterNavT}}'=='yes'">
+						{{include_FooterNav}}
+				</If>
+
+			</Footer>
+
+		</Grid>
+		</If>
+		<If condition="'{{error_code_to_html}}'=='ResultsEmtpy'">
+			<div class="system_promt">
+				<div class="error_message message">{{_list_ResultsEmtpy}}</div>
+			</div>
+		</If>
+		<If condition="'{{error_code_to_html}}'=='TermSearchEmpty'">
+			<div class="system_promt">
+				<div class="error_message message">{{_list_TermSearchEmpty}}</div>
+			</div>
+		</If>
+		<If condition="'{{error_code_to_html}}'=='InvalidTerm'">
+			<div class="system_promt">
+				<div class="error_message message">{{_list_InvalidTerm}}</div>
+			</div>
+		</If>
+		<If condition="'{{error_code_to_html}}'=='SomeErrorOccurred'">
+			<div class="system_promt">
+				<div class="error_message message">{{_list_error_occured}}</div>
+			</div>
+		</If>
+
+
+
+</If>
+
+<br/>
+
+<If condition="'{{RSSNode}}'=='yes'">
+	<div style="width:300px; height:40px;">
+		<a href="{{APP_URL}}rss_index.php/{{RSS_href}}" style="background:url('{{GRAPHICS_PATH_APP}}social_icon.png') no-repeat 0 -20px transparent; padding: 7px 0 5px 24px;">{{RSSText}}</a>
+	</div>
+</If>

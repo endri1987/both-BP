@@ -1,0 +1,105 @@
+<div id="addint">
+	
+		<form class="cme-smart-form no-padding smart-form validate" style="padding-bottom: 0 !important;" id="addnewAddInfo" novalidate="novalidate" 
+			data-modal-ajax="true" 
+			data-modal-ajax="true" 
+			data-url="&apprcss=cmFunctions&act=topic&step=3&selfId={{CMselfDocID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId=0#addint"
+			data-target="#addint" 
+			data-bs-modal="true"
+			data-dismiss-modal="true"			
+			data-ajax-notify="{{_adding_new_tema}}" 
+			data-notify-success="{{_theme_added_suc}}" >
+			
+				<fieldset class="no-padding">
+		
+						<If condition="'{{ses_userid}}'==2">						
+							<div class="row">
+								<label class="label col col-3 structure-item-label" for="nick_name">
+									<abbr title="{{_nick_name}}" class="pub">{{_nick_name}}<br>
+									</abbr>
+								 </label>
+								<section class="col col-9 structure-item-section">
+									<label class="input">
+										<input type="text" placeholder="{{_nick_name}}" name="nick_name" value="">
+									</label>
+								</section>
+							</div>
+							<div class="row">
+								<label class="label col col-3 structure-item-label" for="email">
+									<abbr title="{{_email_address}}" class="pub">{{_email_address}}<br>
+									</abbr>
+								 </label>
+								<section class="col col-9 structure-item-section">
+									<label class="input">
+										<input type="text" placeholder="{{_email_address}}" name="email" value="">
+									</label>
+								</section>
+							</div>
+						</If>
+						
+						
+						<div class="row">
+							<label class="label col col-3 structure-item-label" for="title">
+								<abbr title="{{_topic_title}}" class="pub">{{_topic_title}}<br>
+								</abbr>
+							 </label>
+							<section class="col col-9 structure-item-section">
+								<label class="input">
+									<input type="text" placeholder="{{_topic_title}}" name="title" value="">
+								</label>
+							</section>
+						</div>
+
+						<!--div class="row">
+							<label class="label col col-3 structure-item-label">
+								<abbr class="pub" title="{{_message}}">{{_message}}</abbr>
+							</label>
+							<section class="col col-9 structure-item-section">
+								<label class="textarea">
+
+									<textarea class="is-ckeditor" placeholder="{{_message}}" id="comment" name="comment"
+									data-ckeditor-config="standard"
+									data-ckeditor-extraplugins="placeholder"	
+									>
+										
+									</textarea>
+								</label>
+							</section>
+						</div-->
+						
+						<div class="row">
+								<div class="ibox float-e-margins">
+									<label class="label col col-3 structure-item-label">
+										<abbr class="pub" title="{{_message}}">{{_message}}</abbr>
+									</label>
+									<section class="col col-9 structure-item-section">
+											 <div class="ibox-content no-padding">                                      
+													<textarea style="visibility:hidden;" placeholder="{{_message}}" class="summernote" name="comment" id="comment"> </textarea>
+											</div>	
+									</section>								
+								</div>
+						</div>
+						
+							
+				</fieldset>
+				
+				<footer class="cme-footer" style=" position: relative;width: auto;" data-parent=".cme-smart-form">
+					<button type="button" class="btn btn-default" data-dismiss="modal">{{_cancel}}</button>
+					<button class="btn btn-primary" type="submit">
+						{{_save}}
+					</button>
+				</footer>
+		</form>
+		
+<!--script type="text/javascript">
+  modules.push('ckeditor');
+</script-->
+<script type="text/javascript">
+  modules.push('summernote');
+</script>
+</div>
+
+
+
+
+

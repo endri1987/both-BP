@@ -1,0 +1,261 @@
+<Messages>
+<Message ID="back_mesg">
+retour
+</Message>
+<Message ID="publikuar_me_mesg">
+Publie ?
+</Message>
+<Message ID="articles_mesg">
+Articles
+</Message>
+<Message ID="_articles">
+Articles
+</Message>
+<Message ID="page_mesg">
+page
+</Message>
+<Message ID="home_mesg">
+Home
+</Message>
+<Message ID="position_path">
+Vous êtes ici:
+</Message>
+<Message>
+<Message ID="of_mesg">
+?
+</Message>
+<Message ID="to_mesg">
+a
+</Message>
+<Message ID="from_mesg">
+?
+</Message>
+<Message ID="close_mesg"> 
+Fermer
+</Message> 
+<Message ID="print_mesg"> 
+Print
+</Message> 
+<Message ID="previews_page_alt_mesg">
+retour
+</Message>
+<Message ID="next_page_alt_mesg">
+la page suivante
+</Message>
+<Message ID="_fill_required_data">
+Veuillez taper votre nom d'utilisateur et votre mot de passe!
+</Message>
+<Message ID="_right_format_email">
+Please insert the right format of e-mail address!
+</Message>
+<Message ID="_right_format_number">
+Please insert the right format number!
+</Message>
+
+<Message ID="lng1_mesg">
+DE 
+</Message>
+<Message ID="lng1_alt_mesg">
+DE 
+</Message>
+<Message ID="lng2_mesg">
+FR  
+</Message>
+<Message ID="lng2_alt_mesg">
+FR  
+</Message>
+<Message ID="lng3_mesg">
+Deutsch  
+</Message>
+<Message ID="lng3_alt_mesg">
+Deutsch  
+</Message>
+<Message ID="actual_hb">
+taux d'Hb actuel
+</Message>
+<Message ID="target_hb">
+taux d'Hb cible
+</Message>
+<Message ID="is_ferritin">
+taux de ferritine actuel
+</Message>
+<Message ID="iron_requirements">
+Besoin en fer
+</Message>
+<Message ID="measure_g_per_l">
+en g/l
+</Message>
+<Message ID="measure_ug_per_l">
+en µg/l
+</Message>
+<Message ID="measure_mg">
+en mg
+</Message>
+<Message ID="calculate">
+Calculer
+</Message>
+<Message ID="reset">
+Annuler
+</Message>
+<Message ID="field_required_mesg">
+Veuillez entrer une valeur au fenêtre marquée.
+</Message>
+<Message ID="should_be_number">
+Veuillez entrer une valeur numérique!
+</Message>
+<Message ID="should_be_number_positive">
+La valeur doit être positive!
+</Message>
+<Message ID="search_default_vl_input_mesg">
+Les termes de recherche
+</Message>
+<Message ID="search_etiketa_mesg">
+Recherche
+</Message>
+<Message ID="_results_for_term">
+résultats pour la durée
+</Message>
+<Message ID="_Showing">
+Afficher
+</Message>
+<Message ID="_narrow_results">
+Afficher
+</Message>
+<Message ID="_All_search_results">
+Tous les résultats de la recherche
+</Message>
+<Message ID="_All_search_results_title">
+Résultats de la recherche
+</Message>
+<Message ID="contact_user_name_mesg"> 
+Nga (Emri juaj)
+</Message>
+<Message ID="contact_user_email_mesg"> 
+E-mail
+</Message>
+<Message ID="contact_user_tel_mesg"> 
+Téléphone
+</Message>
+<Message ID="contact_komente_mesg"> 
+Mesazhi juaj
+</Message>
+<Message ID="contact_but_send_mesg"> 
+Dergo
+</Message>
+<Message ID="contact_but_clear_mesg"> 
+Pastro
+</Message>
+<Message ID="contact_send_sukses_mesg" Shpjegim="Ky mesazh afishohet kur informacioni i formes se kontaktit dergohet me sukses dhe nuk eshte percaktuar faqja ku do ridireksionohet"> 
+Ju faleminderit per mesazhin tuaj!
+</Message> 
+<Message ID="contact_send_fail_mesg" Shpjegim="Ky mesazh afishohet kur informacioni i formes se kontaktit nuk dergohet me sukses dhe nuk eshte percaktuar faqja ku do ridireksionohet"> 
+Dergimi i mesazhit tuaj deshtoi! Ju lutem provojeni me vone.
+</Message> 
+<Message ID="contact_emri_mesg"> 
+Prénom
+</Message>
+<Message ID="contact_mbiemri_mesg"> 
+Nom
+</Message>
+<Message ID="contact_titulli_mesg"> 
+Anrede
+</Message>
+<Message ID="contact_kompania_mesg"> 
+Company
+</Message>
+<Message ID="contact_vendi_mesg"> 
+Place
+</Message>
+<Message ID="contact_user_cel_mesg"> 
+Cellular
+</Message>
+<Message ID="contact_other1_mesg"> 
+Kursi qe doni te ndiqni
+</Message>
+<Message ID="contact_other2_mesg"> 
+Koha më e përshtatshme për ta ndjekur kursin (muaji)
+</Message>
+<Message ID="contact_other3_mesg"> 
+Burimi nga jeni informuar për ne
+</Message>
+<Message ID="contact_other4_mesg"> 
+Webi
+</Message>
+<Message ID="contact_other5_mesg"> 
+Emaili
+</Message>
+<Message ID="contact_other6_mesg"> 
+Kolegë të punës
+</Message>
+<Message ID="contact_other7_mesg"> 
+Njerëz që njihni
+</Message>
+<Message ID="contact_other8_mesg"> 
+Tjetër
+</Message>
+<Message ID="contact_kurs1_mesg"> 
+Cisko
+</Message>
+<Message ID="contact_kurs2_mesg"> 
+Windows XP
+</Message>
+<Message ID="contact_kurs3_mesg"> 
+Oracle
+</Message>
+<Message ID="captcha_reload_mesg">
+Reload
+</Message>
+<Message ID="captcha_kodi_mesg">
+Security code
+</Message>
+<Message ID="email_subjekt_mesg"> 
+Objet 
+</Message>
+<Message ID="email_komente_mesg"> 
+Commentaire
+</Message>
+<Message ID="email_but_send_mesg"> 
+Envoyer
+</Message>
+<Message ID="_of"> 
+de
+</Message>
+
+
+<Message>
+------------------------------------------------------- form_mesazhet_fund si p.sh feedbackModule ---------------------
+</Message>
+
+<Message ID="_list_ResultsEmtpy">
+Le systeme n'a rien trouvé
+</Message>
+<Message ID="_list_error_occured">
+An error has occurred. Please try again later!
+</Message>
+<Message ID="_list_TermSearchEmpty">
+Le systeme n'a rien trouvé
+</Message>
+<Message ID="_list_InvalidTerm">
+Please redefined your search term!
+</Message>
+<Message ID="_view_all">
+Voir tout
+</Message>
+<Message ID="_fe_calculator_header">
+Entrez Hb en  g/l . Ex: 12 g/dl = 120 g/l; 7.6 g/dl = 76 g/l
+</Message>
+<Message ID="_not_in_range_30_300">
+Valeur invalide: Veuillez entrer une valeur entre 30 g/l et 300 g/l
+</Message>
+<Message ID="_not_integer">
+Veuillez entrer les valeurs Hb en g/l
+</Message>
+
+<Message ID="mesg_lng_I">
+English
+</Message>
+<Message ID="mesg_lng_II">
+Shqip
+</Message>
+
+</Messages>

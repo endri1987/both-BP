@@ -1,0 +1,9 @@
+<script>
+EW.analytics.trigger('open', {{slideID}});
+clearInterval(analyticsintervalwidg);
+if (typeof ANALYTICS_TIMER !== 'undefined') {
+    var analyticsintervalwidg = setInterval(function(){
+            EW.analytics.trigger('update', {{slideID}});
+        }, ANALYTICS_TIMER);
+}
+</script>

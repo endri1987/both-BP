@@ -1,0 +1,30 @@
+<div class="list_navigation">
+	<ul class="nav-arrows" >
+		<li class="first">
+		<If condition="'{{previewsPage}}'!=''">
+		<a href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')" class="previous"><img alt="" src="{{GRAPHICS_PATH_APP}}tabs/previous.png" class="previous" /></a>
+		</If>
+		<If condition="'{{previewsPage}}'==''">
+		<span class="previous"><img alt="" src="{{GRAPHICS_PATH_APP}}tabs/previous.png" class="previous" /></span>
+		</If>
+		</li>
+		<NavTpl navID="gridDataSrc" blNoToDisplay="10" stepBack="2">
+			<Header>
+			</Header>
+				<li class="nav_digit">
+					<a class="{{selClass}}" title="{{_page}} {{BlockNavNr}}" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{BlockNavNr}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')">{{BlockNavNr}}</a>
+				</li>
+			<Footer>
+			</Footer>
+		</NavTpl>
+		<li class="last">
+		<If condition="'{{nextPage}}'!=''">
+		<a href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')" class="next"><img alt="" src="{{GRAPHICS_PATH_APP}}tabs/next.png" class="next" /></a>
+		</If>
+		<If condition="'{{nextPage}}'==''">
+		<span class="next"><img alt="" src="{{GRAPHICS_PATH_APP}}tabs/next.png" class="next" /></span>
+		</If>
+		</li>
+	</ul>
+	<div class="list_info">{{_Showing}} {{FromRecs}}-{{ToRecs}} {{_items}} {{_of}} {{CountItems}}</div>
+</div>

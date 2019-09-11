@@ -1,0 +1,21 @@
+{{ses_userid}}
+<If condition="'{{register_target_isset}}'=='yes'">
+<li class="dropdown">
+	<a id="register-trigger" title="{{register_target_label}}" href="javascript:void(0);"
+	data-bs-modal="true"
+	data-modal-size="modal-lg"
+	data-modal-ajax="true"
+	data-url="&apprcss=registerModule&cis={{register_target_ci}}#RegisterUserModule"
+	><i class="fa fa-user-plus"></i> {{register_target_label}}</a>
+</li>
+</If>
+<li class="dropdown">
+	<a id="login-trigger" title="{{login_label}}"
+	data-bs-modal="true"
+	data-modal-size="modal-sm"
+	data-modal-ajax="true"
+	data-url="&apprcss=LoginUserModule&idstemp={{idstempLogin}}#loginscreen"
+	href="javascript:void(0);" aria-expanded="false">
+		<i class="fa fa-lock"></i> {{login_label}}
+	</a>
+</li>

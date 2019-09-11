@@ -1,0 +1,512 @@
+<div class="form-area">  
+        <form role="form">
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">HR New application Form</h3>
+				<div class="row">	
+					<div class="col-sm-4 col-md-4">
+					<div class="form-group">
+					<label for="exampleInputEmail1">Name</label>
+						<input type="text" class="form-control" id="name" name="Name" placeholder="" required>
+					</div>
+					</div>
+				<div class="col-sm-4 col-md-4">
+					<div class="form-group">
+					<label for="exampleInputEmail1">Surname</label>
+						<input type="text" class="form-control" id="surname" name="Surname" placeholder="" required>
+					</div>
+				</div>
+
+				<div class="col-sm-4 col-md-4">
+					<form class="form-inline">
+					  <div class="form-group">
+					  <label for="exampleInputEmail1">Date of Birth</label>
+						<label class="sr-only" for="exampleInputAmount">Date of Birth</label>
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						  </div>
+						  <input type="text" class="form-control" id="dateofbirth" placeholder="">
+						</div>
+					  </div>
+					</form>
+					
+					</div>
+					</div>
+					
+					
+					<div class="form-group">
+					<label for="exampleInputEmail1">Address</label>
+                    <textarea class="form-control" type="textarea" id="address" placeholder="Address" maxlength="140" rows="1"></textarea>
+                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+                    </div>
+					
+				<div class="row">
+					<div class="col-md-6">
+					<div class="form-group">
+					<label for="exampleInputEmail1">Tel  / Mobile</label>
+						<input type="text" class="form-control" id="telmobile" name="Tel / Mobile" placeholder="" required>
+					</div>
+					</div>
+					
+					<div class="col-md-6">
+					<div class="form-group">
+					<label for="exampleInputEmail1">Email</label>
+						<input type="text" class="form-control" id="email" name="Email" placeholder="" required>
+					</div>
+					</div>
+					
+					<div class="col-md-6">
+					<div class="form-group">
+					<label for="exampleInputEmail1">Education</label>
+						<input type="text" class="form-control" id="education" name="Education" placeholder="" required>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="form-group">
+					<label for="exampleInputEmail1">Area of Education</label>
+						<input type="text" class="form-control" id="areaofeducation" name="Area of Education" placeholder="" required>
+					</div>
+					</div>
+				</div>
+					
+					
+					<h3>Level of education</h3>
+
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+					<div class="form-group">
+						<label for="exampleInputEmail1">PHD</label>
+						<input type="email" class="form-control" id="phd" placeholder="Institution:">
+					</div>
+					</div>
+					
+					<div class="col-sm-6 col-md-6">
+					<div class="form-group">
+						<label for="exampleInputEmail1">MBA</label>
+						<input type="email" class="form-control" id="mba" placeholder="Institution:">
+					</div>
+					</div>
+					
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+						<label for="exampleInputEmail1">Bachelor</label>
+						<input type="email" class="form-control" id="bachelor" placeholder="Institution:">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="exampleInputEmail1">High School</label>
+							<input type="email" class="form-control" id="highschool" placeholder="Institution:">
+						</div>
+					</div>
+				</div>
+
+			<h3>Knowledge of foreign languages</h3>
+			<div class="row hidden-xs">
+				<div class="col-sm-3"><strong>Language</strong></div>
+				<div class="col-sm-3 text-center"><strong>Read</strong></div>
+				<div class="col-sm-3 text-center"><strong>Write</strong></div>
+				<div class="col-sm-3 text-center"><strong>Speaking</strong></div>
+			</div>
+			<hr class="hidden-xs">
+			<div class="row">
+				<div class="col-sm-3">
+					<h6>Albanian</h6>
+					<hr class="visible-xs">
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Read</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Write</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Speaking</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<h6>English</h6>
+					<hr class="visible-xs">
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Read</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Write</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Speaking</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<h6>Italian</h6>
+					<hr class="visible-xs">
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Read</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Write</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Speaking</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<h4 class="visible-xs">Other language 1</h4>
+					<div class="form-group">
+						<input type="text" class="form-control input-sm" id="other-language-1" placeholder="Other language 1">
+					</div>
+					<hr class="visible-xs">
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Read</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Write</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Speaking</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<h4 class="visible-xs">Other language 1</h4>
+					<div class="form-group">
+						<input type="text" class="form-control input-sm" id="other-language-1" placeholder="Other language 1">
+					</div>
+					<hr class="visible-xs">
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Read</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Write</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="proficiency" class="visible-xs">Speaking</label>
+						<select class="form-control input-sm" name="proficiency" id="proficiency">
+							<option value="Excelent"></option>
+							<option value="Excelent">Excelent</option>
+							<option value="Good">Good</option>
+							<option value="Fair">Fair</option>
+						</select>
+					</div>
+				</div>
+			</div>
+				<h3>Computer Literacy</h3>
+
+				<div class="form-group">
+					
+	                <textarea class="form-control" type="textarea" id="address" maxlength="540" rows="1"></textarea>
+	                <span class="help-block"><p id="characterLeft" class="help-block ">(Please list computer language/software packages known)</p></span>                    
+	            </div>
+
+
+
+				<h3>Employment Record</h3>
+				<p class="contactTitle">Present Position</p>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control" id="employername" name="Employer Name" placeholder="Employer Name" required>
+					</div>
+				</div>
+
+					<div class="col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control" id="titleofposition" name="Title of Position" placeholder="Title of Position" required>
+					</div>
+				</div>
+
+				
+				<div class="col-md-6">
+					<form>
+					  <div class="form-group">
+						<label class="sr-only" for="From">From</label>
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						  </div>
+						  <input type="text" class="form-control" id="From" placeholder="From" />
+						</div>
+					  </div>
+					</form>
+				</div>
+			</div>
+
+
+				<p class="contactTitle">Present Position</p>
+
+				<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" class="form-control" id="employername" name="Employer Name" placeholder="Employer Name" required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" class="form-control" id="titleofposition" name="Title of Position" placeholder="Title of Position" required>
+				</div>
+			</div>
+				
+			
+				<div class="col-sm-6 col-md-6">
+					<form>
+					  <div class="form-group">
+						<label class="sr-only" for="From">From</label>
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						  </div>
+						  <input type="text" class="form-control" id="From" placeholder="From" />
+						</div>
+					  </div>
+					</form>
+				</div>
+				
+				<div class="col-sm-6 col-md-6">
+				<form>
+					  <div class="form-group">
+						<label class="sr-only" for="To">To</label>
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						  </div>
+						  <input type="text" class="form-control" id="To" placeholder="To" />
+						</div>
+					  </div>
+					</form>
+				</div>
+			</div>
+			
+			<p class="contactTitle">Previous Employer</p>
+				<div class="form-group">
+					<input type="text" class="form-control" id="employername" name="Employer Name" placeholder="Employer Name" required>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="titleofposition" name="Title of Position" placeholder="Title of Position" required>
+				</div>
+				
+			<div class="row">
+				<div class="col-sm-6 col-md-6">
+					<form>
+					  <div class="form-group">
+						<label class="sr-only" for="From">From</label>
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						  </div>
+						  <input type="text" class="form-control" id="From" placeholder="From" />
+						</div>
+					  </div>
+					</form>
+				</div>
+				
+				<div class="col-sm-6 col-md-6">
+				<form>
+					  <div class="form-group">
+						<label class="sr-only" for="To">To</label>
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						  </div>
+						  <input type="text" class="form-control" id="To" placeholder="To" />
+						</div>
+					  </div>
+					</form>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6 col-md-6">
+				<p class="contactTitle">References 1</p>
+				<div class="form-group">
+					<input type="text" class="form-control" id="Area" name="area" placeholder="Area" required>
+				</div>
+				</div>
+				<div class="col-sm-6 col-md-6">
+				<p class="contactTitle">References 2</p>
+				<div class="form-group">
+					<input type="text" class="form-control" id="Area" name="area" placeholder="Area" required>
+				</div>
+				</div>
+			</div>
+			
+
+
+		<div class="row">
+			<div class="col-md-12">
+				 <h3>Other Questions</h3>
+			    <p class="contactTitle">a. Have you any objection to our making inquiries from your present employer?</p>
+					<div class="checkbox">
+					  <label>
+					    <input type="checkbox" value="">
+					   Yes
+					  </label>
+					  <label>
+					    <input type="checkbox" value="">
+					    No
+					  </label>
+					</div>
+				</div>
+				
+
+			<div class="col-md-12">
+			    <p class="contactTitle">b. Have you ever previously applied for a position at this bank?</p>
+				<div class="form-group">
+					<input type="text" class="form-control" id="surname" name="Surname" placeholder="When and for which position?" required>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+			    <p class="contactTitle">c. Have you ever been formally interviewed for a position at this bank?</p>
+				<div class="form-group">
+					<input type="text" class="form-control" id="surname" name="Surname" placeholder="When and for which position?" required>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+			    <p class="contactTitle">c. Have you ever been formally interviewed for a position at this bank?</p>
+				<div class="form-group">
+					<input type="text" class="form-control" id="surname" name="Surname" placeholder="When and for which position?" required>
+				</div>
+				<div class="checkbox">
+					  <label>
+					    <input type="checkbox" value="">
+					   Yes
+					  </label>
+					  <label>
+					    <input type="checkbox" value="">
+					    No
+					  </label>
+				</div>
+			</div>
+
+		</div>
+
+		<button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+
+
+	</form>
+
+
+    </div>

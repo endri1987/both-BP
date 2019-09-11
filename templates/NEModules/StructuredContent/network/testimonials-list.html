@@ -1,0 +1,32 @@
+<Grid gridId="Grid_StructuredContent">
+	<IfEmpty>
+	</IfEmpty>
+	<Header>
+		<If condition="'{{slogan_title_exists}}' == 'yes'">
+			<h2>{{slogan_title}}</h2>
+		</If>
+		<div class="row">
+		</Header>
+		<div class="col-lg-4">
+			<blockquote class="blockquote">
+				<If condition="'{{dp_content}}' == 'yes'">
+				{{fullcontent}}
+				</If>
+				<If condition="'{{dp_title}}' == 'yes'">
+				<footer>
+					<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+					<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+						{{titleToDisplay}}
+					</a>
+					</If>
+					<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+					{{titleToDisplay}}
+					</If>
+				</footer>
+				</If>
+			</blockquote>
+		</div>
+		<Footer>
+		</div>
+	</Footer>
+</Grid>

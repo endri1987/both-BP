@@ -1,0 +1,57 @@
+<WebBox ID="newsletterModule">
+<script language="javascript1.2" src="{{./}}newsletterModule.js"></script>
+<script language="javascript1.2">
+<!--
+	var _fill_required_data = {{'_fill_required_data'}};
+	var _right_format_email = {{'_right_format_email'}};
+
+	var idstempNl = '{{idstempNl}}';
+//-->
+</script>
+
+
+<table style="width: 100%; border-collapse: collapse" bgcolor="#f2f8fb">
+<form name="formNewsletter" method="post"  onSubmit="addNewsletterUser(); return false;">
+<tbody>
+<tr>
+<td class="blufour" colspan="4">
+<span style="font-weight: bold">{{_Registration_Form}}</span></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4">
+<img class="" height="5" alt="spacer" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="1" border="0" /></td>
+</tr>
+<tr>
+<td>{{_First_name}}*</td>
+<td>
+<input ty class="txtBoxdefault" size="40" type="text" name="emri" /></td>
+<td>{{_Last_name}}*</td>
+<td>
+<input class="txtBoxdefault" size="40" type="text" name="mbiemri" /></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4">
+<img class="" height="5" alt="spacer" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="1" border="0" /></td>
+</tr>
+<tr>
+<td>{{_Profession}}</td>
+<td>
+<input class="txtBoxdefault" size="40" type="text" name="profesioni" /></td>
+<td>{{_Email}}*</td>
+<td>
+<input class="txtBoxdefault" size="40" type="text" name="email" /></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4">
+<img class="" height="5" alt="spacer" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="1" border="0" /></td>
+</tr>
+<tr>
+<td colspan="4" align="right">
+<input class="graygobtnBlue" type="submit" value="{{_send}}" name="Submit" />
+<input class="graygobtnBlue" type="reset" value="{{_Reset}}" name="Reset" /></td>
+</tr>
+</tbody>
+</form>
+</table>
+
+</WebBox>

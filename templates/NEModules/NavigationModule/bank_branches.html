@@ -1,0 +1,55 @@
+<Grid gridId="Grid_Navigation">
+
+	<IfEmpty>
+	</IfEmpty>
+
+	<Header>
+	<div class="footer-box bg_site_map">
+		<a data-parent="#footer-panels" href="#bankBranches" data-target="#footerLogo">
+			<span></span>
+		</a>
+	</div>
+	<div id="bankBranches" class="site_map_box collapse">
+	<div class="row">
+	<div class="col-sm-12">
+	
+	<ul class="list-navigation">
+	</Header>
+
+	<If condition="'{{nivel}}' == '1'">
+	<If condition="'{{index1}}' == '1'">
+		<If condition="{{level_1}} == '0' ">
+		<li>
+			<a href="javascript:GoTo('thisPage?event=none.ch_state(k=0,0,0,0,0)');" ><strong>{{home_mesg}}</strong></a>
+		</li>
+		</If>
+		<If condition="{{level_1}} != '0' ">
+		<li>
+			<a href="javascript:GoTo('thisPage?event=none.ch_state(k=0,0,0,0,0)');" >{{home_mesg}}</a>
+		</li>
+		</If>
+		<li>
+	</If>
+	<If condition="'{{index1}}' > '1'">
+		</li>
+		<li>
+	</If>
+
+			<a  href="{{link}}" title="{{label}}">{{label}}</a>
+
+	<If condition="('{{index1}}' == '{{nr_tot1}}') && ('{{nr_child}}' == '0')">
+		</li>
+	</If>
+	</If>
+
+	<Separator>
+	
+	</Separator>
+
+	<Footer>
+	</ul>
+	</div>
+	</div>
+	</div>
+	</Footer>
+</Grid>

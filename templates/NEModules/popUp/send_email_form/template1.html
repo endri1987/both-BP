@@ -1,0 +1,62 @@
+<h1>{{email_header_mesg}}</h1><br />
+
+<If condition="'{{sendthis}}' == '1'">
+  <form {{email_form_attribut}}>
+
+   <table border="0" cellpadding="5" cellspacing="0" class="POPUP_tab_form_email">
+    <tr>
+     <td valign="top" class="email_form_etiketa">*{{email_fullname_mesg}}:</td>
+     <td><input type="text" name="full_name" value="{{fullname}}" maxlength="100" class="email_form_fusha" /></td>
+    </tr>
+
+    <tr>
+     <td valign="top" class="email_form_etiketa">*{{email_usr_mesg}}:</td>
+     <td><input type="text" name="senderemail" value="{{usr_email}}" maxlength="100" class="email_form_fusha" /></td>
+    </tr>
+
+    <tr>
+     <td valign="top" class="email_form_etiketa">*{{email_recipients_mesg}}:</td>
+     <td><textarea name="recipientsOthers"  cols="40" rows="40" wrap="virtual" class="email_form_fusha" style='height:40px'></textarea>
+         <br /><span class="email_form_etiketa"><i>{{email_recipients_help_mesg}}</i></span>
+     </td>
+    </tr>
+
+    <tr><td colspan="2"></td></tr>
+
+    <tr>
+     <td valign="top" class="email_form_etiketa">*{{email_subjekt_mesg}}:</td>
+     <td><input type="text" name="email_subjekt" value="" maxlength="100" class="email_form_fusha" /></td>
+    </tr>
+
+    <tr>
+     <td valign="top" class="email_form_etiketa">{{email_komente_mesg}}:</td>
+     <td><textarea name="comment"  cols="40" rows="40" wrap="virtual" class="email_form_fusha" style='height:60px'></textarea></td>
+    </tr>
+
+    <tr>
+     <td colspan="2">
+      <input type="button" name="send"  value="{{email_but_send_mesg}}"  class="email_buton" onclick="javascript:on_send();" id="buton_send" />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" name="clear" value="{{email_but_clear_mesg}}" class="email_buton" onclick="javascript:clearAll();" />
+     </td>
+    </tr>
+   </table>
+  </form>
+</If>
+
+<If condition="'{{sendthis}}' == 2">
+   <table border="0" cellpadding="5" cellspacing="0" class="POPUP_tab_form_email">
+    <tr>
+     <td class="email_form_etiketa">{{email_sukses_mesg}}<br /> <b>{{MsgBox_message}}</b></td>
+    </tr>
+   </table>
+</If>
+
+<If condition="'{{sendthis}}' == 3">
+   <table border="0" cellpadding="5" cellspacing="0" class="POPUP_tab_form_email">
+    <tr>
+     <td class="email_form_etiketa">{{email_failed_mesg}}</td>
+    </tr>
+   </table>
+</If>
+

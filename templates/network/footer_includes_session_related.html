@@ -1,0 +1,119 @@
+<If condition="'{{ses_userid}}' != '2'">
+<Grid gridId="SessionConfigurationGrid">
+	<!-- START Logout options -->
+
+
+<Grid gridId="SessionConfigurationGrid_logout">
+<IfEmpty>
+	<div class="modal inmodal" id="logoutPromptAlert" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content animated bounceInDown">
+				<div class="modal-header no-border">
+					<i class="fa fa-exclamation-circle modal-icon"></i>
+					<h4 class="modal-title text-center">
+						<small>{{areYouSureToLogout}}</small>
+					</h4>
+				</div>
+				<div class="modal-footer text-center no-border">
+					<If condition="'{{SESSION_LOCK_ENABLED}}' == 'yes' && '{{LOCK_SCREEN_IN_LOGOUT}}' == 'yes'">
+					<button type="button" class="btn btn-block btn-sm btn-primary" data-dismiss="modal" data-session="lock"><i class="fa fa-lock"></i>&nbsp;&nbsp;{{LockScreen}}</button>
+					</If>
+					<button type="button" class="btn btn-block btn-sm btn-warning" data-dismiss="modal" data-session="logout"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;{{Logout}}</button>
+					<button type="button" class="btn btn-block btn-sm btn-default" data-dismiss="modal" data-session="extend">{{Cancel}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</IfEmpty>
+
+
+	<div class="modal inmodal" id="logoutPromptAlert" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content animated bounceInDown">
+				<div class="modal-header no-border">
+					<i class="fa fa-exclamation-circle modal-icon"></i>
+					<h4 class="modal-title text-center">
+						<small>{{__logoutScreenMessage}}</small>
+					</h4>
+				</div>
+				<div class="modal-footer text-center no-border">
+					<If condition="'{{SESSION_LOCK_ENABLED}}' == 'yes' && '{{LOCK_SCREEN_IN_LOGOUT}}' == 'yes'">
+					<button type="button" class="btn btn-block btn-sm btn-primary" data-dismiss="modal" data-session="lock"><i class="fa fa-lock"></i>&nbsp;&nbsp;{{__LockScreen}}</button>
+					</If>
+					<button type="button" class="btn btn-block btn-sm btn-warning" data-dismiss="modal" data-session="logout"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;{{__Logout}}</button>
+					<button type="button" class="btn btn-block btn-sm btn-default" data-dismiss="modal" data-session="extend">{{__Cancel}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</Grid>
+
+
+
+
+
+
+	<!-- END Logout options -->
+	<!-- HTML Related to session timeout -->
+	<If condition="'{{SESSION_TIMEOUT_ENABLED}}' == 'yes' && '{{BO_ENVIRONMENT}}' == 'APPLICATION'">
+		<If condition="'{{SESSION_TIMEOUT_EXPIRING_NOTIFY}}' == 'yes'">
+
+
+<Grid gridId="SessionConfigurationGrid_expiring">
+<IfEmpty>
+		<div class="modal inmodal" id="sessionTimeoutAlert" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content animated bounceInDown">
+					<div class="modal-header no-border">
+						<i class="fa fa-exclamation-circle modal-icon"></i>
+						<h4 class="modal-title text-center">
+							<small>{{_time_will_expire_in}}</small>
+							<div id="timeoutIndicatorWrapper">
+								<span id="warningTimeoutIndicator">xxx</span>{{_seconds}}
+							</div>
+						</h4>
+					</div>
+					<div class="modal-footer text-center no-border">
+						<button type="button" class="btn btn-block btn-sm btn-brand" data-dismiss="modal" data-session="extend">{{StayOnPage}}</button>
+						<If condition="'{{LOCK_SCREEN_NOTIFICATION_EXPIRATION}}' == 'yes'">
+						<button type="button" class="btn btn-block btn-sm btn-primary" data-session="lock"><i class="fa fa-lock"></i>&nbsp;&nbsp;{{LockScreen}}</button>
+						</If>
+						<button type="button" class="btn btn-block btn-sm btn-warning" data-session="logout"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;{{Logout}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</IfEmpty>
+
+		<div class="modal inmodal" id="sessionTimeoutAlert" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content animated bounceInDown">
+					<div class="modal-header no-border">
+						<i class="fa fa-exclamation-circle modal-icon"></i>
+						<h4 class="modal-title text-center">
+							<small>{{_time_will_expire_in}}</small>
+							<div id="timeoutIndicatorWrapper">
+								<span id="warningTimeoutIndicator">xxx</span>{{_seconds}}
+							</div>
+						</h4>
+					</div>
+					<div class="modal-footer text-center no-border">
+						<button type="button" class="btn btn-block btn-sm btn-brand" data-dismiss="modal" data-session="extend">{{__StayOnPage}}</button>
+						<If condition="'{{LOCK_SCREEN_NOTIFICATION_EXPIRATION}}' == 'yes'">
+						<button type="button" class="btn btn-block btn-sm btn-primary" data-session="lock"><i class="fa fa-lock"></i>&nbsp;&nbsp;{{__LockScreen}}</button>
+						</If>
+						<button type="button" class="btn btn-block btn-sm btn-warning" data-session="logout"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;{{__Logout}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</Grid>
+
+
+		</If>
+	</If>
+	</Grid>
+	<!-- END HTML Related to session timeout -->
+</If>
+<Var name="prodassets">('{{APP_STATE}}' != 'development' ? '.min' : '')</Var>
+<script type="text/javascript" src="{{EASY_URL}}inc/include_js/ew.sessionwatcher{{prodassets}}.js"></script>

@@ -1,0 +1,138 @@
+<If condition="'{{displayFilter}}'=='yes'">
+
+</If>
+
+
+<If condition="'{{error_code_to_html}}'=='FoundResults'">
+
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+		<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+	</IfEmpty>
+
+	<Header>
+
+		<If condition="'{{HeaderNav}}'=='yes'">
+			<div class="standart_list_navigation standart_list_navigation_top">
+				<div class="list_navigation_info">{{_articles}} {{FromRecs}} - {{ToRecs}} / {{CountItems}}</div>
+				<ul class="list_pagination">
+
+					<If condition="'{{previewsPage}}'!=''">
+						<li>
+						<a title="{{_previews_page_alt}}"
+						href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+						>&laquo;</a>
+						</li>
+					</If>
+
+					<NavTpl navID="gridDataSrc" blNoToDisplay="5" stepBack="0">
+						<Header>
+						</Header>
+							<li>
+								<a class="{{selClass}}" title="{{_page}} {{BlockNavNr}}" 
+								href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{BlockNavNr}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+								>{{BlockNavNr}}</a>
+							</li>
+						<Footer>
+						</Footer>
+					</NavTpl>
+
+					<If condition="'{{nextPage}}'!=''">
+						<li>
+							<a title="{{_next_page_alt}}"
+							href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+							>&raquo;</a>
+						</li>
+					</If>
+				</ul>
+			</div>
+		</If>
+	<div id="galleryList{{objId}}" class="galleryList">
+	</Header>
+	<Var name="target_val">('{{hrefToDocTargetOther}}' == '_blank' ? '_blank' : '_self')</Var>
+		<div class="list_item">
+			<If condition="'{{dp_image}}' == 'yes'">
+			<div class="item_thumbnail">
+				<If condition="'{{linkToimage}}' == 'yes'">
+				<a href="{{hrefToDocOther}}" target="{{target_val}}" title="{{titleToAlt}}">
+					<img src="{{srcImageToDisplay}}"  alt="{{titleToAlt}}" width="138"/>
+				</a>
+				</If>
+				<If condition="'{{linkToimage}}' != 'yes'">
+				<img src="{{srcImageToDisplay}}"  alt="{{titleToAlt}}" width="138"/>
+				</If>
+			</div>
+			</If>
+			<div class="item_title">
+				<If condition="'{{linkToTitle}}' == 'yes'">
+				<a href="{{hrefToDocOther}}" title="{{titleToAlt}}" target="{{target_val}}">{{titleToDisplay}}</a>
+				</If>
+				<If condition="'{{linkToTitle}}' != 'yes'">
+				{{titleToDisplay}}
+				</If>
+			</div>
+		</div>
+
+	<Separator>
+		<If condition="{{CurrentRecNr}}%4 != '0'">
+		<div class="item_separator">&nbsp;</div>
+		</If>
+		<If condition="{{CurrentRecNr}}%4 == '0'">
+		<div class="row_separator">&nbsp;</div>
+		</If>
+	</Separator>
+
+
+	<Footer>
+	</div>
+		<If condition="'{{FooterNav}}'=='yes'">
+			<div class="standart_list_navigation standart_list_navigation_bottom">
+				<div class="list_navigation_info">{{_articles}} {{FromRecs}} - {{ToRecs}} / {{CountItems}}</div>
+				<ul class="list_pagination">
+
+					<If condition="'{{previewsPage}}'!=''">
+						<li>
+						<a title="{{_previews_page_alt}}"
+						href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+						>&laquo;</a>
+						</li>
+					</If>
+
+					<NavTpl navID="gridDataSrc" blNoToDisplay="5" stepBack="0">
+						<Header>
+						</Header>
+							<li>
+								<a class="{{selClass}}" title="{{_page}} {{BlockNavNr}}" 
+								href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{BlockNavNr}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+								>{{BlockNavNr}}</a>
+							</li>
+						<Footer>
+						</Footer>
+					</NavTpl>
+
+					<If condition="'{{nextPage}}'!=''">
+						<li>
+							<a title="{{_next_page_alt}}"
+							href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+							>&raquo;</a>
+						</li>
+					</If>
+				</ul>
+			</div>
+		</If>
+	</Footer>
+</Grid>
+</If>
+
+<If condition="'{{error_code_to_html}}'=='ResultsEmtpy'">
+	<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='TermSearchEmpty'">
+	<div class="list_error_message">{{_list_TermSearchEmpty}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='InvalidTerm'">
+	<div class="list_error_message">{{_list_InvalidTerm}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='SomeErrorOccurred'">
+	<div class="list_error_message">{{_list_error_occured}}</div>
+</If>

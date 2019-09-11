@@ -1,0 +1,67 @@
+<Grid gridId="Grid_Navigation">
+
+	<IfEmpty>
+	</IfEmpty>
+
+	<Header>
+	<div class="row">
+	</Header>
+	<If condition="'{{nivel}}' == '1'">
+		<If condition="'{{index1}}' == '1'">
+		<div class="col-md-3">
+			<div class="sm_box">
+				<ul class="product_catalogue">
+					<li>
+		</If>
+		<If condition="'{{index1}}' > '1'">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="sm_box">
+				<ul class="product_catalogue">
+					<li>
+		</If>
+						<a  href="{{link}}" title="{{label}}">{{label}}</a>
+
+		<If condition="('{{index1}}' == '{{nr_tot1}}') && ('{{nr_child}}' == '0')">
+					</li>
+				</ul>
+			</div>
+		</div>
+		</If>
+	</If>
+
+	<If condition="'{{nivel}}' == '2'">
+		
+		<If condition="'{{index2}}' == '1'">
+		<ul>
+			<li>
+				<a title="{{label}}" href="{{link}}" >{{label}}</a>
+		</If>
+		<If condition="'{{index2}}' > '1'">
+			<li>
+				<a title="{{label}}" href="{{link}}" >{{label}}</a>
+		</If>
+
+		<If condition="('{{index2}}' == '{{nr_tot2}}') && ('{{nr_child}}' == '0')">
+			</li>
+		</ul>
+		<If condition="'{{index1}}' == '{{nr_tot1}}'">
+		</li>
+	</ul>
+	</div>
+	</div>
+		</If>
+		</If>
+	</If>
+
+
+	<Separator>
+	</Separator>
+
+	<Footer>
+	</div>
+	</Footer>
+</Grid>

@@ -1,0 +1,34 @@
+<Messages>
+
+
+<Message ID="_login_headline">
+Log In
+</Message>
+
+<Message ID="_protected_area_message">
+You are trying to access a protected area. Please login to continue.
+</Message>
+
+<Message ID="_usernamelogin">
+Username
+</Message>
+
+<Message ID="_passwordlogin">
+Password
+</Message>
+
+<Message ID="_sign_in">
+Sign In
+</Message>
+
+<Message ID="_fill_username_data">
+Please enter your username
+</Message>
+
+<Message ID="_fill_password_data">
+Please enter your password
+</Message>
+
+
+
+</Messages>

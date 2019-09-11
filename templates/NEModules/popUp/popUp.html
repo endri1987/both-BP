@@ -1,0 +1,98 @@
+<WebBox ID="popUp">
+
+<If condition="'{{mode}}'=='simple' || '{{mode}}'=='wb' ">
+	<Include SRC="{{MainContent_modul}}">
+</If>
+
+<If condition="'{{mode}}'!='simple'  && '{{mode}}'!='wb'">
+
+
+<div class="POPUP_tab_general">
+
+	<If condition="{{'mode'}} != 'simple' && {{'mode'}} != 'alone'">
+	<div class="POPUP_tab_header">
+		<Include SRC="{{NEMODULES_PATH}}popUp/HeaderAreaPopup/HeaderAreaPopup.html"/>
+		<Include SRC="{{NEMODULES_PATH}}popUp/print_email_header/print_email_header.html"/>
+	</div>
+	</If>
+
+	<div class="POPUP_tab_center">
+
+		<div id="fullcontent">
+
+			<script type="text/javascript" src="{{./}}popUp.js"></script>
+			<script type="text/javascript">
+				var uniqueid='{{uni}}';
+				var mode='{{mode}}';
+				var url='{{APP_URL}}templates/NEModules/popUp/';
+				var app_encoding='{{APP_ENCODING}}';
+
+			</script>
+
+			<If condition="'{{dyn}}'=='dynamic' || '{{mode}}'=='alone'">
+				<style>body{background:#fff !important;}</style>
+				<!--link rel="stylesheet" id="maincss"  type="text/css" href="{{APP_URL}}include_css/print.css" /-->
+				<Include SRC="{{MainContent_modul}}">
+				<Include SRC="{{APP_PATH}}templates/MainContainer/footer_includes.html"/>
+			</If>
+
+			<If condition="'{{mode}}'=='email'">
+
+				<Include SRC="{{MainContent_modul}}">
+
+				<If condition="'{{sendthis}}'=='1' || '{{sendthis}}'=='sendthis'">
+				<script type="text/javascript" src="{{INCLUDE_BOJSFILES_PATH}}prototype.js"> </script>
+				<style>html{background:#fff;}</style>
+				<form name="xhtmlBody" id="xhtmlBody">
+					<textarea  name="xhtmlBodyCont" id="xhtmlBodyCont" style="display:none">
+					</textarea>
+				</form>
+				<script type="text/javascript">
+					Event.observe(window,"load",function(){
+
+						if (window.opener) {
+							callLoaderEmailFunction();
+						} else {
+							window.location.href="{{APP_URL}}";
+						}
+
+					});
+
+				</script>
+
+				</If>
+			</If>
+
+			<If condition="'{{mode}}'=='print'">
+
+			<link rel="stylesheet" id="maincss"  type="text/css" href="{{APP_URL}}include_css/print.css" />
+			<div id="CmlP"></div>
+			<script type="text/javascript" src="{{INCLUDE_BOJSFILES_PATH}}prototype.js"> </script>
+			<div style="display:none">
+				<form name="xhtmlBody" id="xhtmlBody">
+					<textarea style="display:none" name="xhtmlBodyCont" id="xhtmlBodyCont">
+					</textarea>
+				</form>
+			</div>
+			<script type="text/javascript">
+				if (window.opener) {
+					callLoaderFunction();
+				} else {
+					window.location.href="{{APP_URL}}";
+				}
+			</script>
+
+			</If>
+		</div>
+
+   </div>
+
+	<If condition="{{'mode'}} != 'simple' && {{'mode'}} != 'alone'">
+	<div class="POPUP_tab_footer">
+		<Include SRC="{{NEMODULES_PATH}}popUp/FooterAreaPopup/FooterAreaPopup.html"/>
+	</div>
+	</If>
+</div>
+
+</If>
+</WebBox>

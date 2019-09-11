@@ -1,0 +1,62 @@
+<Grid gridId="Grid_StructuredContent">
+	<IfEmpty>
+	</IfEmpty>
+	<Header>
+	<div>
+		<If condition="'{{slogan_title_exists}}' == 'yes'">
+			<div class="header_white_reds hidden-xs">
+				<div class="header_title">{{slogan_title}}</div>
+			</div>
+		</If>
+
+		<a class="collapsable collapsable_red visible-xs" role="button" href="#collapseRight7" data-toggle="collapse">
+			<span class="ti-arrow-circle-down"></span>
+			<span class="ti-arrow-circle-right"></span>{{slogan_title}}
+		</a> 
+		<div class="collapse collapse-sm in" id="collapseRight7">
+
+		<If condition="'{{slogan_description_show}}' == 'yes'">
+			<div class="font_18 color_red line_20 marg_v-sm omega_v font_ptserif">{{slogan_description}}</div>
+		</If>
+	 
+			<ul class="list-unstyled pad_v clearfix">
+			<li class="li_left-w100">
+				
+					
+	</Header>
+			   		<If condition="'{{dp_smallImg}}' == 'yes' && {{CurrentRecNr}} == '1'">
+						<div class="item_thumb">	
+								<img src="{{img_small_id_src}}" alt="{{titleToAlt}}"/>
+						</div>
+					</If>
+							<If condition="'{{dp_title}}' == 'yes'">
+								<div class="item_title">{{titleToDisplay}}</div>	
+							</If>
+							<Grid gridId="Grid_StructuredContent">
+						<div class="item_content">
+							<If condition="'{{dp_desc}}' == 'yes'">
+								<If condition="'{{exist_link}}' == 'yes'">
+									<a href="link_src" role="button" target="link_target">{{linklabel}}
+										<div class="item_desc">
+										{{description}}
+											<span class="ti-new-window color_red"></span>
+										</div>
+									</a>
+								</If>
+							</If>
+						</div>	
+							</Grid>
+							<If condition="'{{dp_content}}' == 'yes'">
+								<div class="item_desc">{{fullcontent}}</div>
+							</If>
+					
+					
+				
+	<Footer>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	</Footer>
+</Grid>

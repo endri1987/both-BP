@@ -1,0 +1,46 @@
+<If condition="'{{display_preview}}' != 'no'">
+	<If condition="'{{allowed_preview}}' == 'yes'">
+	<a  title="{{_view_item}}"  data-title="[{{ecc_reference}}]. {{ew_title}}"
+		data-key="{{identifier_type}}" data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+		data-url="{{identifier_key}}" href="{{stream_url}}"
+		class="pull-right text-danger ic_pos view-{{ico_type}}">
+        <If condition="'{{extension}}' == 'link-ref-play'">
+		<i class="fa fa-fw fa-play"></i>
+		</If>
+        <If condition="'{{extension}}' == 'ref' || '{{extension}}' == 'link-ref'">
+		<i class="fa fa-fw fa-external-link"></i>
+		</If>
+		<If condition="'{{extension}}' == 'pdf'">
+		<i class="fa fa-fw fa-external-link-square"></i>
+		</If>
+		<If condition="'{{extension}}' == 'mp4' || '{{extension}}' == 'mp3'">
+			<i class="fa fa-fw fa-play"></i>
+		</If>
+		<If condition="'{{extension}}' == 'html'">
+			<i class="fa fa-fw fa-external-link"></i>
+		</If>
+		<If condition="'{{ico_type}}' == 'image'">
+			<i class="fa fa-fw fa-picture-o"></i>
+		</If>
+	</a>
+	</If>
+	<If condition="'{{allowed_preview}}' == 'no'">
+	<a  title="{{_view_item_not_allowed}}"  data-title="[{{ecc_reference}}]. {{ew_title}}" data-key="{{identifier_type}}"
+		class="pull-right text-danger ic_pos" data-id="{{CID}}" data-url="{{identifier_key}}" href="javascript:;">
+			<i class="fa fa-fw fa fa-external-link disabled" ></i>
+	</a>
+	</If>
+</If>
+<If condition="'{{display_info}}' != 'no'">
+    <Include SRC="{{./}}ci_icon_more_info.html"/>
+</If>
+<If condition="'{{display_download}}' != 'no'">
+	<a class="pull-right text-danger ic_pos download-item" data-id="{{CID}}" href="{{link_url}}">
+		<If condition="'{{allowed_download}}' == 'no'">
+			<i class="fa fa-fw fa-download text-info disabled download-item" data-id="{{CID}}"  title="{{_download_unavailable}}"></i>
+		</If>
+		<If condition="'{{allowed_download}}' == 'yes'">
+			<i class="fa fa-fw fa-download text-info"  title="{{_download_item}}"></i>
+		</If>
+	</a>
+</If>

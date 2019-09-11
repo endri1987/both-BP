@@ -1,0 +1,73 @@
+<div id="addint">
+	<!--Include SRC="{{NEMODULES_PATH}}CommunityModule/tema_main_post_List.html"/-->
+		<div class="panel-list-navigation discussion-list list-view" data-panel-list="true">
+		<script type="text/panel-list-navigation-config">
+			{
+				"dualView": true,
+				"dualViewBrakepoint": 680
+			}
+		</script>
+		<div class="list-panel has-header has-footer">
+			<div class="panel-header">
+				<If condition="'{{ses_userid}}'!='2'">
+				<a class="btn btn-xs btn-primary pull-right margin-top-5 create-new force-hide-header"
+					title="{{_add_new_discussion}}"
+					href="javascript:void(0);"
+					data-target="#view-news-details"
+					data-ajax-loader="loader-lg"
+					data-title="{{_add_new_discussion}}"
+					data-url="&apprcss=cmFunctions&step=1&act=Mpost&selfId={{CMID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&lectureIDM={{lectureIDM}}&parSubId=0#addint">
+					<i class="fa fa-comment-o"></i> {{_add_discussion}}
+				</a>
+				<a class="pull-right btn btn-xs btn-default margin-top-5 margin-right-5 view-home force-hide-header"
+					title="{{_help}}"
+					href="javascript:void(0);"
+					data-target="#view-news-details"
+					data-ajax-loader="loader-lg"
+					data-url="&apprcss=cmFunctions&step=7&lectureDiscID={{CMID}}#addint">
+					<i class="fa fa-info"></i> {{_help}}
+				</a>
+				</If>
+				<div class="header-title bold">{{_list_of_discussions}}</div>
+			</div>
+			<div id="mainPostListCntWrapper" class="panel-inner">
+				<div id="mainPostListCnt">
+					<Include SRC="{{NEMODULES_PATH}}CommunityModule/main_post_ListAjax.html"/>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<If condition="'{{ses_userid}}'!='2'">
+				<a class="btn btn-xs btn-primary pull-right margin-top-5 create-new force-hide-header"
+					title="{{_add_new_discussion}}"
+					href="javascript:void(0);"
+					data-target="#view-news-details"
+					data-ajax-loader="loader-lg"
+					data-title="{{_add_new_discussion}}"
+					data-url="&apprcss=cmFunctions&step=1&act=Mpost&selfId={{CMID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&lectureIDM={{lectureIDM}}&parSubId=0#addint">
+					<i class="fa fa-comment-o"></i> {{_add_discussion}}
+				</a>
+				</If>
+				<span id="mainPostNrTotWrapperCont">
+					<span id="mainPostNrTotWrapper">
+						<i>{{_listing}} {{mainPostTot}} {{_post}}</i>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="details-panel has-header">
+			<div class="panel-header">
+				<a href="javascript:void(0);" class="btn btn-default btn-xs close-details pull-left margin-top-5 margin-right-10" title="Back to list"><i class="fa fa-bars"></i></a>
+				<div class="btn-group btn-group-xs header-navigation margin-top-5 margin-left-10 pull-right" role="group">
+					<a href="javascript:void(0);" class="btn btn-default panel-prev-item" title="Previous post"><i class="fa fa-chevron-left"></i></a>
+					<a href="javascript:void(0);" class="btn btn-default panel-next-item" title="Next post"><i class="fa fa-chevron-right"></i></a>
+				</div>
+				<div class="header-title bold">Post details</div>
+			</div>
+			<div id="view-news-details" class="panel-inner ajax-loader-full">
+			</div>
+		</div>
+	</div>
+	<script>
+		modules.push('panels-list');
+	</script>
+</div>

@@ -1,0 +1,101 @@
+<WebBox ID="GlobalContainer" Type="HiddenContainer" Level="0" Case="Always" Editable="False">
+<div id="container" class="clearfix">
+	<WebBox ID="HeaderContainer" Type="HiddenContainer" Case="Always" Tag="header" Editable="False" Container="GlobalContainer">
+	<header id="header">
+		<div id="headerWrapper">
+			<div class="container">
+				<div class="menu-toggler">
+					<button class="navbar-toggler" data-menu-toggle="open" type="button" aria-label="Toggle navigation">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+				</div>
+				<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+				<nav id="headerControls" class="navbar navbar-toggleable-md top-navigation">
+					<div class="collapse navbar-collapse">
+						<Include SRC="{{./}}UserProfileArea/UserProfileArea.html"/>
+					</div>
+				</nav>
+				<div id="suche" style="display: none;" data-mask-wrapper="">
+					<div id="sucheInput" class="container">
+						<div id="suchmaske" data-mask-container="">
+							<Include SRC="{{./}}SearchArea/SearchArea.html"/>
+						</div>
+					</div>
+				</div>
+				<div id="dropdownMenuLink" style="display: none;" data-mask-wrapper="">
+					<div id="sucheInput" class="container" >
+						<div id="loginContainer" data-mask-container="">
+							<Include SRC="{{./}}UserLoginArea/UserLoginArea.html"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<WebBox ID="BannerContainer" Type="HiddenContainer" Level="0" Case="Always" Editable="False">
+			<Include SRC="{{./}}BannerArea/BannerArea.html"/>
+		</WebBox>
+
+		<WebBox ID="MainNavigationContainer" Type="HiddenContainer" Level="0" Tag="div" TagClass="container" Case="Always" Editable="False">
+			<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+		</WebBox>
+	</header>	
+	</WebBox>
+
+	<WebBox ID="MainContainer" Type="RegionContainer" Tag="section" TagId="content" Case="Always" Editable="False" Container="GlobalContainer">
+				<If condition="'{{level_1}}' != '0' && '{{masterZoneSpecialization}}' == 'intranet'">
+					<Include SRC="{{./}}LocationPathArea/LocationPathArea.html"/>
+				</If>
+				<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+				<If condition="'{{masterZoneSpecialization}}' != 'intranet'">
+					<Include SRC="{{./}}MainContent/MainContent.html"/>
+				</If>
+				
+				<If condition="'{{masterZoneSpecialization}}' == 'intranet'">
+					<div class="container">
+					<div class="row">
+						<div class="col-lg-9">
+							<Include SRC="{{./}}MainContent/MainContent.html"/>
+						</div>
+						<div class="col-lg-3">
+							<Include SRC="{{./}}RightTopArea/RightTopArea.html"/>
+							<Include SRC="{{./}}RightMiddleArea/RightMiddleArea.html"/>
+							<Include SRC="{{./}}RightBottomArea/RightBottomArea.html"/>
+						</div>
+					</div>
+					</div>
+					
+				</If>
+				<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+				
+	<div id="stopper"></div>
+	</WebBox>
+<section id="footer">
+	<WebBox ID="BottomRowContainer" Type="RegionContainer" Tag="div" TagId="bottomRow" TagClass="bg-inverse" Case="Always" Editable="False" Container="GlobalContainer">
+		<div class="container">
+			<Include SRC="{{./}}BottomRowArea/BottomRowArea.html"/>
+		</div>
+	</WebBox>
+
+	<WebBox ID="FooterContainer" Type="RegionContainer" Tag="footer" TagClass="" Case="Always" Editable="False" Container="GlobalContainer">
+	<If condition="'{{masterZoneSpecialization}}' == 'intranet'">
+		<div class="footer bg-primary">
+	</If>
+	<If condition="'{{masterZoneSpecialization}}' == 'internet'">
+		<div class="footer bg-black">
+	</If>
+			<div class="container">
+				<div class="clearfix">
+					<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+					<Include SRC="{{./}}FooterNavigationArea/FooterNavigationArea.html"/>
+				</div>
+			</div>
+		</div>
+	</WebBox>
+</section>
+
+	<button id="back-to-top" class="btn btn-primary btn-sm"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+</div>
+<Include SRC="{{./}}footer_includes.html"/>
+
+</WebBox>

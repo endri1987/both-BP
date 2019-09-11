@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-md-6">
+	<label for="_photo_msg" >{{_photo_msg}}</label>
+	<div id="cameraInfo"></div>
+	<div class="camera_off" id="snapImageUpload">
+		<div style="width: 200px; height: 150px; margin-bottom: 10px; float: left; margin-right: 10px;" class="fileinput-preview thumbnail">
+			<video height="150" width="200" autoplay="" id="video"></video>
+		</div>
+
+		<canvas height="150" width="200" id="canvas"></canvas>
+		<div class="col-md-12">
+		<div class="btn btn-primary btn-xs" id="snap">{{_Snap_Photo}}</div>
+		<div class="btn btn-primary btn-xs" id="activateSnap">{{_Take_new_photo}}</div>
+		</div>
+		<input type="hidden" name="canvasImgDataUrl" id="canvasImgDataUrl">
+	</div>
+	</div>
+	<div class="col-md-6">
+		<div class="row">
+			<div class="form-group col-lg-12">
+				<label for="user_public_nickname">{{_user_public_nickname}}:</label>
+				<input id="user_public_nickname" name="user_public_nickname" type="text" class="form-control" value="">
+			</div>
+			<div class="form-group col-lg-12">
+				<label for="user_public_location">{{_user_public_location}} :</label>
+				<input id="user_public_location" name="user_public_location" type="text" class="form-control">
+			</div>
+			<div class="form-group col-lg-12">
+				<label for="user_occupation">{{_user_occupation}} :</label>
+				<input id="user_occupation" name="user_occupation" type="text" class="form-control">
+			</div>
+			<div class="form-group col-lg-12">
+				<label for="user_about">{{_user_about}} :</label>
+				<input id="user_about" name="user_about" type="text" class="form-control">
+			</div>
+			<div class="form-group col-lg-12">
+				<label for="user_interes">{{_user_interes}} :</label>
+				<input id="user_interes" name="user_interes" type="text" class="form-control">
+			</div>
+			<div class="form-group col-lg-12">
+				<label for="user_interes">{{_mail_preferences}} :</label>
+				<input id="mail_preferences" name="mail_preferences" type="text" class="form-control">
+			</div>
+		</div>
+	</div>
+ </div>

@@ -1,0 +1,579 @@
+<Messages>
+<Message ID="header_alt_mesg">
+Emri i aplikimit
+</Message>
+<Message ID="copyright_name_mesg">
+Emri i aplikimit 
+</Message>
+<Message ID="copyright_mesg">
+© Të gjitha te drejtat e rezervuara
+</Message>
+<Message ID="home_mesg">
+Kreu
+</Message>
+<Message>
+------------------------------------------------- LanguageSwitch_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="mesg_lng_I">
+AL
+</Message>
+<Message ID="mesg_lng_II">
+EN
+</Message>
+<Message ID="mesg_lng_III">
+Fr
+</Message>
+
+
+<Message ID="lng1_mesg">
+AL
+</Message>
+<Message ID="lng1_alt_mesg">
+AL
+</Message>
+<Message ID="lng1_full_mesg">
+Shqip
+</Message>
+<Message ID="lng2_full_mesg">
+English
+</Message>
+<Message ID="lng2_mesg">
+EN
+</Message>
+<Message ID="lng2_alt_mesg">
+EN
+</Message>
+<Message ID="lng3_mesg">
+English
+</Message>
+<Message ID="lng3_alt_mesg">
+English
+</Message>
+<Message>
+------------------------------------------------- LanguageSwitch_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+----------------------------------------------------- print_email_mesazhet_fillim -------------------------------------------
+</Message>
+<Message ID="print_mesg">
+Print
+</Message>
+<Message ID="print_alt_mesg">
+Printo
+</Message>
+<Message ID="email_mesg">
+Email
+</Message>
+<Message ID="email_alt_mesg">
+Dergo me Email
+</Message>
+<Message>
+------------------------------------------------------- print_email_mesazhet_fund -------------------------------------------
+</Message>
+<Message>
+--------------------------------------------------- lastupdate_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="lastupdate_mesg">
+Përditësuar në
+</Message>
+<Message>
+----------------------------------------------------- lastupdate_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------- SearchModule_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="js_search_kriteria_more_than_mesg">
+Ju lutem jepni një fjalë me më shumë se dy karaktere
+</Message>
+<Message ID="search_alt_mesg">
+Kërko
+</Message>
+<Message ID="search_default_vl_input_mesg">
+Kërko
+</Message>
+<Message ID="search_etiketa_mesg">
+Kërkim
+</Message>
+<Message>
+-------------------------------------------------- SearchModule_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- POPUP_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="close_mesg">
+Mbyll
+</Message>
+<Message ID="close_alt_mesg">
+Mbyll dritaren
+</Message>
+<Message ID="js_fill_required_field_mesg">
+Ju lutem plotesoni fushat e shenuar me *.
+</Message>
+<Message ID="js_your_email_not_correct_mesg">
+Formati i adreses suaj nuk eshte i sakte!\nJu lutem beni korigjimet e nevojshme!
+</Message>
+<Message ID="js_email_not_correct_mesg">
+Formati i adresave te dergimit te emailit nuk eshte i sakte!\nJu lutem beni korigjimet e nevojshme!
+</Message>
+<Message ID="email_header_mesg">
+Dërgo me E-mail
+</Message>
+<Message ID="email_fullname_mesg">
+Nga (Emri juaj)
+</Message>
+<Message ID="email_usr_mesg">
+Adresa juaj e E-mailit
+</Message>
+<Message ID="email_usr_mesg">
+Adresa juaj e E-mailit
+</Message>
+<Message ID="email_recipients_mesg">
+Per
+</Message>
+<Message ID="email_subjekt_mesg">
+Subjekti
+</Message>
+<Message ID="email_recipients_help_mesg">
+(Fusni listen e adresave te ndara me presje)
+</Message>
+<Message ID="email_komente_mesg">
+Mesazhi juaj
+</Message>
+<Message ID="email_but_send_mesg">
+Dergo
+</Message>
+<Message ID="email_but_clear_mesg">
+Pastro
+</Message>
+<Message ID="email_sukses_mesg" Shpjegim="Ky mesazh afishohet kur e-maili dergohet me sukses">
+Mesazhi juaj u dergua me sukses ne adresat e meposhtme:
+</Message>
+<Message ID="email_failed_mesg" Shpjegim="Ky mesazh afishohet kur e-maili nuk dergohet me sukses">
+Dërgimi i mesazhit tuaj dështoi. Ju lutem provojeni përsëri me vonë.
+</Message>
+<Message>
+------------------------------------------------------- POPUP_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- SITEMAP Fillim ------------------------------------------------
+</Message>
+<Message ID="sitemap_mesg">
+Indeksi
+</Message>
+<Message>
+<Message ID="sitemap_TopNavigation_mesg">
+Indeksi
+</Message>
+<Message ID="sitemap_MainNavigation_mesg">
+Indeksi
+</Message>
+<Message ID="sitemap_FooterNavigation_mesg">
+Indeksi
+</Message>
+<Message>
+------------------------------------------------------- SITEMAP Fund --------------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- Listat, foto, etj galeria Fillim ------------------------------
+</Message>
+<Message ID="_search_headline_default">
+Rezultatet e Kërkimit
+</Message>
+<Message ID="_search_headline">
+Jepni termin e kërkimit
+</Message>
+<Message ID="_articles">
+Rezultate
+</Message>
+<Message ID="_page">
+Faqe
+</Message>
+<Message ID="_of">
+prej
+</Message>
+<Message ID="_next_page_alt">
+Faqja pasardhëse
+</Message>
+<Message ID="_previews_page_alt">
+Faqja paraardhëse
+</Message>
+<Message ID="_nr_articles_per_page">
+Nr. i rezultateve në faqe
+</Message>
+<Message ID="_top">
+Në krye
+</Message>
+<Message ID="_published_date">
+Data e publikimit
+</Message>
+<Message ID="_author">
+Autori
+</Message>
+<Message ID="_source">
+Burimi
+</Message>
+<Message ID="_list_ResultsEmtpy">
+Asnjë rezultat i gjetur!
+</Message>
+<Message ID="_list_error_occured">
+Pati një problem në gjenerimin e listës. Ju lutem provoni më vonë!
+</Message>
+<Message ID="_list_TermSearchEmpty">
+Asnjë rezultat i gjetur!
+</Message>
+<Message ID="_results_for_term">
+Ku kërkuat për 
+</Message>
+<Message ID="_list_InvalidTerm">
+Ju lutem përcaktoni përsëri termin e kërkimit!
+</Message>
+<Message ID="_term">
+Termi 
+</Message>
+<Message ID="_search">
+Kërko
+</Message>  
+<Message ID="_back">
+Mbrapa
+</Message>
+<Message ID="foto_mesg">
+Foto
+</Message>
+<Message>
+------------------------------------------------------- Listat, foto, etj galeria Fund ---------------------------------
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te pergjithshme JS fillim ------------------------------
+</Message>
+<Message ID="alert_isnull_mesg">
+Ju lutemi, jepni një vlerë për
+</Message>
+<Message ID="alert_isalpha_mesg">
+Kujdes, fusha pranon vetëm gërma
+</Message>
+<Message ID="alert_isdate1_mesg">
+Data duhet të jepet në formatin DD.MM.YYYY !
+</Message>
+<Message ID="alert_isdate2_mesg">
+Muaji i dhënë nuk është i saktë!
+</Message>
+<Message ID="alert_isdate3_mesg">
+Data e dhënë nuk është e saktë!
+</Message>
+<Message ID="alert_isemail_mesg">
+Adresa e e-mail-it nuk është e saktë!
+</Message>
+<Message ID="alert_isinteger_mesg">
+Fusha pranon vetëm numra të plotë!
+</Message>
+<Message ID="alert_isnumber1_mesg">
+Vlera duhet të jetë numër!
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te pergjithshme JS fund ------------------------------
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te tjera fillim --------------------------------------
+</Message>
+<Message ID="yes_mesg">
+Po
+</Message>
+<Message ID="no_mesg">
+Jo
+</Message>
+<Message ID="_Janar">
+Janar
+</Message>
+<Message ID="_Shkurt">
+Shkurt
+</Message>
+<Message ID="_Mars">
+Mars
+</Message>
+<Message ID="_Prill">
+Prill
+</Message>
+<Message ID="_Maj">
+Maj
+</Message>
+<Message ID="_Qershor">
+Qershor
+</Message>
+<Message ID="_Korrik">
+Korrik
+</Message>
+<Message ID="_Gusht">
+Gusht
+</Message>
+<Message ID="_Shtator">
+Shtator
+</Message>
+<Message ID="_Tetor">
+Tetor
+</Message>
+<Message ID="_Nentor">
+Nentor
+</Message>
+<Message ID="_Dhjetor">
+Dhjetor
+</Message>
+<Message ID="_month_01">
+Janar
+</Message>
+<Message ID="_month_02">
+Shkurt
+</Message>
+<Message ID="_month_03">
+Mars
+</Message>
+<Message ID="_month_04">
+Prill
+</Message>
+<Message ID="_month_05">
+Maj
+</Message>
+<Message ID="_month_06">
+Qershor
+</Message>
+<Message ID="_month_07">
+Korrik
+</Message>
+<Message ID="_month_08">
+Gusht
+</Message>
+<Message ID="_month_09">
+Shtator
+</Message>
+<Message ID="_month_10">
+Tetor
+</Message>
+<Message ID="_month_11">
+Nentor
+</Message>
+<Message ID="_month_12">
+Dhjetor
+</Message>
+<Message ID="_hene">
+He
+</Message>
+<Message ID="_marte">
+Ma
+</Message>
+<Message ID="_merkure">
+Me
+</Message>
+<Message ID="_enjte">
+En
+</Message>
+<Message ID="_premte">
+Pr
+</Message>
+<Message ID="_shtune">
+Sh
+</Message>
+<Message ID="_diel">
+Di
+</Message>
+<Message ID="_day_01">
+E Hënë
+</Message>
+<Message ID="_day_02">
+E Martë
+</Message>
+<Message ID="_day_03">
+E Mërkure
+</Message>
+<Message ID="_day_04">
+E Enjte
+</Message>
+<Message ID="_day_05">
+E Premte
+</Message>
+<Message ID="_day_06">
+E Shtunë
+</Message>
+<Message ID="_day_07">
+E Diel
+</Message>
+<Message ID="_day_short_01">
+Hë
+</Message>
+<Message ID="_day_short_02">
+Ma
+</Message>
+<Message ID="_day_short_03">
+Më
+</Message>
+<Message ID="_day_short_04">
+En
+</Message>
+<Message ID="_day_short_05">
+Pr
+</Message>
+<Message ID="_day_short_06">
+Sh
+</Message>
+<Message ID="_day_short_07">
+Di
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te tjera fund --------------------------------------
+</Message>
+
+<Message ID="_hene_mesg">
+e henë
+</Message>
+<Message ID="_marte_mesg">
+e martë
+</Message>
+<Message ID="_merkure_mesg">
+e mërkurë
+</Message>
+<Message ID="_enjte_mesg">
+e enjte
+</Message>
+<Message ID="_premte_mesg">
+e premte
+</Message>
+<Message ID="_shtune_mesg">
+e shtunë
+</Message>
+<Message ID="_diel_mesg">
+e diel
+</Message>
+
+<Message>
+------------------------------------------------------- form_mesazhet_fillim si p.sh feedbackModule --------------------
+</Message>
+<Message ID="contact_user_name_mesg">
+ Emri 
+</Message>
+<Message ID="contact_user_email_mesg">
+ E-mail
+</Message>
+<Message ID="contact_user_tel_mesg">
+Telefon
+</Message>
+<Message ID="contact_komente_mesg">
+Mesazhi 
+</Message>
+<Message ID="contact_but_send_mesg">
+Dërgo
+</Message>
+<Message ID="contact_but_clear_mesg">
+Pastro
+</Message>
+<Message ID="contact_send_sukses_mesg" Shpjegim="Ky mesazh afishohet kur informacioni i formes se kontaktit dergohet me sukses dhe nuk eshte percaktuar faqja ku do ridireksionohet">
+Ju faleminderit per mesazhin tuaj!
+</Message>
+<Message ID="contact_send_fail_mesg" Shpjegim="Ky mesazh afishohet kur informacioni i formes se kontaktit nuk dergohet me sukses dhe nuk eshte percaktuar faqja ku do ridireksionohet">
+Dërgimi i mesazhit tuaj deshtoi! Ju lutem provojeni përsëri më vone.
+</Message>
+<Message ID="contact_emri_mesg">
+Emri
+</Message>
+<Message ID="contact_mbiemri_mesg">
+Mbiemri
+</Message>
+<Message ID="contact_titulli_mesg">
+Titulli
+</Message>
+<Message ID="contact_kompania_mesg">
+Kompania
+</Message>
+<Message ID="contact_vendi_mesg">
+Vendi
+</Message>
+<Message ID="contact_user_cel_mesg">
+Celular
+</Message>
+<Message ID="contact_other1_mesg">
+Gjinia
+</Message>
+<Message ID="contact_other2_mesg">
+Koha më e përshtatshme për ta ndjekur kursin (muaji)
+</Message>
+<Message ID="contact_other3_mesg">
+Burimi nga jeni informuar për ne
+</Message>
+<Message ID="contact_other4_mesg">
+Webi
+</Message>
+<Message ID="contact_other5_mesg">
+Emaili
+</Message>
+<Message ID="contact_other6_mesg">
+Kolegë të punës
+</Message>
+<Message ID="contact_other7_mesg">
+Njerëz që njihni
+</Message>
+<Message ID="contact_other8_mesg">
+Tjetër
+</Message>
+<Message ID="contact_other_value1_mesg">
+Mashkull
+</Message>
+<Message ID="contact_other_value2_mesg">
+Femër
+</Message>
+<Message ID="contact_title_window_mesg">
+Ngarkoni Dokumentin
+</Message>
+<Message ID="contact_dok_etiketa_mesg">
+Dokumenti
+</Message>
+<Message ID="ngarko_mesg">
+Ngarko
+</Message>
+<Message ID="format_mesg">
+format
+</Message>
+<Message ID="captcha_reload_mesg">
+Rifresko
+</Message>
+<Message ID="captcha_kodi_mesg">
+Kodi sigurise
+</Message>
+<Message>
+------------------------------------------------------- form_mesazhet_fund si p.sh feedbackModule ---------------------
+</Message>
+<Message>
+------------------------------------------------------- form_validate_mesazhet_fillim si p.sh contact module ---------------------
+</Message>
+<Message ID="field_reqiured_mesg">
+Kjo fushe eshte e nevojshme
+</Message>
+<Message ID="field_number_mesg">
+Ju lutem plotesoni formatin e duhur te nje numri.
+</Message>
+<Message ID="field_date_mesg">
+Ju lutem plotesoni formatin e duhur te dates.
+</Message>
+<Message ID="field_numberphone_mesg">
+Ju lutem plotësoni numrin tuaj të telefonit.
+</Message>
+<Message ID="field_email_mesg">
+Ju lutem jepni nje adrese email te vlefshme.
+</Message>
+<Message ID="field_reqiured_email">
+Ju lutem jepni nje adrese email te vlefshme.
+</Message>
+<Message ID="pass_match">
+Ju lutem jepni të njëjtin password si më sipër!
+</Message>
+<Message ID="pass_leng">
+Password-i juaj duhet të jetë minimumi 6 karaktere!
+</Message>
+<Message>
+------------------------------------------------------- form_validate_mesazhet_fund si p.sh contact module  ---------------------
+</Message>
+<Message ID="_detaje">
+Detaje
+</Message>
+<Message ID="_view_all">
+View all
+</Message>
+
+
+</Messages>

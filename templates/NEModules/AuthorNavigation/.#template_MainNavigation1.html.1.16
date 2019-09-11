@@ -1,0 +1,25 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+	
+	<Header>
+	<Var name="current">("{{level_1}}" == "0" ? 'li_aktiv' : 'li_inaktiv')</Var>
+	<ul role="menubar">
+			<li role="menuitem" class="{{current}}">
+				<a href="{{linkToHomeOfZoneHref}}" title="{{home_mesg}}">{{home_mesg}}</a>
+			</li>
+	</Header>
+
+		<Var name="current">("{{nivel}}" == "{{level_1}}" ? 'li_aktiv' : 'li_inaktiv')</Var>
+		<If condition="'{{nivel}}' == '1'">
+		<li role="menuitem" class="{{current}}">
+			<a href="{{link}}">{{label}}</a>
+		</li>
+		</If>
+	
+	<Footer>
+
+	</ul>
+	</Footer>
+
+</Grid>
+
+

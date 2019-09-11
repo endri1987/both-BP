@@ -1,0 +1,16 @@
+<Grid gridId="Grid_Navigation">
+<Header>
+<ul role="menubar">
+</Header>
+	<If condition="'{{nivel}}' == '1'">
+	<Var name="current">("{{id1}}" == "{{level_1}}" ? 'li_aktiv' : 'li_inaktiv')</Var>
+	<li role="menuitem" class="{{current}}">
+		<a href="{{link}}">{{label}}</a>
+	</li>
+	</If>
+<Footer>
+
+</ul>
+</Footer>
+</Grid>
+

@@ -1,0 +1,63 @@
+			<div class="cm_block">
+				<div class="comment-avatar grid_15">
+					<img width="82" class="author-avatar" src="{{APP_URL}}graphics/profile_pic2.png" alt="">
+				</div>
+						<Grid gridId="gridDocumentFullDate_{{cm_id}}">
+						<Header>
+						<div class="dt">[
+						</Header>
+						{{date}} {{monthLabelShort}} {{year}}, {{hour12}}:{{min}} {{pm_am}}
+						<Footer>
+						]</div>
+						</Footer>
+						</Grid>
+
+						<div class="hd">{{titleToDisplay}}</div>
+						<div class="abs">{{abstractToDisplay}}</div>
+
+
+
+					<Grid gridId="MemberData_{{authorOfComm}}">
+						<div class="dbc">{{_posted_by}}:{{usr_title}} {{FirstName}} {{SecondName}}</div>
+					</Grid>
+
+
+
+
+
+<div class="is_useful" style="float:right">
+
+
+<If condition="'{{exist_useful}}'!='yes'">
+
+	<span style="float:left;padding-right:30px">{{_is_this_article_useful}} </span>
+	<button class="btnlfs smll usefull-article" date-vote="usefull" date-ned="{{cm_id}}" title="{{_article_is_usefull}}"><i class="icofont-thumbs-up color-green"></i></button>
+	<button class="btnlfs smll usefull-article" date-vote="not_usefull" date-ned="{{cm_id}}" title="{{_article_is_useless}}"><i class="icofont-thumbs-down color-red"></i></button>
+
+</If>
+
+<If condition="'{{exist_useful}}'=='yes'">
+
+	<span style="float:left;padding-right:30px">{{_is_this_article_useful}} </span>
+	<button class="btnlfs smll usefull-article" date-vote="usefull" date-ned="{{cm_id}}" title="{{_article_is_usefull}}"><i class="icofont-thumbs-up color-green"></i> {{nr_useful}}</button>
+	<button class="btnlfs smll usefull-article" date-vote="not_usefull" date-ned="{{cm_id}}" title="{{_article_is_useless}}"><i class="icofont-thumbs-down color-red"></i> {{nr_not_useful}}</button>
+
+
+
+
+<div > {{nr_useful}} / {{nr_useful_total}} e gjeten artikullin te dobishem</div>
+</If>
+</div>
+
+			<div class="sh_btn">
+			
+				<div class="btn-group">
+					<button style="float:right" class="btnlfs dialog cm-data-act btn btn-xs bg-color-blue txt-color-white"  		dt-step="1"  dt-selfId="{{CMID}}"  dt-itemId="{{CMmainDocID}}" dt-parSubId="{{cm_id}}" dt-itemSubId="{{CMparentDocID}}" dt-CMType="{{CMType}}" dt-step="1" title="{{_replay}}"><i class="fa fa-share"></i>  {{_replay}}</button>
+				</div>
+					<div class="btn-group">
+					<button style="float:right" class="btnlfs dialog cm-data-act btn btn-xs bg-color-blueLight txt-color-white"  	dt-step="2"  dt-selfId="{{CMID}}"  dt-itemId="{{CMmainDocID}}" dt-parSubId="{{cm_id}}" dt-itemSubId="{{CMparentDocID}}" dt-CMType="{{CMType}}" title="{{_report_this}}"><i class="fa fa-flag-o"></i> {{_report_this}}</button>
+				</div>
+			</div>
+
+
+</div>

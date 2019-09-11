@@ -1,0 +1,147 @@
+<script type="text/javascript" language="JavaScript1.2">
+var recPages = '{{recPages}}';
+</script>
+<div style="float:left;border:1px solid orange" >
+
+<script type="text/javascript" src="{{APP_URL}}include_js/jquery.rating.js"></script>
+<link type="text/css" href="{{APP_URL}}include_css/jquery.rating.css" rel="stylesheet" />
+
+<script language="javascript">
+var DoUrlA = APP_URL+'templates/NEModules/ajaxrespvfl.php';
+var ajaxGenVar = '&uni='+uniC+'&u='+returnUTS();
+var pars = '?cci='+cci+'&cln='+cln+'&cu='+cu;
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('#rate1').rating(DoUrlA+pars+ajaxGenVar, {cancel:false,maxvalue:5});
+$("#rating_portal").bind('click', function() {save_rating()});
+});
+
+function save_rating() {
+//ruaje me ajax
+}
+</script>
+<input type="hidden1" class="editable" name="rating_portal" id="rating_portal"  />
+<div  id="rate1" class="rating" inp="rating_portal"></div>
+
+</div>
+
+
+
+
+
+
+
+
+<Grid gridId="gridContainerList">
+
+	<Header>
+
+
+
+						<table id="printH" class="blutwo" cellspacing="10" cellpadding="0" border="0" width="100%" height="30">
+						<tbody>
+						<tr>
+
+						<td nowrap="nowrap" class="navList">{{__rates}} {{FromRecs}}-{{ToRecs}} / {{CountItems}}</td>
+						<td width="50%" class="navList"></td>
+
+						<td class="navList" nowrap="nowrap">{{__nr_articles_per_page}}</td>
+						<td width="7"><img height="1" alt="" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="5" border="0" /></td>
+						<td>
+							<select name="rec_page" style="width:54px"
+							onchange="JavaScript:GoTo('thisPage?event=CommentRating.srm(rpp=1;rp='+this.value+')')"
+							>
+								{{rec_page_options}}
+							</select>
+						</td>
+						<td width="30%"></td>
+						<td nowrap="nowrap" align="right" class="navList">{{__page}}
+							<select name="nr_page" style="width:54px"
+							onchange="JavaScript:GoTo('thisPage?event=CommentRating.srm(rp={{recPages}};rpp='+this.value+')')"
+							>
+								{{goto_page_options}}
+							</select> {{__of}} {{TotPage}} </td>
+						<td></td>
+						<td>
+						<If condition="'{{previewsPage}}'!=''">
+							<a href="JavaScript:GoTo('thisPage?event=CommentRating.srm(rpp={{previewsPage}};rp={{recPages}})')"
+							><img src="{{GRAPHICS_PATH_APP}}previews_page.gif" border="0" alt="{{_previews_page_alt}}"
+							/></a>
+						</If>
+						</td>
+						<td>
+						<If condition="'{{nextPage}}'!=''">
+							<a href="JavaScript:GoTo('thisPage?event=CommentRating.srm(rpp={{nextPage}};rp={{recPages}})')"
+							><img src="{{GRAPHICS_PATH_APP}}next_page.gif" border="0" alt="{{_previews_page_alt}}"
+							/></a>
+						</If>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+
+
+								<hr/>
+
+
+		</Header>
+
+								<div style="width:100%">
+								 	<div id="left" style="float:left;width:{{titleW}}">
+										<If condition="'{{titleC}}'!=''">
+											<div class="listpadditem title_link">{{titleC}}</div>
+										</If>
+								 	</div>
+								 	<If condition="'{{rate_value}}'!=0">
+								 		<div id="right" class="listpadditem title_link" style="float:right;width:65px">
+								 		<div alt="{{_average_rate}}" title="{{_average_rate}}" style="float:left;width:60px;height:12px;"
+												class="star_empty"><div class="star"
+												style="width:{{rate_value}}px;height:12px;"></div></div>
+												</div>
+									</If>
+									<div style="clear:both;"></div>
+								</div>
+
+								<If condition="'{{publish_block}}'=='yes'">
+									<If condition="'{{textC}}'!=''">
+										<div class="listpadditem">{{textC}}</div>
+									</If>
+								</If>
+								<If condition="'{{user_date}}'!=''">
+									<div class="listpadditem" style="padding-bottom:5px;padding-top:5px">{{user_date}}</div>
+								</If>
+
+
+								<Grid gridId="gridContainerRating">
+									<div class="listpadditem"><div style="float:left;width:60px;height:12px;"
+													class="star_empty"><div class="star"
+													style="width:{{rate_value}}px;height:12px;"></div></div>
+														<span class="rate_txt">{{rate_desc}}</span>
+													</div>
+								</Grid>
+								<If condition="'{{edit_delete}}'=='yes'">
+								<div class="listpadditem" style="float:right">
+
+								<a href="javascript:void(0)" class="link_editor" onclick="javascript:openWinRe_CR({{rid}})">
+									<img alt="{{__contribute_edit}}" title="{{__contribute_edit}}" src="{{GRAPHICS_PATH_APP}}comment_edit.png"  border="0" /> {{__contribute_edit}}
+								</a>
+
+								<a class="link_editor" href="JavaScript:GoTo('thisPage?event=CommentRating.rmr(k={{contentId}};kc={{level_0}},{{level_1}},{{level_2}},{{level_3}},{{level_4}};rid={{rid}})')">
+									<img alt="{{__contribute_delete}}" title="{{__contribute_delete}}" src="{{GRAPHICS_PATH_APP}}comment_delete.png"  border="0" /> {{__contribute_delete}}
+								</a>
+
+								</div>
+								</If>
+								<hr/>
+								<div class="listpadditem"></div>
+
+
+
+
+
+
+
+</Grid>

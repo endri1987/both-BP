@@ -1,0 +1,42 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+		<Header>
+		</Header>
+<If condition="'{{level_0}}_{{level_1}}_{{level_2}}_{{level_3}}_{{level_4}}'=='{{keyIden}}'">
+	<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+		<Header>
+
+			<ul class="arrow-list">
+		</Header>
+				<li>
+					<span class="bold color_red">{{label}}:</span>{{ci_description}}
+					
+					<div class="listpadditem nd_list">
+						<a href="{{link}}">{{_more}} <span class="ti-new-window color_red"></span></a> 
+					</div>
+				</li>
+		<Footer>
+			</ul>
+		</Footer>
+	</Grid>
+</If>
+</Grid>
+
+<Grid gridId="gridDataSrc">
+<Header>
+	<ul class="arrow-list">
+</Header>
+		<li>
+			<If condition="'{{linkToTitle}}' != 'yes'">
+				<span class="bold color_red">{{titleToDisplay}}: </span>{{abstractToDisplay}} 
+			</If>
+			
+			<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+				<div class="listpadditem nd_list">
+					<a title="{{paramsToNode}}" href="{{hrefToDocOther}}">{{linkDetails_CI_label}} <span class="ti-new-window color_red"></span></a>
+				</div>
+			</If>
+		</li>
+<Footer>
+</ul>
+</Footer>
+</Grid>

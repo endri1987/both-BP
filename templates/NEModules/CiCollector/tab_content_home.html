@@ -1,0 +1,68 @@
+
+<Grid gridId="gridDataSrc">
+
+   <IfEmpty>
+   </IfEmpty>
+
+   <Header>
+
+	<div class="well box_gray">
+		<div class="tab-content">
+   </Header>
+   		<If condition="'{{alias}}' == '0'">
+			<div class="tab-pane fade active in" id="Bigtab-{{objId}}">
+				<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html"/>
+			</div>
+		</If>
+   		<If condition="'{{alias}}' != '0'">
+			<div class="tab-pane fade" id="Bigtab-{{objId}}">
+				<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html"/>
+			</div>
+		</If>
+
+   <Separator>
+   </Separator>
+
+   <Footer>
+		</div>
+	</div>
+   </Footer>
+
+</Grid>
+
+<Grid gridId="gridDataSrc">
+
+   <IfEmpty>
+   </IfEmpty>
+
+   <Header>
+   <If condition="'{{slogan_title}}' != ''">
+		<h5>{{slogan_title}}</h5>
+   </If>
+	<ul class="tab-containerBig btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+   </Header>
+   <Var name="hasImg">(('{{dp_image}}' != '') ? 'style="background-image:url({{srcImageToDisplay}});"' : '')</Var>
+
+		<If condition="'{{alias}}' == '0'">
+			<li class="btn-group active" role="group">
+				<a class="tab_classBig tab_class" href="#Bigtab-{{objId}}" data-toggle="tab" {{hasImg}}>
+					<div class="hidden-xs">{{titleToDisplay}}</div>
+				</a>
+			</li>
+		</If>
+		<If condition="'{{alias}}' != '0'">
+			<li class="img_box btn-group" role="group">
+				<a class="tab_class-in tab_class" href="Bigtab-{{objId}}" data-toggle="tab" {{hasImg}}>
+					<div class="hidden-xs">{{titleToDisplay}}</div>
+				</a>
+			</li>
+		</If>
+
+	<Separator>
+   </Separator>
+
+   <Footer>
+	</ul>
+   </Footer>
+
+</Grid>

@@ -1,0 +1,21 @@
+<WebBox ID="PrintEmailModule" Type="Service" MODE="Dynamic">
+
+<If condition="'{{PRINTEMAILMODULE_TEMPLATE}}' > '0'">
+  <Include SRC="{{./}}template{{PRINTEMAILMODULE_TEMPLATE}}.html" />
+</If>
+
+<If condition="'{{PRINTEMAILMODULE_TEMPLATE}}' == '0'">
+	<table border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+		<td>{{link_print}}<img title="{{print_alt_mesg}}" src="{{GRAPHICS_PATH_APP}}ico_print.gif" border="0">{{link_print_c}}</td>
+		<td>&nbsp;</td>
+		<td>{{link_print}}{{print_mesg}}{{link_print_c}}</td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+		<td>{{link_email}}<img title="{{email_alt_mesg}}" src="{{GRAPHICS_PATH_APP}}ico_email.gif" border="0">{{link_email_c}}</td>
+		<td>&nbsp;</td>
+		<td>{{link_email}}{{email_mesg}}{{link_email_c}}</td>
+	  </tr>
+	</table>
+</If>
+
+</WebBox>

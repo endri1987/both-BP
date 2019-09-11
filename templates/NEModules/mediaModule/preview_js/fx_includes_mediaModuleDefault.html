@@ -1,0 +1,39 @@
+<Grid gridId="mediaModuleGridParams">
+	<script type="text/javascript">
+			var path = "{{GRAPHICS_PATH_APP}}MediaPlayer/";
+			var width = "350";
+			var height = "200";
+
+			var flashvars = {
+				file:"{{path_to_xml}}"+returnUTS(),
+				autostart:"{{autostart}}",
+				skin:"{{MEDIAMODULEPATH}}skins/modieus.swf",
+
+				bufferlength:"{{bufferlength}}",
+				volume:"{{volume}}",
+				repeat:"{{repeat}}",
+				quality:"{{quality}}",
+				displayclick:"{{displayclick}}",
+				streching:"{{streching}}",
+				controlbar:"{{controlbar}}",
+				shuffle:"{{shuffle}}",
+				mute:"{{mute}}",
+				logo:"{{logo}}",
+				item :"{{item}}",
+				playlist:"{{position}}"
+			}
+			var params = {
+				allowfullscreen:"true",
+				allowscriptaccess:"always",
+				wmode:"transparent"
+			}
+			var attributes = {
+					id:"ply",
+					name:"ply"
+			}
+	</script>
+
+	<div id="xprev">
+		<a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.
+	</div>
+</Grid>

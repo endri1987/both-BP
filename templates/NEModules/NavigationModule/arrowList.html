@@ -1,0 +1,19 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+
+		<Header>
+			<ul class="arrow-list">
+		</Header>
+                <Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+                <Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{con_id}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+				<li class="{{handle_editing_class}}" {{handle_editing_attr}}>
+					<span class="bold color_red">{{label}}:</span> {{ci_description}}
+
+					<div class="listpadditem nd_list">
+						<a href="{{link}}">{{_more}} <span class="ti-new-window color_red"></span></a>
+					</div>
+				</li>
+		<Footer>
+			</ul>
+		</Footer>
+
+</Grid>

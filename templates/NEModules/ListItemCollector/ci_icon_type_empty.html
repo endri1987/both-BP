@@ -1,0 +1,24 @@
+<If condition="'{{ci_type}}' == 'PR'">
+	<i class="fa fa-globe text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}' == 'EC'">
+	<i class="fa fa-cubes text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}' == 'EL'">
+	<i class="fa fa-cube text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}' == 'TE' || '{{ci_type}}' == 'TC'">
+	<i class="fa fa-calendar-o text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}' == 'NI' || '{{ci_type}}' == 'NC'">
+	<i class="fa fa-newspaper-o text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}' == 'FQ' || '{{ci_type}}' == 'FC'">
+	<i class="fa fa-question-circle text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}' == 'CC' || '{{ci_type}}' == 'CF' || '{{ci_type}}' == 'CT'">
+		<i class="fa fa-comments-o text-info" title="{{_ew_title}}"></i>
+</If>
+<If condition="'{{ci_type}}'!='TC' && '{{ci_type}}'!='TE' && '{{ci_type}}'!='PR' && '{{ci_type}}'!='EC' && '{{ci_type}}'!='EL' && '{{ci_type}}'!='NC' && '{{ci_type}}'!='NI' && '{{ci_type}}'!='FQ' && '{{ci_type}}'!='FC' && '{{ci_type}}'!='CM' && '{{ci_type}}'!='CC' && '{{ci_type}}'!='CF' && '{{ci_type}}'!='CT'">
+<i class="fa fa-file-text-o text-info" title="{{_external_reference}}"></i>
+</If>

@@ -1,0 +1,51 @@
+<Messages>
+<Message ID="_protected_area_message">
+You are trying to access a protected area. Please login to continue.
+</Message>
+<Message ID="_succes_login_message">	 
+Success! Login succesfull
+</Message>
+<Message ID="_error_login_message">	
+Error! Your login failed, please check your credentials!
+</Message> 
+
+<Message ID="_fill_required_data">
+Please fill in the required data!
+</Message>
+<Message ID="_Login">
+Log In
+</Message>
+<Message ID="_login_headline">
+Log In to eccE-learning.
+</Message>
+<Message ID="_forgot_pass">
+Forgot password?
+</Message>
+
+<Message ID="_usernamelogin">	
+Username
+</Message>
+<Message ID="_passwordlogin">
+Password
+</Message>
+<Message ID="_sign_in">
+Sign In
+</Message>
+<Message ID="_fill_username_data">
+Please enter your username
+</Message>
+<Message ID="_fill_password_data">	
+Enter your password
+</Message>
+<Message ID="_new_member">
+New Member Login - Create a new account
+</Message>
+<Message ID="_rgnew_member">
+Register as a new member for free!
+</Message>
+<Message ID="_register">
+Register
+</Message>
+
+
+</Messages>

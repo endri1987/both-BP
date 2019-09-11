@@ -1,0 +1,30 @@
+<div class="listTemplate">
+	<Grid gridId="Grid_StructuredContent">
+		<Header>
+			<Include SRC="{{NEMODULES_PATH}}partials/default_header_property_template.html"/>
+		</Header>
+		<div class="acord">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel-group panel-group-control panel-group-control-right content-group-lg" id="accordion-control-right">
+						<div class="panel panel-white">
+							<div class="panel-heading">
+								<h6 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion-control-right" href="#accordion-control-right-group{{key}}-{{strc_objID}}" aria-expanded="false" class="collapsed">  {{titleToDisplay}}</a>
+								</h6>
+							</div>
+							<div id="accordion-control-right-group{{key}}-{{strc_objID}}" class="panel-collapse collapse" aria-expanded="false">
+								<div class="panel-body">
+									{{description}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<Footer>
+			<Include SRC="{{NEMODULES_PATH}}ListItemCollector/network/partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>

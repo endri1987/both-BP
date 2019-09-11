@@ -1,0 +1,24 @@
+<Grid gridId="Grid_StructuredContent">
+	<Header>
+		<ul class="ch-grid">
+	</Header>
+			<li>
+				<span onclick="javascript:void(0);">
+					<div class="ch-item ch-img-{{key}}">
+						<div class="ch-info">
+							<h3>{{titulli}}</h3>
+							<If condition="'{{key}}' != '6' && '{{titulli}}' != 'Denonco'">
+								<p><a href="{{link_src}}">{{link_lab}}</a></p>
+							</If>
+							<If condition="'{{key}}' == '6' && '{{titulli}}' == 'Denonco'">
+								<p><a href="callto:055800807">{{link_lab}}</a></p>
+							</If>
+						</div>
+						<span class="ch-title">{{titulli}}</span>
+					</div>
+				</span>
+			</li>
+	<Footer>
+		</ul>
+   </Footer>
+</Grid>

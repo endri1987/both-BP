@@ -1,0 +1,127 @@
+<Var name="handle_first">('{{alias}}' == '0' ? 'border-top:0;' : '')</Var>
+<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+<div class="protocol-item {{handle_editing_class}}" {{handle_editing_attr}}>
+	<div class="row">
+
+		<If condition="'{{DC_thumbnail_display}}' == 'yes'">
+		<div class="col-md-1">
+			<Grid gridId="DocCachedInfo_{{asset_id}}">
+					<Var name="pdf_type">('{{ico_type}}' == 'pdf' ? 'img_sprite_pdf' : '')</Var>
+					<Var name="word_type">('{{ico_type}}' == 'word' ? 'img_sprite_doc' : '')</Var>
+					<Var name="png_type">('{{ico_type}}' == 'image' ? 'img_sprite_png' : '')</Var>
+					<Var name="jpg_type">('{{ico_type}}' == 'image' ? 'img_sprite_jpg' : '')</Var>
+					<Var name="mp4_type">('{{ico_type}}' == 'video' ? 'img_sprite_mp4' : '')</Var>
+					<Var name="mp3_type">('{{ico_type}}' == 'mp3' ? 'img_sprite_mp3' : '')</Var>
+					<Var name="excel_type">('{{ico_type}}' == 'excel' ? 'img_sprite_xls' : '')</Var>
+					<div class=" d-flex mr-3 mb-3  {{pdf_type}} {{word_type}} {{png_type}} {{jpg_type}} {{mp4_type}} {{mp3_type}} {{excel_type}}"></div>
+			</Grid>
+		</div>
+		</If>
+		<div class="col col-md-11">
+			<h5 style="font-weight:bold;">
+
+			<If condition="'{{linkToTitle}}' == 'yes'">
+			<If condition="'{{targetUsedFromMakeLink}}' == 'docAttached' && '{{asset_id}}'>'0'">
+			<Grid gridId="DocCachedInfo_{{asset_id}}">
+				<a title="{{titleToAlt}}" data-title="{{titleToAlt}}"  target="_blank"
+					class="line-clamping view-{{ico_type}} item-title" data-key="{{identifier_type}}"
+					data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+					data-url="{{identifier_key}}" href="{{stream_url}}" target="_blank">
+					{{titleToDisplay}}
+				</a>
+			</Grid>
+			</If>
+			<If condition="'{{targetUsedFromMakeLink}}' != 'docAttached' || ('{{targetUsedFromMakeLink}}' == 'docAttached'  && ('{{asset_id}}'=='0' || '{{asset_id}}'==''))">
+			<a title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+				{{titleToDisplay}}
+			</a>
+			</If>
+			</If>
+			<If condition="'{{linkToTitle}}' != 'yes'">
+			{{titleToDisplay}}
+			</If>
+			</h5>
+			<div class="row">
+				<div class="col-md-4">
+					<If condition="'{{DC_date_display}}' == 'yes' || ('{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes')">
+					<div class="text-primary">
+						<If condition="'{{DC_date_display}}' == 'yes'">
+						{{source_creation_date}}
+						</If>
+						<If condition="'{{DC_date_display}}' == 'yes' &&  '{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes'">
+						/
+						</If>
+						<If condition="'{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes'">
+						{{source_creation_time}}
+						</If>
+					</div>
+					</If>
+					<Grid gridId="DocCachedInfo_{{asset_id}}">
+						<If condition="'{{DA_filename_display}}' == 'yes'">
+						<div>
+							<small><strong>{{_DA_filename_label}}: {{file_name_cached}}</strong></small>
+						</div>
+						</If>
+						<If condition="'{{DA_mimetype_display}}' == 'yes'">
+						<div>
+							<strong>{{_DA_mimetype_label}}:</strong> {{mimetype}}
+						</div>
+						</If>
+						<If condition="'{{DA_filesize_display}}' == 'yes'">
+						<div class="mb-0">
+							<strong>{{_DA_filesize_label}}:&nbsp</strong>{{file_size}}
+						</div>
+						</If>
+						<If condition="'{{DA_duration_display}}' == 'yes' && ('{{ico_type}}'=='media' || '{{ico_type}}'=='audio')">
+						<div>
+							<small><strong>{{_DA_duration_label}}: {{file_duration}}</strong></small>
+						</div>
+						</If>
+						<If condition="'{{DA_dimension_display}}' == 'yes' && ('{{ico_type}}'=='image')">
+						<div class="mb-0">
+							<strong>{{_DA_dimension_label}}(px :</strong> {{file_width}} X {{file_height}}
+						</div>
+						</If>
+					</Grid>
+				</div>
+
+				<Grid gridId="DocCachedInfo_{{asset_id}}">
+				<div class="col-md-4">
+					<If condition="'{{DC_sourceauthor_display}}' == 'yes' && '{{dp_author}}'=='yes'">
+					<div><strong>{{_DC_sourceauthor_label}}:</strong> {{AuthorToDisplay}}</div>
+					</If>
+					<If condition="'{{DC_source_display}}' == 'yes' && '{{dp_source}}'=='yes'">
+					<div class="mb-0"><strong>{{_DC_source_label}}:</strong> {{sourceToDisplay}}</div>
+					</If>
+				</div>
+				</Grid>
+
+				<div class="col-md-4 mt-2">
+					<Include SRC="{{./}}partials/ci_doc_icon_type_actions.html"/>
+				</div>
+			</div>
+			<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+			<div class="mt-2">{{abstractToDisplay}}</div>
+			</If>
+			<If condition="'{{DC_content_display}}' == 'yes' && '{{dp_content}}' == 'yes'">
+			<div class="mb-3">
+				<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html" />
+			</div>
+			</If>
+			<If condition="'{{dp_labelUserDefinedDocAttachedLink}}' == 'yes' && '{{asset_id}}'>'0'">
+			<a title="{{titleToAlt}}" data-title="{{titleToAlt}}"  target="_blank"
+				data-key="{{identifier_type}}"
+				data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+				data-url="{{identifier_key}}" href="{{stream_url}}" target="_blank"  role="button" class="btn btn-sm btn-primary">
+				{{labelUserDefinedDocAttachedLink}}
+			</a>
+			</If>
+			<If condition="'{{dp_labelUserDefinedLink}}'=='yes'">
+			<a title="{{titleToAlt}}" class="btn btn-sm btn-primary" role="button" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+				{{labelUserDefinedLink}}
+			</a>
+			</If>
+		</div>
+	</div>
+</div>

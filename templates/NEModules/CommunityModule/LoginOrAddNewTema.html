@@ -1,0 +1,33 @@
+<!--If condition="'{{ses_userid}}'=='2'">
+	<div class="block block-trans">
+		<div class="block_action full_action">
+			<label class="lg">{{_LogInToPostTema}}</label>
+		</div>
+	</div>
+
+</If-->
+
+<If condition="'{{ses_userid}}'!='2'">
+	<div class="block block-trans">
+		<div class="block_action full_action">
+
+				<a class="ew-edit-block-btn btn btn-xs btn-primary" 
+					title="{{_add_new_tema}}" 
+					data-modal-size="modal-md" 
+					href="javascript:void(0);"
+					data-bs-modal="true"
+					data-modal-ajax="true" 
+					data-title="{{_add_new_tema}}"
+					data-url="&apprcss=cmFunctions&act=topic&step=1&selfId={{CMID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId=0#addint"> 
+					<i class="fa fa-comment-o"></i> {{_add_new_tema}}
+				</a>
+				
+		</div>
+	</div>
+</If>
+
+
+
+
+
+					

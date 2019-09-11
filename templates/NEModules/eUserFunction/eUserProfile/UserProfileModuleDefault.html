@@ -1,0 +1,83 @@
+<If condition="'{{uiId}}' != '2'">
+<ul class="user-profile-block">
+	<li class="dropdown">
+		<Grid gridId="getUserInfo">
+			<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<div class="pull-left user-picture">
+					<If condition="'{{doc_id}}'!=''">
+					<img alt="{{FirstName}} {{SecondName}}" class="bordered"  src="{{APP_URL}}show_photo.php?file_id={{doc_id}}" style="left: 0;">
+					</If>
+					<If condition="'{{doc_id}}'==''">
+					<img alt="{{FirstName}} {{SecondName}}" class="bordered" src="{{APP_URL}}graphics/default_user.png" style="left: 0;">
+					</If>
+				</div>
+				<span class="user-name pull-left block"><strong class="user-name-label font-bold"> {{FirstName}} {{SecondName}}</strong><b class="caret old"></b></span>
+			</a>
+
+			<ul class="dropdown-menu animated fadeInRight">
+
+                <If condition="'{{accountInformation_show}}'=='show'">
+				<li>
+                   <a id="register-trigger" title="{{_accountInformation}}" href="javascript:void(0);" data-bs-modal="true" data-modal-size="modal-lg" data-modal-ajax="true" data-url="&apprcss=userProfileCall&cis={{accountInformation_target}}#calleUserFunction">
+                   {{_accountInformation}}</a>
+                </li>
+                </If>
+
+                <If condition="'{{contactDetails_show}}'=='show'">
+				<li>
+                   <a id="register-trigger" title="{{_contactDetails}}" href="javascript:void(0);" data-bs-modal="true" data-modal-size="modal-lg" data-modal-ajax="true" data-url="&apprcss=userProfileCall&cis={{contactDetails_target}}#calleUserFunction">
+                   {{_contactDetails}}</a>
+                </li>
+                 </If>
+                 <If condition="'{{authenticationData_show}}'=='show'">
+				<li>
+                   <a id="register-trigger" title="{{_authenticationData}}" href="javascript:void(0);" data-bs-modal="true" data-modal-size="modal-lg" data-modal-ajax="true" data-url="&apprcss=userProfileCall&cis={{authenticationData_target}}#calleUserFunction">
+                   {{_authenticationData}}</a>
+                </li>
+                </If>
+
+                <If condition="'{{professionalData_show}}'=='show'">
+				<li>
+                    <a id="register-trigger" title="{{_professionalData}}" href="javascript:void(0);" data-bs-modal="true" data-modal-size="modal-lg" data-modal-ajax="true" data-url="&apprcss=userProfileCall&cis={{professionalData_target}}#calleUserFunction">
+                   {{_professionalData}}</a>
+                </li>
+                </If>
+
+                <If condition="'{{publicProfile_show}}'=='show'">
+				<li>
+                  <a id="register-trigger" title="{{_publicProfile}}" href="javascript:void(0);" data-bs-modal="true" data-modal-size="modal-lg" data-modal-ajax="true" data-url="&apprcss=userProfileCall&cis={{publicProfile_target}}#calleUserFunction">
+                   {{_publicProfile}}</a>
+                </li>
+                </If>
+
+				<li class="divider"></li>
+
+                <If condition="'{{changePassword_show}}'=='show'">
+				<li>
+                 <a id="register-trigger" title="{{_changePassword}}" href="javascript:void(0);" data-bs-modal="true" data-modal-size="modal-lg" data-modal-ajax="true" data-url="&apprcss=userProfileCall&cis={{changePassword_target}}#calleUserFunction">
+                   <i class="fa fa-key"></i> {{_changePassword}}</a>
+                </li>
+                 </If>
+
+                <If condition="'{{logOut_show}}'=='show'">
+				<li>
+                   <a id="register-trigger" title="{{_logOut}}" href="javascript:void(0);" class="logout-link">
+                  <i class="fa fa-sign-out"></i> {{_logOut}}</a>
+                </li>
+                 </If>
+			</ul>
+		</Grid>
+	</li>
+</ul>
+<script type="text/javaScript">
+   var _fill_required_data = '{{_fill_required_data}}';
+   var idstempLogout = '{{idstempLogout}}';
+   function onLogoutForm() {
+    var form = document.logoutForm;
+    GoTo("thisPage?event=none.logout(idstempLogout="+idstempLogout+")");
+   }
+</script>
+<script>
+	modules.push('logout');
+ </script>
+</If>

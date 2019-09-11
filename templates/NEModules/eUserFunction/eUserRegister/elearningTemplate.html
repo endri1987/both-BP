@@ -1,0 +1,38 @@
+<div id="RegisterUserModule">
+		<form class="wizard wizard-big register_form validate steps-5" data-wizard="true" role="form"  name="RegisterUser" id="RegisterUser" method="post"
+			data-step-bodyTag="fieldset"
+			data-finish-label="Complete registration"
+			data-cancel-label="Cancel"
+			data-modal-ajax="true"  
+            
+            data-url="&apprcss=eUserRegister&idstemp={{idstempNl}}#registerscreen"	
+            data-bs-modal="true"   
+			data-ajax-notify="{{_update_data}}"
+			data-notify-success="{{_update_item_success}}"  
+            
+			>
+		<h1>{{_account_information}}</h1>
+		<fieldset>
+			<Include SRC="{{./}}steps/step_account_information.html"/>
+		</fieldset>
+		<h1>{{_contact_details}}</h1>
+		<fieldset>
+			<Include SRC="{{./}}steps/step_contact_details.html"/>
+		</fieldset>
+		<h1>{{_biometrical_data}}</h1>
+		<fieldset>
+			<Include SRC="{{./}}steps/step_biometrical_data.html"/>
+		</fieldset>
+		<h1>{{_proffesional_data}}</h1>
+		<fieldset>
+			<Include SRC="{{./}}steps/step_proffesional_data.html"/>
+		</fieldset>
+		<h1>{{_PublicProfile}}</h1>
+		<fieldset>
+			<Include SRC="{{./}}steps/step_public_profile.html"/>
+		</fieldset>
+	</form>
+	<script>
+		modules.push('stepper', 'validate');
+	</script>
+</div>

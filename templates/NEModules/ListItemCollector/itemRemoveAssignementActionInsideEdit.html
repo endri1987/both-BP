@@ -1,0 +1,31 @@
+<If condition="'{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes'">
+	<div class="ew-block-content-child-persistent pull-right" style="width:20px; height:20px; margin-left: 5px;">
+		<div class="ew-edit-ctrls">
+				<If condition="'{{how_to_collect}}' == 'manual'">
+					<a class="btn btn-default btn-xs pull-right text-danger" title="{{_remove_Assignment}}"
+						id-att="{{CID}}"
+						data-url="&apprcss=DeleteDocModuleRel&ciId={{CID}}&cis={{contentId}}"
+
+						data-ajax-notify="{{_rem_loading}}"
+						data-notify-success="{{_rem_success}} "
+						data-refresh="true"
+						data-type="make-ajax-call"
+						data-confirm-action="{{_sure_to_remove}}"
+					>
+						<i class="fa fa-fw fa-trash-o"></i>
+					</a>
+				</If>
+				<If condition="'{{how_to_collect}}' == 'automatic_all'">
+							<a class="btn btn-default btn-xs pull-right text-danger" title="{{_delete_item}}" id-att="{{CID}}" href="javascript:void(0);"
+								data-url="&apprcss=simpleModeActions&cis={{CID}}&itemType=CI&itemId={{CID}}&action=sendCiToRecycle"
+								data-notify-success="Item deleted successfully"
+								data-notify-confirm="Are you sure you want to delete this item?"
+								data-type="make-ajax-call"
+								data-confirm-action="Are you sure you want to delete this item?"
+								>
+								<i class="fa fa-fw fa-trash-o"></i>
+							</a>
+				</If>
+		</div>
+	</div>
+</If>

@@ -1,0 +1,29 @@
+<WebBox ID="HeaderNavigationTemplate" Type="NavTemplate" Case="Always" Editable="False" MODE="Dynamic" Container="MainContainer">
+<table border="0" cellpadding="0" cellspacing="0" height="55">
+	<tr>
+		<td valign="bottom" height="55">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<Repeat rs="HeaderFamily_1">
+						<If condition="{{level_1}}=={{ID1}}">
+							<td nowrap="nowrap">
+								<a class="globalNavSel" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1}},0,0,0)');">{{description_1}}</a>
+							</td>
+						</If>
+						<If condition="{{level_1}}!={{ID1}}">
+							<td nowrap="nowrap">
+								<a class="globalNav" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1}},0,0,0)');">{{description_1}}</a>
+							</td>
+						</If>
+					</Repeat>
+				</tr>
+
+			</table>
+		</td>
+	<td valign="bottom" width="100%" style="border-bottom:3px solid #D10133">
+		<img src="{{GRAPHICS_PATH_APP}}spacer.gif" width="100%" height="3" alt="" border="0"/>
+ </td>
+	</tr>
+</table>
+
+</WebBox>

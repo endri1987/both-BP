@@ -1,0 +1,20 @@
+ {{home_link}}
+ <If condition="{{print_level1}} > 0">
+    <span class="LocationModule_ndares"><br>&nbsp;&nbsp;&nbsp;</span>
+    {{level1_link}}
+
+    <If condition="{{print_level2}} > 0">
+       <span class="LocationModule_ndares"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+       {{level2_link}}
+
+       <If condition="{{print_level3}} > 0">
+          <span class="LocationModule_ndares"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          {{level3_link}}
+
+          <If condition="{{print_level4}} > 0">
+             <span class="LocationModule_ndares"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+             {{level4_link}}
+          </If>
+       </If>
+    </If>
+ </If>

@@ -1,0 +1,10 @@
+<WebBox ID="CiContent" Type="ContentTemplate" Editable="false" Region="Middle" Container="LeftMiddleRightContainer">
+	<Grid gridId="CiPropGrid{{contentId}}">
+	<Grid gridId="TemplateGrid{{contentId}}">
+		<IfEmpty>
+			{{ci_content_to_display}}
+		</IfEmpty>
+		{{templateHtml}}
+	</Grid>
+	</Grid>
+</WebBox>

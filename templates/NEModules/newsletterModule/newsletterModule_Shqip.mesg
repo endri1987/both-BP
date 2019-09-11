@@ -1,0 +1,112 @@
+<Messages>
+
+<Message ID="technical comment">
+########################################### Keto jane komente te cilat nuk do perdoren ne aplikim. Keto jane mesazhe qe perdoren nga Moduli i Pershtypjeve ###
+</Message>
+
+<Message ID="sendmesg" Shpjegim="Ky label perdoret per te emertuar butonin dergo">
+Dergo
+</Message>
+
+<Message ID="thisis" Shpjegim="Ky mesazh afishohet per te treguar qe eshte hapur dritarja e pershtypjeve">
+Ky eshte nje:
+</Message>
+
+<Message ID="koment" Shpjegim="Ky mesazh afishohet ne dritaren e pershtypjeve perkrah fushes te komenteve">
+Koment
+</Message>
+
+<Message ID="mesgfed1" Shpjegim="Ky mesazh afishohet kur fushat e pershtypjeve nuk plotesohen">
+Ju lutem mbushni fushat e kerkuara(*)!
+</Message>
+
+<Message ID="mesgfed2" Shpjegim="Ky mesazh afishohet kur adresa e emailit nuk eshte ne formatin e duhur">
+Ju lutem jepni nje adrese te sakte E-maili!
+</Message>
+	
+<Message ID="feed1" Shpjegim="Ky mesazh afishohet si titull ne dritaren e pershtypjeve">
+Pershtypje
+</Message>
+
+<Message ID="answer" Shpjegim="Ky mesazh afishohet pasi pershtypjet jane derguar">
+Faleminderit per ndihmen tuaj!
+</Message>
+
+<Message ID="answer2" Shpjegim="Ky mesazh afishohet si titull ne dritaren e pershtypjeve">
+Sygjerimet tuaja do te merren nen konsiderate.<br>C'do sygjerim i juaji eshte i mirepritur dhe ju falenderoj per bashkepunimin.
+</Message>
+
+<Message ID="message_suggestions1" Shpjegim="Ky mesazh afishohet si titull i pershtypjeve">
+Na thoni opinionin tuaj 
+</Message>
+
+<Message ID="message_suggestions2" Shpjegim="Ky mesazh afishohet si titull ne dritaren e pershtypjeve">
+We're always looking for ways of making our Website even better, and comments and suggestions from our users are an important part of that process. If your suggestion relates to a particular page on the site, please include the url. Thanks for taking the time to contribute!
+</Message>
+
+<Message ID="message_complaint1" Shpjegim="Ky mesazh afishohet si titull ne dritaren e pershtypjeve">
+Bashkepunoni me ne dhe ne do te bashekepunojme ne ju. 
+</Message>
+
+<Message ID="message_complaint2" Shpjegim="Ky mesazh afishohet pasi pershtypjet jane derguar">
+Your complaint will be passed to the Editor in charge of the appropriate area of our site. Please be as concise as you can. We take your comments seriously, and will deal with them as soon as possible.
+</Message>
+
+<Message ID="message_problem1" Shpjegim="Ky mesazh afishohet kur pershtypjet nuk jane derguar">
+Gabim ne faqe
+</Message>
+
+<Message ID="message_problem2" Shpjegim="Ky mesazh afishohet kur pershtypjet nuk jane derguar">
+If you have difficulties to use our offer, you please send us an elaborate description of the problem and we to help try... 
+</Message>
+
+<Message ID="Complaints_mesg" Shpjegim="Ky mesazh afishohet perkrah fushes se ankesave">
+Ankesa
+</Message>
+
+<Message ID="Suggestions_mesg" Shpjegim="Ky mesazh afishohet perkrah fushes se ankesave">
+Sugjerime
+</Message>
+
+<Message ID="SiteErrors_mesg" Shpjegim="Ky mesazh afishohet kur pershtypjet nuk jane derguar">
+Gabim ne faqe
+</Message>
+
+<Message ID="textemail_mesg" Shpjegim="Ky mesazh afishohet perkrah fushes ne te cilen vendoset adresa e emailit te personit i cili dergon pershtypjet">
+Adresa juaj e E-mailit:
+</Message>
+
+<Message ID="emri_mesg" Shpjegim="Ky mesazh afishohet perkrah fushes ne te cilen vendoset mbiemri i personit i cili dergon pershtypjet">
+Mbiemri
+</Message>
+
+<Message ID="mbiemri_mesg" Shpjegim="Ky mesazh afishohet perkrah fushes ne te cilen vendoset emri i personit i cili dergon pershtypjet">
+Emri
+</Message>
+
+<Message ID="profesioni_mesg"  Shpjegim="Ky mesazh afishohet perkrah fushes ne te cilen vendoset telefoni i personit i cili dergon pershtypjet" >
+Telefon
+</Message>
+
+<Message ID="Thema_mesg"  Shpjegim="Ky mesazh afishohet perkrah fushes ku vendoset subjekti i ankeses">
+Subjekti
+</Message>
+
+<Message ID="koment"  Shpjegim="Ky mesazh afishohet perkrah fushes ne te cilen vendosen ankesat e perdoruesve">
+Koment
+</Message>
+
+<Message ID="Submit"  Shpjegim="Ky label perdoret per te emertuar butonin dergo">
+Dergo
+</Message>
+
+<Message ID="Reset"  Shpjegim="Ky label perdoret per te emertuar butonin pastro">
+Pastro
+</Message>
+
+<Message ID="technical comment">
+########################################### Ketu mbyllen mesazhet e Modulit te Pershtypjeve ###
+</Message>
+
+</Messages>
+

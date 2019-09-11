@@ -1,0 +1,117 @@
+<WebBox ID="navigationModuleContainer" Type="Container" Level="0" Case="Always" Editable="False">
+
+    <style>
+        /* angular-ui-tree css file */
+.angular-ui-tree-empty{border:1px dashed #bbb;min-height:100px;background-color:#e5e5e5;background-image:-webkit-linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%,#fff),-webkit-linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%,#fff);background-image:-moz-linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%,#fff),-moz-linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%,#fff);background-image:linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%,#fff),linear-gradient(45deg,#fff 25%,transparent 25%,transparent 75%,#fff 75%,#fff);background-size:60px 60px;background-position:0 0,30px 30px}.angular-ui-tree-nodes{display:block;position:relative;margin:0;padding:0;list-style:none}.angular-ui-tree-nodes .angular-ui-tree-nodes{padding-left:20px}.angular-ui-tree-node,.angular-ui-tree-placeholder{display:block;position:relative;margin:0;padding:0;min-height:20px;line-height:20px}.angular-ui-tree-hidden{display:none}.angular-ui-tree-placeholder{margin:5px 0;padding:0;min-height:30px}.angular-ui-tree-handle{cursor:move;text-decoration:none;font-weight:700;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;min-height:20px;line-height:20px}.angular-ui-tree-drag{position:absolute;pointer-events:none;z-index:999;opacity:.8}
+        
+.btn {
+    margin-right: 8px;
+}
+
+.angular-ui-tree-handle {
+    background: #f8faff;
+    border: 1px solid #dae2ea;
+    color: #7c9eb2;
+    padding: 10px 10px;
+}
+
+.angular-ui-tree-handle:hover {
+    color: #438eb9;
+    background: #f4f6f7;
+    border-color: #dce2e8;
+}
+
+.angular-ui-tree-placeholder {
+    background: #f0f9ff;
+    border: 2px dashed #bed2db;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.group-title {
+    background-color: #687074 !important;
+    color: #FFF !important;
+}
+
+.cursor-normal .angular-ui-tree-handle{
+    cursor:default;
+}
+    </style>
+    
+<script src="{{APP_URL}}include_js/libs.min.js"></script>
+<script src="{{APP_URL}}include_js/bootstrap.min.js"></script>
+<script src="{{APP_URL}}include_js/pnotify.custom.min.js"></script>
+<script src="{{APP_URL}}include_js/angular.1.4.1.min.js"></script>
+<script src="{{APP_URL}}include_js/angular-ui-router.min.js"></script>
+<script src="{{APP_URL}}include_js/angular-ui-tree.js"></script>
+<script src="{{APP_URL}}include_js/navigation_js/services.js"></script>
+<script src="{{APP_URL}}include_js/navigation_js/controllers.js"></script>
+<script src="{{APP_URL}}include_js/navigation_js/directives.js"></script>
+<script src="{{APP_URL}}include_js/navigation_js/routes.js"></script>
+
+
+<div id="wrapper"  ng-app="navigationModule">
+    
+    NAVIGATION IFRAME
+   
+    <div class="row">
+
+        <!-- COLUMN ONE NAMED VIEW -->
+        <div class="col-sm-4" ng-controller="treeviewCtrl">
+            
+            <div ng-click="collapseAll()"> Collapse All</div>
+            
+            <div ng-click="expandAll()"> Expand All</div>
+            
+              <a class="btn btn-danger btn-xs"  ng-click="removee(this)">
+                  <span class="glyphicon glyphicon-remove"></span>
+              </a>
+            
+              <a class="btn btn-primary btn-xs" ng-click="newSubItem(this)" style="margin-right: 8px;">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </a>
+            
+              <a class="btn btn-xs" ng-class="{'btn-primary': options.dragEnabled === true, 'btn-default': options.dragEnabled !== true}" ng-click="options.dragEnabled = !options.dragEnabled">
+                  <span class="glyphicon glyphicon-move"></span>
+              </a>
+                  
+              <div ui-tree="options"  ng-class="{'cursor-normal': options.dragEnabled !== true}" data-drag-enabled="options.dragEnabled">
+                <ol ui-tree-nodes ng-model="list" >
+                  <li ng-repeat="item in list" ui-tree-node ng-include="'items_renderer.html'"></li>
+                </ol>
+              </div>
+                <!-- Nested list template -->
+                <script type="text/ng-template" id="items_renderer.html">
+                  <div ui-tree-handle>
+                    <a class="btn btn-success btn-xs" data-nodrag ng-click="toggle(this)"><span class="glyphicon" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}"></span></a>
+                    [[item.title]]
+                 </div>
+                  <ol id="tree-root" ui-tree-nodes="options" ng-click="setActiveNode(item, this)" ng-model="item.items" ng-class="{hidden: collapsed}">
+                    <li ng-repeat="item in item.items" ui-tree-node ng-click="setActiveNode(item, this)" ng-include="'items_renderer.html'">
+                    </li>
+                  </ol>
+                </script>
+              
+        </div>
+
+        <!-- COLUMN TWO NAMED VIEW -->
+        <div class="col-sm-8">
+            <div ui-view> 
+                
+            </div>
+        </div>
+
+    </div>  
+   
+    
+    <div>
+        <script type="text/ng-template" id="viewTemplate.html">
+            View Template
+        </script>
+    </div>
+    
+</div>
+
+</WebBox>

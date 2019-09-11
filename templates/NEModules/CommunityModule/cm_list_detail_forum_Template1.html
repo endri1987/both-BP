@@ -1,0 +1,217 @@
+<div id="addint">
+	
+				<!--div class="ibox-content m-b-sm border-bottom">
+					<div class="p-xs">
+						<div class="pull-left m-r-md">
+							<i class="fa fa-cloud text-navy mid-icon"></i>
+						</div>
+						<h2>{{CMtitle}}</h2>
+						<span class="text-muted">{{abstractToDisplay}}</span>
+					</div>
+                </div-->
+				
+				
+				<div class="ibox no-margin">
+					<div class="ibox-content no-border ew-block-content" data-ew-tag="tt" data-ew-tool="1" data-ew-id="{{idci}}">
+						<div class="ew-block-content" data-ew-tag="create" data-ew-tool="1001" data-ew-id="{{idci}}">&nbsp;</div>
+						<div class="page-header margin-top-5 margin-bottom-0">
+							<h1>
+								{{CMtitle}}						
+								<small>
+									{{abstractToDisplay}}
+								</small>
+							</h1>
+						</div>
+					</div>
+				</div> 
+				 
+				<div class="ibox-content forum-container no-border">
+	
+					<div class="forum-title">
+						<If condition="'{{show_total_post}}'=='yes'">
+							<div class="pull-right forum-desc">
+								<small>{{total_post_label_lb}}: {{topic_total_postNr}}</small>
+							</div>
+						</If>
+						<h3>{{topics_label_lb}}</h3>
+					</div>
+					
+					<Grid gridId="gridDataSrc">
+						<IfEmpty>
+							<p class="txt-color-orange">
+								<i class="fa fa-warning"></i>{{_there_are_no_temas}}
+							</p>
+						</IfEmpty>
+						
+						<Header>
+						
+							<form data-imodoptions="#ModerationSelect option" data-controls="#InlineModControls" data-cookiename="threads" class="DiscussionList InlineModForm" method="post" action="inline-mod/thread/switch">
+						</Header>
+						
+						<Var name="col_size_8">('{{show_discussions}}' == 'no' && '{{show_views}}' == 'yes' && '{{show_last_message}}' == 'yes' ? ' col-md-8' : '')</Var>	
+						<Var name="col_size_11">('{{show_discussions}}' == 'no' && '{{show_views}}' == 'yes' && '{{show_last_message}}' == 'no' ? ' col-md-11' : '')</Var>						
+						<Var name="col_size_9s">('{{show_discussions}}' == 'no' && '{{show_views}}' == 'no' && '{{show_last_message}}' == 'yes' ? ' col-md-9' : '')</Var>
+						<Var name="col_size_12">('{{show_discussions}}' == 'no' && '{{show_views}}' == 'no' && '{{show_last_message}}' == 'no' ? ' col-md-12' : '')</Var>
+						
+						<Var name="col_size_10">('{{show_discussions}}' == 'yes' && '{{show_views}}' == 'no' && '{{show_last_message}}' == 'no' ? ' col-md-10' : '')</Var>
+						<Var name="col_size_7">('{{show_discussions}}' == 'yes' && '{{show_views}}' == 'no' && '{{show_last_message}}' == 'yes' ? ' col-md-7' : '')</Var>
+						<Var name="col_size_9">('{{show_discussions}}' == 'yes' && '{{show_views}}' == 'yes' && '{{show_last_message}}' == 'no' ? ' col-md-9' : '')</Var>	
+						<Var name="col_size_6">('{{show_discussions}}' == 'yes' && '{{show_views}}' == 'yes' && '{{show_last_message}}' == 'yes' ? ' col-md-6' : '')</Var>
+						
+						
+						
+								<div class="forum-item">
+										<div class="row">
+											
+											<div class="{{col_size_7}}{{col_size_10}}{{col_size_9}}{{col_size_9s}}{{col_size_12}}{{col_size_11}}{{col_size_8}}{{col_size_6}}">	
+												<div class="forum-icon">
+													<i class="fa fa-comments-o"></i>
+												</div>
+												<a data-previewurl="{{hrefToDoc}}" class="forum-item-title" title="" href="{{hrefToDoc}}"><!--{{titleToDisplay}}-->{{nodeDocLectureTitle}}	</a>
+												<small>
+													<a href="#" class="username" title="Thread starter" started_by="{{web_user_id}}">{{web_nick_name}}</a>
+														
+													<If condition="'{{show_date_creation}}'=='yes'">
+														<Grid gridId="gridDocumentFullDate_{{cm_id}}">
+															<i class="fa fa-clock-o"></i>
+															
+															<If condition="'{{dateIn}}'=='today'">
+																{{_today}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+															</If>
+															<If condition="'{{dateIn}}'=='yestarday'">
+																{{_yestarday}}  {{_at}} {{hour12}}:{{min}} {{pm_am}}
+															</If>
+															<If condition="'{{dateIn}}'=='sameWeek'">
+																{{day_label}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+															</If>
+															<If condition="'{{dateIn}}'=='sameMonth'">
+																{{monthLabel}}  {{date}}, {{year}}
+															</If>
+															<If condition="'{{dateIn}}'=='sameYear'">
+																{{monthLabel}}  {{date}}, {{year}}
+															</If>
+															<If condition="'{{dateIn}}'=='previewsYear'">
+																{{monthLabel}}  {{date}}, {{year}}
+															</If>
+														</Grid>
+													</If>			
+												</small>
+												
+												<div class="forum-sub-title">{{ci_content_to_display}}</div>
+											</div>
+											
+											<If condition="'{{show_discussions}}'=='yes'">
+												<div class="col-md-2 forum-info">
+													<div>
+														<small>{{discussions_label_lb}}</small>
+													</div>
+													<span class="views-number">
+														<If condition="'{{existpost}}'=='yes'">
+															{{post_nr}}
+														</If>
+														<If condition="'{{existpost}}'!='yes'">
+															0
+														</If>
+													</span>												
+												</div>
+											</If>
+	
+											<If condition="'{{show_views}}'=='yes'">
+												<div class="col-md-1 forum-info">
+													<div>
+														<small>{{views_label_lb}}</small>
+													</div>
+													<span class="views-number">
+
+														<If condition="'{{viewed_tot_post}}'>'0'">
+															{{viewed_tot_post}}
+														</If>
+														<If condition="'{{viewed_tot_post}}'=='viewed_tot_post' || '{{viewed_tot_post}}'=='0'">
+															0
+														</If>
+													</span>
+													
+												</div>
+											</If>
+											<If condition="'{{show_last_message}}'=='yes'">											
+												<div class="col-md-3 forum-info">
+													<div>
+														<small>{{last_message_label_lb}}</small>
+													</div>
+														<If condition="'{{existForumDetails}}'=='yes'">
+															<small>
+																<Grid gridId="MemberData_{{authorID}}">
+																	<a href="javascript:void(0);">
+																		<strong> {{_by}} 	
+																			<If condition="'{{usr_short}}'!=''">
+																				{{usr_short}}
+																			</If>
+																			<If condition="'{{usr_short}}'==''">
+																				{{FirstName}} {{SecondName}}
+																			</If>
+																		</strong> <br>
+																	
+																	</a>							
+																</Grid>
+															</small>
+															<Grid gridId="gridPostDate_{{LastPost_id}}">
+																
+																<small title="{{monthLabel}} {{date}}, {{year}} {{_at}} {{hour12}}:{{min}} {{pm_am}}"><i>
+																	<i class="fa fa-clock-o"></i>
+																	<If condition="'{{dateIn}}'=='today'">
+																		{{_today}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+																	</If>
+																	<If condition="'{{dateIn}}'=='yestarday'">
+																		{{_yestarday}}  {{_at}} {{hour12}}:{{min}} {{pm_am}}
+																	</If>
+
+																	<If condition="'{{dateIn}}'=='sameWeek'">
+																		{{day_label}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+																	</If>
+
+																	<If condition="'{{dateIn}}'=='sameMonth'">
+																		{{monthLabel}}  {{date}}, {{year}}
+																	</If>
+
+																	<If condition="'{{dateIn}}'=='sameYear'">
+																		{{monthLabel}}  {{date}}, {{year}}
+																	</If>
+																	<If condition="'{{dateIn}}'=='previewsYear'">
+																		{{monthLabel}}  {{date}}, {{year}}
+																	</If>
+																</i></small>
+															</Grid>
+														</If>	
+												</div>
+											</If>
+										</div>
+								 </div>
+						
+						<Footer>
+							</form>
+							<div class="hr-line-dashed"></div>
+		
+							<If condition="'{{show_navigation}}'=='yes' && '{{TotPage}}'>'1'">							
+								<div class="pageNavLinkGroup">
+									{{nav_template_cm}}
+								</div>				
+							</If>
+						</Footer>
+					</Grid>
+
+				</div>	
+	
+	</div>
+	
+
+	<If condition="'{{showBtn}}'=='y'">
+		<!--Include SRC="{{NEMODULES_PATH}}CommunityModule/LoginOrAddNewTema.html"/-->
+	</If>
+
+
+
+
+
+
+
+

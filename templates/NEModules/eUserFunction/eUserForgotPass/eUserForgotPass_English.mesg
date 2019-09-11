@@ -1,0 +1,23 @@
+<Messages HELP="Messages for Forgot Password">
+<Message ID="_emailAdresse" IDN="12">
+E-mail address:
+</Message>
+<Message ID="_valid_email_address" IDJS="Y">
+Please provide a valid email address! 
+</Message>
+<Message ID="_empty_email_address" IDJS="Y">
+Please enter an email address! 
+</Message>
+<Message ID="_request_passFor" IDN="12">
+Send request
+</Message>
+<Message ID="_mail_not_mach" IDN="12">
+E-mail was not found in our database !
+</Message>
+<Message ID="_update_item_success">
+The item was succesfully updated
+</Message>
+<Message ID="_back_to_login">
+Back to login
+</Message>
+</Messages>

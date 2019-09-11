@@ -1,0 +1,58 @@
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+		<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+	</IfEmpty>
+
+	<Header>
+	asdasdasd
+	<If condition="'{{HeaderNav}}'=='yes'">
+		<Include SRC="{{TPL_PATH}}NEModules/CiCollector/navigation_default.html"/>
+		<hr>
+	</If>
+	<div class="media">
+   </Header>
+   <Var name="target_val">('{{hrefToDocTargetOther}}' == '_blank' ? '_blank' : '_self')</Var>
+	<div class="media-body">
+			<If condition="'{{linkToTitle}}' == 'yes'">
+				<h4 class="media-heading color_black"><a href="{{hrefToDocOther}}" title="{{titleToAlt}}" target="{{target_val}}">{{titleToDisplay}}</a></h4>
+			</If>
+			<If condition="'{{dp_abst}}' == 'yes'">
+				<p>{{abstractToDisplay}} 
+					<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+						<a href="{{hrefToDocOther}}">
+							<span class="ti-new-window color_red bold"></span>
+						</a>
+					</If>
+				</p>
+			</If>
+			<If condition="'{{dp_source}}' == 'yes' || '{{dp_author}}' == 'yes' || '{{dp_date}}' == 'yes'">
+				<div class="listpadditem">
+					<If condition="'{{dp_date}}' == 'yes'">
+						<div class="item_date">{{	}}</div>
+					</If>
+
+					<If condition="'{{dp_source}}' == 'yes'">
+						<span class="ds_block"><span class="lb_list">{{_source}}: </span>{{sourceToDisplay}}</span>
+
+					</If>
+					<If condition="'{{dp_author}}' == 'yes'">
+						<p class="bold color_redl">{{AuthorToDisplay}}</p>
+					</If>
+				</div>
+			</If>
+
+	</div>
+   <Separator>
+   <hr>
+   </Separator>
+
+   <Footer>
+	</div>
+	<If condition="'{{FooterNav}}'=='yes'">
+	<hr>
+		<Include SRC="{{TPL_PATH}}NEModules/CiCollector/navigation_default.html"/>
+	</If>
+   </Footer>
+</Grid>
+</If>
+

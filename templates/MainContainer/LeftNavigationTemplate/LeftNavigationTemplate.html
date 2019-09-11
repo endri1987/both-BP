@@ -1,0 +1,124 @@
+<WebBox ID="LeftNavigationTemplate" Type="NavTemplate" Case="Always" Editable="False" Container="LeftMiddleRightContainer" MODE="Dynamic">
+
+
+
+
+		SELECT 	  DISTINCT n.description{{lang}}{{thisMode}} as description_1,  n.isExpanded as isExpanded_l1,
+		       	  n.id_firstNivel as ID1,n.id_zeroNivel as ID1_0, n.state{{lang}} as state
+
+  		 FROM				profil_rights	AS p
+            		JOIN	nivel_4			AS n	ON (    p.id_zeroNivel   = n.id_zeroNivel
+														AND p.id_firstNivel  = n.id_firstNivel
+														AND p.id_secondNivel = n.id_secondNivel
+														AND p.id_thirdNivel  = n.id_thirdNivel
+														AND p.id_fourthNivel = n.id_fourthNivel
+														)
+            		JOIN	content			AS c	ON (    n.id_zeroNivel  = c.id_zeroNivel
+														AND n.id_firstNivel  = c.id_firstNivel
+														AND n.id_secondNivel = c.id_secondNivel
+														AND n.id_thirdNivel  = c.id_thirdNivel
+														AND n.id_fourthNivel = c.id_fourthNivel
+														AND orderContent = 0
+														)
+
+		WHERE p.profil_id in ({{tip}})
+		  AND p.id_zeroNivel = {{level_0}}
+		  AND p.id_firstNivel > 0
+		  AND p.id_secondNivel = 0
+		  AND p.id_thirdNivel  = 0
+		  AND p.id_fourthNivel = 0
+		  {{stateCondition}}
+	 ORDER BY  n.orderMenu
+
+
+
+
+		<Repeat rs="LeftFamily_1">
+
+
+
+			<Header>
+			<div class="LeftNavigationTemplate">
+			<ul id="nivel_1">
+			</Header>
+
+
+
+			<If condition="{{level_1}}=={{ID1}}">
+				<li class="active">
+					<a class="current" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1}},0,0,0)');">{{description_1}}</a>
+
+
+						<Repeat rs="LeftFamily_2">
+
+							<Header>
+							<ul id="nivel_2">
+							</Header>
+
+								<If condition="{{level_2}}=={{ID2}}">
+									<li class="active"><a class="current" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{level_1}},{{ID2}},0,0)');">
+										{{description_2}}
+									</a>
+										<Repeat rs="LeftFamily_3">
+											<ul id="nivel_3">
+												<If condition="{{level_3}}=={{ID3}}">
+													<li class="active"><a id="subcurrent" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{level_1}},{{ID2}},{{ID3}},0)');">{{description_3}}</a>
+														<Repeat rs="LeftFamily_4">
+															<ul id="nivel_4">
+																<If condition="{{level_4}}=={{ID4}}">
+																	<li id="active"><a id="current" href="javascript:GoTo('thisPage?event=MainContent.ch_state(k={{level_0}},{{level_1}},{{level_2}},{{ID3}},{{ID4}})');">{{description_4}}</a></li>
+																</If>
+																<If condition="{{level_4}}!={{ID4}}">
+																	<li><a href="javascript:GoTo('thisPage?event=MainContent.ch_state(k={{level_0}},{{level_1}},{{level_2}},{{ID3}},{{ID4}})');">{{description_4}}</a></li>
+																</If>
+															</ul>
+														</Repeat>
+													</li>
+												</If>
+												<If condition="{{level_3}}!={{ID3}}">
+													<li class="noactive"><a href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{level_1}},{{ID2}},{{ID3}},0)');">{{description_3}}</a></li>
+												</If>
+											</ul>
+									</Repeat>
+									</li>
+								</If>
+								<If condition="{{level_2}}!={{ID2}}">
+									<li class="noactive">
+										<a href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{level_1}},{{ID2}},0,0)');">
+											{{description_2}}
+										</a>
+									</li>
+								</If>
+								<Separator>
+									<div><img id="main_nav_separator" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="100%" height="1" border="0"/></div>
+								</Separator>
+
+
+							<Footer>
+							</ul>
+							</Footer>
+
+						</Repeat>
+
+					</li>
+
+			</If>
+
+
+			<If condition="{{level_1}}!={{ID1}}">
+					<li class="noactive">
+						<a href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1}},0,0,0)');">{{description_1}} ---</a>
+					</li>
+			</If>
+
+	<Footer>
+	</ul>
+</div>
+	</Footer>
+
+		</Repeat>
+
+
+
+
+</WebBox>

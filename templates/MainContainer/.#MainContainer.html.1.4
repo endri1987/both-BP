@@ -1,0 +1,60 @@
+<WebBox ID="MainContainer" Container="MainContainer" MODE="Dynamic">
+<Include SRC="{{./}}ModalHomeArea/ModalHomeArea.html"/>
+<div class="container">
+    <div class="top_area row visible-lg-block">
+			<div class="col-lg-6">
+				<Include SRC="{{./}}LanguageArea/LanguageArea.html"/>
+			</div>
+			<div class="col-lg-6 txt_right">
+				<Include SRC="{{./}}TopNavigationArea/TopNavigationArea.html"/>
+			</div>
+    </div>
+	<div class="navigation_area row bg_redl">
+		<div id="logo-area-lg" class="logo-area-lg hidden-xs">
+			<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+		</div>
+		<div id="logo-area-xs" class="logo-area-xs">
+			<Include SRC="{{./}}LogoAreaMobile/LogoAreaMobile.html"/>
+		</div>
+		<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+		<div class="dropdown dropdown_top_area hidden-lg">
+            <a data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="fa fa-ellipsis-v color_white"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <Include SRC="{{./}}TopNavigationAreaMobile/TopNavigationAreaMobile.html"/>
+            </ul>
+        </div>
+	</div>
+	<div class="location_area row bg_grayl">
+		<Include SRC="{{./}}LocationPathArea/LocationPathArea.html"/>
+	</div>
+    <div class="row content marg_v_double alpha_v">
+		<div class="col-sm-8 col_left" style="min-height: 500px;">
+			<Include SRC="{{./}}SearchArea/SearchArea.html"/>
+
+			<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+			<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/MainContent.html"/>
+			<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+			<!--Include SRC="{{./}}Sample.html"/-->
+		</div>
+		<div class="col-sm-4 col_right" style="min-height: 2px;">
+			<Include SRC="{{./}}RightTopArea/RightTopArea.html"/>
+			<Include SRC="{{./}}RightMiddleArea/RightMiddleArea.html"/>
+			<Include SRC="{{./}}RightBottomArea/RightBottomArea.html"/>
+		</div>
+    </div>
+    <div class="footer-top">
+        <Include SRC="{{./}}BottomRowArea/BottomRowArea.html"/>
+    </div>
+    <div class="row bg_reds footer-bottom color_white">
+		<div class="col-sm-6 pull_left">
+			<Include SRC="{{./}}FooterNavigationArea/FooterNavigationArea.html"/>
+		</div>
+		<div class="col-sm-6 pull_right text-right txt_center-sm">
+			<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+		</div>
+	</div>
+</div>
+<Include SRC="{{./}}footer_includes.html"/>
+</WebBox>

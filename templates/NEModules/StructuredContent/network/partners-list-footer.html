@@ -1,0 +1,14 @@
+<Grid gridId="Grid_StructuredContent">
+	<IfEmpty>
+	</IfEmpty>
+	<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+		<If condition="'{{exist_link}}' == 'yes' && '{{linkToimage}}' == 'yes' ">
+		<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}"  title="{{titleToAlt}}">
+		<img src="{{link_url}}" alt="{{titleToAlt}}" style="margin-right: 10px;" />
+		</a>
+		</If>
+		<If condition="'{{exist_link}}' != 'yes' || '{{linkToimage}}' != 'yes'">
+			<img src="{{link_url}}" alt="{{titleToAlt}}" style="margin-right: 10px;" />
+		</If>
+	</Grid>
+</Grid>

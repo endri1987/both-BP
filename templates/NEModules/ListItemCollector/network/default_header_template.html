@@ -1,0 +1,27 @@
+<If condition="'{{slogan_icon_show}}' == 'yes' || '{{slogan_title}}' != '' || '{{help_show}}' == 'yes'">
+	<h2 class="head-line">
+		<If condition="'{{slogan_icon_show}}' == 'yes'">
+			<i class="{{slogan_icon}}"></i>
+		</If>
+		<If condition="'{{slogan_title}}' != ''">
+			{{slogan_title}}
+		</If>
+		<If condition="'{{help_show}}' == 'yes'">
+		<small>
+			<div class="float-right">
+				<a href="javascript:void(0);" class="button-icon jarviswidget-edit-btn has-popover" title="{{help_title}}"
+				data-placement="bottom" data-viewport="body" data-container="body">
+				<i class="fa fa-question-circle "></i>
+				<div class="popover-content-holder">
+					{{help_description}}
+				</div>
+				</a>
+			</div>  
+		</small>		
+		</If>
+	</h2>
+</If>
+
+<If condition="'{{slogan_description_show}}' == 'yes'">
+	<div class="mb-3">{{slogan_description}}</div>
+</If>

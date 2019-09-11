@@ -1,0 +1,38 @@
+<WebBox ID="mainLogin" Type="Container" Level="0" Case="Always" Editable="False">
+<div id="container">
+	<header id="kopf" style="height:auto;">
+        <section id="kopfOben">
+            <div class="container">
+                <div class="row">
+                    <article id="kopfLogo" class="col-xs-8">
+						<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+					</article>
+                </div>
+			</div>
+		</section>
+	</header>
+	<section id="content">
+		<div class="container">
+			<Include SRC="{{./}}MainContent/MainContent.html"/>
+		</div>
+
+	</section>
+	<footer id="fuss" style="height: auto;bottom: 0;position: absolute;">
+		<section id="fussOben" class="container">
+		</section>
+		<section id="fussUnten">
+			<div class="container">
+				<div class="row">
+					<article id="fussCopyright" class="col-xs-10">
+						<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+					</article>
+					<article id="fussMeta" class="col-xs-6">
+					</article>
+
+				</div>
+			</div>
+		</section>
+	</footer>
+</div>
+<Include SRC="{{./}}footer_includes.html"/>
+</WebBox>

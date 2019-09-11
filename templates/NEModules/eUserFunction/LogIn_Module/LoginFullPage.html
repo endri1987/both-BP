@@ -1,0 +1,53 @@
+<If condition="('{{ses_userid}}'==2 || '{{loginProccess}}'=='ok') || ('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes')">
+
+<script language="javascript1.2" src="{{./}}LogIn_Module.js"></script>
+	<script>
+		var _fill_required_data = '{{_fill_required_data}}';
+		var idstempLogin = '{{idstempLogin}}';
+	</script>
+
+	<div id="c12" class="csc-default frame_0">
+		<div class="container">
+			<div class="p-3 mt-4">
+				<form name="loginFrm" class="loginFrm m-t client-form validate" id="loginFrm" onSubmit="return onLoginFrm();" action="javascript:void(0)">
+					<div class="panel panel-body login-form p-3" style="width: 320px;border:1px solid #141414;margin:0 auto;">
+						<div class="text-center">
+							<h5 class="content-group">{{login_headline}} <br /><small class="display-block">{{protected_area_message}}</small></h5>
+						</div>
+
+						<div class="form-group has-feedback has-feedback-left clearfix">
+
+							<input type="text" class="form-control required" placeholder="{{usrname_label}}" name="usrname" id="username" data-msg-required="{{fill_username_label}}" autofocus />
+							<div class="form-control-feedback">
+								<i class="icon-user text-muted"></i>
+							</div>
+						</div>
+
+						<div class="form-group has-feedback has-feedback-left clearfix">
+						<input type="password" class="form-control required" name="usrpassd" placeholder="{{password_label}}" id="password-password" data-msg-required="{{fill_password_label}}"/>
+							<div class="form-control-feedback">
+								<i class="icon-lock2 text-muted"></i>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">{{sign_in_label}}</button>
+							<If condition="'{{register_target_isset}}'=='yes'">
+						<a class="btn btn-default block full-width"
+						 data-bs-modal="true"
+						 data-modal-size="modal-lg"
+						 data-modal-ajax="true"
+						 data-url="&amp;apprcss=registerModule&amp;cis={{register_target_ci}}#RegisterUserModule"
+						 data-title="{{register_target_label}}"
+						>{{register_target_label}}</a>
+						</If>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		modules.push('validate');
+	</script>
+</If>

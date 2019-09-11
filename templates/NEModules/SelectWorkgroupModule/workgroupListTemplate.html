@@ -1,0 +1,52 @@
+<Grid gridId="Grid_Workgroup">
+    <Header>
+	<ul class="nav navbar-nav">
+    </Header>
+    	<If condition="'{{ses_userid}}' == '2'">
+	    	<If condition="'{{ID0}}' == '{{level_0}}'">
+			<li class="{{style_class}} nav_n0">
+				<a class="{{style_class}} nav_n0" href="{{LinkToZone}}">
+				<If condition="'{{ID0}}' == '{{ZONE_PUBLIC}}'">
+				<i class="fa fa-user"></i>&nbsp;
+				</If>
+				{{description}}
+				</a>
+			</li>
+			</If>
+    	</If>
+
+    	<If condition="('{{ses_userid}}' != '2' && '{{ID0}}' != '{{ZONE_ECCELEARNING}}')">
+
+			<If condition="('{{ID0}}' != '{{ZONE_AUTHORING}}') || ('{{ID0}}' == '{{ZONE_AUTHORING}}' && '{{typeOfUser}}'=='BO')">
+
+				<li class="{{style_class}} nav_n0">
+					<a class="{{style_class}} nav_n0" href="{{LinkToZone}}">
+					<If condition="'{{ID0}}' == '{{ZONE_ECCELEARNING}}'">
+					<i class="fa fa-users"></i>
+					</If>
+					<If condition="'{{ID0}}' == '{{ZONE_MYCME}}'">
+					<i class="fa fa-user"></i>
+					</If>
+					<If condition="'{{ID0}}' == '{{ZONE_AUTHORING}}'">
+					<i class="fa fa-edit"></i>
+					</If>
+					<If condition="'{{ID0}}' == '{{ZONE_PUBLIC}}'">
+					<i class="fa fa-users"></i>
+					</If>
+					&nbsp;
+					<If condition="'{{ID0}}' == '{{ZONE_PUBLIC}}'">
+					eccELearning Zone
+					</If>
+
+					<If condition="'{{ID0}}' != '{{ZONE_PUBLIC}}'">
+					{{description}}
+					</If>
+					<span class="caret"></span>
+					</a>
+				</li>
+			</If>
+		</If>
+   <Footer>
+	</ul>
+   </Footer>
+</Grid>

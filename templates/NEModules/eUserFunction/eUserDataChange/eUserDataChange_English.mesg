@@ -1,0 +1,162 @@
+<Messages HELP="eUserDataChange">
+<Message ID="_save">
+Save
+</Message>
+<Message ID="_Reset">
+Clear
+</Message>
+<Message ID="_Registration_Form">
+Register to get the latest newsletter on your email
+</Message>
+<Message ID="_first_name_mesg">
+First Name
+</Message>
+<Message ID="_last_name_mesg">
+Last Name
+</Message>
+<Message ID="_username_mesg">
+Username
+</Message>
+<Message ID="_password_mesg">
+Password
+</Message>
+<Message ID="_password_confirm_mesg">
+Confirm password
+</Message>
+<Message ID="_email_mesg">
+Email
+</Message> 
+<Message ID="_confirm_email_mesg">
+Confirm Email
+</Message> 
+<Message ID="username_regis_sr_mesg">
+Please enter your Username
+</Message>
+<Message ID="password_regis_sr_mesg">
+Please enter your password 
+</Message>
+<Message ID="password_regis_confirm_sr_mesg">
+Please enter the same value again!
+</Message>
+<Message ID="email_regis_sr_mesg">
+Please enter your email address
+</Message>
+<Message ID="format_email_regis_sr_mesg">
+Please enter a valid email address!
+</Message>
+<Message ID="email_regisConf_sr_mesg">
+Please confirm your email address
+</Message>
+<Message ID="equal_email_regisConf_sr_mesg">
+Please enter the same value again!
+</Message>
+<Message ID="first_name_regis_sr_mesg">
+Please enter your First Name
+</Message>
+<Message ID="_city">
+City
+</Message>
+<Message ID="_accept_terms_1">
+I accept
+</Message>
+<Message ID="_accept_terms_2">
+ terms and conditions *
+</Message>
+<Message ID="_country">
+Country
+</Message>
+<Message ID="_change_data">
+Edit my Information
+</Message>
+<Message ID="_country">
+Country
+</Message>
+<Message ID="_street">
+Street
+</Message>
+<Message ID="_usr_postcode">
+ZIP
+</Message>
+<Message ID="_tel_mesg">
+Phone number
+</Message>
+<Message ID="_birthdate_mesg">
+Date of birth
+</Message>
+<Message ID="_academic_mesg">
+Academic title
+</Message>
+<Message ID="_hospital_name_mesg">
+Hospital Name & address 
+</Message>
+<Message ID="_hospital_address_mesg">
+Hospital Address  
+</Message>
+<Message ID="_hospital_address_mesg">
+Hospital Address / Institution (Arbeitgeber...)
+</Message>
+<Message ID="_position_mesg">
+Position
+</Message>
+<Message ID="_hospital_data">
+Hospital Data
+</Message>
+
+<Message ID="_change_photo">
+Save Photo
+</Message>
+
+<Message ID="_photo_data_rel">
+My profile photo 
+</Message>
+<Message ID="_select_img">
+Select photo
+</Message>
+<Message ID="_remove_photo">
+Remove photo
+</Message> 
+<Message ID="_photo_msg">
+Please use your camera to take a plofile picture !
+</Message>
+
+
+<Message ID="_fail">
+Fail
+</Message>
+<Message ID="_success">
+Success
+</Message>
+<Message ID="_success_change">
+Your data was edit successfully!
+</Message>
+<Message ID="_fail_change">
+An error has occurred
+</Message>
+<Message ID="_user_public_nickname">
+User Public nickname
+</Message>
+<Message ID="_user_public_location">
+User public location
+</Message>
+<Message ID="_user_occupation">
+User occupation
+</Message>
+<Message ID="_user_interes">
+User interes
+</Message>
+<Message ID="_mail_preferences">
+Mail preferences
+</Message>
+<Message ID="_user_about">
+User about
+</Message>
+<Message ID="_save_data">
+Save Data
+</Message>
+
+<Message ID="_update_item_success">
+Data was successfully saved !
+</Message>
+
+</Messages>
+

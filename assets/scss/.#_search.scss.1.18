@@ -1,0 +1,249 @@
+#buttonsuchmaske{
+	position:relative;
+	top:-58px;
+	right:20px;
+	color:#fff;
+	z-index:2;
+	float:right;
+	font-weight:bold;
+}
+#suche{
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 350px;
+	z-index:2;
+	top:23px;
+	@include media-breakpoint-down(sm) {
+		top:0;
+	}
+}
+
+ #suche #suchmaske{
+    position: relative;
+    top: 140px;
+    left: 12%;
+    width: 80%;
+    padding: 20px;
+    background: rgba(22, 45, 77, 0.8);
+    opacity: 0;
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+	@include media-breakpoint-down(md) {
+		top:20px;
+	}
+}
+
+ #suche .suchmaske{position:relative;}
+
+ #suche #suchmaske.aktiv{
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+
+ #suche #suchmaske input {
+    float: left;
+    width: 100%;
+    border: 1px solid $white;
+    background: none;
+    color: #fff;
+    font-size: 1.4em;
+    height: 52px;
+    font-weight: 300;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+	&::placeholder{
+		color: #eee;
+		opacity: .5;
+	}
+	
+	&::-ms-clear {
+		display: none;
+	}
+}
+
+#suche #suchmaske button {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 10px;
+    width: auto;
+    border: none;
+    padding: 9px 10px;
+    background: none;
+    color: #162d4d;
+    font-size: 1.4em;
+    line-height: 1em;
+}
+
+ #suche #suchmaske button span.icon-lupe {
+    float: right;
+    width: 1.4em;
+    height: 1.4em;
+    background: url('../graphics/search-icon.png') no-repeat center right;
+    background-size: 90% 90%;
+}
+
+
+@media screen and (max-width: 992px) {
+    #suche #suchmaske {
+        top: 80px;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Sub Navi
+   ========================================================================== */
+.subnavi {
+  list-style: none;
+}
+.subnavi li {
+  display: inline-block;
+}
+.subnavi li a {
+  color: #fff;
+  font-size: 16px;
+}
+/* Header Home 1 Style */
+.nav-warp-h1 {
+  background: rgba(10, 44, 78, 0.4);
+}
+.navi-warp-home-1 {
+  display: table;
+  position: relative;
+  z-index:2;
+  width: 100%;
+  top: -90px;
+}
+.navi-warp-home-1 .subnavi {
+  float: right;
+  display: inline-block;
+}
+.navi-warp-home-1 .subnavi a {
+  display: block;
+  min-width: 15px;
+}
+.navi-warp-home-1 nav {
+  float: right;
+  display: inline-block;
+}
+.navi-warp-home-1 .subnavi a {
+  line-height: 82px;
+  margin-left: 20px;
+  -webkit-transition: all all 0.3s ease-in-out;
+          transition: all all 0.3s ease-in-out;
+}
+.navi-warp-home-1 .subnavi a:hover {
+  color: #ffb600;
+}
+
+
+
+
+/* Search PopUP */
+.search-popup {
+  display: none;
+}
+.search-popup ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.search-popup ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+.search-popup :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+.search-popup :-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+.open-search-input {
+  display: block;
+  z-index: 99;
+  position: absolute;
+  right: 0;
+  top: 92%;
+}
+.search-popup.fadeInUp {
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+}
+.open-search-input .form-control {
+  padding: 18px 12px;
+  height: auto;
+  border: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 16px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  width: 300px;
+  background: #0a2c4e;
+  color: #fff;
+}
+
+.search-popup button {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 10px;
+    width: auto;
+    border: none;
+    padding: 9px 10px;
+    background: none;
+    color: #162d4d;
+    font-size: 1.4em;
+    line-height: 1em;
+	z-index:4;
+}
+
+.search-popup button span.icon-lupe {
+    float: right;
+    width: 1.4em;
+    height: 1.4em;
+    background: url('../graphics/search-icon.png') no-repeat center right;
+    background-size: 60% 60%;
+}
+
+@media only screen and (max-width: 991px) {
+
+  .nav-warp-h1 nav {
+    display: none;
+  }
+  .navi-warp-home-1 .btn-menu-mobile {
+    display: inline-block;
+    color: #fff !important;
+    -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+    position: static;
+	float:right;
+    line-height: 82px;
+  }
+  .navi-warp-home-1 .btn-menu-mobile:hover {
+    color: #ffb600 !important;
+  }
+  .navi-warp-home-1 .btn-menu-mobile:focus {
+    color: #ffb600 !important;
+  }
+  .navi-warp-home-1 .subnavi {
+    margin-right: 20px;
+    display: block;
+  }
+}

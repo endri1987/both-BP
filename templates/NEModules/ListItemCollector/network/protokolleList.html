@@ -1,0 +1,49 @@
+<Grid gridId="gridDataSrc">
+	<Header>
+	<div class="document-list">
+	<div class="row">
+	<div class="col-md-12">
+		<h4>{{slogan_title}}</h4>
+	</div>
+
+	</Header>
+		<div class="col-sm-12">
+			<Var name="handle_first">('{{alias}}' == '0' ? 'border-top:0;' : '')</Var>
+			<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+			<ul class="list-inline {{handle_editing_class}}" {{handle_editing_attr}}>
+			  <li class="list-inline-item"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></li>
+			  <li class="list-inline-item h6">
+				<If condition="'{{linkToTitle}}' == 'yes'">
+						<a title="[{{ecc_reference}}]. {{ew_title}}" data-title="[{{ecc_reference}}]. {{ew_title}}"
+							class="line-clamping view-{{ico_type}} item-title" data-key="{{identifier_type}}"
+							data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+							data-url="{{identifier_key}}" href="{{stream_url}}" target="_blank">
+
+							<If condition="'{{display_ecc_reference}}'=='yes'">
+							[{{ecc_reference}}].
+							</If>
+							{{titleToDisplay}}
+						</a>
+				</If>
+				<If condition="'{{linkToTitle}}' != 'yes'">
+							<If condition="'{{display_ecc_reference}}'=='yes'">
+							[{{ecc_reference}}].
+							</If>
+							{{titleToDisplay}}
+				</If>
+				<Grid gridId="DocCachedInfo_{{ecc_doc_id}}">
+					<small><strong>{{file_size}}</strong></small>
+				</Grid>
+			  
+			  
+			  </li>
+			</ul>  
+		</div>
+	<Footer>
+	</div>
+	</div>
+	</Footer>
+</Grid>
+
+

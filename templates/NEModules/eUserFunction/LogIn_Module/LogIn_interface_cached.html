@@ -1,0 +1,17 @@
+<div id="showProduct" class="login_post contentBox typeRoundedContent verticalContentSpacer">
+
+	<form name="loginFrm" id="loginFrm" class="loginFrm validate" dt-idstemp="{{idstempLogin}}" dt-url="{{APP_URL}}"  dt-cashed="yes" method="post">
+		<input type="hidden" name="idstmp" id="idstmp" value="" />
+		<input type="hidden" name="evn" id="evn" value="" /> 
+		
+		<input type="text" class="txtBoxdefault required" name="usrname" value="{{_usernamelogin}}" data-msg-required="{{field_reqiured_mesg}}"	/>						 
+		<input type="password" name="usrpassd" class="txtBoxdefault normal required" id="password-password" data-msg-required="{{field_reqiured_mesg}}" />			   
+		
+		<input class="graygobtn" type="submit" value="{{_Login}}" name="{{_Login}}" />
+	</form>
+
+	<p class="forgotten-details">
+		{{forgot_password_html}}
+	</p>	
+ 
+</div>

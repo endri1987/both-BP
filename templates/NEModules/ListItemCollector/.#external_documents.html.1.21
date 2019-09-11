@@ -1,0 +1,194 @@
+
+	<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+
+<Grid gridId="gridDataSrc">
+				<IfEmpty>
+				<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+				</IfEmpty>
+
+	<Header>
+
+	<div class="document-list">
+	<div class="row">
+	</Header>
+		<div class="col-sm-12">
+			<Var name="handle_first">('{{alias}}' == '0' ? 'border-top:0;' : '')</Var>
+			<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+
+		<div class="media">
+
+
+			<If condition="'{{DC_thumbnail_display}}' == 'yes' && '{{dp_image_ID}}'>0">
+					<If condition="'{{linkToimage}}' == 'yes'">
+						<If condition="'{{targetUsedFromMakeLink}}' == 'docAttached' && '{{asset_id}}'>0">
+
+
+
+						<Grid gridId="DocCachedInfo_{{asset_id}}">
+						<a title="{{titleToAlt}}" data-title="{{titleToAlt}}" target="_blank"
+							class="line-clamping view-{{ico_type}} item-title" data-key="{{identifier_type}}"
+							data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+							data-url="{{identifier_key}}" href="{{stream_url}}" target="_blank">
+							<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+							<img class="d-flex mr-3 img-fluid" src="{{srcImageToDisplay}}" alt="{{titleToAlt}}">
+							</Grid>
+
+						</a>
+						</Grid>
+						</If>
+
+
+						<If condition="'{{targetUsedFromMakeLink}}' != 'docAttached' || '{{asset_id}}'==0">
+						<a title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+						<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+						<img class="d-flex mr-3 img-fluid" src="{{srcImageToDisplay}}"  alt="{{titleToAlt}}">
+						</Grid>
+						</a>
+						</If>
+
+
+
+					</If>
+					<If condition="'{{linkToimage}}' != 'yes'">
+						<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+						<img class="d-flex mr-3 img-fluid" src="{{link_url}}" alt="{{titleToAlt}}">
+						</Grid>
+					</If>
+			</If>
+
+
+<div class="media-body">
+
+
+
+
+
+			<ul class="list-inline mb-0 {{handle_editing_class}}" {{handle_editing_attr}}>
+			<If condition="'{{DA_icotype_display}}' == 'yes'">
+			  <Grid gridId="DocCachedInfo_{{asset_id}}">
+			  <li class="list-inline-item"><i class="fa fa-file-{{ico_type}}-o" aria-hidden="true"></i></li>
+			  </Grid>
+			</If>
+			  <li class="list-inline-item h6">
+				<If condition="'{{linkToTitle}}' == 'yes'">
+					<If condition="'{{targetUsedFromMakeLink}}' == 'docAttached' && '{{asset_id}}'>'0'">
+					<Grid gridId="DocCachedInfo_{{asset_id}}">
+						<a title="{{titleToAlt}}" data-title="{{titleToAlt}}"  target="_blank"
+							class="line-clamping view-{{ico_type}} item-title" data-key="{{identifier_type}}"
+							data-width="{{dt_width}}" data-height="{{dt_height}}" data-id="{{CID_REF}}"
+							data-url="{{identifier_key}}" href="{{stream_url}}" target="_blank">
+							<div class="font-weight-bold">{{titleToDisplay}}</div>
+						</a>
+					</Grid>
+					</If>
+					<If condition="'{{targetUsedFromMakeLink}}' != 'docAttached' || '{{asset_id}}'=='0'">
+						<a title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+							<div class="font-weight-bold">{{titleToDisplay}}</div>
+						</a>
+					</If>
+				</If>
+				<If condition="'{{linkToTitle}}' != 'yes'">
+					<div class="font-weight-bold">{{titleToDisplay}}</div>
+				</If>
+			  </li>
+
+
+
+
+
+			  <li class="list-inline-item">
+				<If condition="'{{DC_date_display}}' == 'yes' || '{{DC_time_display}}' == 'yes'">
+						<div class="text-primary">
+							<If condition="'{{DC_date_display}}' == 'yes'">
+							{{source_creation_date}}
+							</If>
+							<If condition="'{{DC_date_display}}' == 'yes' &&  '{{DC_time_display}}' == 'yes'">
+								/
+							</If>
+							<If condition="'{{DC_time_display}}' == 'yes'">
+							{{source_creation_time}}
+							</If>
+						</div>
+				</If>
+				<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+					<div class="text-desc mb-2">{{abstractToDisplay}}</div>
+				</If>
+				<Grid gridId="DocCachedInfo_{{asset_id}}">
+					<If condition="'{{DA_filename_display}}' == 'yes'">
+					<div>
+						<small><strong>{{_DA_filename_label}}: {{file_name_cached}}</strong></small>
+					</div>
+					</If>
+					<If condition="'{{DA_mimetype_display}}' == 'yes'">
+					<div>
+						<small><strong>{{_DA_mimetype_label}}: {{mimetype}}</strong></small>
+					</div>
+					</If>
+					<If condition="'{{DA_filesize_display}}' == 'yes'">
+					<div>
+						<small><strong>{{_DA_filesize_label}}: {{file_size}}</strong></small>
+					</div>
+					</If>
+					<If condition="'{{DA_duration_display}}' == 'yes' && ('{{ico_type}}'=='media' || '{{ico_type}}'=='audio')">
+					<div>
+						<small><strong>{{_DA_duration_label}}: {{file_duration}}</strong></small>
+					</div>
+					</If>
+					<If condition="'{{DA_dimension_display}}' == 'yes' && ('{{ico_type}}'=='image')">
+					<div>
+						<small><strong>{{_DA_dimension_label}} (px): {{file_width}} X {{file_height}} </strong></small>
+					</div>
+					</If>
+				</Grid>
+			</li>
+			</ul>
+
+</div>
+
+
+</div>
+				<If condition="'{{DC_content_display}}' == 'yes' && '{{dp_content}}' == 'yes'">
+					<div class="mb-3 mt-2">
+						<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html" />
+					</div>
+				</If>
+
+				<If condition="'{{DC_sourceauthor_display}}' == 'yes' && '{{dp_author}}'=='yes'">
+					<div><strong>{{_DC_sourceauthor_label}}:</strong> {{AuthorToDisplay}}</div>
+				</If>
+
+				<If condition="'{{DC_source_display}}' == 'yes' && '{{dp_source}}'=='yes'">
+					<div class="mb-2"><strong>{{_DC_source_label}}:</strong> {{sourceToDisplay}}</div>
+				</If>
+				<div class="float-right allicons">
+					<Include SRC="{{./}}partials/ci_doc_icon_type_actions.html"/>
+				</div>
+
+			<div class="dwnl mt-2"><a class="btn btn-primary btn-sm" target="_blank" href="{{stream_url}}">download</a></div>
+			<div class="ci_docStyle mt-3">
+
+
+			</div>
+
+
+
+		</div>
+
+	<Separator>
+   <div class="col-lg-12"><hr/></div>
+	</Separator>
+
+	<Footer>
+	</div>
+	</div>
+	<Include SRC="{{./}}partials/list_footer.html"/>
+	</Footer>
+</Grid>
+
+
+
+
+
+
+

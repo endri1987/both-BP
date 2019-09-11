@@ -1,0 +1,121 @@
+<Include SRC="{{./}}before_content_includes.html"/>
+
+<div>
+
+<WebBox ID="mainLectureLogin" Type="Container" Level="0" Case="Always" Editable="False">
+
+	<div id="page-wrapper" class="gray-bg">
+		<!-- START Main COntent -->
+		<div class="">
+			<div class="row">
+				<Include SRC="{{./}}MainContent/MainContent.html"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
+jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license
+Bootstrap v3.3.4 (http://getbootstrap.com)
+jQuery Validation Plugin - v1.13.0 - 7/1/2014
+-->
+<script type="text/javascript" language="javaScript" src="{{APP_URL}}include_js/libs.min.js"></script>
+
+<div class="modal inmodal" id="ecc-bs-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content animated bounceInDown">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				Modal body content
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pdf-modal"></div>
+<div id="virtual-slide-video"></div>
+<div id="ref-modal"></div>
+<div id="video-modal"></div>
+<div id="image-html-modal" class="image-html-modal"></div>
+<div id="generic-modal-dialog" role="dialog" aria-hidden="true"></div>
+<div id="navigation-modal"></div>
+<div id="navigationws-modal"></div>
+
+
+
+<script type="text/javascript">
+	_select_from_list_or_add_to_assign 		= '{{_select_from_list_or_add_to_assign}}';
+	_edit_item 								= '{{_edit_item}}';
+	_edit_mode_activated 					= '{{_edit_mode_activated}}';
+	_edit_mode_deactivated 					= '{{_edit_mode_deactivated}}';
+	_edit_item_nem 							= '{{_edit_item_nem}}';
+	_edit_item_si 							= '{{_edit_item_si}}';
+	_change_template 						= '{{_change_template}}';
+	_edit_template 							= '{{_edit_template}}';
+	_add_new_item 							= '{{_add_new_item}}';
+	_edit_mesg 								= '{{_edit_mesg}}';
+	_edit_template 							= '{{_edit_template}}';
+	_edit_configuration 					= '{{_edit_configuration}}';
+	_edit_author 							= '{{_edit_author}}';
+	_select_or_add_lecturer_from_list 		= '{{_select_or_add_lecturer_from_list}}';
+	_edit_navigation 		= '{{_edit_navigation}}';
+
+</script>
+<div id="generic-modal"></div>
+
+<!--
+jQuery UI - v1.11.4 - 2015-06-15
+HTML5 Sortable jQuery Plugin - https://github.com/voidberg/html5sortable
+Countdown for jQuery v2.0.2. - http://keith-wood.name/countdown.html
+bootbox.js v4.4.0 - http://bootboxjs.com/license.txt
+PNotify 2.0.1 sciactive.com/pnotify/
+Dropzone.js - More info at [www.dropzonejs.com](http://www.dropzonejs.com)
+DataTables 1.10.7
+    jquery.dataTables.rowReordering.js
+    DataTables Bootstrap 3 integration
+-->
+<script type="text/javascript" language="javaScript" src="{{APP_URL}}include_js/authoring/libs.min.js"></script>
+
+
+<script type="text/javascript" src="{{APP_URL}}include_js/player/video.js"></script>
+<script>
+  videojs.options.flash.swf = "{{APP_URL}}include_js/video-js/video-js.swf";
+</script>
+
+<script type="text/javascript" src="{{APP_URL}}include_js/main.js"></script>
+
+
+
+<If condition="'{{ZONE_AUTHORING}}' == '{{level_0}}'">
+</If>
+<script type="text/javascript" src="{{APP_URL}}include_js/authoring/main-authoring.js"></script>
+
+
+<If condition="'{{sc}}' != 'none'">
+<script src="{{APP_URL}}plugins/jsrender/jsrender.min.js"></script>
+<script src="{{APP_URL}}plugins/highlight_js/highlight.min.js"></script>
+<script type="text/javascript" src="{{APP_URL}}include_js/player/lecture-player.js"></script>
+</If>
+
+
+<If condition="'{{ZONE_AUTHORING}}' == '{{level_0}}'">
+<script type="text/javascript" src="{{APP_URL}}include_js/authoring/EW.transcription-editor.js"></script>
+<script type="text/javascript" src="{{APP_URL}}include_js/authoring/EW.presentation_annotations_edit.js"></script>
+</If>
+
+
+
+<script>
+modules.push('datatable','ajax-module', 'gendialog', 'modal', 'view-virtual-slide','ref-viewer','pdf-viewer', 'video-player', 'tooltip','save-fav', 'enable-popover', 'image-html-viewer', 'handle-dropdown', 'sidebar-toggle', 'fullscreen');
+</script>
+
+<If condition="'{{ZONE_AUTHORING}}' == '{{level_0}}'">
+<script>
+modules.push( 'dialog', 'conference', 'delete_confirm','edit_author_modal','multidelete_confirm', 'delete_confirm_author',  'block-full-preview', 'form-monitor');
+</script>
+</If>
+
+</WebBox>

@@ -1,0 +1,48 @@
+<div id="addint">
+	<p>{{_report_message}}</p>
+	<form class="no-padding validate" style="padding-bottom: 0 !important;" id="addnewAddInfo" novalidate="novalidate" 
+		data-modal-ajax="true" 
+		data-url="&apprcss=cmFunctions&act=report&step=4&mainPostID={{mainPostID}}&reportThisID={{reportThisID}}&lectureIDM={{lectureIDM}}#addint_{{mainPostID}}"
+		data-dismiss-modal="true" 
+		data-bs-modal="true"
+		data-target="#view-news-details"
+		data-ajax-notify="{{_adding_new_post}}" 
+		data-notify-success="{{_post_added_suc}}" 
+		data-trigger-after="#refreshMainPostListStatus{{mainParentID}}" 
+		>
+		<fieldset class="no-padding">
+
+			<div class="form-group">
+				<label for="report_reason">{{_question_template}}</label>
+				<section class="smart-form">
+					<label class="select">
+						<select class="input-sm form-control required" name="report_reason" id="report_reason">
+							<option value="">{{_issue_type}}</option>
+							<option value="copyright_violation">{{_copyright_violation_reason}}</option>
+							<option value="inappropriate_content">{{_inappropriate_content_reason}}</option>
+							<option value="inappropriate_behavior">{{_inappropriate_behavior_reason}}</option>
+							<option value="policy_violation">{{_policy_violation_reason}}</option>
+							<option value="other">{{_other_reason}}</option>
+						</select>
+						<i></i>
+					</label>
+				</section>
+			</div>
+			<div class="form-group">
+				<label for="report_comment">
+					{{_message}}
+				</label>
+				<textarea class="form-control required" placeholder="{{_message}}" id="report_comment" rows="3" name="comment"></textarea>
+			</div>
+		</fieldset>
+		<footer class="form-group">
+			<button class="btn btn-primary" type="submit">
+				{{_save}}
+			</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">{{_cancel}}</button>
+		</footer>
+	</form>
+<script>
+	modules.push('validate');
+</script>
+</div>

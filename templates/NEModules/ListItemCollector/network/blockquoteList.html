@@ -1,0 +1,23 @@
+<Grid gridId="gridDataSrc">
+<IfEmpty>
+</IfEmpty>
+<Header>
+	<If condition="'{{slogan_title}}' != ''">
+		<h2>{{slogan_title}}</h2>
+	</If>
+
+<div class="row">
+</Header>
+<div class="col-lg-4">
+	<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+	<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+	<blockquote class="blockquote {{enable_edit_class}}" {{enable_edit_attr}}>
+	{{abstractToDisplay}}
+	<footer>{{ew_source_author}}</footer>
+	</blockquote>
+	
+</div>
+<Footer>
+</div>
+</Footer>
+</Grid>

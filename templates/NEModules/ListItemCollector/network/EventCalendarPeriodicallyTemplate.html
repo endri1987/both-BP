@@ -1,0 +1,64 @@
+<Grid gridId="GroupedByPeriodGrid">
+<Header>
+	<If condition="'{{slogan_title}}' != ''">
+	<div class="row">
+		<div class="col-md-12"><h2 class="mt-3">{{slogan_title}}</h2></div>
+	</div>
+	</If>	
+<div class="calendar-list">
+</Header>
+
+<Grid gridId="GroupedByPeriodGrid_{{labelPeriodKey}}">
+<Header>
+	<div class="row">
+
+		<div class="col-md-12"><h2>{{labelPeriod}}</h2></div>
+</Header>
+			<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+			<div class="col-md-12 {{handle_editing_class}}" {{handle_editing_attr}}>
+				<h5>
+						<If condition="'{{linkToTitle}}' == 'yes'">
+							<a title="{{titleToAlt}}" href="{{hrefToDoc}}">
+								{{titleToDisplay}}
+							</a>
+						</If>
+						<If condition="'{{linkToTitle}}' != 'yes'">
+								{{titleToDisplay}}
+						</If>
+				</h5>
+				<table class="mb-3">
+					<tbody>
+						<tr>
+							<td>{{descriptor_eventschedule}}: </td>
+							<td> {{eventStartDate}}</td>
+						</tr>
+						<tr>
+							<td>{{descriptor_eventLocation}}: </td>
+							<td>{{street}}, {{zip}} {{location}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<If condition="'{{dp_abst}}' == 'yes'">
+					<p>{{abstractToDisplay}}</p>
+				</If>
+				<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+					<a href="{{hrefToDoc}}" class="btn btn-primary btn-sm legitRipple" role="button" tabindex="0">{{labelUserDefinedLink}}</a>
+				</If>
+			</div>
+			<Separator>
+			<If condition="'{{CurrentRecNr}}'%1 == '0'">
+	</div>
+			<div class="row">
+			</If>
+			</Separator>
+
+			<Footer>
+	</div>
+</Footer>
+</Grid>
+		<Footer>
+	</div>
+</Footer>
+
+</Grid>

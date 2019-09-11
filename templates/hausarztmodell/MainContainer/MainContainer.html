@@ -1,0 +1,74 @@
+<WebBox ID="MainContainer" Type="Container" Level="0" Case="Always" Editable="False">
+<div id="container">
+	<header id="kopf">
+			<Include SRC="{{./}}BannerArea/BannerArea.html"/>
+        <section id="kopfOben">
+            <div class="container">
+                <div class="row">
+                    <article id="kopfLogo" class="col-xs-8">
+						<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+					</article>
+					<article id="kopfLogoArgo" class="hidden-xs hidden-sm col-md-2 pull-right">
+						<Include SRC="{{./}}HeaderPromoArea/HeaderPromoArea.html"/>
+					</article>
+                    <article id="kopfSuche" class="col-xs-3 col-md-4 pull-right">
+						<button id="buttonsuchmaske" class="invert">
+							<span class="icon-lupe"></span>
+						</button>
+					</article>
+                </div>
+			</div>
+		</section>
+        <section id="suche" style="display: none;">
+            <article id="sucheInput" class="container">
+				<div id="suchmaske">
+					<Include SRC="{{./}}SearchArea/SearchArea.html"/>
+				</div>
+			</article>
+        </section>
+        <section id="navContainer">
+            <div class="container">
+                <nav id="navigation" class="col-xs-16 col-lg-16" style="width:100%;">
+					<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+				</nav>
+            </div>
+		</section>
+	</header>
+	<section id="content">
+	<If condition="'{{level_1}}' == '0'">
+		<div class="container">
+			<Include SRC="{{./}}MainContent/MainContent.html"/>
+		</div>
+	</If>
+	<If condition="'{{level_1}}' != '0'">
+			<Include SRC="{{./}}MainContent/MainContent.html"/>
+	</If>
+	<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+	<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+
+	</section>
+
+	<div id="stopper"></div>
+</div>
+
+<footer id="fuss">
+	<section id="fussOben" class="container">
+		<Include SRC="{{./}}BottomRowArea/BottomRowArea.html"/>
+	</section>
+	<section id="fussUnten">
+		<div class="container">
+			<div class="row">
+				<article id="fussCopyright" class="col-xs-10">
+					<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+				</article>
+				<article id="fussMeta" class="col-xs-6">
+					<Include SRC="{{./}}FooterNavigationArea/FooterNavigationArea.html"/>
+				</article>
+
+			</div>
+		</div>
+	</section>
+</footer>
+<Include SRC="{{./}}footer_includes.html"/>
+
+</WebBox>

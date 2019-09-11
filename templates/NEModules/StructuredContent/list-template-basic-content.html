@@ -1,0 +1,46 @@
+<div class="listcontent">
+	<Grid gridId="Grid_StructuredContent">
+		<IfEmpty>
+		</IfEmpty>
+		<Header>
+	<Include SRC="{{NEMODULES_PATH}}partials/default_header_property_template.html"/>
+	
+	
+	<style>
+		.img_wd{
+			width: 200px;
+		}
+	</style>
+	
+			<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+				
+				<ul class="list-unstyled">
+			</Header>
+	
+					<li>
+							
+						<If condition="'{{display_title}}' == 'yes'">
+							<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+							<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+								<div class="titlelib mb-2">{{titleToDisplay}}</div>
+							</a>
+							</If>
+							<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+								<div class="titlelib mb-2">{{titleToDisplay}}</div>
+							</If>
+						</If>
+	
+						<If condition="'{{display_desc}}' == 'yes' && '{{dp_desc}}' == 'yes'">
+							<div class="bodytext mb-2">{{description}}</div>
+						</If>
+					</li>
+	
+		<If condition="'{{display_content}}' == 'yes' && '{{exist_fullcontent}}' == 'yes'">
+					<div class="bodytext mb-2">{{fullcontent}}</div>
+					</If>
+			<Footer>
+				</ul>
+				<Include SRC="{{NEMODULES_PATH}}ListItemCollector/network/partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>

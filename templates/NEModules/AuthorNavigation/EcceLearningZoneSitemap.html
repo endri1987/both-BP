@@ -1,0 +1,76 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+	<Header>
+	<div class="row" data-equal-heights=".sitemap-level-1-title">
+	</Header>
+
+		<div class="col-xs12 col-sm-6 col-md-4">
+			<div class="sitemap-level-1 margin-bottom-30">
+				<Var name="level_1_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' != 'PR' ? 'fa-clone' : '{{boostrap_ico}}')</Var>
+				<Var name="pr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'PR' ? 'fa-graduation-cap' : '')</Var>
+				<h4 class="sitemap-level-1-title border-bottom padding-bottom-10 margin-bottom-0" style="min-height:40px;">
+					<a class="" style="display:block;" href="javascript:GoTo('thisPage?event=none.ch_state(k={{id0}},{{id1}},{{id2}},{{id3}},{{id4}})');">
+						<i class="fa nav-icon {{level_1_icon}} {{pr_icon}} pull-left margin-right-5"></i>
+						<span style="display:block;overflow:hidden;">{{label}}</span>
+					</a>
+				</h4>
+
+				<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+					<Header>
+						<ul class="list-unstyled margin-left-10">
+					</Header>
+							<li class="padding-top-10">
+								<a class="" href="javascript:GoTo('thisPage?event=none.ch_state(k={{id0}},{{id1}},{{id2}},{{id3}},{{id4}})');">
+									<strong>{{label}}</strong>
+								</a>
+
+								<Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+									<Header>
+										<ul class="list-unstyled margin-left-10">
+									</Header>
+											<li class="padding-top-10">
+												<a class="" href="javascript:GoTo('thisPage?event=none.ch_state(k={{id0}},{{id1}},{{id2}},{{id3}},{{id4}})');">
+													{{label}}
+												</a>
+
+												<Grid gridId="Grid_AuthorNav_Nivel4{{con_id}}{{keyIden}}">
+													<Header>
+														<ul class="list-unstyled margin-left-10">
+													</Header>
+															<li class="padding-top-10">
+																<a class="" href="javascript:GoTo('thisPage?event=none.ch_state(k={{id0}},{{id1}},{{id2}},{{id3}},{{id4}})');">
+																	{{label}}
+																</a>
+															</li>
+													<Footer>
+														</ul>
+													</Footer>
+												</Grid>
+
+											</li>
+									<Footer>
+										</ul>
+									</Footer>
+								</Grid>
+
+							</li>
+					<Footer>
+						</ul>
+					</Footer>
+				</Grid>
+
+			</div>
+		</div>
+
+		<If condition="'{{CurrentRecNr}}' % 2 == '0'">
+		<div class="clearfix visible-sm-block"></div>
+		</If>
+		<If condition="'{{CurrentRecNr}}' % 3 == '0'">
+		<div class="clearfix visible-md-block visible-lg-block"></div>
+		</If>
+	<Footer>
+	</div>
+	<script>
+	modules.push('equal-heights');
+	</script>
+	</Footer>
+</Grid>

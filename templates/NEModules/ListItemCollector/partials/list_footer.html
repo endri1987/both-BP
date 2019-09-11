@@ -1,0 +1,18 @@
+
+
+
+
+<If condition="'{{masterZoneSpecialization}}'=='intranet' && '{{block_link_show}}' == 'yes'">
+	<div class="list-footer clearfix">
+		<a href="{{block_link_target_Href}}" role="button" class="float-right">
+			{{block_link_label}} <i class="fa fa-angle-right" aria-hidden="true"></i>
+		</a>
+	</div>
+</If>
+<If condition="'{{masterZoneSpecialization}}'=='internet' && '{{block_link_show}}' == 'yes'">
+	<div class="list-footer text-center">
+		<a href="{{block_link_target_Href}}" role="button" class="btn btn-primary">
+			{{block_link_label}}
+		</a>
+	</div>
+</If>

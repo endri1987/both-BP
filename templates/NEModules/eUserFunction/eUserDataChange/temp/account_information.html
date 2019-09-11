@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="form-group col-sm-6">
+		<label for="user_name_regis">* {{_username_mesg}} :</label>
+		<input id="user_name_regis" name="user_name_regis" type="text" class="form-control required" disabled
+		data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateUname"
+		data-msg-required="Please enter a username"
+		data-msg-remote="This username is already in taken"
+         value="{{MdUserName}}"
+		>
+	</div>
+	<div class="form-group col-sm-6">
+		<label for="email_regis">* {{_email_mesg}} :</label>
+		<input id="email_regis" name="email_regis" type="text" class="form-control email required"
+		data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateEmail"
+		data-msg-email="Please provide a valid email address"
+		data-msg-required="Please enter an email address"
+		data-msg-remote="This email address is already registered"
+        value="{{email_regis}}"
+		>
+	</div>
+</div>
+
+

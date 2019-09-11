@@ -1,0 +1,21 @@
+<WebBox ID="MainContent" Type="CIRegionContainer" Region="{{contentId}}" param="" Case="Default" Editable="True" Container="MainContainer" Dimension="155x*">
+	<Grid gridId="CiPropGrid{{contentId}}">
+	<Grid gridId="TemplateGrid{{contentId}}">
+		<IfEmpty>
+			{{ew_content}}
+		</IfEmpty>
+		{{templateHtml}}
+	</Grid>
+
+	<Footer>
+		<If condition="'{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes'">
+		<div class="ew-edit-toolbar-wrapper">
+			<div class="ew-edit-toolbar ew-edit-tmp">
+				<Include SRC="{{INC_PHP}}EditWorkingItem/actionsShortcutCiInApplication.html"/>
+			</div>
+		</div>
+		</If>
+	</Footer>
+	</Grid>
+
+</WebBox>

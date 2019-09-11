@@ -1,0 +1,33 @@
+<!-- START: recaptcha -->
+<Var name="captchaAktiv">('{{captcha_aktiv}}' == 'AC' && '{{captcha_type}}' == 'i' ? 'Y':'N')</Var>
+<Var name="onlyUserCaptchaAktiv">('{{captcha_aktiv}}' == 'NLO' && '{{captcha_type}}' == 'i' && '{{systemUserId}}' == '' ? 'Y':'N')</Var>
+<Var name="captchaMessage">('{{sendFeedbackProces}}' == 'RESEND' ? "{{error_captcha_match}}" : '')</Var>
+
+<If condition="'{{captchaAktiv}}' == 'Y' || '{{onlyUserCaptchaAktiv}}' == 'Y'">
+<div class="well well-md">
+	<div class="form-group no-margin">
+		<label for="{{captcha_input_name}}" class="recaptcha_only_if_image">
+			{{captcha_code_lbl_msg}}:
+		</label>
+		<If condition="'{{sendFeedbackProces}}' == 'RESEND'">
+		<div class="text-danger margin-bottom-10">
+			<i class="fa fa-exclamation-circle"></i> {{captchaMessage}}
+		</div>
+		</If>
+		<div class="margin-bottom-10">
+			<div class="pull-right margin-left-10">
+				<a href="{{captcha_reload_fun}}" class="btn btn-sm btn-default">
+					<i class="fa fa-refresh fa-fw"></i>
+				</a>
+			</div>
+			<div class="overflow-hidden">
+				<img class="imgCpt" src="{{captcha_img_src}}" id="{{captcha_img_id}}"  border="0" width="100%" />
+			</div>
+		</div>
+		<input type="text" name="{{captcha_input_name}}" id="{{captcha_input_name}}" class="form-control input-sm" placeholder="{{_captcha_code_lbl_msg}}"
+		data-rule-required="true"
+		data-msg-required="{{_please_enter_captcha}}" maxlength="{{captcha_length}}" valid="0,0,0,0,0,0" etiketa="{{captcha_code_lbl_msg}}" >
+	</div>
+</div>
+</If>
+<!-- END: recaptcha -->

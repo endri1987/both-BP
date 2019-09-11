@@ -1,0 +1,24 @@
+<WebBox ID="ContactModule" Type="Service" MODE="Dynamic">
+
+<If condition="'{{CONTACT_TEMPLATE_SEND_SEL}}'=='SUCCES'">
+  <Include SRC="{{./}}template_SUCCES.html" />
+</If>
+<If condition="'{{CONTACT_TEMPLATE_SEND_SEL}}'=='FAIL'">
+  <Include SRC="{{./}}template_FAIL.html" />
+</If>
+
+<If condition="'{{CONTACT_TEMPLATE_SEND_SEL}}' == 'DEFAULT'">
+  {{mesg_js}}
+  <Include SRC="{{./}}{{CONTACT_TEMPLATE_SEL}}" />
+<script type="text/javascript">
+    modules.push('contact_post_nem');
+</script>
+  <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}include_js/valid_fun/isnull.js"></script>
+  <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}include_js/valid_fun/isemailaddress.js"></script>
+  <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}include_js/valid_fun/valid_value.js"></script>
+  <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}nems/ContactModule/ContactModule.js"></script>
+  {{js_script}}
+</If>
+
+
+</WebBox>

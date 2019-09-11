@@ -1,0 +1,81 @@
+<h2>{{_all_notifications}}</h2>
+<div class="">
+    <form name="" action="" >
+        <div class="grid">
+            <div class="col w-10">  <h4>{{_data_label}}:</h4></div>
+            <div class="col w-35">
+                <div class="fm-data">
+                    <div class="grid">
+                        <div class="col w-60">
+                            <label class="pad alpha">
+                                <span class="access">{{_starting_from_date}} </span>{{_starting_from_date}}
+                            </label>
+                        </div>
+                        <div class="col w-40 pad-lg omega">
+                            <input id="" class="fm-required w-100 datepicker"  type="text" name="" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col w-35">
+                <div class="fm-data">
+                    <div class="grid">
+                        <div class="col w-60">
+                            <label for="" class="pad alpha">
+                                <span class="access">{{_to_date}}</span>{{_to_date}}
+                            </label>
+                        </div>
+                        <div class="col w-40 pad-lg omega">
+                            <input class="fm-required w-100 datepicker" type="text" name="" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col w-20">
+                <div class="fm-submit support-btn">
+                    <input class="btn btn-sml w-100 fr-lrg" type="submit"  value="{{search_alt_mesg}}">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<hr class="hr"/>
+
+<form name="" action="" >
+    <div class="grid">
+        <div class="col w-20">
+            <h4>{{_keyword}}:</h4>
+        </div>
+        <div class="col w-60">
+            <div class="fm-data se-help se-support">
+                <label for="se-help" class="access">{{search_alt_mesg}} </label>
+                <input class="fm-required w-100" type="text" placeholder="{{search_alt_mesg}}">
+            </div>
+        </div>
+        <div class="col w-20">
+            <div class="fm-submit support-btn">
+                <input class="btn  btn-sml w-100 fr-lrg" type="submit"  value="{{search_alt_mesg}}">
+            </div>
+        </div>
+    </div>
+</form>
+
+<hr class="hr"/>
+<div class="de-box">
+    <div class="fm-data">
+        <label for="topup-select">{{_select}}</label>
+        <div class="fm-select">
+            <select id="" name="">
+                <option value="">{{_select}}</option>
+            </select>
+            <span>
+                <i class="i-arrow-down-grey-lrg"></i>
+            </span>
+        </div>
+    </div>
+</div>
+<hr class="hr"/>
+
+
+<script>modules.push("ui-datepicker");</script>

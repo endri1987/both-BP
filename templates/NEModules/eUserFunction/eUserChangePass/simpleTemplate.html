@@ -1,0 +1,43 @@
+<div id="calleUserFunction" class="">
+	<form  class ="change_form validate" role="form" name="changePass" id="changePass"  method="post"          
+            data-bs-modal="true"
+            data-modal-size="modal-sm"
+            data-modal-ajax="true"
+            data-url="&apprcss=eUserChangePass&idstemp={{idStempCHP}}"
+			data-ajax-notify="{{_update_data}}"
+			data-notify-success="{{_update_item_success}}"            
+            
+        >
+            <input type="hidden" id="token"  name="token"  value="{{token}}">
+
+            <If condition="'{{with_token}}'=='no'">
+            <div class="form-group">
+                <label for="UserPasswd">* {{_old_pass}} :</label>
+                <input id="UserPasswd" name="UserPasswd" type="password" class="form-control required"
+                data-msg-required="Please enter old password">
+            </div>
+            </If>
+            <div class="form-group">
+                <label for="NewUserPasswd">* {{_password_mesg}} :</label>
+                <input id="NewUserPasswd" name="NewUserPasswd" type="password" class="form-control required passwordstrength"
+                data-rule-minlength="8"
+                data-msg-required="Please enter new password"
+                data-msg-length="Password should contain at least 8 characters"
+                data-msg-passwordstrength="Password should contain at one capital letter and a number">
+            </div>
+             <div class="form-group">
+                <label for="ConfirmUserPasswd">* {{_password_confirm_mesg}} :</label>
+                <input id="ConfirmUserPasswd" name="ConfirmUserPasswd" type="password" class="form-control required" data-rule-equalto="#NewUserPasswd"
+                data-msg-required="Please enter a value for password confirmation"
+                data-msg-equalto="Please enter the same value for new password">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-white" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary btn-sm" type="submit">{{_passw_go}}</button>
+            </div>
+
+	</form>
+    <script>
+        modules.push('validate');
+    </script>
+</div>

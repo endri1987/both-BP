@@ -1,0 +1,40 @@
+<Messages HELP="Messages for Forgot Password">
+
+<Message ID="_user_public_nickname">
+User Public nickname
+</Message>
+<Message ID="_user_public_location">
+User public location
+</Message>
+<Message ID="_user_occupation">
+User occupation
+</Message>
+<Message ID="_user_interes">
+User interes
+</Message>
+<Message ID="_mail_preferences">
+Mail preferences
+</Message>
+<Message ID="_user_about">
+User about
+</Message>
+<Message ID="_account_info">
+Account Information
+</Message>
+<Message ID="_contact_details">
+Contact Details
+</Message> 
+<Message ID="_authentication_data">
+Authentication Data
+</Message>
+<Message ID="_professional_data">
+Professional Data
+</Message>
+<Message ID="_public_profile">
+Public Profile
+</Message>
+<Message ID="_change_password">
+Change Password
+</Message>
+
+</Messages>

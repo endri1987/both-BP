@@ -1,0 +1,35 @@
+<div class="listTemplate">
+	<Grid gridId="Grid_StructuredContent">
+		<IfEmpty>
+		</IfEmpty>
+		<Header>
+	<Include SRC="{{NEMODULES_PATH}}partials/default_header_property_template.html"/>
+		
+			<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+				
+				<ul class="list-unstyled">
+			</Header>
+	
+					<li>
+							
+						<If condition="'{{display_title}}' == 'yes'">
+							<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+							<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+								<i class="fa fa-link titleList" aria-hidden="true"></i> {{titleToDisplay}}
+							</a>
+							</If>
+							<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+								<i class="fa fa-link titleList" aria-hidden="true"></i> {{titleToDisplay}}
+							</If>
+						</If>
+	
+						
+					</li>
+	
+	
+			<Footer>
+				</ul>
+				<Include SRC="{{NEMODULES_PATH}}ListItemCollector/network/partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>

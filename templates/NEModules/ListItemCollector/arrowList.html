@@ -1,0 +1,19 @@
+<Grid gridId="gridDataSrc">
+<Header>
+	<ul class="arrow-list">
+</Header>
+		<li>
+			<If condition="'{{linkToTitle}}' != 'yes'">
+				<span class="bold color_red">{{titleToDisplay}}: </span>{{abstractToDisplay}} 
+			</If>
+			
+			<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+				<div class="listpadditem nd_list">
+					<a title="{{paramsToNode}}" href="{{hrefToDocOther}}">{{linkDetails_CI_label}} <span class="ti-new-window color_red"></span></a>
+				</div>
+			</If>
+		</li>
+<Footer>
+</ul>
+</Footer>
+</Grid>

@@ -1,0 +1,92 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+    <Header>
+        <ul class="nav metismenu side-menu">
+    </Header>
+    <Var name="level_1_active">('{{id1}}' == '{{level_1}}' ? 'active' : '')</Var>
+    <li class="{{level_1_active}}">
+        <If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+            <span class="fa arrow"></span>
+        </If>
+        <a class="{{class_style}}" href="{{link}}" title="{{ci_title}}">
+            <Var name="level_1_icon">('{{boostrap_ico}}' != '' ? '{{boostrap_ico}}' : 'fa-inbox')</Var>
+            <i class="fa nav-icon {{level_1_icon}}"></i> <span class="nav-label">{{label}} </span>
+        </a>
+
+        <Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+
+            <Header>
+                <ul class="nav nav-second-level collapse">
+            </Header>
+            <Var name="level_2_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' ? 'active' : '')</Var>
+            <Separator>
+            </Separator>
+    <li class="{{level_2_active}}">
+        <If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+            <span class="fa arrow"></span>
+        </If>
+        <a class="{{class_style}}" href="{{link}}" title="{{ci_title}}">
+            {{label}}
+        </a>
+
+
+        <Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+
+            <IfEmpty>
+            </IfEmpty>
+
+            <Header>
+                <ul class="nav nav-third-level">
+            </Header>
+            <Var name="level_3_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' ? 'active' : '')</Var>
+
+    <li class="{{level_3_active}}">
+        <If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+            <span class="fa arrow"></span>
+        </If>
+        <a class="{{class_style}}" href="{{link}}" title="{{ci_title}}">
+            {{label}}
+        </a>
+        <Grid gridId="Grid_AuthorNav_Nivel4{{con_id}}{{keyIden}}">
+            <IfEmpty>
+            </IfEmpty>
+
+            <Header>
+                <ul class="nav nav-fourth-level">
+            </Header>
+            <Var name="level_4_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' && '{{id4}}' == '{{level_4}}' ? 'active' : '')</Var>
+    <li class="{{level_4_active}}">
+        <a class="{{class_style}}" href="{{link}}" title="{{ci_title}}">{{label}}
+        </a>
+
+    </li>
+    <Footer>
+        </ul>
+    </Footer>
+
+</Grid>
+</li>
+<Separator>
+</Separator>
+
+<Footer>
+    </ul>
+</Footer>
+
+</Grid>
+
+
+</li>
+<Footer>
+    </ul>
+</Footer>
+
+</Grid>
+
+<Separator>
+</Separator>
+
+<Footer>
+    </ul>
+</Footer>
+
+</Grid>

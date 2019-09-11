@@ -1,0 +1,72 @@
+<If condition="'{{simpleEditAuthoring}}' == 't'">
+
+	<If condition="'{{simpleModePreview}}' == 'tools'">
+		{{includeMainContent}}
+	</If>
+
+	<If condition="'{{simpleModePreview}}' == 'view' || '{{simpleModePreview}}' == 'yes'">
+			<Grid gridId="CiPropGrid{{contentId}}">
+			<Grid gridId="TemplateGrid{{contentId}}">
+				<IfEmpty>
+					{{ew_content}}
+				</IfEmpty>
+				{{templateHtml}}
+			</Grid>
+
+
+
+
+		<If condition="'{{simpleModePreview}}' == 'yes'">
+		<div class="ew-edit-toolbar-wrapper">
+			<div class="ew-edit-toolbar ew-edit-tmp">
+				<div class="btn-group pull-left dropup">
+					<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+						<span title="Current status: {{CiLabelState}}"><i class="fa fa-file-text text-danger"></i></span>
+						 <span class="caret"></span>
+					</button>
+				</div>
+				<Include SRC="{{NEMODULES_PATH}}EditCMEMetadata/simple_mode_change_template.html"/>
+
+				<div class="ew-edit-full-btn ew-block-content pull-right" data-ew-tool="0" data-ew-tag="all" data-ew-id="{{contentId}}"></div>
+
+				<If condition="'{{templateIdForTheDocument}}' >= '0'">
+				<div class="ew-edit-full-btn ew-block-content pull-right" data-ew-tool="1000" data-ew-tag="fc_ti"  data-ew-id="{{contentId}}"></div>
+				</If>
+
+				<If condition="'{{templateIdForTheDocument}}' == '-1'">
+				<div class="ew-edit-full-btn ew-block-content pull-right" data-disabled="true" data-ew-tool="1000" data-ew-tag="fc_ti"  data-ew-id="{{contentId}}"></div>
+				</If>
+
+			</div>
+		</div>
+		</If>
+
+
+			</Grid>
+	</If>
+
+	<If condition="'{{simpleModePreview}}' == 'yes' || '{{simpleModePreview}}' == 'tools'">
+
+
+
+
+
+	<input id="toggle-edit-mode" type="radio" checked="checked" style="display:none;">
+	<script type="text/javascript">
+		modules.push('toggle-edit-mode','gendialog');
+	</script>
+	</If>
+
+
+</If>
+<If condition="'{{simpleEditAuthoring}}' != 't'">
+			<Grid gridId="CiPropGrid{{contentId}}">
+			<Grid gridId="TemplateGrid{{contentId}}">
+				<IfEmpty>
+					{{ew_content}}
+				</IfEmpty>
+				{{templateHtml}}
+			</Grid>
+			</Grid>
+
+</If>

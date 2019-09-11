@@ -1,0 +1,8 @@
+<WebBox ID="FooterAreaPopup" Type="SITemplate" Case="Optional/Default" Editable="True" Region="Popup Footer Area" Container="MainContainer" Dimension="800x150">
+<If condition="'{{has_content}}'!=''">
+{{content_sponsor}}
+</If>
+<If condition="'{{has_content}}'==''">
+	{{copyright_mesg}} {{copyright_name_mesg}}
+</If>
+</WebBox>

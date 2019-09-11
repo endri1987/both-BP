@@ -1,0 +1,164 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+   <Header>
+<ul class="nav metismenu side-menu">
+   </Header>
+	<If condition="'{{CurrentRecNr}}' == '1'">
+	<Var name="active_parent">('{{node_family_id_sel}}' == '{{node_family_id}}' ? 'active' : '')</Var>
+	<Var name="collapse_parent">('{{node_family_id_sel}}' == '{{node_family_id}}' ? 'collapse in' : 'collapse')</Var>
+	<Var name="compact_parent">('{{node_family_id_sel}}' == '{{node_family_id}}' ? 'padding-left-15' : '')</Var>
+	<li class="{{active_parent}}">
+		<span class="fa arrow"></span>
+		<a class="nav_n1 {{compact_parent}}" title="{{slogan_title}}" onclick="{{link}}">
+			<If condition="'{{node_family_id_sel}}' != '{{node_family_id}}'">
+				<If condition="'{{slogan_icon_show}}' == 'yes'">
+					<i class="fa nav-icon {{slogan_icon}}"></i>
+				</If>
+				<If condition="'{{slogan_icon_show}}' != 'yes'">
+					<If condition="'{{node_family_id_sel}}' != '16' && '{{node_family_id_sel}}' != '111' && '{{node_family_id_sel}}' != '112'">
+					<i class="fa nav-icon fa-clone "></i>
+					</If>
+					<If condition="'{{node_family_id_sel}}' == '16'">
+					<i class="fa nav-icon fa-tasks"></i>
+					</If>
+					<If condition="'{{node_family_id_sel}}' == '111'">
+					<i class="fa nav-icon fa-shopping-basket"></i>
+					</If>
+					<If condition="'{{node_family_id_sel}}' == '112'">
+					<i class="fa nav-icon fa-university"></i>
+					</If>
+				</If>
+			</If>
+			<span class="nav-label">{{slogan_title}}</span>
+		</a>
+		<ul class="nav nav-second-level {{collapse_parent}}">
+	</If>
+			<Var name="level_1_active">('{{id1}}' == '{{level_1}}' ? 'active' : '')</Var>
+			<li class="{{level_1_active}}">
+				<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+				<span class="fa arrow"></span>
+				</If>
+				<a class="{{class_style}}" href="{{link}}" data-placement="right"  data-trigger="hover" data-container="body" data-viewport="body" title="{{ci_title}}">
+					<Var name="level_1_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' != 'PR' ? 'fa-clone' : '{{boostrap_ico}}')</Var>
+					<Var name="pr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'PR' ? 'fa-graduation-cap' : '')</Var>
+					<i class="fa nav-icon {{level_1_icon}} {{pr_icon}}"></i> <span class="nav-label">{{label}}</span>
+				</a>
+
+				<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+
+					<Header>
+						<ul class="nav nav-second-level collapse">
+					</Header>
+						<Var name="level_2_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' ? 'active' : '')</Var>
+						<Separator>
+						</Separator>
+							<li class="{{level_2_active}}">
+								<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+								<span class="fa arrow"></span>
+								</If>
+								<Var name="enable_popover">('{{ci_type}}' == 'EC' ? 'data-toggle="popover" data-placement="right" data-container="body" data-viewport="body" data-trigger="hover"' : '')</Var>
+								<a class="{{class_style}}" href="{{link}}" title="{{ci_title}}" style="/*padding-bottom:30px !important;*/" {{enable_popover}}>
+									<Var name="ec_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'EC' ? 'fa-cubes' : '{{boostrap_ico}}')</Var>
+									<Var name="nc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'NC' ? 'fa-newspaper-o' : '{{boostrap_ico}}')</Var>
+									<Var name="ss_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'SS' ? 'fa-users' : '{{boostrap_ico}}')</Var>
+									<Var name="us_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'US' ? 'fa-star-half-o' : '{{boostrap_ico}}')</Var>
+									<Var name="lr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'LR' ? 'fa-bar-chart' : '{{boostrap_ico}}')</Var>
+									<Var name="ue_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UE' ? 'fa-line-chart' : '{{boostrap_ico}}')</Var>
+									<Var name="cc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CC' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+									<Var name="tc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'TC' ? 'fa-calendar' : '{{boostrap_ico}}')</Var>
+									<i class="fa nav-icon {{ec_icon}}{{nc_icon}}{{ss_icon}}{{us_icon}}{{lr_icon}}{{ue_icon}}{{cc_icon}}{{tc_icon}}"></i>
+									<span class="nav-label">{{label}}</span>
+								</a>
+								<Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+
+									<IfEmpty>
+									</IfEmpty>
+
+									<Header>
+										<ul class="nav nav-third-level">
+									</Header>
+											<Var name="level_3_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' ? 'active' : '')</Var>
+
+											<li class="{{level_3_active}}">
+												<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+												<span class="fa arrow"></span>
+												</If>
+												<Var name="enable_popover">('{{ci_type}}' == 'EL' ? 'data-toggle="popover" data-placement="right" data-container="body" data-viewport="body" data-trigger="hover"' : '')</Var>
+												<a class="{{class_style}}" href="{{link}}" title="{{ci_title}}" style="/*padding-bottom:30px !important;*/" {{enable_popover}}>
+													<Var name="el_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'EL' ? 'fa-cube' : '{{boostrap_ico}}')</Var>
+													<Var name="nc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'NC' ? 'fa-newspaper-o' : '{{boostrap_ico}}')</Var>
+													<Var name="ss_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'SS' ? 'fa-users' : '{{boostrap_ico}}')</Var>
+													<Var name="us_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'US' ? 'fa-star-half-o' : '{{boostrap_ico}}')</Var>
+													<Var name="lr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'LR' ? 'fa-bar-chart' : '{{boostrap_ico}}')</Var>
+													<Var name="ue_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UE' ? 'fa-line-chart' : '{{boostrap_ico}}')</Var>
+													<Var name="cc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CC' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+													<Var name="cf_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CF' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+													<Var name="at_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'AT' ? 'fa-video-camera' : '{{boostrap_ico}}')</Var>
+													<Var name="uf_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UF' ? 'fa-commenting-o' : '{{boostrap_ico}}')</Var>
+													<Var name="es_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'ES' ? 'fa-list-alt' : '{{boostrap_ico}}')</Var>
+													<Var name="te_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'TE' ? 'fa-calendar-check-o' : '{{boostrap_ico}}')</Var>
+													<i class="fa nav-icon {{el_icon}}{{nc_icon}}{{ss_icon}}{{us_icon}}{{lr_icon}}{{ue_icon}}{{cf_icon}}{{cc_icon}}{{at_icon}}{{uf_icon}}{{es_icon}}{{te_icon}}"></i>
+													<span class="nav-label">{{label}}</span>
+
+												</a>
+												<Grid gridId="Grid_AuthorNav_Nivel4{{con_id}}{{keyIden}}">
+													<IfEmpty>
+													</IfEmpty>
+
+													<Header>
+														<ul class="nav nav-fourth-level">
+													</Header>
+																<Var name="level_4_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' && '{{id4}}' == '{{level_4}}' ? 'active' : '')</Var>
+																<li class="{{level_4_active}}">
+																		<a class="{{class_style}}" href="{{link}}" title="{{ci_title}}">
+																			<Var name="nc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'NC' ? 'fa-newspaper-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="ss_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'SS' ? 'fa-users' : '{{boostrap_ico}}')</Var>
+																			<Var name="us_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'US' ? 'fa-star-half-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="lr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'LR' ? 'fa-bar-chart' : '{{boostrap_ico}}')</Var>
+																			<Var name="ue_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UE' ? 'fa-line-chart' : '{{boostrap_ico}}')</Var>
+																			<Var name="ct_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CT' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="at_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'AT' ? 'fa-video-camera' : '{{boostrap_ico}}')</Var>
+																			<Var name="uf_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UF' ? 'fa-commenting-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="es_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'ES' ? 'fa-list-alt' : '{{boostrap_ico}}')</Var>
+																			<Var name="rq_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'RQ' ? 'fa-puzzle-piece' : '{{boostrap_ico}}')</Var>
+																			<Var name="ra_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'RA' ? 'fa-files-o' : '{{boostrap_ico}}')</Var>
+																			<i class="fa nav-icon {{nc_icon}}{{ss_icon}}{{us_icon}}{{lr_icon}}{{ue_icon}}{{ct_icon}}{{at_icon}}{{uf_icon}}{{es_icon}}{{rq_icon}}{{ra_icon}}"></i>
+																			<span class="nav-label">{{label}}</span>
+
+																		</a>
+
+																</li>
+													<Footer>
+														</ul>
+													</Footer>
+
+												</Grid>
+											</li>
+										<Separator>
+										</Separator>
+
+									<Footer>
+										</ul>
+									</Footer>
+
+								</Grid>
+
+
+						</li>
+				   <Footer>
+						</ul>
+				   </Footer>
+
+				</Grid>
+
+   <Separator>
+   </Separator>
+
+   <Footer>
+		</ul>
+   </li>
+</ul>
+   </Footer>
+
+</Grid>
+
+

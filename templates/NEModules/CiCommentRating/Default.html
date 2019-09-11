@@ -1,0 +1,165 @@
+<script type="text/javascript" language="JavaScript1.2">
+var recPages = '{{recPages}}';
+</script>
+<div class="modHeader" style="background:#F6F6F6; font-weight:bold; font-size:12px; padding: 5px;">
+<div>
+<a href="javascript:void(0)" class="title_link" onclick="javascript:openWinR_CR()" style="text-decoration:none;text-indent:999px;float:right; overflow:hidden; background: url({{GRAPHICS_PATH_APP}}comment_add.png) center center no-repeat; width:16px; height:16px;"> {{__contribute}}
+</a>
+{{__headline_rates}}</div>
+
+</div>
+
+<div class="modBody">
+
+<Grid gridId="gridContainerList">
+
+	<Header>
+<Grid gridId="gridContainerRatingAverage">
+<Header>
+<p><strong>Vleresimi i pergjithshëm deri ne këtë moment</strong></p>
+</Header>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#rate_av_{{id}}').rating(null, {show_cancel:false,maxvalue:5,curvalue:'{{rate_raport_rounded}}'});
+});
+</script>
+
+
+<div class="listpadditem" style="clear:both">
+	<div id="rate_av_{{id}}" class="rating_dp" style="float:left;width:100px"></div>
+	<div class="rate_txt" style="float:left">{{rate_desc}}</div>
+</div>
+
+
+
+</Grid>
+
+	<div class="list_navigation clearfix">
+		<ul class="nav-arrows" >
+			<li class="first">
+			<If condition="'{{previewsPage}}'!=''">
+					<a title="{{_previews_page_alt}}"
+					href="JavaScript:onChangeListState('{{previewsPage}}',{{recPages}})"
+					 class="previous"><img title="{{_previews_page_alt}}" alt="" src="{{GRAPHICS_PATH_APP}}tabs/previous.png" class="previous"></a>
+
+			</If>
+			<If condition="'{{previewsPage}}'==''">
+			<span class="previous"><img title="{{_previews_page_alt}}" alt="" src="{{GRAPHICS_PATH_APP}}tabs/previous.png" class="previous"></span>
+			</If>
+			</li>
+			<NavTpl navID="gridContainerList" blNoToDisplay="10" stepBack="2">
+					<li class="nav_digit">
+					<a class="{{selClass}}" title="{{_page}} {{BlockNavNr}}" href="JavaScript:onChangeListState('{{BlockNavNr}}',{{recPages}})">{{BlockNavNr}}</a>
+					</li>
+			</NavTpl>
+			<li class="last">
+			<If condition="'{{nextPage}}'!=''">
+					<a title="{{_next_page_alt}}"
+					href="JavaScript:onChangeListState('{{nextPage}}',{{recPages}})"
+					 class="next"><img title="{{_next_page_alt}}" alt="{{_next_page_alt}}" src="{{GRAPHICS_PATH_APP}}tabs/next.png" class="next"></a>
+			</If>
+			<If condition="'{{nextPage}}'==''">
+			<span class="next"><img title="{{_next_page_alt}}" alt="{{_next_page_alt}}" src="{{GRAPHICS_PATH_APP}}tabs/next.png" class="next"></span>
+			</If>
+			</li>
+		</ul>
+		<div class="list_info">{{__page}} {{FromRecs}}-{{ToRecs}} {{__items}} {{_of}} {{CountItems}}</div>
+	</div>
+<div class="comentsList">
+	</Header>
+
+    	<div class="coment_item">
+			<div class="comment_title">{{titleC}}</div>
+			<div class="comment_user_details">
+				<span class="coment_user">{{name_to_display}}</span>&nbsp;-&nbsp;
+				<span class="coment_date"> {{dateModified}} </span>
+			</div>
+			<div class="coment_content">{{textC}}</div>
+			<div class="comment_bottom">
+				<div class="coment_rating">
+					<If condition="'{{rate_value}}'==200">
+					<div id="right" class="listpadditem title_link" style="float:right;">
+						<div alt="{{_average_rate}}" title="{{titleC}}" style="float:left;height:12px;" class="star_empty">
+							<div class="star" style="width:{{rate_value}}px;height:12px;"></div>
+						</div>
+					</div>
+					</If>
+					<Grid gridId="gridContainerRating">
+					<script type="text/javascript">
+					$(document).ready(function() {
+					$('#rate_{{id}}_{{rid}}').rating(null, {show_cancel:false,maxvalue:5,curvalue:'{{rate_ori_value}}'});
+					});
+					</script>
+					<!--
+					<div class="coment_rating" >
+						<div id="rate_{{id}}_{{rid}}" class="rating_dp" style="float:left;width:55%"></div>
+						<div class="rate_txt" style="float:left">{{rate_desc}}</div>
+					</div>
+					-->
+					</Grid>
+
+				</div>
+				<!--
+				<div class="coment_edit">
+					<a href="javascript:void(0)" class="link_editor" onclick="javascript:openWinRe_CR({{rid}})">
+						<img alt="{{__contribute_edit_mesg}}" title="{{__contribute_edit_mesg}}" src="{{GRAPHICS_PATH_APP}}comment_edit.png"  border="0" /> {{__contribute_edit}}
+					</a>
+					<a class="link_editor" href="JavaScript:del_cr({{rid}})">
+						<img alt="{{__contribute_delete_mesg}}" title="{{__contribute_delete_mesg}}" src="{{GRAPHICS_PATH_APP}}comment_delete.png"  border="0" /> {{__contribute_delete}}
+					</a>
+				</div>
+				-->
+			</div>
+		</div>
+
+	<Footer>
+	</div>
+		<div class="list_navigation clearfix">
+		<ul class="nav-arrows" >
+			<li class="first">
+			<If condition="'{{previewsPage}}'!=''">
+					<a title="{{_previews_page_alt}}"
+					href="JavaScript:onChangeListState('{{previewsPage}}',{{recPages}})"
+					 class="previous"><img title="{{_previews_page_alt}}" alt="" src="{{GRAPHICS_PATH_APP}}tabs/previous.png" class="previous"></a>
+
+			</If>
+			<If condition="'{{previewsPage}}'==''">
+			<span class="previous"><img title="{{_previews_page_alt}}" alt="" src="{{GRAPHICS_PATH_APP}}tabs/previous.png" class="previous"></span>
+			</If>
+			</li>
+			<NavTpl navID="gridContainerList" blNoToDisplay="10" stepBack="2">
+					<li class="nav_digit">
+					<a class="{{selClass}}" title="{{_page}} {{BlockNavNr}}" href="JavaScript:onChangeListState('{{BlockNavNr}}',{{recPages}})">{{BlockNavNr}}</a>
+					</li>
+			</NavTpl>
+			<li class="last">
+			<If condition="'{{nextPage}}'!=''">
+					<a title="{{_next_page_alt}}"
+					href="JavaScript:onChangeListState('{{nextPage}}',{{recPages}})"
+					 class="next"><img title="{{_next_page_alt}}" alt="{{_next_page_alt}}" src="{{GRAPHICS_PATH_APP}}tabs/next.png" class="next"></a>
+			</If>
+			<If condition="'{{nextPage}}'==''">
+			<span class="next"><img title="{{_next_page_alt}}" alt="{{_next_page_alt}}" src="{{GRAPHICS_PATH_APP}}tabs/next.png" class="next"></span>
+			</If>
+			</li>
+		</ul>
+		<div class="list_info">{{__page}} {{FromRecs}}-{{ToRecs}} {{__items}} {{_of}} {{CountItems}}</div>
+	</div>
+
+	</Footer>
+
+
+
+</Grid>
+
+
+</div>
+
+
+
+
+
+
+
+

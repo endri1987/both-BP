@@ -1,0 +1,156 @@
+
+<link rel="stylesheet" type="text/css" href="{{./}}style.css" media="all">
+<script type="text/javascript">
+	var _APP_URL		= '{{APP_URL}}';
+	var _ajx 			= "{{APP_URL}}ajxPh.php?uni={{uni}}&lang={{lang}}&k={{contentId}}";
+</script>
+
+<Grid gridId="mediaModuleGridParams">
+
+		
+			<script type="text/javascript">
+				var width			= "{{width}}";
+				var height			= "{{height}}";
+				
+				var youtube_paramas	= "?theme=dark";
+				var media_params1	= "&amp;width={{width}}";
+								
+				media_params1		= media_params1+"&amp;height={{height}}";
+				if({{show_volume}}=='1'){
+					media_params1		= media_params1+"&amp;showvolume={{showvolume}}";
+					youtube_paramas		= youtube_paramas+"&amp;autohide=1";
+				}
+				if({{show_time}}=='1'){
+					media_params1		= media_params1+"&amp;show_time={{show_time}}";
+					
+				}	
+				if({{loop}}=='1'){
+					media_params1		= media_params1+"&amp;loop={{loop}}";
+					youtube_paramas		= youtube_paramas+"&amp;loop={{loop}}";
+				}	
+				if({{autostart}}=='1'){
+					media_params1		= media_params1+"&amp;autoplay={{autostart}}";
+					youtube_paramas		= youtube_paramas+"&amp;autoplay={{autostart}}";
+				}
+				media_params1		= media_params1+"&amp;margin=0";
+				media_params1		= media_params1+"&amp;bgcolor1=8fffff";
+				media_params1		= media_params1+"&amp;bgcolor2=00009e";
+			</script>
+		
+</Grid>
+
+
+	<Grid gridId="mediaModuleGrid">
+		<Header>
+			<script type="text/javascript">
+				var _idF	= "{{idF}}";
+			</script>
+				<div class="block carousel_mediagallery video" id="{{idF}}">
+							<div class="gallery_main">
+								<div class="slide_media">
+									
+								</div>
+								
+									<a href="#" class="prev prev_11">
+										<!--i class="icon-left-open-big"></i-->										
+										<img alt="{{title}}" src="{{APP_URL}}graphics/fancybox/fancy_nav_left.png" height="30" width="30"/>
+									</a> 
+									<a href="#" class="next next_11">
+										<!--i class="icon-right-open-big"></i-->
+										<img alt="{{title}}" src="{{APP_URL}}graphics/fancybox/fancy_nav_right.png" height="30" width="30"/>
+									</a>
+									<div class="slide_title"><span></span></div>
+									<div class="slide_description"><span></span></div>
+									<div class="slide_author"><span></span></div>
+									<div class="slide_date"><span></span></div>
+							</div>
+							<div class="gallery_slides">
+								<div class="cycle-slideshow" 
+									data-cycle-slides="li"
+									 data-cycle-timeout="0"								
+									 data-cycle-prev=".prev_11"
+									 data-cycle-next=".next_11"
+									 data-cycle-fx="carousel" 
+									 data-cycle-carousel-visible="6" 
+									 data-cycle-carousel-slide-dimension="115"
+									 data-cycle-carousel-fluid="true">
+							<ul>
+		</Header>
+						
+						<li>
+				
+							<If condition="'{{type}}'=='youtube'">
+							
+								<If condition="'{{file}}'!=''">
+									<img alt="{{title}}" src="{{file}}" dt-title="{{title}}" dt-idf="{{idF}}"  dt-key="{{key}}" dt-item="{{item}}" dt-desc="{{description}}" dt-auth="{{author}}" dt-date="{{date}}" dt-src="{{file}}" dt-type="y" class="youtube_video"/>
+								</If>
+							</If>	
+							<If condition="'{{type}}'=='video'">
+							
+								<If condition="'{{thumbnail}}'!=''">
+									<img alt="{{title}}" src="{{thumbnail}}"  dt-idf="{{idF}}"  dt-key="{{key}}" dt-item="{{item}}" dt-title="{{title}}" dt-desc="{{description}}" dt-auth="{{author}}" dt-date="{{date}}" dt-src="{{file}}" dt-type="v" class="other_video"/>
+								</If>
+								<If condition="'{{thumbnail}}'==''">
+									<img alt="{{title}}" src="{{APP_URL}}graphics/video_icon.png" dt-idf="{{idF}}"  dt-key="{{key}}" dt-item="{{item}}" dt-title="{{title}}" dt-desc="{{description}}" dt-auth="{{author}}" dt-date="{{date}}" dt-src="{{file}}" dt-type="v" class="other_video"/>
+								</If>
+							</If>
+							<If condition="'{{type}}'=='image'">						
+								<If condition="'{{thumbnail}}'!=''">
+									<img alt="{{title}}" src="{{file}}" dt-idf="{{idF}}"  dt-key="{{key}}" dt-item="{{item}}" dt-title="{{title}}" dt-desc="{{description}}" dt-auth="{{author}}" dt-date="{{date}}" dt-src="{{file}}" dt-type="i" class="image_video"/>
+								</If>
+								<If condition="'{{thumbnail}}'==''">
+									<img alt="{{title}}" src="{{APP_URL}}graphics/video_icon.png" dt-idf="{{idF}}"  dt-key="{{key}}" dt-item="{{item}}" dt-title="{{title}}" dt-desc="{{description}}" dt-auth="{{author}}" dt-date="{{date}}" dt-src="{{thumbnail}}" dt-type="i" class="image_video"/>
+								</If>
+							</If>								
+						</li>
+											
+
+			<Separator>
+
+		
+			</Separator>	
+		<Footer>
+								</ul>
+								</div>
+
+								<div class="gallery_action">
+									
+										<a href="#" class="prev prev_11">
+											<!--i class="icon-left-open-big"></i-->										
+											<img alt="{{title}}" src="{{APP_URL}}graphics/fancybox/fancy_nav_left.png" height="30" width="30"/>
+										</a> 
+										<a href="#" class="next next_11">
+											<!--i class="icon-right-open-big"></i-->
+											<img alt="{{title}}" src="{{APP_URL}}graphics/fancybox/fancy_nav_right.png" height="30" width="30"/>
+										</a>
+								
+									<span class="custom-caption"></span>
+									
+									
+								</div>
+
+
+							</div>
+							
+						
+							
+						</div>
+						<script type="text/javascript"> modules.push("cycle-video-gallery");</script>
+						
+						
+					
+		</Footer>
+	</Grid>
+	
+	
+
+
+
+
+
+
+
+
+
+	
+

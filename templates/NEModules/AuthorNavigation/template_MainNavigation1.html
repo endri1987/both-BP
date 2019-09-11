@@ -1,0 +1,61 @@
+<div class="MainNavigation">
+	<Grid gridId="Grid_AuthorNav_{{objNem}}">
+	<Header>
+	<ul class="navbar-nav">
+	</Header>
+		<Var name="has_child">('{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child' ? 'dropdown' : '')</Var>
+		<Var name="active_class">('{{id1}}' == '{{level_1}}' ? 'active' : '')</Var>
+		<Var name="last_child">('{{AllRecs}}' == '{{CurrentRecNr}}' ? 'last-child' : '')</Var>
+		<li role="nav-item" class="nav-item {{has_child}} {{last_child}} hover">
+			<a href="{{link}}" class="nav-link {{active_class}}">{{label}}</a>
+
+			<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+				<Header>
+					<If condition="'{{id1}}' == '{{level_1}}'">
+					<ul id="level-2-{{id1}}" class="level-2 colapse collapse show">
+					</If>
+					<If condition="'{{id1}}' != '{{level_1}}'">
+					<ul id="level-2-{{id1}}" class="level-2 colapse collapse">
+					</If>
+				</Header>
+						<li role="nav-item" class="nav-item-l2 {{has_child}}">
+							<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+									<If condition="'{{id2}}' == '{{level_2}}'">
+									<span class="fa has-child hidden-md-up float-right" style="position:relative;top:0;background:#eee;border:1px solid #ede;font-weight:bold;padding: 0;" data-toggle="collapse" data-parent=".dropdown" data-target="#level-3-{{id1}}-{{id2}}" aria-expanded="false">
+									</If>
+									<If condition="'{{id2}}' != '{{level_2}}'">
+									<span class="fa has-child hidden-md-up collapsed float-right" style="position:relative;top:0;background:#eee;border:1px solid #ede;font-weight:bold;padding: 0;" data-toggle="collapse" data-parent=".dropdown" data-target="#level-3-{{id1}}-{{id2}}" aria-expanded="false">
+									</If>
+									</span>
+							</If>
+							<Var name="has_child">('{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child' ? 'child' : '')</Var>
+							<Var name="last_child">('{{AllRecs}}' == '({{CurrentRecNr}})-1' || '{{AllRecs}}' == '{{CurrentRecNr}}' ? 'last-child' : '')</Var>
+							<a class="{{class_style}} {{has_child}}" href="{{link}}">{{label}}</a>
+							<Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+								<Header>
+									<If condition="'{{id2}}' == '{{level_2}}'">
+									<ul id="level-3-{{id1}}-{{id2}}" class="level-3 colapse collapse show">
+									</If>
+									<If condition="'{{id2}}' != '{{level_2}}'">
+									<ul id="level-3-{{id1}}-{{id2}}" class="level-3 colapse collapse">
+									</If>
+								</Header>
+										<li class="nav-item-l3">
+											<a class="{{class_style}}" href="{{link}}">{{label}}</a>
+										</li>
+								<Footer>
+									</ul>
+								</Footer>
+							</Grid>
+
+						</li>
+				<Footer>
+					</ul>
+				</Footer>
+			</Grid>
+		</li>
+	<Footer>
+				</ul>
+	</Footer>
+	</Grid>
+</div>

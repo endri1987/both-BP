@@ -1,0 +1,46 @@
+<If condition="('{{ses_userid}}'==2 || '{{loginProccess}}'=='ok') || ('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes')">
+<script language="javascript1.2" src="{{./}}LogIn_Module.js"></script>
+	<script>
+		var _fill_required_data = '{{_fill_required_data}}';
+		var idstempLogin = '{{idstempLogin}}';
+	</script>
+
+		<div class="container">
+			<div class="col-lg-16" id="switch">
+				<form name="loginFrm" class="loginFrm m-t client-form validate" id="loginFrm" onSubmit="return false;" action="javascript:void(0)">
+					<div class="panel panel-body login-form">
+						<div class="form-group" style="position:relative;">
+							<i class="fa fa-user text-muted" style="position:absolute;top:6px;left:3px;"></i>
+							<input type="text" class="form-control required" style="padding-left: 20px;" placeholder="{{usrname_label}}" name="usrname" id="username" data-msg-required="{{fill_username_label}}" autofocus />
+						</div>
+
+						<div class="form-group" style="position:relative;">
+						<i class="fa fa-lock text-muted" style="position:absolute;top:6px;left:3px;"></i>
+						<input type="password" class="form-control required" style="padding-left: 20px;" name="usrpassd" placeholder="{{password_label}}" id="password-password" data-msg-required="{{fill_password_label}}"/>
+						</div>
+						<If condition="'{{forgot_password_isset}}'=='yes'">
+							<div class="form-group">
+								<a title="{{forgot_password_label}}" href="javascript:void(0);"
+								>{{forgot_password_label}}</a>
+							</div>
+						</If>
+						<div class="form-group">
+							<button class="btn btn-primary btn-block">{{sign_in_label}}</button>
+							<If condition="'{{register_target_isset}}'=='yes'">
+								<a class="btn btn-default block full-width"
+								 data-bs-modal="true"
+								 data-modal-size="modal-lg"
+								 data-modal-ajax="true"
+								 data-url="&amp;apprcss=registerModule&amp;cis={{register_target_ci}}#RegisterUserModule"
+								 data-title="{{register_target_label}}"
+								>{{register_target_label}}</a>
+							</If>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<script>
+		modules.push('validate','ajax-module');
+	</script>
+</If>

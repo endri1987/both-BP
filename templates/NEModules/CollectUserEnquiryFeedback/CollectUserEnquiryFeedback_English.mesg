@@ -1,0 +1,62 @@
+<Messages>
+<Message ID="_headline">
+Enquiry & Feedback
+</Message>
+<Message ID="_success_registration_message">
+Your Enquiry & Feedback was sent successfully!
+</Message>
+<Message ID="_error_registration_message">
+There was an error sending Enquiry & Feedback. Please try later!
+</Message>
+<Message ID="_error_captcha_match">
+Captcha didn't match
+</Message>
+<Message ID="field_reqiured_mesg">
+Please fill all required fields marked with *.
+</Message>
+
+<Message ID="_enquirerTypeLBL">
+I am
+</Message>
+<Message ID="_questionTypeLBL">
+I have Quesion about
+</Message>
+<Message ID="_subjectLBL">
+Subject
+</Message>
+<Message ID="_salutationLBL">
+Salutation
+</Message>
+<Message ID="_firstnameLBL">
+First Name
+</Message>
+<Message ID="_lastnameLBL">
+Last Name
+</Message>
+<Message ID="_emailLBL">
+Email
+</Message>
+<Message ID="_phoneLBL">
+Phone (optional)
+</Message>
+<Message ID="_institutionLBL">
+Institution
+</Message>
+<Message ID="_countryLBL">
+Country
+</Message>
+<Message ID="_enquiryDetailsLBL">
+Enquiry Details
+</Message>
+<Message ID="_captcha_code_lbl_msg">
+Enter captcha code
+</Message>
+
+<Message ID="_submitButtonLBL">
+Send
+</Message>
+<Message ID="_resetButtonLBL">
+Reset
+</Message>
+
+</Messages>

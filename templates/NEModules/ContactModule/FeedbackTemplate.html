@@ -1,0 +1,32 @@
+<!--formular_contact_form-->
+<form {{contact_form_attribut}} action="{{contact_form_action}}" class="validate"  dt-idstemp="{{idstemp}}" dt-id_nem="{{id_nem}}" dt-id_form_k="0">
+	<div class="row">
+		 <div class="form-group col-sm-6">
+			 <label  for="Inputemri">*{{contact_emri_mesg}}:</label>
+			 <input  class="form-control input-sm required" placeholder="{{contact_emri_mesg}}" type="text" name="name" value=""  maxlength="50"  name_post="{{contact_emri_mesg}}" valid="1,0,0,0,0,0" etiketa="{{contact_emri_mesg}}"  data-msg-required="{{field_reqiured_mesg}}" id="Inputemri"/>
+		 </div>
+		 <div class="form-group col-sm-6">
+			 <label for="Inputmbiemri">*{{contact_mbiemri_mesg}}:</label>
+			 <input  class="form-control input-sm required" placeholder="{{contact_mbiemri_mesg}}"  type="text" name="surname" value=""  maxlength="50"  name_post="{{contact_mbiemri_mesg}}" valid="1,0,0,0,0,0" etiketa="{{contact_mbiemri_mesg}}" data-msg-required="{{field_reqiured_mesg}}" id="Inputmbiemri"/>
+		 </div>
+		<div class="form-group col-sm-6">
+			 <label for="Inputtel">*{{contact_user_tel_mesg}}:</label>
+			 <input type="text" class="form-control input-sm required" placeholder="{{contact_user_tel_mesg}}" name="tel_cont" name_post="{{contact_user_tel_mesg}}" value="" id="Inputtel" data-msg-required="{{field_reqiured_mesg}}" maxlength="50"  valid="0,0,0,0,0,0" etiketa="{{contact_user_tel_mesg}}" />
+		 </div>
+		<div class="form-group col-sm-6">
+			 <label for="Inputemail">*{{contact_user_email_mesg}}:</label>
+			 <input  class="form-control input-sm required" placeholder="{{contact_user_email_mesg}}" type="text" name="email_cont" name_post="{{contact_user_email_mesg}}" value=""  maxlength="50"  valid="1,0,0,0,0,0" etiketa="{{contact_user_email_mesg}}" data-msg-required="{{field_reqiured_mesg}}" id="Inputemail" />
+		</div>
+	</div>
+	<div class="row">	 
+		 <div class="form-group col-sm-12">
+			 <label for="_Kommentar">*{{email_komente_mesg}}:</label>
+			 <textarea  class="form-control input-sm required" placeholder="{{email_komente_mesg}}" rows="5"  type="text" name="email_komente_mesg" value=""  maxlength="250"  name_post="{{email_komente_mesg}}" valid="0,0,0,0,0,0" etiketa="{{email_komente_mesg}}" data-msg-required="{{field_reqiured_mesg}}" id="_Kommentar"></textarea>
+		 </div>
+		<div class="form-group col-sm-12">
+			<button type="submit" class="btn btn-primary btn-sm" title="{{email_but_send_mesg}}">{{email_but_send_mesg}}</button>
+			<button type="reset" class="btn btn-white btn-sm" title="{{email_but_clear_mesg}}">{{email_but_clear_mesg}}</button>
+		</div>
+	</div>
+</form>
+<script>modules.push("validate");</script>

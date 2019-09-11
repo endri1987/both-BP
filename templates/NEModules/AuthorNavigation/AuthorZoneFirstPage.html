@@ -1,0 +1,209 @@
+<div class="ibox">
+	<div class="ibox-title">
+	    <h5>{{slogan_title}}</h5>
+	</div>
+	<div class="ibox-content">
+
+
+
+		<Grid gridId="Grid_AuthorNav_{{objNem}}">
+
+		   <IfEmpty>
+		   </IfEmpty>
+
+		   <Header>
+				<div class="dd nestable-divided" id="program-structure">
+					<ol class="dd-list">
+		   </Header>
+					<li class="{{class_style}} dd-item" data-id="{{CurrentRecNr}}">
+
+						<div class="dd-handle">
+							<a class="btn btn-xs btn-primary pull-right" href="{{link}}" title="{{_edit_nav}}"><i class="fa fa-edit fa-fw"></i> {{_edit_nav}}</a>
+							<em class="text-small">{{label}}</em><br>
+							<strong>{{ci_title}}</strong><br>
+
+							<If condition="'{{showColor}}' == 'y'">
+									<div style="padding: 9px 10px 28px 5px;background-color: transparent;margin-top:10px;">
+										<div class="col-xs-6 col-xs-2  no-padding margin-right-5" >
+											<div class="bar-holder no-padding">
+												<div class="progress progress-xs" >
+													<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;"></div>
+												</div>
+											</div>
+											<span class="txt-color-blueLight font-xs">{{_input_stad}}:{{value_i}}</span>
+										</div>
+										<div class="col-xs-6 col-xs-2 no-padding margin-right-5">
+											<div class="bar-holder no-padding">
+												<div class="progress progress-xs" >
+													<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+												</div>
+											</div>
+											<span class="txt-color-blueLight font-xs">{{_processing_stad}}:{{value_p}}</span>
+										</div>
+										<div class="col-xs-6 col-xs-2  no-padding">
+											<div class="bar-holder no-padding">
+												<div class="progress progress-xs" >
+													<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;"></div>
+												</div>
+											</div>
+											<span class="txt-color-blueLight font-xs">{{_review_stad}}:{{value_r}}</span>
+										</div>
+									</div>
+							</If>
+
+						</div>
+
+						<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+
+							<IfEmpty>
+							</IfEmpty>
+
+							<Header>
+								<ol class="dd-list level_2" style="{{display}}">
+							</Header>
+								<Separator>
+								</Separator>
+
+									<li class="dd-item" data-id="{{CurrentRecNr}}">
+
+									<div class="dd-handle">
+										<a class="btn btn-xs btn-primary pull-right" href="{{link}}" title="{{_edit_nav}}"><i class="fa fa-edit fa-fw"></i> {{_edit_nav}}</a>
+										<em class="text-small">{{label}}</em><br>
+										<strong>{{ci_title}}</strong><br>
+
+
+
+
+										<If condition="'{{showColor}}' == 'y'">
+												<div style="padding: 9px 10px 28px 5px;background-color: transparent;margin-top:10px;">
+													<div class="col-xs-6 col-xs-2 no-padding margin-right-5" >
+														<div class="bar-holder no-padding">
+															<div class="progress progress-xs" >
+																<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;"></div>
+															</div>
+														</div>
+														<span class="txt-color-blueLight font-xs">{{_input_stad}}:{{value_i}}</span>
+													</div>
+													<div class="col-xs-6 col-xs-2 no-padding margin-right-5">
+														<div class="bar-holder no-padding">
+															<div class="progress progress-xs" >
+																<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+															</div>
+														</div>
+														<span class="txt-color-blueLight font-xs">{{_processing_stad}}:{{value_p}}</span>
+													</div>
+													<div class="col-xs-6 col-xs-2  no-padding">
+														<div class="bar-holder no-padding">
+															<div class="progress progress-xs" >
+																<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;"></div>
+															</div>
+														</div>
+														<span class="txt-color-blueLight font-xs">{{_review_stad}}:{{value_r}}</span>
+													</div>
+												</div>
+											</If>
+									</div>
+
+										<Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+
+											<IfEmpty>
+											</IfEmpty>
+
+											<Header>
+												<ol class="dd-list level_3" style="{{display}}">
+											</Header>
+
+
+													<li class="dd-item dd-collapsed" data-id="{{CurrentRecNr}}">
+
+															<div class="dd-handle">
+																<a class="btn btn-xs btn-primary pull-right" href="{{link}}" title="{{_edit_nav}}"><i class="fa fa-edit fa-fw"></i> {{_edit_nav}}</a>
+																<em class="text-small">{{label}}</em><br>
+																<strong>{{ci_title}}</strong><br>
+
+
+																<If condition="'{{showColor}}' == 'y'">
+																	<div style="padding: 9px 10px 28px 5px;background-color: transparent;margin-top:10px;">
+																		<div class="col-xs-6 col-xs-2  no-padding margin-right-5" >
+																			<div class="bar-holder no-padding">
+																				<div class="progress progress-xs" >
+																					<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;"></div>
+																				</div>
+																			</div>
+																			<!--span class="txt-color-blueLight font-xs">
+																				{{_input_stad}}:{{value_i}}
+																			</span-->
+																		</div>
+																		<div class="col-xs-6 col-xs-2 no-padding margin-right-5">
+																			<div class="bar-holder no-padding">
+																				<div class="progress progress-xs" >
+																					<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+																				</div>
+																			</div>
+																			<span class="txt-color-blueLight font-xs">{{_processing_stad}}:{{value_p}}</span>
+																		</div>
+																		<div class="col-xs-6 col-xs-2  no-padding">
+																			<div class="bar-holder no-padding">
+																				<div class="progress progress-xs" >
+																					<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;"></div>
+																				</div>
+																			</div>
+																			<span class="txt-color-blueLight font-xs">{{_review_stad}}:{{value_r}}</span>
+																		</div>
+																	</div>
+																</If>
+
+															</div>
+
+															<Grid gridId="Grid_AuthorNav_Nivel4{{con_id}}{{keyIden}}">
+																<IfEmpty>
+																</IfEmpty>
+
+																<Header>
+																	<ol class="dd-list level_4" style="display:none;">
+																</Header>
+
+																			<li class="{{class_style}} dd-handle">
+
+																					<a class="btn btn-xs btn-primary pull-right" href="{{link}}" title="{{_edit_nav}}"><i class="fa fa-edit fa-fw"></i> {{_edit_nav}}</a>
+																					<a class="{{class_style}}" href="{{link}}" title="{{label}}">{{label}}</a>
+
+																			</li>
+																<Footer>
+																	</ol>
+																</Footer>
+
+															</Grid>
+													</li>
+												<Separator>
+												</Separator>
+
+											<Footer>
+												</ol>
+											</Footer>
+
+										</Grid>
+
+
+								</li>
+						   <Footer>
+								</ol>
+
+						   </Footer>
+
+						</Grid>
+
+		   <Separator>
+		   </Separator>
+
+		   <Footer>
+				</ol>
+				</div>
+				<script>
+				modules.push('structure-info');
+				</script>
+		   </Footer>
+
+		</Grid>
+	</div>
+</div>

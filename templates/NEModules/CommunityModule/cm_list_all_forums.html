@@ -1,0 +1,181 @@
+<div id="addint">
+	
+				<div class="ibox-content m-b-sm border-bottom">
+					<div class="p-xs">
+						<div class="pull-left m-r-md">
+							<i class="fa fa-globe text-navy mid-icon"></i>
+						</div>
+						<h2>{{CMtitle}}</h2>
+						<span class="text-muted">{{abstractToDisplay}}</span>
+					</div>
+                </div>
+				 
+				 
+				<div class="ibox-content forum-container">
+	
+					<div class="forum-title">
+						<div class="pull-right forum-desc">
+							<small>{{_total_post}}: {{forum_total_postNr}}</small>
+						</div>
+						<h3>All Forum</h3>
+					</div>
+					
+					<Grid gridId="gridDataSrc">
+						<IfEmpty>
+							<p class="txt-color-orange">
+								<i class="fa fa-warning"></i>{{_there_are_no_temas}}
+							</p>
+						</IfEmpty>
+						
+						<Header>
+						
+							<form data-imodoptions="#ModerationSelect option" data-controls="#InlineModControls" data-cookiename="threads" class="DiscussionList InlineModForm" method="post" action="inline-mod/thread/switch">
+						</Header>
+						
+								<div class="forum-item">
+										<div class="row">
+											<div class="col-md-7">
+												<div class="forum-icon">
+													<i class="fa fa-cloud"></i>
+												</div>
+												<a data-previewurl="{{hrefToDoc}}" class="forum-item-title" title="" href="{{hrefToDoc}}">{{titleToDisplay}}</a>
+												<small>
+													<a href="#" class="username" title="Thread starter" started_by="{{web_user_id}}">{{web_nick_name}}</a>
+														<Grid gridId="gridDocumentFullDate_{{cm_id}}">
+															<i class="fa fa-clock-o"></i>
+															
+															<If condition="'{{dateIn}}'=='today'">
+																{{_today}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+															</If>
+															<If condition="'{{dateIn}}'=='yestarday'">
+																{{_yestarday}}  {{_at}} {{hour12}}:{{min}} {{pm_am}}
+															</If>
+															<If condition="'{{dateIn}}'=='sameWeek'">
+																{{day_label}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+															</If>
+															<If condition="'{{dateIn}}'=='sameMonth'">
+																{{monthLabel}}  {{date}}, {{year}}
+															</If>
+															<If condition="'{{dateIn}}'=='sameYear'">
+																{{monthLabel}}  {{date}}, {{year}}
+															</If>
+															<If condition="'{{dateIn}}'=='previewsYear'">
+																{{monthLabel}}  {{date}}, {{year}}
+															</If>
+														</Grid>						
+												</small>
+												
+												<div class="forum-sub-title">{{ci_content_to_display}}</div>
+											</div>
+											<div class="col-md-1 forum-info">
+												<div>
+													<small>{{_post}}</small>
+												</div>
+												<span class="views-number">
+													<If condition="'{{nr_of_post_for_forumL}}'>'0'">
+														{{nr_of_post_for_forumL}}
+													</If>
+													<If condition="'{{nr_of_post_for_forumL}}'=='0'">
+														0
+													</If>
+												</span>
+												
+											</div>
+											<div class="col-md-1 forum-info">
+												<div>
+													<small>{{_Views}}</small>
+												</div>
+												<span class="views-number">
+
+													<If condition="'{{viewed_tot_postL}}'>'0'">
+														{{viewed_tot_postL}}
+													</If>
+													<If condition="'{{viewed_tot_postL}}'=='viewed_tot_postL' || '{{viewed_tot_postL}}'=='0'">
+														0
+													</If>
+												</span>
+												
+											</div>
+											<div class="col-md-3 forum-info">
+												<div>
+													<small>{{_LastMessage}}</small>
+												</div>
+												
+													<If condition="'{{existForumDetailsL}}'=='yes'">
+														<small>
+															<Grid gridId="MemberData_{{authorIDL}}">
+																<a href="javascript:void(0);">
+																	<strong> {{_by}} 
+																		<If condition="'{{usr_short}}'!=''">
+																			{{usr_short}}
+																		</If>
+																		<If condition="'{{usr_short}}'==''">
+																			{{FirstName}} {{SecondName}}
+																		</If>															
+																	</strong> <br>
+																
+																</a>							
+															</Grid>
+														</small>
+														<Grid gridId="gridPostDateL_{{LastPost_idL}}">
+
+															<small title="{{_month_03}} {{date}}, {{year}} {{_at}} {{hour12}}:{{min}} {{pm_am}}"><i>
+																<i class="fa fa-clock-o"></i>
+																<If condition="'{{dateIn}}'=='today'">
+																	{{_today}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+																</If>
+																<If condition="'{{dateIn}}'=='yestarday'">
+																	{{_yestarday}}  {{_at}} {{hour12}}:{{min}} {{pm_am}}
+																</If>
+
+																<If condition="'{{dateIn}}'=='sameWeek'">
+																	{{day_label}} {{_at}} {{hour12}}:{{min}} {{pm_am}}
+																</If>
+
+																<If condition="'{{dateIn}}'=='sameMonth'">
+																	{{_month_03}}  {{date}}, {{year}}
+																</If>
+
+																<If condition="'{{dateIn}}'=='sameYear'">
+																	{{_month_03}}  {{date}}, {{year}}
+																</If>
+																<If condition="'{{dateIn}}'=='previewsYear'">
+																	{{_month_03}}  {{date}}, {{year}}
+																</If>
+															</i></small>
+														</Grid>
+													</If>
+												
+												
+											</div>
+										</div>
+								 </div>
+						
+						<Footer>
+							</form>
+							<div class="hr-line-dashed"></div>
+							
+							<If condition="'{{TotPage}}'>'1'">
+								<div class="pageNavLinkGroup">
+									{{nav_template_cm}}
+								</div>
+							</If>	
+						</Footer>
+					</Grid>
+
+				</div>	
+	
+	</div>
+	
+
+	<If condition="'{{showBtn}}'=='y'">
+		<!--Include SRC="{{NEMODULES_PATH}}CommunityModule/LoginOrAddNewTema.html"/-->
+	</If>
+
+
+
+
+
+
+
+

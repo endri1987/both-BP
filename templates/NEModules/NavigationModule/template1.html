@@ -1,0 +1,26 @@
+<Grid gridId="Grid_Navigation">
+  <IfEmpty>
+  </IfEmpty>
+	<Header>
+		<ul class="offcanvas" id="section_menu">
+	</Header>
+		<If condition="'{{nivel}}' == '1'">
+			<If condition="'{{index1}}' == '1'">
+			<li>
+				<a  href="{{link}}" >{{label}}</a>
+			</If>
+			<If condition="'{{index1}}' > '1'">
+			</li>
+			<li>
+				<a  href="{{link}}" >{{label}}</a>
+			</If>    
+			<If condition="('{{index1}}' == '{{nr_tot1}}') && ('{{nr_child}}' == '0')">
+			</li>
+			</If>
+		</If>
+	<Separator>
+	</Separator>
+	<Footer>
+		</ul>
+	</Footer>
+</Grid>

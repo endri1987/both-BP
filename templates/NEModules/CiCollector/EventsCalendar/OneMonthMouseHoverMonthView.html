@@ -1,0 +1,127 @@
+<script type="text/javascript">
+<If condition="'{{EIcalenEmpty}}' != 'yes'">
+	var currentmonth = "{{currentmonth}}";
+	var enableDays = [{{ew_ei_enable}}];
+	var $jdaysWithRecords = [{{ew_ei_enable}}];
+	var $jdaysWithRecords_{{objNemCal}} = [{{ew_ei_enable}}];
+</If>
+<If condition="'{{EIcalenEmpty}}' == 'yes'">
+	var currentmonth = "{{currentmonth}}";
+	var enableDays = "{{ew_ei_enable}}";
+	var $jdaysWithRecords = "{{ew_ei_enable}}";
+	var $jdaysWithRecords_{{objNemCal}} = ["",""];
+</If>
+$j(document).ready(function() {
+
+	$j("#datepicker_{{objNemCal}}").datepicker(
+		{
+			dateFormat:'dd.mm.yy',
+			defaultDate: '{{currenCaldateReadable}}',
+			<If condition="'{{EIcalenEmpty}}' != 'yes'">
+				minDate: '{{minCaldateReadable}}',
+				maxDate:'{{maxCaldateReadable}}',
+
+				onSelect: function(date, inst) {
+					GetEventsDays_{{objNemCal}}(date)
+				},
+			</If>
+				onChangeMonthYear: function(year, month) {
+								GetEventsMonth_{{objNemCal}}(year, month)
+				},
+
+
+			beforeShowDay: EnableClosedDays_{{objNemCal}}
+
+	});
+
+	function GetEventsMonth_{{objNemCal}}(year, month) {
+		$j('#filterCalByMonth_{{objNemCal}}').val(year+"_"+month);
+		$j.ajax ({
+			url:"{{APP_URL}}templates/NEModules/ajaxrespvfl.php?ap_process=getCalendarMEvents",
+			async: false,
+			type:"post",
+			dataType: "html",
+			data: "&cLln={{fln}}&fu={{ses_userid}}&fTP={{tip}}&idstemp={{idstemp}}&lang={{lang}}&fCalByMonth="+ $j('#filterCalByMonth_{{objNemCal}}').val()+'&ser={{objId}}',
+			beforeSend :function(){
+				$j("#datepicker_{{objNemCal}}").datepicker("destroy");
+			},
+			success: function(data){
+				 $j("#ajaxCalGridInfo_{{objNemCal}}").html(data);
+			}
+		})
+	}
+
+	function EnableClosedDays_{{objNemCal}}(calendarDate) {
+		for (i = 0; i < $jdaysWithRecords_{{objNemCal}}.length; i++) {
+			tempDate =$jdaysWithRecords_{{objNemCal}}[i].split("-");
+			if (calendarDate.getDate() == tempDate[2]*1
+			&& calendarDate.getMonth()+1 == tempDate[1]*1
+			&& calendarDate.getFullYear() == tempDate[0]*1) {
+				return [true, ''];
+			}
+		}
+		return [false, ''];
+	}
+
+
+	   function GetEventsDays_{{objNemCal}}(dateText) {
+
+ 			var pos_datapick = $j('#datepicker_{{objNemCal}}').position();
+ 			var outerWidth_d = $j('.ui-datepicker-calendar').outerWidth();
+			var outerHeight_d = $j('#personPopupContainer_{{objNemCal}}').outerHeight();
+			$j('#filterCalByDay_{{objNemCal}}').val($j.datepicker.formatDate("yy_mm_dd", $j("#datepicker_{{objNemCal}}").datepicker('getDate')));
+
+
+			if ( $j('#dt_'+$j('#filterCalByDay_{{objNemCal}}').val()+'_{{objNemCal}}').length > 0) {
+
+				var cis = $j('#dt_'+$j('#filterCalByDay_{{objNemCal}}').val()+'_{{objNemCal}}').val();
+				$j.ajax ({
+					url:"{{APP_URL}}templates/NEModules/ajaxrespvfl.php?ap_process=getCalendarEvents",
+					type:"post",
+					dataType: "html",
+					data: "&cLln={{fln}}&fu={{ses_userid}}&fTP={{tip}}&idstemp={{idstemp}}&lang={{lang}}&dateD="+$j('#filterCalByDay_{{objNemCal}}').val()+"&cis="+cis+"&ser={{objId}}",
+					beforeSend :function(){
+						$j("#personPopupContent_{{objNemCal}}").html();
+					},
+					success: function(data){
+						$j("#personPopupContent_{{objNemCal}}").html(data);
+						$j('#personPopupContainer_{{objNemCal}}').show();
+
+						$j("#personPopupContainer_{{objNemCal}}").css({
+							position: "absolute",
+							top: (pos_datapick.top-10)+ "px",
+							left: (pos_datapick.left+outerWidth_d+5) + "px"
+  						});
+
+					}
+				})
+			}
+		}
+
+});
+</script>
+
+<div id="datepicker_{{objNemCal}}"></div>
+
+
+<Grid gridId="gridDataCurrentWeekDays">
+<Header>
+<style type="text/css">
+</Header>
+.ui-datepicker td .weekD_{{weekday}}{{weekmonth}}{{weekyear}} {
+	background:#FF9C3D;
+}
+.ui-datepicker td a.weekD_{{weekday}}{{weekmonth}}{{weekyear}}:hover {
+	background:#2E4572;
+}
+<Footer>
+</style>
+</Footer>
+
+</Grid>
+
+<Grid gridId="allCiNeDateGrid">
+<input type="hidden" id="dt_{{dt}}_{{objNemCal}}" class="getEnableDays" enDt="{{dt}}" value="{{docsIds}}">
+</Grid>
+
+

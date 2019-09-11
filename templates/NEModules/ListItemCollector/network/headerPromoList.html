@@ -1,0 +1,54 @@
+<div class="header-promo-list">
+<Grid gridId="gridDataSrc">
+<IfEmpty>
+	<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+	</IfEmpty>
+<Header>
+<div class="carousel-inner" role="listbox">
+</Header>
+
+		<If condition="'{{CurrentRecNr}}' == '1'">
+		<div class="carousel-item active">
+			<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+			<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+			<Var name="bg_for_first">('{{CurrentRecNr}}' == '1' ? 'background-image: url("{{link_url}}")' : '')</Var>
+					<img class="first-slide" src="{{link_url}}" data-lazy="{{link_url}}" data-src="{{link_url}}" alt="{{titleToDisplay}}">
+			</Grid>
+				<div class="carousel-caption d-md-block text-center">
+				<h1>{{titleToDisplay}}</h1>
+				<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+				<div class="item-description">
+					{{abstractToDisplay}}
+				</div>
+				</If>
+				</div>
+		</div>
+		</If>
+		<If condition="'{{CurrentRecNr}}' != '1'">
+		<div class="carousel-item">
+			<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+			<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+					<img class="first-slide" src="{{link_url}}" data-lazy="{{link_url}}" data-src="{{link_url}}" alt="{{titleToDisplay}}">
+			</Grid>
+				<div class="carousel-caption d-md-block text-center">
+				<h1>{{titleToDisplay}}</h1>
+				<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+				<div class="item-description">
+					<p>{{abstractToDisplay}}</p>
+				</div>
+				</If>
+				</div>
+		</div>
+		</If>
+
+<Footer>
+	</div>
+<script>
+	modules.push('header-slideshow');
+</script>
+
+</Footer>
+</Grid>
+</div>

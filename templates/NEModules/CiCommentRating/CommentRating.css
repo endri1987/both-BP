@@ -1,0 +1,25 @@
+#messageBoxEditCR {
+display: none;
+width:680px;
+min-height:60px;
+padding: 0px;
+}
+
+
+#messageBoxEditCR #MainCntEditCR{
+padding: 0px;
+
+}
+
+#messageBoxEditCR div.cls {
+display: block;
+line-height: 1em;
+padding: 10px;
+border-top: 1px #cfcfcf solid;
+text-align: right;
+text-decoration: none;
+cursor:pointer;
+overflow:auto;
+}
+
+/****************** Add Coment Window **************************/

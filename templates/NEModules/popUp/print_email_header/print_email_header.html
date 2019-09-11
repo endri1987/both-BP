@@ -1,0 +1,26 @@
+<WebBox ID="print_email_header">
+
+<If condition="'{{mode}}' == 'print' || '{{mode}}' == 'alone'">
+    <div class="POPUP_tab_ico_header">
+	    <ul>
+	      <li>
+			{{link_popup_print}}{{print_mesg}}{{link_popup_print_c}}
+		  </li>
+		  <li>
+			{{link_popup_close}}{{close_mesg}}{{link_popup_close_c}}
+		  </li>
+	    </ul>
+    </div>
+</If>
+
+<If condition="'{{mode}}' == 'email'">
+    <div class="POPUP_tab_ico_header">
+		<ul>
+		  <li>
+			{{link_popup_close}}{{close_mesg}}{{link_popup_close_c}}
+		  </li>
+	    </ul>
+    </div>
+</If>
+
+</WebBox>

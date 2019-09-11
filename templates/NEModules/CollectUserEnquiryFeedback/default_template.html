@@ -1,0 +1,123 @@
+<div class="ibox" id="enquireFeedback">
+	<div class="ibox-content bordered">
+		<div class="page-header margin-top-5">
+			<h1>{{EF_desc_type}}</h1>
+		</div>
+		<form class="validate" role="form" method="post" data-ajax="true"
+			data-url="&apprcss=saveEnquiryFeedbackData&idstemp={{idstemp}}"
+			data-target="#enquireFeedback"
+			data-ajax-notify="Saving data..."
+			data-notify-success="Saved successfully">
+			<div class="content clearfix margin-h-0">
+				<fieldset>
+					<input type="hidden" name="systemUserId" value="{{systemUserId}}">
+					<input type="hidden" name="typeEF" value="{{typeEF}}">
+					<input type="hidden" name="EF_id" value="{{EF_id}}">
+					<div class="row">
+						<div class="col-sm-12 form-group">
+							<label class="col-sm-4 control-label" for="enquirer_type">I am a:</label>
+							<div class="col-sm-8">
+								<select class="col-sm-12 input-sm form-control" id="enquirer_type" name="enquirer_type" data-rule-required="true">
+									<option value=""></option>
+									<Grid gridId="enquirerTypeGrid">
+										<option value="{{id}}" {{sel}}>{{label}}</option>
+									</Grid>
+								</select>
+							</div>
+						</div>
+						<If condition="'{{singleQuestion}}'=='yes'">
+							<input type="hidden" name="enquiry_question" value="{{enquiry_question}}">
+						</If>
+						<If condition="'{{singleQuestion}}'!='yes'">
+							<div class="col-sm-12 form-group">
+								<label class="col-sm-4 control-label" for="enquiry_question">I have question about:</label>
+								<div class="col-sm-8">
+									<select class="col-sm-12 input-sm form-control" id="enquiry_question" name="enquiry_question" data-rule-required="true">
+										<option value=""></option>
+										<Grid gridId="enquireQuestionGrid">
+											<option value="{{id}}" {{sel}}>{{label}}</option>
+										</Grid>
+									</select>
+								</div>
+							</div>
+						</If>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-2">
+								<label for="usr_salutation">Salutation</label>
+								<select class="input-sm form-control {{disableLabel}}" id="usr_salutation" name="usr_salutation" data-rule-required="true">
+									<option value=""></option>
+									<Grid gridId="salutationGrid">
+										<Var name="sel">('{{usr_salutation}}'=='{{id}}' ? 'selected' : '')</Var>
+										<option value="{{id}}" {{sel}} {{disableInput}}>{{label}}</option>
+									</Grid>
+								</select>
+							</div>
+							<div class="col-sm-5">
+								<label class="{{disableLabel}}" for="first_name">First Name</label>
+								<input id="first_name" name="usr_firstName" type="text" value="{{usr_firstName}}" placeholder="First name" class="input-sm form-control {{disableInput}}"
+									   data-rule-htmlsanity="true">
+							</div>
+
+							<div class="col-sm-5">
+								<label class="{{disableState}}" for="usr_secondName">Last Name</label>
+								<input id="usr_secondName" name="usr_secondName" value="{{usr_secondName}}" type="text" placeholder="Second name" class="input-sm form-control {{disableInput}}"
+									   data-rule-htmlsanity="true">
+							</div>
+						</div>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-6">
+								<label class="{{disableLabel}}" for="email">Email*</label>
+								<input id="email" name="urs_email" type="text" value="{{urs_email}}" placeholder="Email" class="input-sm form-control {{disableInput}}"
+									   data-rule-htmlsanity="true">
+							</div>
+
+							<div class="col-sm-6">
+								<label for="phone">Phone</label>
+								<input id="phone" name="phone" value="" type="text" placeholder="Phone (optional)" class="input-sm form-control"
+									   data-rule-htmlsanity="true">
+							</div>
+						</div>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-6">
+								<label for="email">Institution</label>
+								<input id="email" name="institution" type="text" value="" class="input-sm form-control" placeholder="Institution" data-rule-htmlsanity="true">
+							</div>
+							<div class="col-sm-6 kw-list-controller-wrapper" >
+								<label for="address_country">country:</label>
+								<select id="address_country" name="country" class="form-control kw-list-controller" data-rule-required="true">
+									<option value="">--Select Country--</option>
+									<option value=""></option>
+									<Grid gridId="countryListGrid">
+										<Var name="is_sel">('{{co_name}}'=='{{user_country}}' ? 'selected' : '')</Var>
+										<option value="{{country_id}}" {{is_sel}}>{{country_name}}</option>
+									</Grid>
+								</select>
+							</div>
+							
+						</div>
+						<div class="col-sm-12 form-group ">
+							<div class="col-sm-12">
+								<label for="enquiry_details">Enquiry details: </label>
+								<textarea style="resize: vertical" id="enquiry_details" name="enquiry_details" rows="5" class="form-control" placeholder="Enquiry details" data-rule-htmlsanity="true"></textarea>
+							</div>
+						</div>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-12">
+								<Include SRC="{{./}}file_attach_dropZone.html"/>
+							</Include>							
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="clearfix">
+				<div class="pull-right">
+					<button type="reset" class="btn btn-sm btn-default">Reset</button>
+					<button type="submit" class="btn btn-sm btn-brand">Send</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script>
+		modules.push('kw-list-controller','multi_dropzone','my_dropzone','validate');
+	</script>	
+</div>

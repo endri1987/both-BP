@@ -1,0 +1,51 @@
+<div class="row navigation-footer">
+	<div class="col-xs-12 navigation-footer-inner">
+		<h2 class="color_white navigation-footer-heading hidden-xs">Sitemap</h2>
+		<a class="collapsable collapsable_grey visible-xs collapsed" role="button" href="#navigation-footer-list" data-toggle="collapse">
+			<span class="ti-arrow-circle-down"></span>
+			<span class="ti-arrow-circle-right"></span>Sitemap
+		</a>
+		<Grid gridId="Grid_AuthorNav_{{objNem}}">
+			<IfEmpty>
+			</IfEmpty>
+
+			<Header>
+			<div class="collapse collapse-sm" id="navigation-footer-list">
+				<div class="row navigation-footer-list">
+			</Header>
+					<div class="col-sm-6 col-md-3 navigation-footer-list-item">
+						<ul class="list-unstyled">
+							<li>
+								<a href="{{link}}"><strong>{{label}}</strong></a>
+								<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+									<Header>
+										<ul class="list-unstyled">
+									</Header>
+											<li>
+												<a href="{{link}}">{{label}}</a>
+												<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+													<Header>
+														<ul class="list-unstyled">
+													</Header>
+															<li>
+																<a href="{{link}}">{{label}}</a>
+															</li>
+													<Footer>
+														</ul>
+													</Footer>
+												</Grid>
+											</li>
+									<Footer>
+										</ul>
+									</Footer>
+								</Grid>
+							</li>
+						</ul>
+					</div>
+			<Footer>
+				</div>
+			</div>
+			</Footer>
+		</Grid>
+	</div>
+</div>

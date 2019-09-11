@@ -1,0 +1,489 @@
+<Messages>
+<Message ID="header_alt_mesg">
+Emri i aplikimit
+</Message>
+<Message ID="copyright_name_mesg">
+Emri i aplikimit 
+</Message>
+<Message ID="copyright_mesg">
+© All right reserved.
+</Message>
+<Message ID="home_mesg">
+Home
+</Message>
+<Message ID="position_path">
+Sie sind hier:
+</Message>
+<Message>
+------------------------------------------------- LanguageSwitch_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="lng1_mesg">
+DE
+</Message>
+<Message ID="lng1_alt_mesg">
+DE  
+</Message>
+<Message ID="lng2_mesg">
+FR
+</Message>
+<Message ID="lng2_alt_mesg">
+FR  
+</Message>
+<Message ID="lng3_mesg">
+AL
+</Message>
+<Message ID="lng3_alt_mesg">
+AL  
+</Message>
+<Message>
+------------------------------------------------- LanguageSwitch_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+----------------------------------------------------- print_email_mesazhet_fillim -------------------------------------------
+</Message>
+<Message ID="print_mesg">
+drucken
+</Message>
+<Message ID="print_alt_mesg">
+drucken
+</Message>
+<Message ID="email_mesg">
+E-Mail
+</Message>
+<Message ID="email_alt_mesg">
+Per e-mail  
+</Message>
+<Message>
+------------------------------------------------------- print_email_mesazhet_fund -------------------------------------------
+</Message>
+<Message>
+--------------------------------------------------- lastupdate_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="lastupdate_mesg">
+Letzte Aktualisierung
+</Message>
+<Message>
+----------------------------------------------------- lastupdate_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------- SearchModule_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="js_search_kriteria_more_than_mesg">
+Bitte fügen Sie ein Wort mit mehr als zwei Buchstaben ein!
+</Message>
+<Message ID="search_alt_mesg">
+Suchresultate für
+</Message>
+<Message ID="search_default_vl_input_mesg">
+Begriffe suchen
+</Message>
+<Message ID="search_etiketa_mesg">
+Suche
+</Message>
+<Message>
+-------------------------------------------------- SearchModule_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- POPUP_mesazhet_fillim --------------------------------------------
+</Message>
+<Message ID="close_mesg">
+Schließen
+</Message>
+<Message ID="close_alt_mesg">
+Schließen window
+</Message>
+<Message ID="js_fill_required_field_mesg">
+Bitte füllen Sie die obligatorischen Felder aus!
+</Message>
+<Message ID="js_your_email_not_correct_mesg">
+Ihre E-Mail Adresse ist nicht korrekt!
+</Message>
+<Message ID="js_email_not_correct_mesg">
+Die E-Mail Adressen sind nicht korrekt!!
+</Message>
+<Message ID="email_header_mesg"> 
+Als E-Mail versenden
+</Message>
+<Message ID="email_fullname_mesg"> 
+Von (Ihr Vorname/Name)
+</Message>
+<Message ID="email_usr_mesg"> 
+Ihre E-Mail-Adresse
+</Message>
+<Message ID="email_usr_mesg"> 
+Ihre E-Mail-Adresse
+</Message>
+<Message ID="email_recipients_mesg"> 
+An
+</Message>
+<Message ID="email_subjekt_mesg"> 
+Thema
+</Message>
+<Message ID="email_recipients_help_mesg"> 
+(Mehrere Empfänger mit "," trennen)
+</Message>
+<Message ID="email_komente_mesg"> 
+Kommentar
+</Message>
+<Message ID="email_but_send_mesg"> 
+Senden
+</Message>
+<Message ID="email_but_clear_mesg"> 
+Zurücksetzen
+</Message>
+<Message ID="email_sukses_mesg" Shpjegim="Ky mesazh afishohet kur e-maili Sendenhet me sukses"> 
+Diese E-Mail wurde erfolgreich an folgende Adressen übermittelt:
+</Message> 
+<Message ID="email_failed_mesg" Shpjegim="Ky mesazh afishohet kur e-maili nuk Sendenhet me sukses"> 
+Die Mitteilung konnte nicht gesendet werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt wieder.
+</Message> 
+<Message>
+------------------------------------------------------- POPUP_mesazhet_fund --------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- SITEMAP Fillim ------------------------------------------------
+</Message>
+<Message ID="sitemap_mesg"> 
+Sitemap
+</Message>
+<Message>
+<Message ID="sitemap_TopNavigation_mesg"> 
+Sitemap
+</Message>
+<Message ID="sitemap_MainNavigation_mesg"> 
+Sitemap
+</Message>
+<Message ID="sitemap_FooterNavigation_mesg"> 
+Sitemap
+</Message>
+<Message>
+------------------------------------------------------- SITEMAP Fund --------------------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- Listat, foto, etj galeria Fillim ------------------------------
+</Message>
+<Message ID="_search_headline_default">
+Search Results
+</Message>
+<Message ID="_search_headline">
+Legen Sie den Suchbegriff
+</Message>
+<Message ID="_articles">
+Artikel
+</Message>
+<Message ID="_page">
+Seite
+</Message>
+<Message ID="_of">
+von
+</Message>
+<Message ID="_next_page_alt">
+Nächste Seite
+</Message>
+<Message ID="_previews_page_alt">
+Vorhergehende Seite
+</Message>
+<Message ID="_nr_articles_per_page">
+Artikel pro Seite
+</Message>
+<Message ID="_top">
+Top
+</Message>
+<Message ID="_published_date">
+Publiziert in
+</Message>
+<Message ID="_author">
+Autor/en
+</Message>
+<Message ID="_source">
+Quelle
+</Message>
+<Message ID="_list_ResultsEmtpy">
+Keine Einträge gefunden!
+</Message>
+<Message ID="_list_error_occured">
+An error has occurred. Please try again later!
+</Message>
+<Message ID="_list_TermSearchEmpty">
+Keine Einträge gefunden!
+</Message>
+<Message ID="_list_InvalidTerm">
+Please redefined your search term!
+</Message>
+<Message ID="_term">
+Begriff 
+</Message>
+<Message ID="_search">
+Suche
+</Message>   
+<Message ID="_back">
+zurück
+</Message>
+<Message ID="foto_mesg">
+Image
+</Message>
+<Message>
+------------------------------------------------------- Listat, foto, etj galeria Fund ---------------------------------
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te pergjithshme JS fillim ------------------------------
+</Message>
+<Message ID="alert_isnull_mesg">
+Bitte einen Wert definieren
+</Message>
+<Message ID="alert_isalpha_mesg">
+Bitte einen gültigen Wert eingeben
+</Message>
+<Message ID="alert_isdate1_mesg">
+Bitte korrektes Datumsformat eingeben (TT.MM.JJJJ)!
+</Message>
+<Message ID="alert_isdate2_mesg">
+ungültiger Monatswert!
+</Message>
+<Message ID="alert_isdate3_mesg">
+ungültiger Tageswert!
+</Message>
+<Message ID="alert_isemail_mesg">
+Bitte eine gültige e-mail-Adresse eingeben!
+</Message>
+<Message ID="alert_isinteger_mesg">
+Bitte eine gültige Nummer eingeben!
+</Message>
+<Message ID="alert_isnumber1_mesg">
+Bitte eine Nummer eingeben!
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te pergjithshme JS fund ------------------------------
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te tjera fillim --------------------------------------
+</Message>
+<Message ID="yes_mesg">
+Ja
+</Message>
+<Message ID="no_mesg">
+Nein
+</Message>
+<Message ID="_Janar">
+Januar
+</Message>
+<Message ID="_Shkurt">
+Februar
+</Message>
+<Message ID="_Mars">
+März
+</Message>
+<Message ID="_Prill">
+April
+</Message>
+<Message ID="_Maj">
+Mai
+</Message>
+<Message ID="_Qershor">
+Juni
+</Message>
+<Message ID="_Korrik">
+Juli
+</Message>
+<Message ID="_Gusht">
+August
+</Message>
+<Message ID="_Shtator">
+September
+</Message>
+<Message ID="_Tetor">
+Oktober
+</Message>
+<Message ID="_Nentor">
+November
+</Message>
+<Message ID="_Dhjetor">
+Dezember
+</Message>
+<Message ID="_hene">
+M
+</Message>
+<Message ID="_marte">
+D
+</Message>
+<Message ID="_merkure">
+M
+</Message>
+<Message ID="_enjte">
+D
+</Message>
+<Message ID="_premte">
+F
+</Message>
+<Message ID="_shtune">
+S
+</Message>
+<Message ID="_diel">
+S
+</Message>
+<Message>
+------------------------------------------------------- Mesazhe te tjera fund --------------------------------------
+</Message>
+<Message>
+------------------------------------------------------- form_mesazhet_fillim si p.sh feedbackModule --------------------
+</Message>
+<Message ID="contact_user_name_mesg"> 
+Nga (Emri juaj)
+</Message>
+<Message ID="contact_user_email_mesg"> 
+Adresa juaj e E-mailit
+</Message>
+<Message ID="contact_user_tel_mesg"> 
+Phone
+</Message>
+<Message ID="contact_komente_mesg"> 
+Mesazhi juaj
+</Message>
+<Message ID="contact_but_send_mesg"> 
+Dergo
+</Message>
+<Message ID="contact_but_clear_mesg"> 
+Pastro
+</Message>
+<Message ID="contact_send_sukses_mesg" Shpjegim="Ky mesazh afishohet kur informacioni i formes se kontaktit dergohet me sukses dhe nuk eshte percaktuar faqja ku do ridireksionohet"> 
+Ju faleminderit per mesazhin tuaj!
+</Message> 
+<Message ID="contact_send_fail_mesg" Shpjegim="Ky mesazh afishohet kur informacioni i formes se kontaktit nuk dergohet me sukses dhe nuk eshte percaktuar faqja ku do ridireksionohet"> 
+Dergimi i mesazhit tuaj deshtoi! Ju lutem provojeni me vone.
+</Message> 
+<Message ID="contact_emri_mesg"> 
+Vorname
+</Message>
+<Message ID="contact_mbiemri_mesg"> 
+Name
+</Message>
+<Message ID="contact_titulli_mesg"> 
+Anrede
+</Message>
+<Message ID="contact_kompania_mesg"> 
+Company
+</Message>
+<Message ID="contact_vendi_mesg"> 
+Place
+</Message>
+<Message ID="contact_user_cel_mesg"> 
+Cellular
+</Message>
+<Message ID="contact_other1_mesg"> 
+Kursi qe doni te ndiqni
+</Message>
+<Message ID="contact_other2_mesg"> 
+Koha më e përshtatshme për ta ndjekur kursin (muaji)
+</Message>
+<Message ID="contact_other3_mesg"> 
+Burimi nga jeni informuar për ne
+</Message>
+<Message ID="contact_other4_mesg"> 
+Webi
+</Message>
+<Message ID="contact_other5_mesg"> 
+Emaili
+</Message>
+<Message ID="contact_other6_mesg"> 
+Kolegë të punës
+</Message>
+<Message ID="contact_other7_mesg"> 
+Njerëz që njihni
+</Message>
+<Message ID="contact_other8_mesg"> 
+Tjetër
+</Message>
+<Message ID="contact_kurs1_mesg"> 
+Cisko
+</Message>
+<Message ID="contact_kurs2_mesg"> 
+Windows XP
+</Message>
+<Message ID="contact_kurs3_mesg"> 
+Oracle
+</Message>
+<Message ID="captcha_reload_mesg">
+Reload
+</Message>
+<Message ID="captcha_kodi_mesg">
+Security code
+</Message>
+<Message>
+------------------------------------------------------- form_mesazhet_fund si p.sh feedbackModule ---------------------
+</Message>
+<Message>
+-------------  FE CALCULATOR --------
+</Message>
+<Message ID="actual_hb">
+Ist-Hb
+</Message>
+<Message ID="target_hb">
+Soll-Hb
+</Message>
+<Message ID="is_ferritin">
+Ist-Ferritin
+</Message>
+<Message ID="iron_requirements">
+Eisenbedarf
+</Message>
+<Message ID="measure_g_per_l">
+in g/l
+</Message>
+<Message ID="measure_ug_per_l">
+in µg/l
+</Message>
+<Message ID="measure_mg">
+in mg
+</Message>
+<Message ID="calculate">
+Berechnen
+</Message>
+<Message ID="reset">
+Zurücksetzen
+</Message>
+
+<Message ID="field_required_mesg">
+Bitte einen Wert in die markierten Felder eintragen *
+</Message>
+<Message ID="should_be_number">
+Bitte eine Zahl eingeben!
+</Message>
+<Message ID="should_be_number_positive">
+Die Zahl sollte positiv sein!
+</Message>
+
+<Message ID="_results_for_term">
+ergebnisse für den begriff
+</Message>
+<Message ID="_Showing">
+Zeige
+</Message>
+<Message ID="_narrow_results">
+Ergebnisse begrenzen
+</Message>
+<Message ID="_All_search_results">
+Alle suchergebnisse
+</Message>
+<Message ID="_All_search_results_title">
+Suchergebnisse
+</Message>
+<Message ID="_of"> 
+von
+</Message>
+<Message ID="_view_all">
+Alle anzeigen
+</Message>
+
+<Message ID="_fe_calculator_header">
+Hb in g/l eingeben. Bsp: 12g/dl = 120 g/l; 7.6 g/dl = 76 g/l
+</Message>
+<Message ID="_not_in_range_30_300">
+Ungültiger Wert. Bitte einen Wert zwischen 30 g/l und 300 g/l eingeben
+</Message>
+<Message ID="_not_integer">
+Bitte die  Hb Werte in g/l eingeben 
+</Message>
+
+
+
+</Messages>

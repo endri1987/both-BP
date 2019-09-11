@@ -1,0 +1,48 @@
+<div id="mainPOstList">
+	<Grid gridId="gridCmmDataAll">
+	<IfEmpty>
+		<p class="txt-color-orange padding-10">
+			<i class="fa fa-warning"></i>{{_there_are_no_post}}
+		</p>
+	</IfEmpty>
+
+	<Header>
+	<div class="list-group">
+	</Header>
+		<a href="javascript:void(0);" class="list-group-item block view-details"
+		data-target="#view-news-details"
+		data-ajax-loader="loader-lg"
+		data-url="&apprcss=cmFunctions&act=getPostList&step=5&selfId={{cm_id}}&itemId={{cm_id}}&itemSubId={{CMparentDocID}}&lectureIDM={{lectureIDM}}&parSubId={{CMID}}&post_type=replay#addint_{{cm_id}}">
+
+			<Var name="label_class">('{{replay_nr}}'=='0' ? 'label-plain' : 'label-primary')</Var>
+			<div id="labelIndicatorCont_{{cm_id}}" class="indicator pull-right">
+				<span id="labelIndicator_{{cm_id}}" class="label {{label_class}}" title="{{replay_nr}} {{_total_replies}}">{{replay_nr}}</span>
+			</div>
+			<small class="text-muted">
+				<div id="StatusIndicatorCont_{{cm_id}}">
+					<span id="StatusIndicator_{{cm_id}}">
+						<If condition="'{{report_author}}'=='{{ses_userid}}' || '{{report_author}}'=='{{adm_userid}}'">
+							<If condition="'{{post_status}}'=='reported'">
+								<i class="fa fa-tag" title="{{_post_reported}}"></i>					
+							</If>			
+							<If condition="'{{post_status}}'=='removed'">
+								<i class="fa fa-ban" title="{{_post_removed}}"></i> 														
+							</If>
+						</If>
+					</span>
+				</div>
+				<Grid gridId="gridDocumentFullDate_{{cm_id}}">
+					<Header>
+					</Header>
+							{{date}} {{monthLabelShort}} {{year}}, {{hour12}}:{{min}} {{pm_am}}
+					<Footer>
+					</Footer>
+				</Grid>
+			</small>
+			<h4 class="margin-bottom-5 list-group-item-heading">{{titleToDisplay}}</h4>
+		</a>
+	<Footer>
+	</div>
+	</Footer>
+	</Grid>
+</div>

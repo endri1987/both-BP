@@ -1,0 +1,19 @@
+
+<If condition="'{{display_favorit}}' != 'no'">
+	<If condition="'{{how_to_collect}}' == 'automatic_filter' && '{{user_preferences}}' == 'user_basket'">
+	   <If condition="'{{is_favorites}}'=='1'">
+			<Include SRC="{{./}}BasketItemRemoving.html"/>
+	   </If>
+	</If>
+	<If condition="'{{how_to_collect}}' != 'automatic_filter' || '{{user_preferences}}' != 'user_basket'">
+		<If condition="'{{is_favorites}}'=='1'">
+			<span class="pull-right text-danger ic_pos" data-title="{{titleToDisplay}}" title="{{_reading_item_added}}" disabled="disabled">
+			<i class="fa fa-bookmark disabled"></i>
+			</span>
+		</If>
+		<If condition="'{{is_favorites}}'=='0'">
+			<Include SRC="{{./}}BasketItemAdding.html"/>
+		</If>
+	</If>
+</If>
+<Include SRC="{{./}}ci_icon_type_actions.html"/>

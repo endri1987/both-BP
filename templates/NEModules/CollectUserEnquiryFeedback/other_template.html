@@ -1,0 +1,183 @@
+<script type="text/javascript" language="JavaScript1.2">
+var contactmodule_capt_h  = new Array();
+</script>
+<If condition="'{{sendFeedbackProces}}' == 'SUCCESS'">
+	<div class="alert alert-success fade in">
+		<span class="fa-fw fa fa-check"></span>
+		{{success_send_message}}
+	</div>
+</If>
+<If condition="'{{sendFeedbackProces}}' == 'FAIL'">
+	<div class="alert alert-danger fade in">
+		<span class="fa-fw fa fa-warning"></span>
+		{{error_send_message}}
+	</div>
+
+</If>
+<If condition="'{{sendFeedbackProces}}' == 'NEW'"><div class="ibox" id="enquireFeedback">
+<div class="ibox float-e-margins"" id="enquireFeedback">
+	<div class="ibox-content bordered">
+		<div class="promo-heading margin-top-10 margin-bottom-20"">
+			<div class="row">
+				<div class="col col-xs-12">
+					<h3>
+						<If condition="'{{slogan_icon_show}}' == 'yes'">
+						<i class="{{slogan_icon}}"></i>	
+						</If>
+						{{headline}}
+						<If condition="'{{help_show}}' == 'yes'">
+						<div class="pull-right has-popover cursor-pointer" title="{{help_title}}" data-toggle="popover" data-placement="bottom" data-container="body" data-viewport="body">
+							<a class="btn btn-xs btn-outline btn-brand no-margin"><i class="fa fa-question-circle"></i></a>
+							<div class="popover-content-holder">
+								{{help_description}}
+							</div>
+						</div>
+						</If>
+					</h3>
+					<If condition="'{{slogan_description_show}}' == 'yes'">
+						<div class="promo-description col-xs-12">
+							{{slogan_description}}
+						</div>
+					</If>
+				</div>
+			</div>
+		</div>
+		<form name="enquiry_form_name_{{id_nem}}" id="enquiry_form_name_{{id_nem}}" action="javascript:feedback_send('{{idstemp}}','{{id_nem}}',{{EF_id}});" class="validate padding-0" role="form" method="post">
+			<div class="content clearfix margin-h-0">
+				<fieldset>
+					<input type="hidden" name="systemUserId" value="{{systemUserId}}">
+					<input type="hidden" name="typeEF" value="{{typeEF}}">
+					<input type="hidden" id="UserName_{{EF_id}}" name="UserName" value="{{username}}">
+					<input type="hidden" name="EF_id" value="{{EF_id}}">
+					<div class="row">
+						<If condition="'{{showEnquirerType}}' == 'show'">
+						<div class="col-sm-12 form-group">
+							<Var name="disableSelectEnquirer">('{{defaultEnquirerType}}' == '' ? '':'disabled')</Var>
+							<Var name="disableSelectEnquirerLabel">('{{defaultEnquirerType}}' == '' ? '':'state-disabled')</Var>
+							<label class="col-sm-4 control-label" for="EnquirerType">*{{feedback_enquirer_mesg}}:</label>
+							<div class="col-sm-8">
+								<select class="col-sm-12 input-sm form-control {{disableSelectEnquirerLabel}}" id="EnquirerType" name="EnquirerType" valid="0,0,0,0,0,0" etiketa="{{feedback_enquirer_mesg}}"
+									name_post="{{feedback_enquirer_mesg}}" {{disableSelectEnquirer}}
+									data-rule-required="true">
+									<option value=""></option>
+									<Grid gridId="enquirerTypeGrid">
+									<Var name="sel">('{{defaultEnquirerType}}' == '{{id}}' ? 'selected':'')</Var>
+										<option value="{{id}}" {{sel}}>{{label}}</option>
+									</Grid>
+								</select>
+							</div>
+						</div>						
+						</If>
+						<If condition="'{{showEnquirerType}}' == 'hide'">
+							<input type="hidden" name="EnquirerType" id="EnquirerType" value="{{defaultEnquirerType}}" valid="0,0,0,0,0,0" etiketa="{{feedback_enquirer_mesg}}"
+									name_post="{{feedback_enquirer_mesg}}">
+						</If>
+						<If condition="'{{singleQuestion}}'=='yes'">
+							<input type="hidden" name="EnquiryQuestion" value="{{enquiry_question}}" valid="0,0,0,0,0,0" etiketa="{{feedback_question_msg}}"
+										name_post="{{feedback_question_msg}}">
+
+							<!--div class="col-sm-12 form-group">
+								<label class="col-sm-4 control-label state-disabled" for="EnquiryQuestion">*{{feedback_question_msg}}</label>
+								<div class="col-sm-8">
+									<select class="col-sm-12 input-sm form-control" id="EnquiryQuestion" name="EnquiryQuestion" data-rule-required="true"
+										valid="0,0,0,0,0,0" etiketa="{{feedback_question_msg}}"
+										name_post="{{feedback_question_msg}}" disabled>
+										<Grid gridId="enquireQuestionGrid">
+											<Var name="selec">('{{enquiry_question}}' == '{{id}}' ? 'selected':'')</Var>
+											<option value="{{id}}" {{selec}}>{{label}}</option>
+										</Grid>
+									</select>
+								</div>
+							</div -->
+						</If>
+						<If condition="'{{singleQuestion}}'!='yes'">
+							<div class="col-sm-12 form-group">
+								<label class="col-sm-4 control-label" for="EnquiryQuestion">*{{feedback_question_msg}}</label>
+								<div class="col-sm-8">
+									<select class="col-sm-12 input-sm form-control" id="EnquiryQuestion" name="EnquiryQuestion" data-rule-required="true"
+										valid="0,0,0,0,0,0" etiketa="{{feedback_question_msg}}"
+										name_post="{{feedback_question_msg}}">
+										<option value=""></option>
+										<Grid gridId="enquireQuestionGrid">
+											<option value="{{id}}" {{sel}}>{{label}}</option>
+										</Grid>
+									</select>
+								</div>
+							</div>
+						</If>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-2">
+								<label for="usr_salutation">{{feedback_salutation_msg}}</label>
+								<select class="input-sm form-control {{disableLabel}}" id="usr_salutation" placeholder="{{feedback_salutation_msg}}" name="usr_salutation" data-rule-required="true"
+										valid="0,0,0,0,0,0" etiketa="{{feedback_salutation_msg}}"
+										name_post="{{feedback_salutation_msg}}">
+									<option value=""></option>
+									<Grid gridId="salutationGrid">
+										<Var name="sel">('{{usr_salutation}}'=='{{id}}' ? 'selected' : '')</Var>
+										<option value="{{id}}" {{sel}} {{disableInput}}>{{label}}</option>
+									</Grid>
+								</select>
+							</div>
+							<div class="col-sm-5">
+								<label class="{{disableLabel}}" for="UserFirstName">{{contact_firstName_msg}}:</label>
+								<input id="UserFirstName" name="UserFirstName" type="text" value="{{usr_firstName}}" placeholder="{{contact_firstName_msg}}"
+									class="input-sm form-control {{disableInput}}"
+									data-rule-htmlsanity="true" valid="0,0,0,0,0,0" etiketa="{{contact_firstName_msg}}"
+									name_post="{{contact_firstName_msg}}"
+									data-rule-namefieldsanity="true">
+							</div>
+
+							<div class="col-sm-5">
+								<label class="{{disableState}}" for="UserSecondName">{{contact_secontName_msg}}:</label>
+								<input id="UserSecondName" name="UserSecondName" value="{{usr_secondName}}" type="text" placeholder="{{contact_secontName_msg}}" class="input-sm form-control {{disableInput}}"
+									   data-rule-htmlsanity="true" valid="0,0,0,0,0,0" etiketa="{{contact_secontName_msg}}"
+										name_post="{{contact_secontName_msg}}"
+										data-rule-namefieldsanity="true">
+							</div>
+						</div>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-6">
+								<label class="{{disableLabel}}" for="UserEmail">*{{contact_email_msg}}:</label>
+								<input id="UserEmail_{{EF_id}}" name="UserEmail" type="text" value="{{usr_email}}" placeholder="{{contact_email_msg}}" class="input-sm form-control {{disableInput}}"
+									   data-rule-htmlsanity="true" valid="0,0,0,0,0,0" etiketa="{{contact_email_msg}}"
+										name_post="{{contact_email_msg}}"
+										data-rule-namefieldsanity="true">
+							</div>
+
+							<div class="col-sm-6">
+								<label for="phone">{{contact_phone_msg}}</label>
+								<input id="phone" name="phone" value="{{usr_phone}}" type="text" placeholder="{{contact_phone_msg}}" class="input-sm form-control"
+									   data-rule-htmlsanity="true" valid="0,0,0,0,0,0" etiketa="{{contact_phone_msg}}"
+										name_post="{{contact_phone_msg}}"
+										data-rule-namefieldsanity="true">
+							</div>
+						</div>
+						<div class="col-sm-12 form-group ">
+							<div class="col-sm-12">
+								<label for="enquiry_details">{{enquiry_details_msg}}:</label>
+								<textarea style="resize: vertical" id="enquiry_details" name="enquiry_details" rows="5" class="form-control" placeholder="Enquiry details" data-rule-htmlsanity="true" valid="0,0,0,0,0,0" etiketa="{{enquiry_details_msg}}"
+										name_post="{{enquiry_details_msg}}"
+										data-rule-namefieldsanity="true"></textarea>
+							</div>
+						</div>
+						<div class="col-sm-12 form-group">
+							<div class="col-sm-12">
+								<Include SRC="{{./}}file_attach_dropZone.html"/>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="clearfix">
+				<div class="pull-right">
+					<button type="reset" class="btn btn-sm btn-default">{{reset_button_lbl}}</button>
+					<button type="submit" class="btn btn-sm btn-brand">{{submit_button_lbl}}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script>
+		modules.push('kw-list-controller','multi_dropzone','my_dropzone','validate');
+	</script>
+</div>
+</If>

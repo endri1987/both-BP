@@ -1,0 +1,330 @@
+<ul class="nav metismenu side-menu">
+	<li class="is_insideTheLecture_class fake-expand active">
+		<span class="fa arrow" aria-expanded="true"></span>
+		<a class="class_style padding-left-15" title="{{slogan_title}}">
+			<span class="nav-label">{{slogan_title}}</span>
+		</a>
+
+
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+   <Header>
+		<ul class="nav nav-second-level is_insideTheLecture_collapse">
+   </Header>
+			<Var name="level_1_active">('{{id1}}' == '{{level_1}}' ? 'active' : '')</Var>
+			<li class="{{level_1_active}}">
+				<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+				<span class="fa arrow"></span>
+				</If>
+				<a class="{{class_style}}" href="{{link}}" data-placement="right"  data-trigger="hover" data-container="body" data-viewport="body" title="{{ci_title}}" style="padding-left:50px;">
+					<Var name="level_1_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' != 'PR' ? 'fa-clone' : '{{boostrap_ico}}')</Var>
+					<Var name="pr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'PR' ? 'fa-graduation-cap' : '')</Var>
+					<i class="fa nav-icon {{level_1_icon}} {{pr_icon}}"></i> <span class="nav-label">{{label}}</span>
+							<div class="popover-content-holder">
+								<div class="popover-content">
+									{{ci_description}}
+									<If condition="'{{showColor}}' == 'y'">
+									<div class="margin-top-10" style="width:400px;!important;">
+										<div class="col-xs-6 col-xs-3  no-padding margin-right-5">
+											<div class="bar-holder no-padding">
+												<div class="progress progress-xs">
+													<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;" ></div>
+
+												</div>
+											</div>
+											{{_input_stad}}:{{value_i}}
+										</div>
+										<div class="col-xs-6 col-xs-3  no-padding margin-right-5">
+											<div class="bar-holder no-padding">
+												<div class="progress progress-xs" >
+													<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+
+												</div>
+											</div>
+											{{_processing_stad}}:{{value_p}}
+										</div>
+										<div class="col-xs-6 col-xs-3  no-padding">
+											<div class="bar-holder no-padding">
+												<div class="progress progress-xs" >
+													<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;" data-original-title="Warning Icon Text"></div>
+
+												</div>
+											</div>
+											{{_review_stad}}:{{value_r}}
+										</div>
+									</div>
+									</If>
+								</div>
+							</div>
+				</a>
+					<If condition="'{{showColor}}' == 'y'">
+							<div style="padding: 14px 15px 13px 24px;background-color: transparent;margin-top:-40px;">
+								<div class="col-xs-6 col-xs-3  no-padding margin-right-5" rel="tooltip" data-original-title="{{value_i}}">
+									<div class="bar-holder no-padding">
+										<div class="progress progress-xs">
+											<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;" ></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-xs-3  no-padding margin-right-5" rel="tooltip" data-original-title="{{value_p}}">
+									<div class="bar-holder no-padding">
+										<div class="progress progress-xs" >
+											<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;" data-original-title="Warning Icon Text"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 col-xs-3  no-padding" rel="tooltip" data-original-title="{{value_r}}">
+									<div class="bar-holder no-padding">
+										<div class="progress progress-xs" >
+											<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;" data-original-title="Warning Icon Text"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</If>
+
+
+				<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+
+					<Header>
+						<ul class="nav nav-second-level collapse">
+					</Header>
+						<Var name="level_2_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' ? 'active' : '')</Var>
+						<Separator>
+						</Separator>
+							<li class="{{level_2_active}}">
+								<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+								<span class="fa arrow"></span>
+								</If>
+								<Var name="enable_popover">('{{ci_type}}' == 'EC' ? 'data-toggle="popover" data-placement="right" data-container="body" data-viewport="body" data-trigger="hover"' : '')</Var>
+								<a class="{{class_style}}" href="{{link}}" title="{{ci_title}}" style="/*padding-bottom:30px !important;*/" {{enable_popover}}>
+									<Var name="ec_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'EC' ? 'fa-cubes' : '{{boostrap_ico}}')</Var>
+									<Var name="nc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'NC' ? 'fa-newspaper-o' : '{{boostrap_ico}}')</Var>
+									<Var name="ss_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'SS' ? 'fa-users' : '{{boostrap_ico}}')</Var>
+									<Var name="us_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'US' ? 'fa-star-half-o' : '{{boostrap_ico}}')</Var>
+									<Var name="lr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'LR' ? 'fa-bar-chart' : '{{boostrap_ico}}')</Var>
+									<Var name="ue_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UE' ? 'fa-line-chart' : '{{boostrap_ico}}')</Var>
+									<Var name="cc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CC' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+									<Var name="tc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'TC' ? 'fa-calendar' : '{{boostrap_ico}}')</Var>
+									<i class="fa nav-icon {{ec_icon}}{{nc_icon}}{{ss_icon}}{{us_icon}}{{lr_icon}}{{ue_icon}}{{cc_icon}}{{tc_icon}}"></i>
+									<span class="nav-label">{{label}}</span>
+									<If condition="'{{ci_type}}' == 'EC'">
+									<div class="popover-content-holder">
+										<div class="popover-content">
+											{{ci_description}}
+											<If condition="'{{showColor}}' == 'y'">
+											<div class="margin-top-10" style="width:400px;!important;">
+												<div class="col-xs-6 col-xs-3  no-padding margin-right-5">
+													<div class="bar-holder no-padding">
+														<div class="progress progress-xs">
+															<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;" ></div>
+
+														</div>
+													</div>
+													{{_input_stad}}:{{value_i}}
+												</div>
+												<div class="col-xs-6 col-xs-3  no-padding margin-right-5">
+													<div class="bar-holder no-padding">
+														<div class="progress progress-xs" >
+															<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+
+														</div>
+													</div>
+													{{_processing_stad}}:{{value_p}}
+												</div>
+												<div class="col-xs-6 col-xs-3  no-padding">
+													<div class="bar-holder no-padding">
+														<div class="progress progress-xs" >
+															<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;" data-original-title="Warning Icon Text"></div>
+
+														</div>
+													</div>
+													{{_review_stad}}:{{value_r}}
+												</div>
+											</div>
+											</If>
+										</div>
+									</div>
+									</If>
+								</a>
+									<If condition="'{{showColor}}' == 'y'">
+										<div style="padding: 9px 10px 8px 34px;background-color: transparent;margin-top:-35px;">
+											<div class="col-xs-6 col-xs-3  no-padding margin-right-5" >
+												<div class="bar-holder no-padding">
+													<div class="progress progress-xs" >
+														<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-6 col-xs-3 no-padding margin-right-5">
+												<div class="bar-holder no-padding">
+													<div class="progress progress-xs" >
+														<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-6 col-xs-3  no-padding">
+												<div class="bar-holder no-padding">
+													<div class="progress progress-xs" >
+														<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</If>
+
+
+								<Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+
+									<IfEmpty>
+									</IfEmpty>
+
+									<Header>
+										<ul class="nav nav-third-level">
+									</Header>
+											<Var name="level_3_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' ? 'active' : '')</Var>
+
+											<li class="{{level_3_active}}">
+												<If condition="'{{nr_child}}' != '0' && '{{nr_child}}' != 'nr_child'">
+												<span class="fa arrow"></span>
+												</If>
+												<Var name="enable_popover">('{{ci_type}}' == 'EL' ? 'data-toggle="popover" data-placement="right" data-container="body" data-viewport="body" data-trigger="hover"' : '')</Var>
+												<a class="{{class_style}}" href="{{link}}" title="{{ci_title}}" style="/*padding-bottom:30px !important;*/" {{enable_popover}}>
+													<Var name="el_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'EL' ? 'fa-cube' : '{{boostrap_ico}}')</Var>
+													<Var name="nc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'NC' ? 'fa-newspaper-o' : '{{boostrap_ico}}')</Var>
+													<Var name="ss_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'SS' ? 'fa-users' : '{{boostrap_ico}}')</Var>
+													<Var name="us_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'US' ? 'fa-star-half-o' : '{{boostrap_ico}}')</Var>
+													<Var name="lr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'LR' ? 'fa-bar-chart' : '{{boostrap_ico}}')</Var>
+													<Var name="ue_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UE' ? 'fa-line-chart' : '{{boostrap_ico}}')</Var>
+													<Var name="cc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CC' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+													<Var name="cf_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CF' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+													<Var name="at_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'AT' ? 'fa-video-camera' : '{{boostrap_ico}}')</Var>
+													<Var name="uf_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UF' ? 'fa-commenting-o' : '{{boostrap_ico}}')</Var>
+													<Var name="es_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'ES' ? 'fa-list-alt' : '{{boostrap_ico}}')</Var>
+													<Var name="te_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'TE' ? 'fa-calendar-check-o' : '{{boostrap_ico}}')</Var>
+													<i class="fa nav-icon {{el_icon}}{{nc_icon}}{{ss_icon}}{{us_icon}}{{lr_icon}}{{ue_icon}}{{cf_icon}}{{cc_icon}}{{at_icon}}{{uf_icon}}{{es_icon}}{{te_icon}}"></i>
+													<span class="nav-label">{{label}}</span>
+
+													<If condition="'{{ci_type}}' == 'EL'">
+													<div class="popover-content-holder">
+															<div class="popover-content">
+																{{ci_description}}
+																<If condition="'{{showColor}}' == 'y'">
+																<div class="margin-top-10" style="width:400px;!important;">
+																	<div class="col-xs-6 col-xs-3  no-padding margin-right-5">
+																		<div class="bar-holder no-padding">
+																			<div class="progress progress-xs">
+																				<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;" ></div>
+
+																			</div>
+																		</div>
+
+																	</div>
+																	<div class="col-xs-6 col-xs-3  no-padding margin-right-5">
+																		<div class="bar-holder no-padding">
+																			<div class="progress progress-xs" >
+																				<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+
+																			</div>
+																		</div>
+																		{{_processing_stad}}:{{value_p}}
+																	</div>
+																	<div class="col-xs-6 col-xs-3  no-padding">
+																		<div class="bar-holder no-padding">
+																			<div class="progress progress-xs" >
+																				<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;" data-original-title="Warning Icon Text"></div>
+
+																			</div>
+																		</div>
+																		{{_review_stad}}:{{value_r}}
+																	</div>
+																</div>
+																</If>
+															</div>
+													</div>
+													</If>
+												</a>
+												<If condition="'{{showColor}}' == 'y'">
+													<div style="padding: 9px 10px 8px 34px;background-color: transparent;margin-top:-35px;">
+														<div class="col-xs-6 col-xs-3 no-padding margin-right-5">
+															<div class="bar-holder no-padding">
+																<div class="progress progress-xs" >
+																	<div class="progress-bar bg-color-{{color_i}}" role="progressbar" style="width: {{percentage_i}}%;"></div>
+																</div>
+															</div>
+														</div>
+														<div class="col-xs-6 col-xs-3 no-padding margin-right-5">
+															<div class="bar-holder no-padding">
+																<div class="progress progress-xs" >
+																	<div class="progress-bar bg-color-{{color_p}}" role="progressbar" style="width: {{percentage_p}}%;"></div>
+																</div>
+															</div>
+														</div>
+														<div class="col-xs-6 col-xs-3 no-padding">
+															<div class="bar-holder no-padding">
+																<div class="progress progress-xs" >
+																	<div class="progress-bar bg-color-{{color_r}}" role="progressbar" style="width: {{percentage_r}}%;"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</If>
+												<Grid gridId="Grid_AuthorNav_Nivel4{{con_id}}{{keyIden}}">
+													<IfEmpty>
+													</IfEmpty>
+
+													<Header>
+														<ul class="nav nav-fourth-level">
+													</Header>
+																<Var name="level_4_active">('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' && '{{id4}}' == '{{level_4}}' ? 'active' : '')</Var>
+																<li class="{{level_4_active}}">
+																		<a class="{{class_style}}" href="{{link}}" title="{{ci_title}}">
+																			<Var name="nc_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'NC' ? 'fa-newspaper-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="ss_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'SS' ? 'fa-users' : '{{boostrap_ico}}')</Var>
+																			<Var name="us_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'US' ? 'fa-star-half-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="lr_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'LR' ? 'fa-bar-chart' : '{{boostrap_ico}}')</Var>
+																			<Var name="ue_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UE' ? 'fa-line-chart' : '{{boostrap_ico}}')</Var>
+																			<Var name="ct_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'CT' ? 'fa-comments-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="at_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'AT' ? 'fa-video-camera' : '{{boostrap_ico}}')</Var>
+																			<Var name="uf_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'UF' ? 'fa-commenting-o' : '{{boostrap_ico}}')</Var>
+																			<Var name="es_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'ES' ? 'fa-list-alt' : '{{boostrap_ico}}')</Var>
+																			<Var name="rq_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'RQ' ? 'fa-puzzle-piece' : '{{boostrap_ico}}')</Var>
+																			<Var name="ra_icon">('{{boostrap_ico}}' == '' && '{{ci_type}}' == 'RA' ? 'fa-files-o' : '{{boostrap_ico}}')</Var>
+																			<i class="fa nav-icon {{nc_icon}}{{ss_icon}}{{us_icon}}{{lr_icon}}{{ue_icon}}{{ct_icon}}{{at_icon}}{{uf_icon}}{{es_icon}}{{rq_icon}}{{ra_icon}}"></i>
+																			<span class="nav-label">{{label}}</span>
+
+																		</a>
+
+																</li>
+													<Footer>
+														</ul>
+													</Footer>
+
+												</Grid>
+											</li>
+										<Separator>
+										</Separator>
+
+									<Footer>
+										</ul>
+									</Footer>
+
+								</Grid>
+
+
+						</li>
+				   <Footer>
+						</ul>
+				   </Footer>
+
+				</Grid>
+
+   <Separator>
+   </Separator>
+
+   <Footer>
+		</ul>
+   </Footer>
+
+</Grid>
+	</li>
+</ul>

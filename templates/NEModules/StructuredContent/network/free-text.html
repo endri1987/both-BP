@@ -1,0 +1,52 @@
+<Grid gridId="Grid_StructuredContent">
+	<IfEmpty>
+	</IfEmpty>
+	<Header>
+	<div class="blockHeading mt-4">
+	<If condition="'{{slogan_description_show}}' == 'yes' || '{{slogan_title}}' != ''">
+	<div class="desc_border" style="width:100%">
+		<If condition="'{{slogan_icon_show}}' == 'yes' || '{{slogan_title}}' != ''">
+			<p style="color:#fff; font-size:20px; text-transform:uppercase;" class="mb-0">
+				<If condition="'{{slogan_icon_show}}' == 'yes'">
+					<i class="{{slogan_icon}}"></i>
+				</If>
+				<If condition="'{{slogan_title}}' != ''">
+					{{slogan_title}}
+				</If>
+			</p>
+		</If>
+		<If condition="'{{slogan_description_show}}' == 'yes'">
+			 <div class="desc_border"><p class="lead mb-0">{{slogan_description}}</p> </div>
+		</If>
+	</div>
+	</If>
+	<div class="list-footer">
+		<ul class="list-unstyled">
+	</Header>
+			<li class="">
+				<If condition="'{{linkToTitle}}' == 'yes'">
+					<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+					{{titleToDisplay}}
+					</a>
+				 </If>
+				<If condition="'{{linkToTitle}}' != 'yes'">
+					{{titleToDisplay}}
+				</If>
+				<If condition="'{{display_desc}}' == 'yes' && '{{dp_desc}}' == 'yes'">
+					<div class="bodytext">{{description}}</div>
+				</If>
+				<If condition="'{{display_content}}' == 'yes' && '{{exist_fullcontent}}' == 'yes'">
+					<div class="bodytext">{{fullcontent}}</div>
+				</If>
+			</li>
+	<Footer>
+		</ul>
+	</div>
+	</div>	
+		<If condition="'{{block_link_show}}' == 'yes'">
+			<div class="text-center">
+				<a href="{{block_link_target_Href}}" role="button" class="btn btn-primary">{{block_link_label}}</a>
+			</div>
+		</If>
+	</Footer>
+</Grid>

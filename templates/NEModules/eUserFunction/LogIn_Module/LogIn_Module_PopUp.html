@@ -1,0 +1,64 @@
+<div id="loginRegisterModule">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div class="well">
+				<form name="loginFrm" class="validate"  novalidate="novalidate" id="loginFrm"  dt-cashed="no"
+				action="&idstemp={{idstempLogin}}&apprcss=eUserLogin#loginRegisterModule"
+				data-modal="true"
+				data-modal-ajax="true"
+				>
+					<div class="form-group">
+						<label for="username" class="control-label">{{_usernamelogin}}</label>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							 <input type="text" class="form-control required" id="username" name="usrname" value="" title="{{_need_username}}"
+							data-msg-required="{{_need_username}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="control-label">{{_passwordlogin}}</label>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input type="password" class="form-control required" id="usrpassd" name="usrpassd" value="" required="" title="{{_need_password}}"
+							data-msg-required="{{_need_password}}">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary btn-block" id="loginForm">{{_Login}}</button>
+					<a class="btn btn-default btn-block"
+					data-ajax-link="true"
+					href="javascript:void(0)"
+					data-url="&idstemp={{idstempLogin}}&apprcss=forgotPassModule#forgotPassModule"
+					data-modal-ajax="true"
+					data-modal="true"
+					data-modal-size="modal-sm"
+					title="Login"
+					>{{_forgot_pass}}</a>
+				</form>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<p class="lead">Register now for <span class="text-success">FREE</span></p>
+			<ul class="list-unstyled" style="line-height: 2">
+				<li><span class="fa fa-check text-success"></span> See all your orders</li>
+				<li><span class="fa fa-check text-success"></span> Fast re-order</li>
+				<li><span class="fa fa-check text-success"></span> Save your favorites</li>
+				<li><span class="fa fa-check text-success"></span> Fast checkout</li>
+				<li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
+				<li><a href="/read-more/"><u>Read more</u></a></li>
+			</ul>
+			<p>
+				<a class="btn btn-info btn-block"
+				href="#"
+				data-url="&idstemp={{idstempLogin}}&apprcss=registerModule#registerModule"
+				data-modal-ajax="true"
+				data-modal="true"
+				data-modal-size="modal-lg"
+				title="{{_regjistrohu}}"
+				>{{_regjistrohu}}</a>
+			</p>
+		</div>
+	</div>
+	<script>
+		modules.push('validate','login_post');
+	</script>
+</div>

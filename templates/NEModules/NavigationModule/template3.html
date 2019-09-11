@@ -1,0 +1,30 @@
+<Grid gridId="Grid_Navigation">
+
+	<IfEmpty>
+	</IfEmpty>
+
+	<Header>
+	</Header>
+
+	<If condition="'{{nivel}}' == '1'">
+	<If condition="'{{index1}}' == '1'">
+		<a  href="{{link}}" title="{{label}}">
+	</If>
+	<If condition="'{{index1}}' > '1'">
+		<a  href="{{link}}" title="{{label}}">
+	</If>
+
+			{{label}}
+
+	<If condition="('{{index1}}' == '{{nr_tot1}}') && ('{{nr_child}}' == '0')">
+		</a>
+	</If>
+	</If>
+
+	<Separator>
+	
+	</Separator>
+
+	<Footer>
+	</Footer>
+</Grid>

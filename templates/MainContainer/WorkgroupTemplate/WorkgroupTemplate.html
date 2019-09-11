@@ -1,0 +1,17 @@
+<WebBox ID="WorkgroupTemplate" Type="SIRegionContainer" Case="Always" Editable="False" Container="DIV-like" MODE="Dynamic">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		  <Repeat rs="Zone_Menu">
+			<If condition="{{level_0}}=={{ID0}}">
+				<td nowrap="nowrap" class="wksel"><a class="wksel" href="javascript:GoTo('thisPage?event=none.ch_state(k={{ID0}},0,0,0,0)');">{{description}}</a></td>
+			</If>
+			<If condition="{{level_0}}!={{ID0}}">
+				<td nowrap="nowrap"><a class="wk" href="javascript:GoTo('thisPage?event=none.ch_state(k={{ID0}},0,0,0,0)');">{{description}}</a></td>
+			</If>
+			<td class="wkSep"><img alt="" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="2" height="24" border="0" /></td>
+		  </Repeat>
+			<td><img alt="" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="2" height="24" border="0" /></td>
+			<td width="100%"></td>
+		</tr>
+	</table>
+</WebBox>

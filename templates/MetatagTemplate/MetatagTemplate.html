@@ -1,0 +1,9 @@
+<WebBox ID="MetatagTemplate" Type="MetatagTemplate" Region="{{contentId}}" param="" Case="Always" Tag="article"  Editable="True" Container="HTML-Head">
+<Include SRC="{{ASP_FRONT_PATH}}templates/MetatagTemplate/metatagPart.html"/>
+<Include SRC="{{ASP_FRONT_PATH}}templates/general_includes_header.html"/>
+<If condition="'{{BO_ENVIRONMENT}}' == 'APPLICATION' || '{{BO_ENVIRONMENT}}' == 'APPLICATION_BO'">
+<Include SRC="{{ASP_FRONT_PATH}}templates/header_includes_session_related.html"/>
+</If>
+<If condition="'{{xhtt}}'=='4'">
+</If>
+</WebBox>

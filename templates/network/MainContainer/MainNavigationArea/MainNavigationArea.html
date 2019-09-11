@@ -1,0 +1,14 @@
+<WebBox ID="MainNavigationArea" Type="SIRegionContainer" Region="6" param="single" Tag="nav" TagId="mainNavigationArea" TagClass="navbar navbar-toggleable-md navbar-light" Case="Optional" Editable="True" Container="MainContainer" Dimension="180x70">
+<div class="menu-header">
+	<div class="menu-toggler">
+		<button class="navbar-toggler" data-menu-toggle="close" type="button" aria-label="Hide navigation">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</button>
+	</div>
+</div>
+<div class="menu-dim" data-menu-toggle="close"></div>
+<If condition="'{{has_content}}'!=''">
+		{{content_sponsor}}
+</If>
+</WebBox>
+

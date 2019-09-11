@@ -1,0 +1,46 @@
+<If condition="'{{displayFilter}}'=='yes'">
+</If>
+
+
+<If condition="'{{error_code_to_html}}'=='FoundResults'">
+
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+		<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+	</IfEmpty>
+
+
+	<Var name="target_val">('{{hrefToDocTargetOther}}' == '_blank' ? '_blank' : '_self')</Var>
+
+	<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+	<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+	<article id="{{CID}}" class="csc-default frame_40 {{handle_editing_class}}" {{handle_editing_attr}}>
+		<div class="container">
+			<div class="col-xs-16 col-lg-14 col-lg-offset-1">
+				<div class="csc-header csc-header-n6">
+					<h3>{{titleToDisplay}}</h3>
+				</div>
+				<div class="csc-text">
+					<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiContent.html"/>
+				</div>
+		   </div>
+		</div>
+	</article>
+</Grid>
+
+
+
+</If>
+<If condition="'{{error_code_to_html}}'=='ResultsEmtpy'">
+<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='TermSearchEmpty'">
+<div class="list_error_message">{{_list_TermSearchEmpty}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='InvalidTerm'">
+<div class="list_error_message">{{_list_InvalidTerm}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='SomeErrorOccurred'">
+<div class="list_error_message">{{_list_error_occured}}</div>
+</If>
+</If>

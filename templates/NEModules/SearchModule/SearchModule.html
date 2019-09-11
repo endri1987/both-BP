@@ -1,0 +1,12 @@
+<WebBox ID="SearchModule" MODE="Dynamic">
+{{mesazzhet_js}}
+<If condition="'{{include_js_searchmodule}}' == 'Y'">
+    <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}nems/SearchModule/SearchModule.js"></script>
+
+  <If condition="'{{sugestions_active}}' == 'y'">
+    <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}nems/SearchModule/ajax_search.js"></script>
+  </If>
+</If>
+{{SearchNEM_TEMPLATE}}
+</WebBox>
+

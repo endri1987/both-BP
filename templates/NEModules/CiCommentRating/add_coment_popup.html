@@ -1,0 +1,56 @@
+<script type="text/javascript" src="{{APP_URL}}include_js/jquery.rating.js"></script>
+<link type="text/css" href="{{APP_URL}}include_css/jquery.rating.css" rel="stylesheet" />
+
+<script type="text/javascript"  language="javascript1.2">
+var  APP_URL = '{{APP_URL}}';
+var  $ = $.noConflict();
+var app_status_mode = "{{mode}}";
+</script>
+<form name="updITem" id="updITem">
+
+
+<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+
+
+		<If condition="'{{publish_comments}}'=='yes'">
+
+		<tr>
+			<td>{{headline_cr}}</td>
+			<td><input type="text" name="cr_title" id="cr_title" value="{{cr_title}}" > </td>
+		</tr>
+		<tr>
+			<td>{{description_cr}}</td>
+			<td><textarea id="cr_text" name="cr_text">{{cr_text}}</textarea></td>
+		</tr>
+
+		</If>
+
+		<If condition="'{{publish_comments}}'=='yes'">
+		<Grid gridId="grid_rating_dynamic_data">
+			<tr>
+				<td>{{rate_description}}</td>
+				<td>
+					<input type="hidden1" name="rating_{{rate_id}}" id="rating_{{rate_id}}"  />
+					<div  id="rate_{{rate_id}}" class="rating" inp="rating_{{rate_id}}"></div>
+				</td>
+			</tr>
+		</Grid>
+		</If>
+
+	</tbody>
+</table>
+</form>
+
+		<If condition="'{{publish_comments}}'=='yes'">
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+		<Grid gridId="grid_rating_dynamic_data">
+			$('#rate_{{rate_id}}').rating(null, {cancel:false,maxvalue:5,curvalue:'{{rate_user}}'});
+		</Grid>
+		});
+		</script>
+		</If>
+
+

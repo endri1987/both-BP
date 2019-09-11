@@ -1,0 +1,28 @@
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+<h5>{{label}}</h5>
+	<Grid gridId="Grid_AuthorNav_Nivel2{{keyIden}}">
+		<Grid gridId="Grid_AuthorNav_Nivel3{{keyIden}}">
+			<Header>
+			<ul class="folder-list" style="padding: 0">
+				<li class="lec-tog"  href=""><i class="fa fa-list-alt"></i> {{label}}
+					<ul class="lec-hide1">
+			</Header>
+						<li class="" data-id="{{CurrentRecNr}}">
+							<a class="" href="javascript:;"
+								data-url="&apprcss=getMyBasket&k={{contentId}}&idElC={{con_id}}#relatedBasketToLectureInner"
+								data-ajax="true"
+								data-target="#relatedBasketToLecture"
+								title="{{ci_title}}"> {{label}}</a>
+						</li>
+			<Footer>
+					</ul>
+				</li>
+			</ul>
+			</Footer>
+		</Grid>
+	</Grid>
+</Grid>
+
+<script>
+//modules.push('lec-tog');
+</script>

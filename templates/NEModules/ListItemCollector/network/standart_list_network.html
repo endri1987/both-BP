@@ -1,0 +1,76 @@
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+	</IfEmpty>
+	<Header>
+		<If condition="'{{slogan_title}}' != ''">
+		<h2>{{slogan_title}}</h2>
+		</If>
+		  <div class="row">
+	</Header>
+
+
+
+
+
+	<div class="promoPanel pt-4">
+
+		<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+		<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+
+
+<div class="col-md-4">
+
+	<div class="itemBlock">
+		<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+			<If condition="'{{linkToimage}}' == 'yes'">
+			<a href="{{hrefToDocOther}}"  title="{{titleToAlt}}">
+				<img class="d-flex mr-3 img-fluid" src="{{link_url}}" alt="Generic placeholder image">
+			</a>
+			</If>
+			<If condition="'{{linkToimage}}' != 'yes'">
+			<img class="d-flex mr-3 img-fluid" src="{{link_url}}" alt="Generic placeholder image">
+			</If>
+		</Grid>
+	</div>
+
+		<div class="media-body {{enable_edit_class}}" {{enable_edit_attr}}>
+			<div class="titlePromo">
+			<If condition="'{{linkToTitle}}' == 'yes'">
+			<a href="{{hrefToDocOther}}">
+				{{titleToDisplay}}
+			</a>
+			</If>
+			<If condition="'{{linkToTitle}}' != 'yes'">
+			{{titleToDisplay}}
+			</If>
+			</div>
+		
+			
+			<p class="card-text">{{abstractToDisplay}}</p>
+			<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+			<a href="{{hrefToDocOther}}" role="button" class="btn btn-primary">{{labelUserDefinedLink}}</a>
+			</If>
+		</div>
+		</div>
+
+<div class="col-md-4"></div>
+
+
+
+	</div>
+
+
+
+
+
+
+
+	<Footer>
+	</div>
+		<If condition="'{{block_link_show}}' == 'yes'">
+		<div class="text-center">
+			<a href="{{block_link_target_Href}}" role="button" class="btn btn-primary">{{block_link_label}}</a>
+		</div>
+		</If>
+	</Footer>
+</Grid>

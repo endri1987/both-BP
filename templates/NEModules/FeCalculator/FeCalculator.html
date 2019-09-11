@@ -1,0 +1,73 @@
+<WebBox ID="FeCalculator" MODE="Dynamic">
+    <div class="bg_red pad pad_v_half color_white font_18">{{_fe_calculator_header}}</div>
+
+    <div class="row marg_v omega_v">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ist_hb"> *{{actual_hb}}:</label>
+                <div class="input-group">
+                    <input placeholder="" type="text" class="form-control" name="ist_hb" id="ist_hb"/>
+                    <div class="input-group-addon color_redl" style="min-width: 100px">({{measure_g_per_l}})</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="soll_hb"> *{{target_hb}}:</label>
+                <div class="input-group">
+                    <input  placeholder="" type="text" class="form-control" name="soll_hb" id="soll_hb"/>
+                    <div class="input-group-addon color_redl" style="min-width: 100px">({{measure_g_per_l}})</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ist_fe"> *{{is_ferritin}}:</label>
+                <div class="input-group">
+                    <input  placeholder="" type="text" class="form-control" name="ist_fe" id="ist_fe"/>
+                    <div class="input-group-addon color_redl" style="min-width: 100px">({{measure_ug_per_l}})</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label> {{iron_requirements}}: </label>
+                <div class="input-group">
+                    <input  placeholder="" type="text" class="form-control" name="result" id="result"  readonly="readonly"/>
+                    <div class="input-group-addon color_redl" style="min-width: 100px">({{measure_mg}})</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-xs-12 pull-left col-sm-6 marg_v-sm alpha_v"> 
+                    <input name="3dbut" class="btn btn_red col-xs-12" onclick="javascript:f_log();" type="button" value="{{calculate}}" />
+                </div>
+                <div class="col-sm-6 marg_v-sm omega_v">
+                    <input name="3dbut" class="btn btn_red col-xs-12"  onclick="javascript:f_reset();" type="button" value="{{reset}}" />
+                </div>
+            </div>
+        </div>
+         <div class="col-sm-6">
+
+        </div>
+    </div>
+    
+    <script>
+        
+        var alert_not_integer = '{{_not_integer}}';
+        var alert_idomosdoshem_mesg = "{{field_required_mesg}}";
+        var alert_isnumber1_mesg = "{{should_be_number}}";
+        var alert_isnumber_pozitiv_mesg = "{{should_be_number_positive}}";
+        var alert_not_in_range_30_300 = '{{_not_in_range_30_300}}';
+        
+    </script>
+</WebBox>

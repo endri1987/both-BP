@@ -1,0 +1,83 @@
+<div class="aktuell-list-template aktuell-list">
+	<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+	<Grid gridId="gridDataSrc">
+		<IfEmpty>
+		<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+		</IfEmpty>
+		<Header>
+			<div class="row">
+			</Header>
+			<div class="col-lg-12">
+				<Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+				<Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+				<div class="media mb-4 {{enable_edit_class}}" {{enable_edit_attr}}>
+					
+						<If condition="'{{DC_thumbnail_display}}' == 'yes' && {{dp_image_ID}}>0">
+						<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+							<If condition="'{{linkToimage}}' == 'yes'">
+							<a title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+								<img class="d-flex mr-3 w-25" src="{{link_url}}" alt=""/>
+							</a>
+							</If>
+							<If condition="'{{linkToimage}}' != 'yes'">
+							<img class="d-flex mr-3 w-25" src="{{link_url}}" alt=""/>
+							</If>
+						</Grid>
+						</If>
+						<div class="media-body">
+							<If condition="'{{DC_date_display}}' == 'yes' || ('{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes')">
+							<span class="card-date">
+								<If condition="'{{DC_date_display}}' == 'yes'">
+								{{source_creation_date}}
+								</If>
+								<If condition="'{{DC_date_display}}' == 'yes' &&  '{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes'">
+								/
+								</If>
+								<If condition="'{{DC_time_display}}' == 'yes' && '{{dp_docTime}}' == 'yes'">
+								{{source_creation_time}}
+								</If>
+							</span>
+							</If>
+							<h4 class="card-title">
+							<If condition="'{{linkToTitle}}' == 'yes'">
+							<a  title="{{titleToAlt}}" href="{{hrefToDoc}}" target="{{hrefToDocTarget}}">
+								{{titleToDisplay}}
+							</a>
+							</If>
+							<If condition="'{{linkToTitle}}' != 'yes'">
+							{{titleToDisplay}}
+							</If>
+							</h4>
+							<If condition="'{{DC_abstract_display}}' == 'yes' && '{{dp_abst}}' == 'yes'">
+							{{abstractToDisplay}}
+							</If>
+							<If condition="'{{DC_sourceauthor_display}}' == 'yes' && '{{dp_author}}'=='yes'">
+							<div class="mb-2" style="display:inline-block"><strong>{{_DC_sourceauthor_label}}:</strong> {{AuthorToDisplay}}</div>
+							</If>
+							<If condition="'{{DC_sourceauthor_display}}' == 'yes' && '{{dp_author}}'=='yes' && '{{DC_source_display}}' == 'yes' && '{{dp_source}}'=='yes'">
+							<div class="mb-2" style="display:inline-block" class="hidden-sm-down">|</div>
+							</If>
+							<If condition="'{{DC_source_display}}' == 'yes' && '{{dp_source}}'=='yes'">
+							<div class="mb-2" style="display:inline-block"> <strong>{{_DC_source_label}}:</strong> {{sourceToDisplay}}</div>
+							</If>
+							<If condition="'{{DC_content_display}}' == 'yes' && '{{dp_content}}' == 'yes'">
+							<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html" />
+							</If>
+							<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+
+							<div class="d-block">
+								<a href="{{hrefToDocOther}}" role="button" class="btn btn-primary btn-sm">{{labelUserDefinedLink}}</a>
+							</div>
+
+							</If>
+							
+						</div>
+				
+				</div>
+			</div>
+			<Footer>
+			</div>
+			<Include SRC="{{./}}partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>

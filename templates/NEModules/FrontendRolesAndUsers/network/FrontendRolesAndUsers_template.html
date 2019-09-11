@@ -1,0 +1,89 @@
+<style>
+    table#dt_basic .t_head{
+        height: 34px;
+    }
+    .dt-top ~ table#dt_basic .t_head{
+        padding: 0;
+        border:0;
+        height:0;
+    }
+</style>
+<div class="jarviswidget crm-module">
+    <header role="header">
+        <h2><strong>{{slogan_title}}</strong></h2>
+    </header>
+    <div role="content">
+        <div class="widget-body no-padding author-list-dt">
+            <div id="institutions_list_{{idstemp}}">
+                <div class="datatable-container">
+                    <table id="rolesAndUsers_list_dt_{{idstemp}}" class="datatable table table-striped table-hover dt-responsive dt-hidden-initialization" cellspacing="0" width="100%">
+                            <thead>
+                            <tr style="display:none;">
+                                <th class="t_head">
+                                    <script type="text/chart-config">
+                                        [{
+                                            "paging": true,
+                                            "lengthChange": false,
+                                            "pageLength": 50,
+                                            "info": true,
+                                            "ordering": false,
+                                            "dom": "{table}<\"dt-bottom\"ip>",
+                                            "language": {
+                                                "paginate": {
+                                                    "first": "&laquo;",
+                                                    "last": "&raquo;",
+                                                    "previous": "&lt;",
+                                                    "next": "&gt;"
+                                                }
+                                            }
+                                        }]
+                                    </script>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <Grid gridId="usersListGrid">
+                                    <tr role="row">
+                                        <td>
+                                            <div class="pull-left">
+                                                <i class="fa fa-user fa-fw fa-x3" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="overflow-hidden text-elipsis">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <If condition="'{{show_user_id}}' == 'yes'">
+                                                            <div class="padding-h-5">ID: <strong>{{UserId}}</strong></div>
+                                                        </If>
+                                                        <If condition="'{{show_user_username}}' == 'yes'">
+                                                            <div class="padding-h-5">Username: <strong>{{user_username}}</strong></div>
+                                                        </If>
+                                                        <If condition="'{{show_user_first_name}}' == 'yes'">
+                                                            <div class="padding-h-5">First Name: <strong>{{user_firstName}}</strong></div>
+                                                        </If>
+                                                        <If condition="'{{show_user_second_name}}' == 'yes'">
+                                                            <div class="padding-h-5">Second Name: <strong>{{user_secondName}}</strong></div>
+                                                        </If>
+                                                        <If condition="'{{show_user_email}}' == 'yes'">
+                                                            <div class="padding-h-5">Email: <strong>{{user_email}}</strong></div>
+                                                        </If>
+                                                        <If condition="'{{show_user_status}}' == 'yes'">
+                                                            <div class="padding-h-5">Status: <strong>{{user_status}}</strong></div>
+                                                        </If>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <div class="padding-h-5">Roles</strong></div>
+                                                        <div class="padding-h-5"><strong>{{user_roles}}</strong></div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                        </td>
+                                    </tr>
+                                </Grid>                    
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<style type="text/css">
+.standart_list_template{float:left; width:100%;}
+.standart_list_template .list_item{float:left; width:100%; margin-top:10px;margin-bottom: 0;}
+
+.standart_list_template .item_date{float: left; margin-right: 10px; padding-top: 3px; width: 65px;}
+.standart_list_template .cal-days-label{font-weight: bold;text-transform: uppercase;display: block;}
+
+.standart_list_template .item_details{float:right;width:125px; border-top:1px solid #ddddd5; padding-top:10px;}
+.standart_list_template .item_title{font-weight:bold; color:#2e4572;}
+.standart_list_template .item_title a{font-weight:bold; color:#2e4572;}
+
+.standart_list_template .item_time{display:block; color:#a6393c;}
+
+.standart_list_template .first_item{margin-top:0;}
+.standart_list_template .first_item .item_details{border-top:none; padding-top:0;}
+.standart_list_template .first_item .item_date{padding-top:0;}
+
+#personPopupContainer_{{objNemCal}}{
+display:none;
+z-index: 20000;
+width: 300px;
+padding: 15px;
+border: 2px solid #B3B3B3;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+background:#fff;
+-webkit-box-shadow: 0px 0px 2px 2px #ccc;
+box-shadow: 0px 0px 2px 2px #ccc;
+}
+
+#list_calendar_event_{{objNemCal}}{width: 186px;float: left;margin:10px 5px;padding:2px;}
+#list_calendar_event_{{objNemCal}} .item_details{float:left;}
+#list_calendar_event_{{objNemCal}} .list_item{border:none;}
+#list_calendar_event_{{objNemCal}} .block_title{font-weight: bold; border-bottom:1px solid #333; padding: 0 0 5px 0; line-height: 1em; font-size: 12px;}
+#list_calendar_event_{{objNemCal}} .block_title a{display:block; float:right; width:16px; height:16px; overflow:hidden; text-indent: 999999px; background: url({{GRAPHICS_PATH_APP}}cal_pop_close.png) center center no-repeat;}
+</style>
+
+<div id="ajaxCalGridInfo_{{objNemCal}}">
+<Include SRC="{{NEMODULES_PATH}}CiCollector/EventsCalendar/EventsCalendarWeeklyMonthView.html"/>
+</div>
+
+
+

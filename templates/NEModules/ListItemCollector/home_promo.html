@@ -1,0 +1,85 @@
+<div class="home-block-list-template event-list-template home-block-list-twoCol">
+
+	<Include SRC="{{./}}partials/default_header_template.html"/>
+	<Grid gridId="firstGroupingGrid">
+		<IfEmpty>
+			<div class="promoPanel p-4" data-eq-height=".itemBlock">
+				<Grid gridId="gridDataSrc">
+					<IfEmpty>
+						<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+					</IfEmpty>
+					<Header>
+					<div class="row">
+					</Header>
+					<Include SRC="{{./}}partials/item-home-promo.html"/>
+					<If condition="'{{CurrentRecNr}}' % 3 == '0'">
+				</div>
+					<div class="mb-3">&nbsp;</div>
+				<div class="row">
+					</If>
+					<Footer>
+					</div>
+					<Include SRC="{{./}}footer_pagination.html"/>
+					<Include SRC="{{./}}partials/list_footer.html"/>
+					</Footer>
+				</Grid>
+			</div>
+		</IfEmpty>
+		<Header>
+		<div class="promoPanel p-4" data-eq-height=".itemBlock">
+		</Header>
+			<If condition="'{{existSubGroup}}'=='no'">
+				<div class="list-group-wrapper mb-3">
+					<h2 class="list-group-header">{{labelGroup}}</h2>
+					<Grid gridId="firstLevelGrid_CIINSIDE_key_{{keyGroup}}">
+					<Header>
+					<div class="row">
+					</Header>
+					<Include SRC="{{./}}partials/item-home-promo.html"/>
+					<If condition="'{{CurrentRecNr}}' % 3 == '0'">
+					</div>
+					<div class="mb-3">&nbsp;</div>
+					<div class="row">
+					</If>
+					<Footer>
+						</div>
+					</Footer>
+					</Grid>
+				</div>
+			</If>
+			<If condition="'{{existSubGroup}}'=='yes'">
+				<Grid gridId="secondLevelGrid_{{keyGroup}}">
+				<div class="promoPanel p-4" data-eq-height=".itemBlock">
+					<h2 class="list-group-header">{{labelSubGroupFull}}</h2>
+					<Grid gridId="{{keySubGroup}}">
+					<Header>
+					<div class="row">
+					</Header>
+					<Include SRC="{{./}}partials/item-home-promo.html"/>
+					<If condition="'{{CurrentRecNr}}' % 3 == '0'">
+					</div>
+					<div class="mb-3">&nbsp;</div>
+					<div class="row">
+					</If>
+					<Footer>
+						</div>
+					</Footer>
+					</Grid>
+				</div>
+				</Grid>
+			</If>
+		<Footer>
+		</div>
+		<Include SRC="{{./}}partials/footer_pagination.html"/>
+		<Include SRC="{{./}}partials/list_footer.html"/>
+		<script type="text/javascript" language="javascript1.2">
+			modules.push('eq-heights')
+		</script>
+		</Footer>
+	</Grid>
+</div>
+
+
+
+
+

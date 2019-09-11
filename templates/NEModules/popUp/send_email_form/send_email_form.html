@@ -1,0 +1,13 @@
+<WebBox ID="send_email_form">
+
+<If condition="'{{SEND_EMAIL_FORM_TEMPLATE}}' > '0'">
+  {{email_mesg_js}}
+  <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}nems/popUp/send_email_form/send_email_form.js"></script>
+  <Include SRC="{{./}}template{{SEND_EMAIL_FORM_TEMPLATE}}.html" />
+</If>
+
+<If condition="'{{SEND_EMAIL_FORM_TEMPLATE}}' == '0'">
+  <script type="text/javascript" language="javascript1.2" src="{{ASP_FRONT_URL}}nems/popUp/send_email_form/send_email_form.js"></script>
+</If>
+
+</WebBox>

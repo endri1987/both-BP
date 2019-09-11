@@ -1,0 +1,63 @@
+<div class="row">
+	<div class="form-group col-sm-6">
+		<label for="user_name_regis">* {{_username_mesg}} :</label>
+		<input id="user_name_regis" name="user_name_regis" type="text" class="form-control required"
+		data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateUname"
+		data-msg-required="Please enter a username"
+		data-msg-remote="This username is already in taken"
+		>
+	</div>
+	<div class="form-group col-sm-6">
+		<label for="email_regis">* {{_email_mesg}} :</label>
+		<input id="email_regis" name="email_regis" type="text" class="form-control email required"
+		data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateEmail"
+		data-msg-email="Please provide a valid email address"
+		data-msg-required="Please enter an email address"
+		data-msg-remote="This email address is already registered"
+		>
+	</div>
+</div>
+
+<div class="row">
+	<div class="form-group col-sm-6">
+		<label for="password_regis">* {{_password_mesg}} :</label>
+		<input id="password_regis" name="password_regis" type="password" class="form-control required passwordstrength"
+		data-rule-minlength="8"
+		data-msg-required="Please enter a password"
+		data-msg-length="Password should contain at least 8 characters"
+		data-msg-passwordstrength="Password should contain at least one capital letter and a number">
+	</div>
+	<div class="col-sm-6">
+		<label for="password_regis_confirm">* {{_password_confirm_mesg}} :</label>
+		<input id="password_regis_confirm" name="password_regis_confirm" type="password" class="form-control required" data-rule-equalto="#password_regis"
+		data-msg-equalto="Please enter the same value for password">
+	</div>
+	<div class="col-xs-12">
+		<div class="alert alert-info">
+            <i class="fa fa-fw fa-info fa-2x pull-left"></i>
+            Password should contain at least 8 characters.<br>
+            Password should contain at least one capital letter and a number.
+        </div>
+	</div>
+</div>
+<div class="row">
+	<div class="form-group col-sm-12">
+		<div class="smart-form">
+			<label class="checkbox">
+				<input id="termsConditions" name="termsConditions" type="checkbox" class="required">
+				<i></i>
+				<strong>
+					 {{_agree_with}}
+					<If condition="'{{tp_page_termsCond_isset}}'=='yes'">
+						<a title="{{_register}}"  href="{{APP_URL}}?crd={{tp_page_termsCond_koord}}" target="_blank" style="text-decoration: underline;"
+						>{{_terms_and_condition}}</a>
+					</If>
+					<If condition="'{{tp_page_termsCond_isset}}'!='yes'">
+						{{_terms_and_condition}}
+					</If>
+				</strong>
+			</label>
+		</div>
+	</div>
+
+</div>

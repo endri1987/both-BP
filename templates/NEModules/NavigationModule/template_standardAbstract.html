@@ -1,0 +1,88 @@
+<div class="landing-page-main-nav landingPageMainNav">
+
+<Include SRC="{{NEMODULES_PATH}}partials/network/default_header_property_template.html"/>
+<Grid gridId="Grid_AuthorNav_{{objNem}}">
+    <Header>
+    <div id="landingPage">
+        <div class="row" data-equal-heights=".submenu-container">
+    </Header>
+
+            <div class="col-md-6" style="{{display}}">
+                <Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+                <Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{con_id}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+                <Var name="has-img">('{{show_mainContentThumbnail}}'=='yes' && '{{image_src}}' != '' ? 'p-2' : 'p-2')</Var>
+                <div class="submenu-container {{has-img}} {{handle_editing_class}}" {{handle_editing_attr}}>
+                    <div class="media mt-0">
+                        <If condition="'{{show_mainContentThumbnail}}'=='yes' && '{{image_id}}' >0 ">
+                            <Grid gridId="DocCachedInfo_{{image_id}}">
+                            <If condition="'{{makeLink_mainContentThumbnail}}'=='yes'">
+                                <a class="{{class_style}} bold" href="{{link}}"><img class="d-flex mr-2 img-fluid" src="{{link_url}}" alt="{{label}}"></a>
+                            </If>
+                            <If condition="'{{makeLink_mainContentThumbnail}}'!='yes'">
+                                <img class="d-flex mr-2 img-fluid" src="{{link_url}}" alt="{{label}}">
+                            </If>
+                            </Grid>
+                        </If>
+
+                        <If condition="'{{show_nodeImage}}'=='yes' && '{{image_id_node}}' >0 ">
+                            <Grid gridId="DocCachedInfo_{{image_id_node}}">
+                            <If condition="'{{makeLink_nodeImage}}'=='yes'">
+                                <a class="{{class_style}} bold" href="{{link}}"><img class="d-flex mr-2 img-fluid" src="{{link_url}}" alt="{{label}}"></a>
+                            </If>
+                            <If condition="'{{makeLink_nodeImage}}'!='yes'">
+                                <img class="d-flex mr-2 img-fluid" src="{{link_url}}" alt="{{label}}">
+                            </If>
+                            </Grid>
+                        </If>
+
+                        <div class="media-body">
+                            <If condition="'{{show_mainContentTitle}}' == 'yes' || '{{show_nodeLabel}}' == 'yes'">
+                                <h4 class="mt-2">
+                                    <If condition="'{{show_nodeLabel}}' == 'yes'">
+                                        <small class="d-block">
+									<If condition="'{{show_nodeIcon}}' == 'yes'">
+										<i class="{{boostrap_ico}}" aria-hidden="true"></i>
+									</If>
+                                            <If condition="'{{makeLink_nodeLabel}}' == 'yes'">
+                                                <a class="{{class_style}} bold" href="{{link}}">{{label}}</a>
+                                            </If>
+                                            <If condition="'{{makeLink_nodeLabel}}' != 'yes'">
+                                                {{label}}
+                                            </If>
+                                        </small>
+                                    </If>
+                                    <If condition="'{{show_mainContentTitle}}' == 'yes'">
+                                        <If condition="'{{makeLink_mainContentTitle}}' == 'yes'">
+                                            <a class="{{class_style}} bold" href="{{link}}">{{ci_title}}</a>
+                                        </If>
+                                        <If condition="'{{makeLink_mainContentTitle}}' != 'yes'">
+                                            {{ci_title}}
+                                        </If>
+                                    </If>
+                                </h4>
+                            </If>
+                            <If condition="'{{show_mainContentAbstract}}' == 'yes'">
+                                <div class="">{{ci_description}}</div>
+                            </If>
+                            <If condition="'{{showLinkToDetails}}' == '1'">
+                                <a class="{{class_style}} bold" href="{{link}}">{{linkLabel}} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                            </If>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <If condition="'{{CurrentRecNr}}' % 2 == '0'">
+        </div>
+        <div class="row" data-equal-heights=".submenu-container">
+        </If>
+    <Footer>
+        </div>
+    </div>
+		<script>
+			modules.push('equal-heights');
+		</script>
+
+    </Footer>
+
+</Grid>
+</div>

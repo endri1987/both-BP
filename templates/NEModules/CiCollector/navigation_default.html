@@ -1,0 +1,107 @@
+
+<If condition="'{{global_cache_dynamic}}'=='Y'">
+<div class="list-navigation list-navigation-top">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4 ">
+			<p class="marg_v"><strong>{{_articles}}</strong> <span class="color_red">{{FromRecs}} - {{ToRecs}} / <strong>{{CountItems}}</strong></span></p>
+		</div>
+		<div class="col-xs-12 col-sm-8">
+			<nav>
+				<ul class="pagination">
+
+					<If condition="'{{previewsPage}}' == ''">
+						<li class="disabled"><a href="#" aria-label="{{_previews_page_alt}}"><span aria-hidden="true">&laquo;</span></a></li>
+					</If>
+					<If condition="'{{previewsPage}}'!=''">
+						<li>
+							<a title="{{_previews_page_alt}}"
+							href="{{hrefNavResult}}?rpp={{previewsPage}}&rp={{recPage}}&msv={{msvSrc}}&ser={{objId}}"
+							><span aria-hidden="true">&laquo;</span></a>
+						</li>
+					</If>
+
+					<NavTpl navID="gridDataSrc" blNoToDisplay="5" stepBack="0">
+						<Header>
+						</Header>
+
+							<Var name="selclass">('{{selClass}}' == '' ? '' : 'active')</Var>
+							<li class="{{selclass}}">
+
+								<a title="{{_page}} {{BlockNavNr}}"
+								href="{{hrefNavResult}}?rpp={{BlockNavNr}}&rp={{recPage}}&msv={{msvSrc}}&ser={{objId}}"
+								>{{BlockNavNr}}</a>
+							</li>
+						<Footer>
+						</Footer>
+					</NavTpl>
+
+					<If condition="'{{nextPage}}' == ''">
+					<li class="disabled"><a href="#" aria-label="{{_next_page_alt}}"><span aria-hidden="true">&raquo;</span></a></li>
+					</If>
+					<If condition="'{{nextPage}}' != ''">
+						<li>
+							<a title="{{_next_page_alt}}"
+							href="{{hrefNavResult}}?rpp={{nextPage}}&rp={{recPage}}&msv={{msvSrc}}&ser={{objId}}"
+							><span aria-hidden="true">&raquo;</span></a></a>
+						</li>
+					</If>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+</If>
+
+
+<If condition="'{{global_cache_dynamic}}'!='Y'">
+		<div class="list-navigation list-navigation-top">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 ">
+					<p class="marg_v"><strong>{{_articles}}</strong> <span class="color_red">{{FromRecs}} - {{ToRecs}} / <strong>{{CountItems}}</strong></span></p>
+				</div>
+				<div class="col-xs-12 col-sm-8">
+					<nav>
+						<ul class="pagination">
+
+							<If condition="'{{previewsPage}}' == ''">
+								<li class="disabled"><a href="#" aria-label="{{_previews_page_alt}}"><span aria-hidden="true">&laquo;</span></a></li>
+							</If>
+							<If condition="'{{previewsPage}}'!=''">
+								<li>
+									<a title="{{_previews_page_alt}}"
+									href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+									><span aria-hidden="true">&laquo;</span></a>
+								</li>
+							</If>
+
+							<NavTpl navID="gridDataSrc" blNoToDisplay="5" stepBack="0">
+								<Header>
+								</Header>
+
+									<Var name="selclass">('{{selClass}}' == '' ? '' : 'active')</Var>
+									<li class="{{selclass}}">
+
+										<a title="{{_page}} {{BlockNavNr}}"
+										href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{BlockNavNr}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+										>{{BlockNavNr}}</a>
+									</li>
+								<Footer>
+								</Footer>
+							</NavTpl>
+
+							<If condition="'{{nextPage}}' == ''">
+							<li class="disabled"><a href="#" aria-label="{{_next_page_alt}}"><span aria-hidden="true">&raquo;</span></a></li>
+							</If>
+							<If condition="'{{nextPage}}' != ''">
+								<li>
+									<a title="{{_next_page_alt}}"
+									href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+									><span aria-hidden="true">&raquo;</span></a></a>
+								</li>
+							</If>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+</If>

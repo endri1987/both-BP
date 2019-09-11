@@ -1,0 +1,5 @@
+<WebBox ID="LogInModule" Type="Service" MODE="Dynamic">
+	<If condition="('{{ses_userid}}'==2 || '{{loginProccess}}'=='ok') || ('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes')">
+		{{include_step}}
+	</If>
+</WebBox>

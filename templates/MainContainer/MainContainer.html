@@ -1,0 +1,70 @@
+<WebBox ID="MainContainer" Container="MainContainer" MODE="Dynamic">
+	
+	<div id="header">
+		<div class="container">
+			<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+				<!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleCenteredNav" aria-controls="navbarsExampleCenteredNav" aria-expanded="false" aria-label="Toggle navigation" style="right: 0;z-index: 2;position: absolute;">
+				<span class="navbar-toggler-icon"></span>
+				</button-->
+
+				<div class="logoArea">
+					<Include SRC="{{./}}LogoArea/LogoArea.html"/>
+				</div>
+				
+				<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+			</nav>
+			<div class="navi-warp-home-1">
+			<Include SRC="{{./}}LanguageArea/LanguageArea.html"/>
+			
+			<a data-toggle="collapse" data-target="#navbarsExampleCenteredNav" data-menu-toggle="open" class="btn-menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			<ul class="subnavi">
+				<li>
+					<a class="btn-search-navi" href="#/"><i class="fa fa-search" aria-hidden="true"></i></a>
+					<div class="search-popup">
+						<Include SRC="{{./}}SearchArea/SearchArea.html"/>
+					</div>
+				</li>
+			</ul>				
+			</div>					
+		</div>
+	</div>
+	<If condition="'{{level_1}}' == '0'">
+	<div class="bannerArea">
+		<Include SRC="{{./}}BannerArea/BannerArea.html"/>
+		<div class="banner-block" data-eq-height=".blocks-promo" >
+			<div class="container">
+				<Include SRC="{{./}}TopRowArea/TopRowArea.html"/>
+			</div>
+		</div>
+	</div>
+	</If>
+	<div class="main-content">
+	<div class="container">
+		<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+		<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/MainContent.html"/>
+		<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+	</div>
+	</div>
+    <div id="footerRow">
+	<div id="footerArea">
+		<div class="container">
+			<Include SRC="{{./}}BottomRowArea/BottomRowArea.html"/>
+		</div>
+	</div>
+
+	<div id="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<Include SRC="{{./}}FooterNavigationArea/FooterNavigationArea.html"/>
+				</div>
+				<div class="col-md-4">
+					<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+<Include SRC="{{./}}footer_includes.html"/>
+</WebBox>

@@ -1,0 +1,22 @@
+		<div class="nav_block_2">
+
+			<div class="flL navListLbl">
+				{{_articles}} {{FromRecs}} - {{ToRecs}} / {{CountItems}}
+			</div>
+
+			<div class="flR navListLbl">
+				{{_page}} {{NrPage}} {{_of}} {{TotPage}}&nbsp;&nbsp;
+
+				<If condition="'{{previewsPage}}'!=''">
+					<a title="{{_previews_page_alt}}"
+					href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+					><img src="{{GRAPHICS_PATH_APP}}previews_page.gif" border="0" alt="{{_previews_page_alt}}"
+					/></a>
+				</If>
+				<If condition="'{{nextPage}}'!=''">
+					<a title="{{_next_page_alt}}"
+					href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}};rp={{recPage}};msv={{msvSrc}};ser={{objId}})')"
+					><img src="{{GRAPHICS_PATH_APP}}next_page.gif" border="0" alt="{{_next_page_alt}}" /></a>
+				</If>
+			</div>
+		</div>

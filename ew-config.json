@@ -1,0 +1,74 @@
+{
+    "editorContentsJs" :[],
+    "fontSvgPath" : ["include_css/fonts/fontawesome/fontawesome-webfont.json"],
+    "component" : {
+        "name": "data-ew-component",
+        "editables": {
+            "slogan-title": {
+                "selector": "[data-ew-component-slogan-title]",
+                "multi": true
+            },
+            "slogan-description": {
+                "selector": "[data-ew-component-slogan-description]",
+                "multi": true
+            },
+            "slogan-image": {
+                "selector": "[data-ew-component-slogan-image]",
+                "multi": true
+            },
+            "full-link-label": {
+                "selector": "[data-ew-component-full-link-label]",
+                "multi": true
+            },
+            "full-link-src": {
+                "selector": "[data-ew-component-full-link-src]",
+                "multi": true
+            },
+            "wrapper": {
+                "selector": "[data-ew-component-items-wrapper]",
+                "multi": true
+            },
+            "content": {
+                "selector": "[data-ew-component-content]",
+                "multi": true
+            },
+            "title": {
+                "selector": "[data-ew-component-title]",
+                "multi": true
+            },
+            "description": {
+                "selector": "[data-ew-component-description]",
+                "multi": true
+            },
+            "link-label": {
+                "selector": "[data-ew-component-link-label]",
+                "multi": true
+            },
+            "link-src": {
+                "selector": "[data-ew-component-link-src]",
+                "multi": true
+            },
+            "image-small": {
+                "selector": "[data-ew-component-image-small]",
+                "multi": true
+            },
+            "image-big": {
+                "selector": "[data-ew-component-image-big]",
+                "multi": true
+            },
+            "content-1": {
+                "selector": "[data-ew-component-content-1]",
+                "multi": true
+            },
+            "content-2": {
+                "selector": "[data-ew-component-content-2]",
+                "multi": true
+            }
+        }
+    },
+    "extendConfig": {
+        "contentsCss": [
+            "../include_css/value_style.css"
+        ]
+    }
+}

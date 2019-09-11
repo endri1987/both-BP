@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+	<!-- Chooses the latest browser -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Basic Styles -->
+<link rel="stylesheet" type="text/css" media="screen" href="{{APP_URL}}include_css/smartadmin/font-awesome.min.css">
+<!-- Basic Styles -->
+
+
+
+<If condition="'{{masterStyleSheet}}'!='NetworkBlu'">
+<link href="{{APP_URL}}include_css/network/arztnetwork.css" rel="stylesheet" type="text/css">
+</If>
+<If condition="'{{masterStyleSheet}}'=='NetworkBlu'">
+<link href="{{APP_URL}}include_css/network/arztnetwork-variant-blu.css" rel="stylesheet" type="text/css">
+</If>
+
+
+<WebBox ID="HeadContainer" Type="Container" Level="0" Case="Always" Editable="False">
+<Include SRC="{{./}}MetatagTemplate/MetatagTemplate.html"/>
+</WebBox>
+<Include SRC="{{./}}MainContainer/ExternalTagsArea/ExternalTagsArea.html"/>
+</head>
+
+<Var name="enable_edit_class">('{{masterZoneSpecialization}}' == 'internet' ? 'ew-block-content' : '')</Var>
+<body class="navbar-top-md-md {{masterZoneSpecialization}}">

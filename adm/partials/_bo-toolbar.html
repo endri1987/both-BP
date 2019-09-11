@@ -1,0 +1,43 @@
+<aside class="ew-bo-toolbar" data-module="toolbar">
+	<script type="text/x-config">
+		{
+			"activatedClass":"toolbar-activated",
+			"startView":"compact",
+			"wideViewClass":"toolbar-wide",
+			"compactViewClass":"toolbar-compact"
+		}
+	</script>
+	<div class="toolbar-wrapper clearfix">
+		<div class="toolbar-header">
+			<h5>Toolbar</h5>
+		</div>
+
+
+
+
+
+
+		<div class="toolbar-body">
+		<Grid gridId="ToolsGrid">
+
+			<a href="javascript:void(0);" style="display:block; text-align:center;"
+			data-type="open-{{data_type}}"
+			data-window-type="tool"
+			data-window-id="{{tools_id}}"
+
+			data-window-url="{{B_MODULES_PATH}}?tool={{tools_id}}&uni={{uni}}"
+			data-window-title="{{tools_name}}"
+			data-window-width="{{tools_width}}"
+			data-window-height="{{tools_height}}">
+			<img src="{{GRAPHICS_ICO}}xp/tools/32/{{icon}}"><br>
+			{{tools_name}}
+			</a>
+			<br>
+		</Grid>
+		</div>
+
+
+		<button type="button" class="btn btn-default toolbar-mode-toggle-btn toolbar-mode-toggle-compact" data-type="make-toolbar-compact"><i class="fa fa-arrow-circle-left"></i></button>
+		<button type="button" class="btn btn-default toolbar-mode-toggle-btn toolbar-mode-toggle-wide" data-type="make-toolbar-wide"><i class="fa fa-arrow-circle-right"></i></button>
+	</div>
+</aside>

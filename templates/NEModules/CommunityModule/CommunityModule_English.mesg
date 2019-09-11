@@ -1,0 +1,630 @@
+<Messages>
+<Message ID="_kongress_type">       
+Community Type
+</Message>
+
+<Message ID="_nick_name">       
+Nick Name
+</Message> 
+<Message ID="_email_address">
+Email
+</Message> 
+<Message ID="_title">
+Title
+</Message>
+<Message ID="_topic_title">
+Topic title
+</Message>
+<Message ID="_message">
+Message
+</Message>
+<Message ID="_reply_title">
+Write a reply
+</Message>
+<Message ID="_reply_title_first">
+Be the first to write a reply
+</Message>
+<Message ID="_reply_for_post">
+Reply for post
+</Message>
+<Message ID="_description">
+Description
+</Message> 
+<Message ID="_save">
+Save
+</Message> 
+<Message ID="_save_replay">
+Reply
+</Message> 
+<Message ID="_reply_required_mesg">
+Your reply is empty!
+</Message> 
+<Message ID="_add">       
+Add
+</Message>
+<Message ID="_emri">
+Name
+</Message> 
+<Message ID="_website">
+Website
+</Message>
+<Message ID="_comment">
+Comment
+</Message> 
+<Message ID="_Login">
+Login
+</Message> 
+<Message ID="_usernamelogin">
+Username
+</Message> 
+<Message ID="_forgot_password">
+Kam harruar fjalekalimin
+</Message>
+<Message ID="_password">
+Password
+</Message> 
+<Message ID="_username">
+Emri perdoruesit
+</Message> 
+<Message ID="_sign_in">
+Sign In
+</Message> 
+<Message ID="_pse_regjistrimi">
+Pse duhet te regjistrohem?
+</Message> 
+<Message ID="_llogaria_sigurt">
+Llogaria është e sigurt
+</Message> 
+<Message ID="_llogaria_free">
+Llogaria është falas dhe i lehtë për tu krijuar
+</Message> 
+<Message ID="_info_me_email">
+Merrni me email informacionet më të fundit sipas kategorive të zgjedhura
+</Message> 
+<Message ID="_pjese_diskutime">
+Merrni pjesë në diskutimet në rubrikat për të cilat keni interes
+</Message> 
+<Message ID="_regjistrimi">
+Regjistrohu
+</Message> 
+<Message ID="_canel">
+Clear
+</Message>
+
+<Message ID="_Check_all">
+Check all
+</Message>
+<Message ID="_Uncheck_all">
+Uncheck all
+</Message>
+<Message ID="_close">
+Close
+</Message>
+<Message ID="_error">
+Error
+</Message>
+<Message ID="_kontakt_addrese">
+Contact Addresse
+</Message>
+<Message ID="_city">
+City:
+</Message>
+<Message ID="_street_no">
+Street/No:
+</Message>
+<Message ID="_post_code">
+Post Code:
+</Message>
+<Message ID="_region_city">
+Region (City):
+</Message>
+<Message ID="_country">
+Country:
+</Message>
+<Message ID="_datum">
+Date
+</Message>
+<Message ID="_from">
+From:
+</Message>
+<Message ID="_to">
+To:
+</Message>
+<Message ID="_concat_name">
+Name:
+</Message>
+<Message ID="_place">
+Place:
+</Message>
+<Message ID="_time">
+Time:
+</Message>
+<Message ID="_link">
+Link:
+</Message>
+<Message ID="_company">
+Company:
+</Message>
+<Message ID="_address">
+Address:
+</Message>
+<Message ID="_name">
+Name:
+</Message>
+<Message ID="_tel">
+Tel:
+</Message>
+<Message ID="_fax">
+Fax:
+</Message>
+<Message ID="_web">
+Web:
+</Message>
+<Message ID="_abstract">
+Abstract:
+</Message>
+<Message ID="_first_name">
+First Name:
+</Message>
+<Message ID="_last_name">
+Last Name:
+</Message>
+<Message ID="_country_valid">
+Country
+</Message>
+<Message ID="_details">
+Details
+</Message>
+<Message ID="_kontakt">
+Contact
+</Message>
+<Message ID="_edit_datalog">
+You cannot edit if not logged
+</Message>
+<Message ID="_clear_datalog">
+You cannot clear if not logged
+</Message>
+<Message ID="_edit_data">
+Clear
+</Message>
+<Message ID="_clear_data">
+Clear
+</Message>
+<Message ID="_data_save_success">
+Your Data has been successfully saved !
+</Message>
+<Message ID="no_item_found">
+No records found!
+</Message>
+<Message ID="_no_place_found">
+There is no matching place for this address!
+</Message>
+<Message ID="_add_new_comment">
+Add new comment
+</Message>
+<Message ID="_replay_to_comment">
+Reply
+</Message>
+<Message ID="_add_new_tema">
+Add new Topic
+</Message>
+<Message ID="_add_new_post">
+Add new Post
+</Message>
+<Message ID="_add_discussion">
+Add discussion
+</Message>
+<Message ID="_add_new_discussion">
+Add a new discussion
+</Message>
+<Message ID="_add_reply">
+Add reply
+</Message>
+<Message ID="_add_new_reply">
+Add a new reply
+</Message>
+<Message ID="_there_are_no_temas">
+There are no topics
+</Message>
+<Message ID="_there_are_no_post">
+There are no posts
+</Message>
+
+
+<Message ID="_is_this_article_useful">
+Was this article useful to you? 
+</Message>
+<Message ID="_posted_by">
+Posted by
+</Message>
+<Message ID="_replay">
+Reply
+</Message> 
+<Message ID="_post">
+Post
+</Message> 
+<Message ID="_yestarday">
+yestarday
+</Message> 
+<Message ID="_report_this">
+Report
+</Message>
+<Message ID="_report_this_post">
+Report this post
+</Message>
+<Message ID="_report_this_reply">
+Report this reply
+</Message>
+<Message ID="_next">
+next
+</Message>
+<Message ID="_created_by">
+Created by 
+</Message>
+<Message ID="_on">
+on
+</Message>
+
+
+<Message ID="_Introduction">
+Introduction
+</Message>
+<Message ID="_Replies">
+Replies
+</Message>
+<Message ID="_Views">
+Views
+</Message>
+<Message ID="_LastMessage">
+Last Message
+</Message>
+<Message ID="_today">
+today
+</Message>
+<Message ID="_at">
+at
+</Message>
+<Message ID="day_label">
+day_label
+</Message>
+<Message ID="_by">
+by
+</Message>
+
+<Message ID="_success">
+Success
+</Message>
+<Message ID="_added_them_success">
+The topic was added successfully!
+</Message>
+<Message ID="_fail">
+Fail
+</Message>
+<Message ID="_added_them_fail">
+The added topic process failed!
+</Message>	
+
+<Message ID="_added_post_success">
+The post was added successfully!
+</Message>
+<Message ID="_added_post_fail">
+The added post process failed!
+</Message>		
+
+
+<Message ID="_adding_new_tema">
+Adding new Topic
+</Message>
+<Message ID="_theme_added_suc">
+The topic was added succesfully
+</Message>
+<Message ID="_adding_new_post">
+Adding new Post
+</Message>
+<Message ID="_post_added_suc">
+The post was added succesfully
+</Message>
+<Message ID="_first">
+First
+</Message>
+<Message ID="_last">
+Last
+</Message>
+<Message ID="_post_tot">
+Posts
+</Message>
+<Message ID="_joined">
+Joined
+</Message>
+<Message ID="_cancel">
+Clear
+</Message>
+<Message ID="_total_post">
+Total posts
+</Message>
+<Message ID="_total_replies">
+Replies
+</Message>
+
+<Message ID="_month_01">
+January
+</Message>
+<Message ID="_month_02">
+February
+</Message>
+<Message ID="_month_03">
+March
+</Message>
+<Message ID="_month_04">
+April
+</Message>
+<Message ID="_month_05">
+May
+</Message>
+<Message ID="_month_06">
+June
+</Message>
+<Message ID="_month_07">
+July
+</Message>
+<Message ID="_month_08">
+August
+</Message>
+<Message ID="_month_09">
+September
+</Message>
+<Message ID="_month_10">
+October
+</Message>
+<Message ID="_month_11">
+November
+</Message>
+<Message ID="_month_12">
+December
+</Message>
+
+<Message ID="_month_short_01">
+Jan
+</Message>
+<Message ID="_month_short_02">
+Feb
+</Message>
+<Message ID="_month_short_03">
+Mar
+</Message>
+<Message ID="_month_short_04">
+Apr
+</Message>
+<Message ID="_month_short_05">
+May
+</Message>
+<Message ID="_month_short_06">
+June
+</Message>
+<Message ID="_month_short_07">
+July
+</Message>
+<Message ID="_month_short_08">
+Aug
+</Message>
+<Message ID="_month_short_09">
+Sept
+</Message>
+<Message ID="_month_short_10">
+Oct
+</Message>
+<Message ID="_month_short_11">
+Nov
+</Message>
+<Message ID="_month_short_12">
+Dec
+</Message>
+<Message ID="_day_01">
+Monday
+</Message>
+<Message ID="_day_02">
+Tuesday
+</Message>
+<Message ID="_day_03">
+Wednesday
+</Message>
+<Message ID="_day_04">
+Thursday
+</Message>
+<Message ID="_day_05">
+Friday
+</Message>
+<Message ID="_day_06">
+Saturday
+</Message>
+<Message ID="_day_07">
+Sunday
+</Message>
+<Message ID="_day_1">
+Monday
+</Message>
+<Message ID="_day_2">
+Tuesday
+</Message>
+<Message ID="_day_3">
+Wednesday
+</Message>
+<Message ID="_day_4">
+Thursday
+</Message>
+<Message ID="_day_5">
+Friday
+</Message>
+<Message ID="_day_6">
+Saturday
+</Message>
+<Message ID="_day_7">
+Sunday
+</Message>
+<Message ID="_day_short_01">
+Mo
+</Message>
+<Message ID="_day_short_02">
+Tu
+</Message>
+<Message ID="_day_short_03">
+We
+</Message>
+<Message ID="_day_short_04">
+Th
+</Message>
+<Message ID="_day_short_05">
+Fr
+</Message>
+<Message ID="_day_short_06">
+Sa
+</Message>
+<Message ID="_day_short_07">
+Su
+</Message>
+<Message ID="_day_short_1">
+Mo
+</Message>
+<Message ID="_day_short_2">
+Tu
+</Message>
+<Message ID="_day_short_3">
+We
+</Message>
+<Message ID="_day_short_4">
+Th
+</Message>
+<Message ID="_day_short_5">
+Fr
+</Message>
+<Message ID="_day_short_6">
+Sa
+</Message>
+<Message ID="_day_short_7">
+Su
+</Message>
+<Message ID="_Discussions">
+Topics
+</Message>
+<Message ID="_Messages">
+Posts
+</Message>
+<Message ID="_LatestPost">
+Last Post
+</Message>
+
+<Message ID="contact_user_name_mesg"> 
+From (Your name)
+</Message>
+<Message ID="contact_user_email_mesg"> 
+Your e-mail address
+</Message>
+
+<Message ID="_Total_post"> 
+Total Post
+</Message>
+
+<Message ID="_list_of_post"> 
+List of posts
+</Message>
+<Message ID="_list_of_discussions"> 
+Discussions list
+</Message>
+<Message ID="_listing"> 
+Listing
+</Message>
+<Message ID="_post"> 
+posts
+</Message>
+<Message ID="_report_message"> 
+Flagged content is reviewed by eCCE-Learning staff to determine whether it violates Terms of Service or Community Guidelines. If you have a question or technical issue, please contact our Support team here.
+</Message>
+
+<Message ID="_issue_type"> 
+Issue Type
+</Message>
+<Message ID="_copyright_violation_reason"> 
+Copyright or Trademark Violation
+</Message>
+<Message ID="_inappropriate_content_reason"> 
+Inappropriate Course Content
+</Message>
+<Message ID="_inappropriate_behavior_reason"> 
+Inappropriate Behavior
+</Message>
+<Message ID="_policy_violation_reason"> 
+Udemy Policy Violation
+</Message>
+<Message ID="_other_reason"> 
+Other
+</Message>
+
+<Message ID="_post_reported"> 
+This psot has been reported 
+</Message>
+<Message ID="_post_removed"> 
+This psot has been removed
+</Message>
+
+<Message ID="_remove_this_post"> 
+Remove
+</Message>
+<Message ID="_rem_post_loading">	
+Removing post...
+</Message>
+<Message ID="_sure_to_remove_post">	
+Are you sure you want to remove this post?
+</Message>
+<Message ID="_rem_post_success">	
+The post was removed succesfully. 
+</Message>
+
+<Message ID="_remove_report">	
+Remove report 
+</Message>
+<Message ID="_sure_to_remove_report">	
+Are you sure you want to remove the post report?
+</Message>
+<Message ID="_rem_post_report_loading">	
+Removing post report...
+</Message>
+<Message ID="_rem_post_report_success">	
+The post's report was removed succesfully. 
+</Message>
+
+<Message ID="_help"> 
+Help
+</Message>
+<Message ID="_fill_the_form_below"> 
+FILL THE FORM BELOW TO
+</Message>
+
+<Message ID="_topics"> 
+Topics
+</Message>
+<Message ID="_discussion"> 
+Discussions
+</Message>
+
+<Message ID="_Showing"> 
+Showing
+</Message>
+<Message ID="_items"> 
+items
+</Message>
+<Message ID="_of"> 
+of
+</Message>
+
+</Messages>
+
+
+
+
+	
+	
+
+
+	
+
+   

@@ -1,0 +1,31 @@
+<Messages>
+
+<Message ID="_old_pass">
+Old Password
+</Message>
+<Message ID="_new_pass">
+New Password
+</Message>
+<Message ID="_confirm_pass">
+Confirm Password
+</Message>
+<Message ID="_passw_go">
+Change
+</Message>
+<Message ID="_fill_password">
+Please enter old password.
+</Message>
+<Message ID="_fill_new_password">
+Please enter new password.
+</Message>
+<Message ID="_confirm_new_password">
+Please confirm new password.
+</Message>
+<Message ID="pass_match">
+Password confirmation doesn't match.
+</Message>
+
+<Message ID="_update_item_success">
+The item was succesfully updated
+</Message>
+</Messages>

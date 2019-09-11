@@ -1,0 +1,70 @@
+<div id="registerscreen">
+	<If condition="'{{loginProccess}}'=='ok'">
+			<If condition="'{{isset_page_succes}}'=='yes'">
+				{{page_succes}}
+			</If>
+			<If condition="'{{isset_page_succes}}'!='yes'">
+				<div class="alert alert-success fade in">
+					<span class="fa-fw fa fa-check"></span>
+					<span style="FONT-WEIGHT: bold">{{_succes}}!</span> {{_loginSuccesfull}}
+				</div>
+			</If>
+		<script>
+			GoTo('thisPage?event=none.rfr(action="login";uni={{uni}})');
+		</script>
+	</If>
+	<If condition="'{{loginProccess}}'!='ok'">
+	<div>
+		<h3><i class="fa fa-fw fa-lock"></i> {{_registration}} to eccE-learning.</h3>
+
+		<If condition="'{{loginProccess}}'=='failed'">
+			<If condition="'{{isset_page_failure}}'=='yes'">
+				{{page_failure}}
+			</If>
+			<If condition="'{{isset_page_failure}}'!='yes'">
+                <div class="alert alert-danger fade in">
+                    <span class="fa-fw fa fa-warning"></span>
+                    <span style="FONT-WEIGHT: bold">{{_Error}}!</span> {{_registerFailed}}
+                </div>
+			</If>
+
+		</If>
+
+            <form class="wizard wizard-big register_form validate steps-5" data-wizard="true" role="form"  name="RegisterUser" id="RegisterUser" method="post"
+                data-step-bodyTag="fieldset"
+                data-finish-label="Complete registration"
+                data-cancel-label="Cancel"
+                data-modal-ajax="true"
+                data-url="&apprcss=eUserRegister&idstemp={{idstempNl}}#registerscreen"
+                data-bs-modal="true"
+                data-ajax-notify="{{_update_data}}"
+                data-notify-success="{{_update_item_success}}"
+             >
+            <h1>{{_account_information}}</h1>
+            <fieldset>
+                <Include SRC="{{./}}steps/step_account_information.html"/>
+            </fieldset>
+            <h1>{{_contact_details}}</h1>
+            <fieldset>
+                <Include SRC="{{./}}steps/step_contact_details.html"/>
+            </fieldset>
+            <h1>{{_biometrical_data}}</h1>
+            <fieldset>
+                <Include SRC="{{./}}steps/step_biometrical_data.html"/>
+            </fieldset>
+            <h1>{{_proffesional_data}}</h1>
+            <fieldset>
+                <Include SRC="{{./}}steps/step_proffesional_data.html"/>
+            </fieldset>
+            <h1>{{_PublicProfile}}</h1>
+            <fieldset>
+                <Include SRC="{{./}}steps/step_public_profile.html"/>
+            </fieldset>
+        </form>
+	</div>
+            <script>
+                modules.push('stepper', 'validate');
+            </script>
+	</If>
+
+</div>

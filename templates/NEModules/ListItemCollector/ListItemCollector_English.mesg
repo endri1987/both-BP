@@ -1,0 +1,46 @@
+<Messages> 
+<Message ID="_change_requirement">
+Change/ New Requirement
+</Message>
+<Messages> 
+<Message ID="_incident_reports">
+Incident Reports
+</Message>
+<Messages> 
+<Message ID="_support_documents">
+Support Documents
+</Message>
+
+<Message ID="_ListOFDocuments">
+List of documents
+</Message>
+<Message ID="_surgicalVideos">
+Structured Anatomy and Sugical Access Videos
+</Message>
+
+<Message ID="_statusCi_0">
+New
+</Message>
+<Message ID="_statusCi_1">
+New
+</Message>
+<Message ID="_statusCi_2">
+Completed
+</Message>
+<Message ID="_statusCi_3">
+Confirmed
+</Message>
+<Message ID="_statusCi_4">
+Rejected
+</Message>
+<Message ID="_statusCi_5">
+Deactivated
+</Message>
+<Message ID="_statusCi_6">
+Expired
+</Message>
+<Message ID="_statusCi_7">
+Deleted
+</Message>
+
+</Messages>

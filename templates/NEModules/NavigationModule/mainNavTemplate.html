@@ -1,0 +1,83 @@
+asdkashdakljsdh
+<Grid gridId="Grid_Navigation">
+
+	<IfEmpty>
+	</IfEmpty>
+
+	<Header>
+	<ul id="right_menu">
+	</Header>
+
+	
+		
+		<If condition="'{{nivel}}' == '2'">
+			<Var name="level1IsOpen">(('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}') ? 'open' : '')</Var>
+			<If condition="'{{index2}}' == '1'">
+				<li class="{{level1IsOpen}}">
+				<a title="{{label}}" href="{{link}}" ><span></span>{{label}}</a>
+			</If>
+			
+			<If condition="'{{index2}}' > '1'">
+				</li>
+				<li class="{{level1IsOpen}}">
+					<a title="{{label}}" href="{{link}}" ><span></span>{{label}}</a>
+			</If>
+
+			<If condition="('{{index2}}' == '{{nr_tot2}}') && ('{{nr_child}}' == '0')">
+				</li>
+			</If>
+		</If>
+		
+		<If condition="'{{nivel}}' == '3'">
+			<Var name="level2IsActive">(('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}') ? 'open' : '')</Var>
+			
+			<If condition="'{{index3}}' == '1'">
+			<ul>
+				<li class="{{level2IsActive}}">
+					<a title="{{label}}" href="{{link}}" ><span></span>{{label}}</a>
+			</If>
+			<If condition="'{{index3}}' > '1'">
+				<li class="{{level2IsActive}}">
+					<a title="{{label}}" href="{{link}}" ><span></span>{{label}}</a>
+			</If>
+
+			<If condition="('{{index3}}' == '{{nr_tot3}}') && ('{{nr_child}}' == '0')">
+				</li>
+			</ul>
+			<If condition="'{{index2}}' == '{{nr_tot2}}'">
+			</li>
+			</If>
+			</If>
+		</If>
+		
+		<If condition="'{{nivel}}' == '4'">
+			<Var name="level3IsActive">(('{{id1}}' == '{{level_1}}' && '{{id2}}' == '{{level_2}}' && '{{id3}}' == '{{level_3}}' && '{{id4}}' == '{{level_4}}') ? 'open' : '')</Var>
+			<If condition="'{{index4}}' == '1'">
+			<ul>
+			</If>
+				<li class="{{level3IsActive}}">
+				<a title="{{label}}" href="{{link}}" ><span></span>{{label}}</a>
+			
+			<If condition="('{{index4}}' == '{{nr_tot4}}') && ('{{nr_child}}' == '0')">
+
+				</li>
+			</ul>
+
+			<If condition="'{{index3}}' == '{{nr_tot3}}'">
+				</li>
+			</ul>
+
+			<If condition="'{{index2}}' == '{{nr_tot2}}'">
+				</li>
+			</If>
+
+			</If>
+
+			</If>
+		</If>
+
+
+	<Footer>
+	</ul>
+	</Footer>
+</Grid>

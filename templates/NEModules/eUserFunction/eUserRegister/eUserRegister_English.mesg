@@ -1,0 +1,23 @@
+<Messages HELP="Messages for Forgot Password">
+
+<Message ID="_user_public_nickname">
+User Public nickname
+</Message>
+<Message ID="_user_public_location">
+User public location
+</Message>
+<Message ID="_user_occupation">
+User occupation
+</Message>
+<Message ID="_user_interes">
+User interes
+</Message>
+<Message ID="_mail_preferences">
+Mail preferences
+</Message>
+<Message ID="_user_about">
+User about
+</Message>
+
+ 
+</Messages>

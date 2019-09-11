@@ -1,0 +1,37 @@
+<WebBox ID="TopNavigationTemplate" Type="NavTemplate" Case="Always" Editable="False" Container="MainContainer" MODE="Dynamic">
+<div id="TopNavigationTemplate">
+<table border="0" cellpadding="0" cellspacing="0" valign="middle">
+	<tr>
+		<td nowrap="nowrap" >
+		<a class="topNavigation_sel" href="javascript:GoTo('thisPage?event=none.ch_state(k=0,0,0,0,0)');">{{_home}}</a></td>
+		<Repeat rs="CountTopFamily">
+		 <If condition="{{cnt}} > 0">
+			 <Repeat rs="TopFamily">
+				<IfEmpty>
+					<td nowrap="nowrap"><img alt="" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="1" height="1" /></td>
+				</IfEmpty>
+				<If condition="{{level_1}}=={{ID1_1}}">
+					<td nowrap="nowrap" ><a class="topNavigation_sel" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1_1}},0,0,0)');">{{description}}</a></td>
+				</If>
+				<If condition="{{level_1}}!={{ID1_1}}">
+					<td nowrap="nowrap" >
+						<If condition="{{state}} != 0">
+								<a class="topNavigation" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1_1}},0,0,0)');">{{description}}</a>
+						</If>
+						<If condition="'{{thisMode}}'!='_new' && {{state}} == 0">
+								<a disabled class="topNavigation" style="cursor: default;text-decoration:none" href="#">{{description}}</a>
+						</If>
+						<If condition="'{{thisMode}}'=='_new' && {{state}} == 0">
+								<a class="topNavigation" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1_1}},0,0,0)');">{{description}}</a>
+						</If>
+					</td>
+				</If>
+				<Separator>
+				</Separator>
+			</Repeat>
+			</If>
+		   </Repeat>
+	</tr>
+</table>
+</div>
+</WebBox>

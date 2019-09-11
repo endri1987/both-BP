@@ -1,0 +1,23 @@
+<Messages>
+<Message ID="_send">
+Senden
+</Message>
+<Message ID="_Reset">
+Reset
+</Message>
+<Message ID="_Registration_Form">
+Registration Form
+</Message>
+<Message ID="_First_name">
+First name
+</Message>
+<Message ID="_Last_name">
+Last name
+</Message>
+<Message ID="_Profession">
+Profession
+</Message>
+<Message ID="_Email">
+Email
+</Message>
+</Messages>

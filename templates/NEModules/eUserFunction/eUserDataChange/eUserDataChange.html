@@ -1,0 +1,23 @@
+<WebBox ID="eUserDataChange">
+    
+ <div id="calleUserFunction">
+    <Grid gridId="getUserFullInfo">
+    <form class="wizard wizard-big  DataChange_form validate steps-5" data-wizard="true" role="form"  name="UserDataChange" id="UserDataChange" method="post"
+        data-ajax="true"
+        data-url="&apprcss=eUserChangeData&Mduserid={{Mduserid}}"
+        data-ajax-notify="{{_update_data}}"
+        data-notify-success="{{_update_item_success}}"
+        >
+       
+            {{htmlTemplateInclude}}
+       
+        <button class="btn btn-brand btn-sm pull-right">{{_save_data}}</button>
+      </form>
+
+    </Grid>
+   </div>  
+   <script>
+		modules.push('validate');
+ </script>
+</WebBox>
+

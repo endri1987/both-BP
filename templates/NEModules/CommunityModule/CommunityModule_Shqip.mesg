@@ -1,0 +1,73 @@
+<Messages>
+<Message ID="_LogInToPostTema">
+Ju duhet të identifikoheni ose të regjistroheni nëse doni të merrni pjesë ne forum.
+</Message>
+<Message ID="_LogInToPostComment">       
+Ju duhet të identifikoheni ose të regjistroheni nëse doni të komentoni këtë artikull.
+</Message> 
+<Message ID="_there_are_no_comments">       
+Nuk ka asnjë koment për këtë artikull.
+</Message>
+
+<Message ID="_comments">
+Komente
+</Message> 
+<Message ID="_add_new_comment">
+Shto koment
+</Message> 
+<Message ID="_add_new_tema">
+Shto temë te re
+</Message> 
+<Message ID="_add_new_post">
+Shto postim te ri
+</Message>
+<Message ID="_Replies">
+Pergjigje
+</Message>
+<Message ID="_Views">
+Shikime
+</Message>
+<Message ID="_replay">
+Përgjigju
+</Message> 
+<Message ID="_posted_by">
+Postuar nga
+</Message>
+<Message ID="_report_this">
+Raporto
+</Message> 
+<Message ID="_own">
+
+</Message> 
+<Message ID="_Tema">
+Tema
+</Message> 
+<Message ID="_LastMessage">
+Mesazhi i fundit
+</Message> 
+<Message ID="_add_new_post">
+Add new Post
+</Message>
+
+
+<Message ID="_success">
+Success
+</Message>
+<Message ID="_added_them_success">
+The theme was added successfully!
+</Message>
+<Message ID="_fail">
+Fail
+</Message>
+<Message ID="_added_them_fail">
+The added theme process failed!
+</Message>	
+
+<Message ID="_added_post_success">
+The post was added successfully!
+</Message>
+<Message ID="_added_post_fail">
+The added post process failed!
+</Message>		
+
+</Messages>

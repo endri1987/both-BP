@@ -1,0 +1,314 @@
+<div id="addint_{{CMID}}" class="forum-post-container lecture-post-container">
+	<div class="media post-main post-element">
+    	<div class="post-meta">
+        	<div class="pull-left post-avatar cursor-pointer" data-toggle="popover" data-container="body" data-viewport="body" data-placement="bottom">
+				<Grid gridId="DocCachedInfo_{{photoId}}">
+					<IfEmpty>
+					<img id="savedImg" class="bordered img-circle" src="{{APP_URL}}graphics/default_user.png"/>
+					</IfEmpty>
+					<img id="savedImg" class="bordered img-circle" src="{{link_url}}"/>
+				</Grid>
+				<div class="popover-content-holder">
+					<div class="pull-left margin-right-10">
+						<Grid gridId="DocCachedInfo_{{photoId}}">
+							<IfEmpty>
+							<img id="savedImg" width="50" class="bordered img-circle" src="{{APP_URL}}graphics/default_user.png"/>
+							</IfEmpty>
+							<img id="savedImg" width="50" class="bordered img-circle" src="{{link_url}}"/>
+						</Grid>
+					</div>
+					<div style="overflow:hidden">
+
+						<Grid gridId="MemberData_{{CMUSERID}}">
+						<h4 class="text-nowrap">{{FirstName}} {{SecondName}}</h4>
+						<div class="margin-bottom-10">
+							<If condition="'{{contributing_nr}}'!=''">
+							<span class="text-muted">{{_post_tot}}: {{contributing_nr}}</span><br>
+							</If>
+							<If condition="'{{joined}}'!=''">
+							<span class="text-muted">{{_joined}}:{{joined}}</span>
+							</If>
+						</div>
+						</Grid>
+						<a class="btn btn-xs btn-outline btn-brand" href="javascript:void(0);" title="View Profile"><i class="fa fx fa-user"></i></a>
+						<a class="btn btn-xs btn-outline btn-brand" href="javascript:void(0);" title="Call for a chat"><i class="fa fx fa-comment"></i></a>
+					</div>
+				</div>
+        	</div>
+        	<small>
+	        	<Grid gridId="MemberData_{{CMUSERID}}">
+					<strong>
+					<If condition="'{{FirstName}}'!='' && '{{SecondName}}'!='' ">
+						{{FirstName}} {{SecondName}}
+					</If>
+					<If condition="'{{FirstName}}'=='' ">
+						{{usr_short}}
+					</If>
+					</strong> - 
+				</Grid>
+				<Grid gridId="cmMainDate_{{CMID}}">
+					<Header>
+						<span class="text-muted">
+					</Header>
+							<i class="fa fa-clock-o"></i> {{date}} {{monthLabelShort}} {{year}}, {{hour12}}:{{min}} {{pm_am}}
+					<Footer>
+						</span>
+					</Footer>
+				</Grid>
+			</small>
+    	</div>
+        <div class="media-body">
+        	<h4 class="media-heading">
+        		{{CMtitle}}
+        	</h4>
+		
+			<If condition="'{{report_authorM}}'=='{{ses_userid}}' && '{{userWrite}}'=='y'">
+				<If condition="'{{post_statusM}}'=='reported'">
+					<div class="well"> 
+						<h5><i class="fa fa-tag"></i> {{_post_reported}} <small style="text-decoration: underline;">[{{report_reasonM}}]</small></h5>
+						<div class="margin-5 margin-left-15">
+							{{report_commentM}}
+						</div>					
+					</div>						
+				</If>			
+				<If condition="'{{post_statusM}}'=='removed'">
+					<div class="well badge-danger"> 
+						<h5><i class="fa fa-ban"></i> {{_post_removed}} <small style="color:#fff;text-decoration: underline;">[{{report_reasonM}}]</small></h5>
+						<div class="margin-5 margin-left-15">
+							{{report_commentM}}
+						</div>					
+					</div>						
+				</If>
+			</If>
+			<If condition="'{{post_statusM}}'=='reported' && '{{userWrite}}'=='y'">
+				<a class="btn btn-xs btn-outline btn-default margin-left-5 pull-right"
+					title="{{_remove_this_post}}"
+					href="javascript:void(0);"
+					data-ajax="true"					
+					data-title="{{_remove_this_post}}"
+					data-url="&apprcss=cmFunctions&act=remove&step=8&mainPostID={{CMID}}&reportThisID={{CMID}}&lectureIDM={{lectureIDM}}#addint_{{CMID}}"				
+					data-toggle="tooltip" 
+					data-placement="top"
+					data-target="#view-news-details"
+					data-notify-confirm="{{_sure_to_remove_post}}"
+					data-ajax-notify="{{_rem_post_loading}}"
+					data-notify-success="{{_rem_post_success}} "						
+					>
+					{{_remove_this_post}}</i>
+				</a>
+				<a class="btn btn-xs btn-outline btn-default margin-left-5 pull-right"
+					title="{{_remove_report}}"
+					href="javascript:void(0);"
+					data-ajax="true"					
+					data-title="{{_remove_report}}"
+					data-url="&apprcss=cmFunctions&act=removeReport&step=9&mainPostID={{CMID}}&reportThisID={{CMID}}&lectureIDM={{lectureIDM}}#addint_{{CMID}}"				
+					data-toggle="tooltip" 
+					data-placement="top"
+					data-target="#view-news-details"
+					data-notify-confirm="{{_sure_to_remove_report}}"
+					data-ajax-notify="{{_rem_post_report_loading}}"
+					data-notify-success="{{_rem_post_report_success}} "	
+					data-trigger-after="#refreshMainPostListStatus{{CMparentDocID}}"					
+					>
+					{{_remove_report}}</i>
+				</a>
+								
+			</If>
+        	<div class="post-content margin-bottom-10">
+        		<If condition="'{{post_statusM}}'=='normal'">
+					{{ci_content_to_display}}
+				</If>
+				
+        	</div>
+			<If condition="'{{post_statusM}}'=='normal'">
+				<!--a class="btn btn-xs btn-default txt-color-blueLight margin-left-5 pull-right"
+					title="{{_report_this_post}}"
+					data-modal-size="modal-md"
+					href="javascript:void(0);"
+					data-bs-modal="true"
+					data-modal-ajax="true"
+					data-title="{{_report_this_post}}"
+					data-url="&apprcss=cmFunctions&step=2&selfId={{CMID}}&parSubId={{CMID}}&mainParentID={{CMparentDocID}}&lectureIDM={{lectureIDM}}&post_type=report#addint"
+					data-toggle="tooltip" data-placement="top">
+					<i class="fa fa-flag"></i>
+				</a-->
+				<a class="btn btn-xs btn-primary pull-right"
+					title="{{_add_new_reply}}"
+					href="javascript:void(0);"
+					data-summernote-focus="#summernote_post_{{CMID}}">
+					<i class="fa fa-reply"></i> {{_add_reply}}
+				</a>
+			</If>
+        </div>
+	</div>
+	<Grid gridId="gridCmmDataAll">
+		<IfEmpty>
+
+		</IfEmpty>
+		<Header>
+		</Header>
+    		<div class="media post-element post-reply">
+		    	<div class="post-meta">
+		    		<div class="pull-left post-avatar cursor-pointer" data-toggle="popover" data-container="body" data-viewport="body" data-placement="bottom">
+						<Grid gridId="DocCachedInfo_{{photoId}}">
+						<IfEmpty>
+							<img id="savedImg" class="bordered img-circle" src="{{APP_URL}}graphics/default_user.png"/>
+						</IfEmpty>
+							<img id="savedImg" class="bordered img-circle" src="{{link_url}}"/>
+						</Grid>
+						<div class="popover-content-holder">
+							<div class="pull-left margin-right-10">
+								<Grid gridId="DocCachedInfo_{{photoId}}">
+									<IfEmpty>
+									<img id="savedImg" width="50" class="bordered img-circle" src="{{APP_URL}}graphics/default_user.png"/>
+									</IfEmpty>
+									<img id="savedImg" width="50" class="bordered img-circle" src="{{link_url}}"/>
+								</Grid>
+							</div>
+							<div style="overflow:hidden">
+								<Grid gridId="MemberData_{{authorOfComm}}">
+								<h4>{{FirstName}} {{SecondName}}</h4>
+								<div class="margin-bottom-10">
+									<If condition="'{{contributing_nr}}'!=''">
+									<span class="text-muted">{{_post_tot}}: {{contributing_nr}}</span><br>
+									</If>
+									<If condition="'{{joined}}'!=''">
+									<span class="text-muted">{{_joined}}:{{joined}}</span>
+									</If>
+								</div>
+								</Grid>
+								<a class="btn btn-xs btn-outline btn-brand" href="javascript:void(0);" title="View Profile"><i class="fa fx fa-user"></i></a>
+								<a class="btn btn-xs btn-outline btn-brand" href="javascript:void(0);" title="Call for a chat"><i class="fa fx fa-comment"></i></a>
+							</div>
+						</div>
+		        	</div>
+		        	<small>
+						<Grid gridId="MemberData_{{authorOfComm}}">
+						<strong>{{FirstName}} {{SecondName}}</strong> - 
+						</Grid>
+						<Grid gridId="gridDocumentFullDate_{{cm_id}}">
+						<Header>
+							<span class="text-muted">
+						</Header>
+								<i class="fa fa-clock-o"></i> {{date}} {{monthLabelShort}} {{year}}, {{hour12}}:{{min}} {{pm_am}}
+						<Footer>
+							</span>
+						</Footer>
+						</Grid>
+					</small>
+					<If condition="'{{post_status}}'=='normal'">
+						<!--a class="txt-color-blueLight"
+							title="{{_report_this_reply}}"
+							data-modal-size="modal-md"
+							href="javascript:void(0);"
+							data-bs-modal="true"
+							data-modal-ajax="true"
+							data-title="{{_report_this_reply}}"
+							data-url="&apprcss=cmFunctions&step=2&selfId={{CMID}}&parSubId={{cm_id}}&mainParentID={{CMparentDocID}}&lectureIDM={{lectureIDM}}&post_type=report#addint"
+							data-toggle="tooltip" data-placement="top">
+							<i class="fa fa-fw fa-flag"></i>
+						</a-->
+					</If>
+		    	</div>
+    			<div class="media-body">
+    				<h4 class="media-heading sr-only">
+    					{{titleToDisplay}}
+    				</h4>
+		        	<div class="post-content">
+		        		<If condition="'{{post_status}}'=='normal'">
+							{{ci_content_to_display}}
+						</If>
+							<If condition="'{{report_author}}'=='{{ses_userid}}' && '{{userWrite}}'=='y'">
+								<If condition="'{{post_status}}'=='reported'">
+									<div class="well">
+										<h5><i class="fa fa-tag"></i> {{_post_reported}} <small style="text-decoration: underline;">[{{report_reason}}]</small></h5>
+										<div class="margin-5 margin-left-15">
+											{{report_comment}}
+										</div>
+									</div>
+								</If>
+								<If condition="'{{post_status}}'=='removed'">
+									<div class="well badge-danger">
+										<h5><i class="fa fa-ban"></i> {{_post_removed}} <small style="color:#fff;text-decoration: underline;">[{{report_reason}}]</small></h5>
+										<div class="margin-5 margin-left-15">
+											{{report_comment}}
+										</div>
+									</div>
+								</If>
+							</If>
+						
+							<If condition="'{{post_status}}'=='reported' && '{{userWrite}}'=='y'">
+								<a class="btn btn-xs btn-outline btn-default margin-left-5 pull-right"
+									title="{{_remove_this_post}}"
+									href="javascript:void(0);"
+									data-ajax="true"
+									data-title="{{_remove_this_post}}"
+									data-url="&apprcss=cmFunctions&act=remove&step=8&mainPostID={{CMID}}&reportThisID={{cm_id}}&lectureIDM={{lectureIDM}}#addint_{{CMID}}"
+									data-toggle="tooltip"
+									data-placement="top"
+									data-target="#view-news-details"
+									data-notify-confirm="{{_sure_to_remove_post}}"
+									data-ajax-notify="{{_rem_post_loading}}"
+									data-notify-success="{{_rem_post_success}}"
+									>
+									{{_remove_this_post}}</i>
+								</a>
+							</If>
+		        	</div>
+    			</div>
+    		</div>
+		<Footer>
+		</Footer>
+	</Grid>
+	<If condition="'{{post_statusM}}'=='normal'">
+		<div class="media post-element post-reply">
+			<form class="no-padding validate" style="padding-bottom: 0 !important;" novalidate="novalidate"
+				data-ajax="true"
+				data-url="&apprcss=cmFunctions&act=post&step=3&selfId={{CMID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId={{CMID}}&lectureIDM={{lectureIDM}}#addint_{{CMID}}"
+				data-target="#view-news-details"
+				data-ajax-notify="{{_adding_new_post}}"
+				data-notify-success="{{_post_added_suc}}"
+				data-trigger-after="#refreshMainPostList{{CMparentDocID}}"
+				>
+				<script type="text/jquery-validate-config">
+					{
+						"ignore": []
+					}
+				</script>
+				<input type="hidden" placeholder="{{_title}}" name="title" value="{{_reply_for_post}}: {{CMID}} - {{CMtitle}}" class="hidden">
+
+				<h4>{{_reply_title}}</h4>
+
+				<div class="form-group summernote-compact-toolbar">
+					<textarea id="summernote_post_{{CMID}}" style="display:none;" class="form-control summernote required" name="comment" placeholder="{{_message}}" data-msg-required="{{_reply_required_mesg}}"></textarea>
+				</div>
+				<button class="btn btn-sm btn-primary" type="submit">
+					{{_save_replay}}
+				</button>
+			</form>
+
+			<script type="text/javascript">
+			  modules.push('summernote', 'validate');
+			</script>
+		</div>
+	</If>
+	<a id="refreshMainPostList{{CMparentDocID}}" style="display:none;"
+		data-ajax="true"
+		data-target="#labelIndicatorCont_{{CMID}}"
+		data-trigger-after="#refreshMainPostTotPost{{CMparentDocID}}"
+		data-url="&apprcss=cmFunctions&act=refreshMainList&step=6&selfId={{CMparentDocID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId={{CMID}}#labelIndicator_{{CMID}}"
+	></a>
+	
+	<a id="refreshMainPostTotPost{{CMparentDocID}}" style="display:none;"
+		data-ajax="true"
+		data-target="#mainPostNrTotWrapperCont"
+		data-url="&apprcss=cmFunctions&act=refreshMainList&step=9&selfId={{CMparentDocID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId={{CMID}}#mainPostNrTotWrapper"
+	></a>
+	
+	<a id="refreshMainPostListStatus{{CMparentDocID}}" style="display:none;"
+		data-ajax="true"
+		data-target="#StatusIndicatorCont_{{CMID}}"
+		data-url="&apprcss=cmFunctions&act=refreshMainList&step=6&selfId={{CMparentDocID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId={{CMID}}#StatusIndicator_{{CMID}}"
+	></a>
+</div>
+

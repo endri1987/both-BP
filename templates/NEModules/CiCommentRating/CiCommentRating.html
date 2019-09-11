@@ -1,0 +1,105 @@
+<WebBox ID="CiCommentRating" Type="Service" MODE="Dynamic">
+
+<If condition="'{{show_comments_rating}}'=='yes'">
+<style>
+.star_empty{
+	background-image: url({{GRAPHICS_PATH_APP}}star_pb.png);
+	background-repeat: repeat-x;
+}
+
+.star{
+	background-image: url({{GRAPHICS_PATH_APP}}star_fpb.png);
+	background-repeat: repeat-x;
+}
+.rate_txt {
+	margin: 0px 0px 0px 5px;
+	vertical-align:middle;
+	line-height:12px
+}
+
+
+</style>
+<script type="text/javascript" src="{{APP_URL}}include_js/jquery.rating.js"></script>
+<link type="text/css" href="{{APP_URL}}include_css/jquery.rating.css" rel="stylesheet" />
+
+
+<script type="text/javascript" language="JavaScript1.2">
+
+var crd = {{'comments_ratingci'}};
+var st = {{'comments_idstemp'}};
+var ln = {{'ln'}};
+var uni = {{'uniqueid'}};
+var uniF = {{'uniqueid'}};
+var md = '{{md}}';
+var cci = '{{contentId}}'
+
+var propN = '{{propN}}';
+var APUL = '{{APP_URL}}'
+var uniC = '{{uni}}'
+var cci = '{{contentId}}'
+var cln = '{{lang}}'
+var cu = '{{uIDset}}'
+
+var _comment_title = '{{_comment_title}}';
+var _comment_title_add = '{{_comment_title_add}}';
+var _comment_title_modify = '{{_comment_title_modify}}';
+
+$(function(){
+	$('#dialog_edit').dialog({
+		width: 650,
+		height: 380,
+		zIndex: 3001,
+		bgiframe: true,
+		modal:true,
+		resizable:false,
+		draggable:true,
+		autoOpen: false
+	});
+});
+</script>
+
+
+<script type="text/javascript" language="javascript1.2" src="{{./}}CommentRating.js"></script>
+<link  rel="stylesheet" href="{{./}}CommentRating.css" type="text/css" />
+"{{template_type}}"
+<div class="modContent" id="rfrList_cr">
+	<If condition="'{{template_type}}'== 0">
+		<Include SRC="{{./}}FrontUserNoPrivileges.html">
+	</If>
+	<If condition="'{{template_type}}'== 1">
+		<Include SRC="{{./}}NormalSimple.html">
+	</If>
+	<If condition="'{{template_type}}'== 2">
+		<Include SRC="{{./}}Default.html">
+	</If>
+	<If condition="'{{template_type}}'== 3">
+
+	</If>
+</div>
+
+
+
+
+</If>
+
+
+
+<Include SRC="{{./}}MostPopular.html">
+
+<!--
+<div id="dialog_edit" class="dialogs" title="">
+</div>-->
+
+<div id="messageBoxEditCR" style="display:none">
+
+	<div id="MainCntEditCR" style="width: 500px;">
+
+	</div>
+
+</div>
+
+
+
+
+
+</WebBox>

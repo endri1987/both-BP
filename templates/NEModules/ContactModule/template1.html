@@ -1,0 +1,24 @@
+<div class="contact_post_nem">
+	<form {{contact_form_attribut}} class="formular_contact_form validate"  dt-idstemp="{{idstemp}}" dt-id_nem="{{id_nem}}" dt-id_form_k="1">
+		<div class="form_item">
+			<label>*{{contact_user_name_mesg}}:</label>
+			<input type="text" name="emri_cont" value="{{fullname}}"   name_post="{{contact_user_name_mesg}}" valid="0,0,0,0,0,0" etiketa="{{contact_user_name_mesg}}" data-msg-required="{{field_reqiured_mesg}}" class="required"/>
+		</div>
+		<div class="form_item">
+		<label>*{{contact_user_email_mesg}}:</label>
+			<input type="text" name="email_cont" {{id_user_name}} name_post="{{contact_user_email_mesg}}" value="{{usr_email}}"    valid="0,0,0,0,0,0" etiketa="{{contact_user_email_mesg}}" data-msg-required="{{field_reqiured_mesg}}" class="required email"/>
+		</div>
+		<div class="form_item">
+		<label>*{{contact_komente_mesg}}:</label>
+		<textarea name="koment_cont"  name_post="{{contact_komente_mesg}}"  valid="0,0,0,0,0,0" etiketa="{{contact_komente_mesg}}" cols="50" rows="10" data-msg-required="{{field_reqiured_mesg}}" class="required"/></textarea>
+		</div>
+		<div class="form_item">
+		    {{captcha_img}}<br>
+		    <a href="{{captcha_reload_fun}}">{{captcha_reload_mesg}}</a><br>
+		    {{captcha_input}}<br><br>
+			<button class="email_buton" title="{{contact_but_send_mesg}}">{{contact_but_send_mesg}}</button>
+			<button class="clear_buton" title="{{contact_but_clear_mesg}}">{{contact_but_clear_mesg}}</button>
+			
+		</div>
+	</form>
+</div>

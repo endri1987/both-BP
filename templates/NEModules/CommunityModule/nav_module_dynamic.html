@@ -1,0 +1,42 @@
+<div class="text-center">
+	<div class="btn-group" style="float:left;margin-top:5px;">
+		{{_Showing}} {{FromRecs}}-{{ToRecs}} {{_items}} {{_of}} {{CountItems}}
+	</div>
+	
+	
+	<div class="btn-group" style="float:right;">
+		<NavTpl navID="gridDataSrc" blNoToDisplay="3" stepBack="2">
+			<Header>
+				<div data-baseurl="forums/website-review.16/page-{{sentinel}}" data-sentinel="{{sentinel}}" data-last="26" data-end="16" data-start="2" data-range="7" data-page="1">
+						<nav>
+							<If condition="'{{previewsPage}}'!=''">
+
+								<If condition="'{{previewsPage}}'!='1'">
+								<a class="btn btn-white" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp=1)')">{{_first}}</a>
+								</If>
+
+								<a class="btn btn-white" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{previewsPage}})')"><i class="fa fa-chevron-left"></i></a>
+
+							</If>
+			</Header>
+							<a rel="start" class=" {{selClass}} {{currentPage}} btn btn-white" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{BlockNavNr}})')">{{BlockNavNr}}</a>
+			<Footer>
+
+							<If condition="'{{nextPage}}'!=''">
+
+								<a class="btn btn-white" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{nextPage}})')"><i class="fa fa-chevron-right"></i></a>
+
+								<If condition="'{{NrPage}}'<'{{TotPage}}'">
+								<a class="btn btn-white" href="JavaScript:GoTo('thisPage?event=none.srm(k={{k}};kc={{kc}};rpp={{TotPage}})')">{{_last}}</a>
+								</If>
+							</If>
+						</nav>
+				</div>
+
+			</Footer>
+		</NavTpl>
+	</div>
+ </div>
+
+
+ 

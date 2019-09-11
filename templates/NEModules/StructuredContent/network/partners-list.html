@@ -1,0 +1,87 @@
+
+
+
+
+
+
+<Grid gridId="Grid_StructuredContent">
+	<IfEmpty>
+	</IfEmpty>
+	<Header>
+		<article id="c12" class="csc-default frame_0">
+			<div class="container">
+				<div class="col-lg-16">
+					<div class="csc-header csc-header-n1">
+						<If condition="'{{slogan_title_exists}}' == 'yes'">
+							<h2>{{slogan_title}}</h2>
+						</If>
+
+					</div>
+					<div class="csc-text">
+						<table class="contenttable">
+							<tbody>
+							</Header>
+							<tr>
+
+
+
+							<If condition="'{{dp_smallImg}}' == 'yes'">
+								<td title="{{titleToDisplay}}">
+									<Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+										<If condition="'{{exist_link}}' == 'yes' && '{{linkToimage}}' == 'yes' ">
+										<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}"  title="{{titleToAlt}}">
+										<img src="{{link_url}}" alt="{{titleToAlt}}"/>
+										</a>
+										</If>
+										<If condition="'{{exist_link}}' != 'yes' || '{{linkToimage}}' != 'yes'">
+											{{titleToDisplay}}
+											<img src="{{link_url}}" alt="{{titleToAlt}}"/>
+										</If>
+									</Grid>
+								</td>
+								</If>
+							<If condition="'{{dp_title}}' == 'yes'">
+							<td title="{{titleToDisplay}}">
+								<p class="bodytext">
+									<If condition="'{{exist_link}}' == 'yes' && '{{linkToTitle}}' == 'yes' ">
+									<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}">
+										{{titleToDisplay}}
+										<If condition="'{{dp_desc}}' == 'yes'">
+										 - {{description}}
+										</If>
+									</a>
+									</If>
+									<If condition="'{{exist_link}}' != 'yes' || '{{linkToTitle}}' != 'yes'">
+										{{titleToDisplay}}
+										<If condition="'{{dp_desc}}' == 'yes'">
+										 - {{description}}
+										</If>
+									</If>
+								</p>
+								<If condition="'{{dp_desc}}' == 'yes'">
+								<div class="bodytext">{{abstractToDisplay}}</div>
+								</If>
+								<If condition="'{{dp_content}}' == 'yes'">
+								<div class="bodytext">{{fullcontent}}</div>
+								</If>
+							</td>
+							</If>
+							<td title="{{titleToDisplay}}">
+								<If condition="'{{exist_link}}' == 'yes' && '{{exist_linklabel}}' == 'yes' ">
+								<p class="bodytext">
+									<a href="{{hrefToDocOther}}" target="{{hrefToDocTargetOther}}"  title="{{titleToAlt}}">
+										{{linklabel}}
+									</a>
+								</p>
+								</If>
+							</td>
+						</tr>
+						<Footer>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</article>
+</Footer>
+</Grid>

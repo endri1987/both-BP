@@ -1,0 +1,22 @@
+<Recordset ID="get_meta_el">
+	<Query>
+		SELECT	IF (cm.meta_value IS NULL OR cm.meta_value = '','',cm.meta_value) AS meta_value, 
+			md.name,
+			md.meta_id,
+			md.description,
+			
+			IF(md.value_default{{lang}} IS NULL AND md.value_default{{lang}} = '','',md.value_default{{lang}}) as value_default,
+			
+			
+			md.order_meta as order_meta
+		 FROM meta_def as md 
+		 	LEFT JOIN ci_meta as cm ON (
+		 									cm.meta_id=md.meta_id 
+		 								AND cm.content_id = {{cont_id}} 
+		 								AND md.status='Y' 
+		 								AND language='{{lang}}'
+		 								)
+		  
+	 ORDER BY md.order_meta
+	</Query>
+</Recordset>

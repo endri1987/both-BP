@@ -1,0 +1,31 @@
+ <If condition="('{{link_show_I}}' == '1') || ('{{link_show_II}}' == '1') || ('{{link_show_III}}' == '1')">
+	<table border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+
+       <If condition="'{{link_show_I}}' == '1'">
+         <td>{{link_lng_I}}<img title="{{mesg_lng_alt_I}}" src="{{GRAPHICS_PATH_APP}}{{ico_I}}.gif" border="0">{{link_lng_I_c}}</td>
+       </If>
+
+       <If condition="'{{link_show_II}}' == '1'">
+         <If condition="'{{link_show_I}}' == '1'">
+           <td><span class="LanguageSwitch_ndares">/</span></td>
+         </If>
+         <td>{{link_lng_II}}<img title="{{mesg_lng_alt_II}}" src="{{GRAPHICS_PATH_APP}}{{ico_II}}.gif" border="0">{{link_lng_II_c}}</td>
+       </If>
+
+       <If condition="'{{link_show_III}}' == '1'">
+         <If condition="('{{link_show_I}}' == '1') || ('{{link_show_II}}' == '1')">
+           <td><span class="LanguageSwitch_ndares">/</span></td>
+         </If>
+         <td>{{link_lng_III}}<img title="{{mesg_lng_alt_III}}" src="{{GRAPHICS_PATH_APP}}{{ico_III}}.gif" border="0">{{link_lng_III_c}}</td>
+       </If>
+
+	  </tr>
+	</table>
+ </If>
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<If condition="'{{error_code_to_html}}'=='FoundResults'">
+
+
+<div class="cst-slider">
+	<Grid gridId="gridDataSrc">
+	 	<Header>
+	 		<div class="slider_img">
+	    </Header>
+	   		 <Var name="imgSrc">'{{srcBigImageToDisplay}}' != '' ? '{{srcBigImageToDisplay}}' : '{{srcImageToDisplay}}'</Var>
+	      	 <img id="event{{CurrentRecNr}}" src="{{imgSrc}}" alt="{{titleToAlt}}" border="0" />
+	     <Footer>
+</div>    
+	     </Footer>
+	</Grid>
+
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+		<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+	</IfEmpty>
+ <Header>
+
+     <div class="slider-nav-cst">
+      <span class="left-arrow">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+      </span>
+      <span class="right-arrow">
+        <i class="glyphicon glyphicon-chevron-right"></i>
+      </span>
+ </Header>
+	            
+
+	            <div class="col-xs-3 col-sm-3 col-md-3 slider-nav-caption" data-rel="event{{CurrentRecNr}}">
+                    <If condition="'{{linkToTitle}}' == 'yes'">
+                        <h5><a href="{{hrefToDoc}}" title="{{titleToAlt}}" target="{{hrefToDocTarget}}" >{{titleToDisplay}}</a></h5>
+                    </If>
+                    <If condition="'{{linkToTitle}}' != 'yes'">
+                       <h5> {{titleToDisplay}} </h5>
+                    </If>
+               </div>
+
+    <Footer>
+      </div>
+
+     </Footer>
+</Grid>
+</div>
+
+<If condition="'{{error_code_to_html}}'=='ResultsEmtpy'">
+<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='TermSearchEmpty'">
+<div class="list_error_message">{{_list_TermSearchEmpty}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='InvalidTerm'">
+<div class="list_error_message">{{_list_InvalidTerm}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='SomeErrorOccurred'">
+<div class="list_error_message">{{_list_error_occured}}</div>
+</If>
+
+</If>

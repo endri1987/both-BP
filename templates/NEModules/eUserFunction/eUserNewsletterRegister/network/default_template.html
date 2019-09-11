@@ -1,0 +1,79 @@
+<article class="csc-default frame_60" data-scroll-to="true">
+    <div class="container">
+        <div class="row" id="newsletterWrapperContainer">
+            <div class="col-lg-12">
+                <div class="csc-header csc-header-n1">
+                    <h3 class="csc-firstHeader">{{headline}}</h3>
+                </div>
+            </div>
+            <If condition="'{{slogan_description_show}}' == 'yes'">
+                <div class="col-lg-6">
+                    <div class="bodytext">
+                        {{slogan_description}}
+                    </div>
+                </div>
+            </If>
+            <div class="col-lg-6" id="newsletterInnerContainer">
+                <If condition="'{{register_newsletter}}' != 'FAIL' && '{{register_newsletter}}' != 'SUCCESS'">
+                    <form class="validate form-inverse" role="form" method="post"
+                          id="newsletterForm"
+
+                    <If condition="'{{behaviour}}' == 'on_target_page'">
+                        action="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=registerToNewsletter&cis={{contentId}}&idstemp={{idstemp}}"
+                    </If>
+                    <If condition="'{{behaviour}}' == 'on_page'">
+                        data-ajax="true"
+                        data-url="&apprcss=registerToNewsletter&cis={{contentId}}&idstemp={{idstemp}}"
+                        data-target="#newsletterInnerContainer"
+                    </If>
+                    >
+                        <If condition="'{{show_salutation}}' == 'show'">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <select class="form-control" name="salutation" id="exampleSelect1" data-rule-required="true"
+                                            data-msg-required="{{please_enter_salutation}}"
+                                            data-rule-htmlsanity="true">
+                                        <option disabled selected>{{salutation_ph}}</option>
+                                        <Grid gridId="SalutationGrid">
+                                            <option value="{{source_label}}">{{source_label}}</option>
+                                        </Grid>
+                                    </select>
+                                </div>
+                            </div>
+                        </If>
+                        <div class="row">
+                            <If condition="'{{show_first_name}}' == 'show'">
+                                <div class="col-lg-6">
+                                    <input type="text" name="firstname" placeholder="{{firstname_ph}}" data-rule-required="true"
+                                           data-msg-required="{{please_enter_firstname}}"
+                                           data-rule-htmlsanity="true"/>
+                                </div>
+                            </If>
+                            <If condition="'{{show_last_name}}' == 'show'">
+                                <div class="col-lg-6">
+                                    <input type="text" name="lastname" placeholder="{{lastname_ph}}" data-rule-required="true"
+                                           data-msg-required="{{please_enter_lastname}}"
+                                           data-rule-htmlsanity="true"/>
+                                </div>
+                            </If>
+                            <div class="col-lg-12">
+                                <input type="text" name="email" placeholder="{{email_ph}}" data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateEmail"
+                                       data-msg-remote="{{email_address_already_registered}}"
+                                       data-rule-email="true"
+                                       data-msg-email="{{provide_valid_email_address}}"
+                                       data-rule-required="true"
+                                       data-msg-required="{{please_enter_email}}"
+                                       data-rule-htmlsanity="true"
+                                />
+                                <button type="submit" class="btn btn-md btn-primary">{{submit_button}}</button>
+                            </div>
+                        </div>
+                    </form>
+                </If>
+                <script>
+                    modules.push('validate', 'ajax-module');
+                </script>
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,70 @@
+<div class="standard-list-template">
+	<Include SRC="{{NEMODULES_PATH}}partials/default_header_property_template.html"/>
+	<Grid gridId="firstGroupingGrid">
+		<IfEmpty>
+			<div class="mb-3" data-eq-height=".itemBlock">
+				<Grid gridId="gridDataSrc">
+					<IfEmpty>
+						<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+					</IfEmpty>
+					<Header>
+					<div class="row">
+					</Header>
+					<Include SRC="{{./}}partials/item-standard-list.html"/>
+					<Separator>
+						<div class="col-lg-12"><hr></div>
+					</Separator>
+					<Footer>
+					</div>
+					<Include SRC="{{./}}footer_pagination.html"/>
+					<Include SRC="{{./}}partials/list_footer.html"/>
+					</Footer>
+				</Grid>
+			</div>
+		</IfEmpty>
+		<Header>
+		<div class="mb-3" data-eq-height=".itemBlock">
+		</Header>
+			<If condition="'{{existSubGroup}}'=='no'">
+				<div class="list-group-wrapper mb-3">
+					<h2 class="list-group-header">{{labelGroup}}</h2>
+					<Grid gridId="firstLevelGrid_CIINSIDE_key_{{keyGroup}}">
+					<Header>
+					<div class="row">
+					</Header>
+					<Include SRC="{{./}}partials/item-standard-list.html"/>
+					<Footer>
+					</div>
+					</Footer>
+					</Grid>
+				</div>
+			</If>
+			<If condition="'{{existSubGroup}}'=='yes'">
+				<Grid gridId="secondLevelGrid_{{keyGroup}}">
+				<div class="mb-3" data-eq-height=".itemBlock">
+					<h2 class="list-group-header">{{labelSubGroupFull}}</h2>
+					<Grid gridId="{{keySubGroup}}">
+					<Header>
+					<div class="row">
+					</Header>
+					<Include SRC="{{./}}partials/item-standard-list.html"/>
+					<Footer>
+					</div>
+					</Footer>
+					</Grid>
+				</div>
+				</Grid>
+			</If>
+			<Separator>
+				<div class="col-lg-12"><hr></div>
+			</Separator>
+		<Footer>
+		</div>
+		<Include SRC="{{./}}partials/footer_pagination.html"/>
+		<Include SRC="{{./}}partials/list_footer.html"/>
+		<script type="text/javascript" language="javascript1.2">
+			modules.push('eq-height')
+		</script>
+		</Footer>
+	</Grid>
+</div>

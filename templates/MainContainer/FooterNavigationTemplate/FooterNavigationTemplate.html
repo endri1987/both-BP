@@ -1,0 +1,26 @@
+<WebBox ID="FooterNavigationTemplate" Type="NavTemplate" Case="Always" Editable="False" Container="MainContainer" MODE="Dynamic">
+  <a class="fNavSel" href="javascript:GoTo('thisPage?event=none.ch_state(k=0,0,0,0,0)');">{{_home}}</a>
+  <img src="{{GRAPHICS_PATH_APP}}separat.gif"/>
+  <Repeat rs="FooterFamily">
+	<IfEmpty>
+		<img alt="" src="{{GRAPHICS_PATH_APP}}spacer.gif" width="1" height="1" />
+	</IfEmpty>
+	<If condition="{{level_1}}=={{ID1_1}}">
+		<a class="fNavSel" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1_1}},0,0,0)');">{{description}}</a>
+	</If>
+	<If condition="{{level_1}}!={{ID1_1}}">
+		<If condition="{{state}} != 0">
+			<a class="fNav" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1_1}},0,0,0)');">{{description}}</a>
+		</If>
+		<If condition="'{{thisMode}}'!='_new' && {{state}} == 0">
+			<a class="fNav" disabled style="cursor: default;text-decoration:none" href="#">{{description}}</a>
+		</If>
+		<If condition="'{{thisMode}}'=='_new' && {{state}} == 0">
+			<a class="fNav" href="javascript:GoTo('thisPage?event=none.ch_state(k={{level_0}},{{ID1_1}},0,0,0)');">{{description}}</a>
+		</If>
+	</If>
+	 <Separator>
+		<img src="{{GRAPHICS_PATH_APP}}separat.gif" />
+	</Separator>
+  </Repeat>
+</WebBox>

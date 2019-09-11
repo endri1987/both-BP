@@ -1,0 +1,30 @@
+
+<Grid gridId="Grid_Navigation">
+	<If condition="'{{nivel}}' == '1'">
+	<If condition="'{{index1}}' == '1'">
+	<div class="{{Navigation_Container_Class}}">
+		<If condition="{{level_1}} == '0' ">
+		<span>
+			<a href="javascript:GoTo('thisPage?event=none.ch_state(k=0,0,0,0,0)');" title="{{home_mesg}}">{{home_mesg}}</a>
+		</span>
+		</If>
+		<If condition="{{level_1}} != '0' ">
+		<span>
+			<a href="javascript:GoTo('thisPage?event=none.ch_state(k=0,0,0,0,0)');" title="{{home_mesg}}">{{home_mesg}}</a>
+		</span>
+		</If>
+		<span>
+	</If>
+	<If condition="'{{index1}}' > '1'">
+		</span>
+		<span>
+	</If>
+			<a href="{{link}}" title="{{label}}">{{label}}</a>
+
+	<If condition="('{{index1}}' == '{{nr_tot1}}') && ('{{nr_child}}' == '0')">
+		</span>
+	</div>
+	</If>
+	</If>
+
+</Grid>

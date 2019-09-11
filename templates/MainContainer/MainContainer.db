@@ -1,0 +1,50 @@
+<Recordset ID="get_contentId">
+	<Query>
+		SELECT 	   content_id,state{{lang}} as state
+		  FROM 	   content
+		 WHERE 	   id_zeroNivel={{level_0}}
+			   AND id_firstNivel={{level_1}}
+			   AND id_secondNivel={{level_2}}
+			   AND id_thirdNivel={{level_3}}
+			   AND id_fourthNivel={{level_4}}
+			   AND (ci_mtype{{lang}}{{thisMode}} = 'html' or ci_mtype{{lang}}{{thisMode}} = 'text/html')
+			   AND (content{{lang}}{{thisMode}}!='' OR content{{lang}}{{thisMode}} IS NOT NULL) 
+			   {{kusht_deleted}}
+			   AND (ci_type!="DL")
+	      ORDER BY 	   orderContent
+		 LIMIT 	   0,1
+	</Query>
+</Recordset>
+<Recordset ID="getnodetype">
+	<Query>
+		SELECT 	   node_type 
+		  FROM     nivel_4
+		 WHERE 	   id_zeroNivel={{level_0}}
+			   AND id_firstNivel={{level_1}}
+		 	   AND id_secondNivel={{level_2}}
+		  	   AND id_thirdNivel={{level_3}}
+			   AND id_fourthNivel={{level_4}}
+	</Query>
+</Recordset>
+<Recordset ID="get_node_family_id">
+	<Query>
+		SELECT 	   n.node_family_id as node_family_id
+		  FROM     nivel_1 as n,profil_rights as t4
+		 WHERE     n.id_zeroNivel  = '{{level_0}}' 
+		  	   AND n.id_firstNivel  = '{{level_1}}' 
+			   AND t4.id_zeroNivel  = n.id_zeroNivel 
+			   AND t4.id_firstNivel = n.id_firstNivel  
+			   AND t4.id_secondNivel = 0 
+			   AND t4.id_thirdNivel  = 0 
+			   AND t4.id_fourthNivel = 0 
+			   AND t4.profil_id    in ({{tip}})
+              ORDER BY     n.orderMenu
+	</Query>
+</Recordset>
+<Recordset ID="get_ci_type">
+	<Query>
+		SELECT     ci_type
+		  FROM     content
+		 WHERE     content_id={{contentId}}
+	</Query>
+</Recordset>

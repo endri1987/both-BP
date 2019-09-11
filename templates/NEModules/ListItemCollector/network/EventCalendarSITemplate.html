@@ -1,0 +1,94 @@
+<Grid gridId="GroupedByPeriodGrid">
+<IfEmpty>
+
+	<Grid gridId="gridDataSrc">
+	<Header>
+	<div class="calendar-list">
+		<div class="row">
+	</Header>
+				<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+				<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+				<div class="col-md-12 {{handle_editing_class}}" {{handle_editing_attr}}>
+					<h3>
+							<If condition="'{{linkToTitle}}' == 'yes'">
+								<a title="{{titleToAlt}}" href="{{hrefToDoc}}">
+									{{titleToDisplay}}
+								</a>
+							</If>
+							<If condition="'{{linkToTitle}}' != 'yes'">
+									{{titleToDisplay}}
+							</If>
+					</h3>
+					<table class="mb-3">
+						<tbody><tr>
+							<td>{{descriptor_eventschedule}}: </td>
+							<td> {{ew_event_timing_text}}</td>
+						</tr>
+						<tr>
+							<td>{{descriptor_eventLocation}}: </td>
+							<td>{{location}}, {{country}}</td>
+						</tr>
+					</tbody></table>
+					<If condition="'{{dp_abst}}' == 'yes'">
+						<p>{{abstractToDisplay}}</p>
+					</If>
+					<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+						<a href="{{hrefToDoc}}" class="btn btn-primary btn-sm legitRipple" role="button" tabindex="0">{{labelUserDefinedLink}}</a>
+					</If>
+				</div>
+	<Footer>
+		</div>
+	</div>
+	</Footer>
+	</Grid>
+
+</IfEmpty>
+<Grid gridId="GroupedByPeriodGrid_{{labelPeriodKey}}">
+<Header>
+<div class="calendar-list">
+	<div class="row">
+		<div class="col-md-12"><h2>{{labelPeriod}}</h2></div>
+</Header>
+			<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+			<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+			<div class="col-md-12 {{handle_editing_class}}" {{handle_editing_attr}}>
+				<h3>
+						<If condition="'{{linkToTitle}}' == 'yes'">
+							<a title="{{titleToAlt}}" href="{{hrefToDoc}}">
+								{{titleToDisplay}}
+							</a>
+						</If>
+						<If condition="'{{linkToTitle}}' != 'yes'">
+								{{titleToDisplay}}
+						</If>
+				</h3>
+				<table class="mb-3">
+					<tbody><tr>
+						<td>{{descriptor_eventschedule}}: </td>
+						<td> {{eventStartDate}}</td>
+					</tr>
+					<tr>
+						<td>{{descriptor_eventLocation}}: </td>
+						<td>{{street}}, {{zip}} {{location}}</td>
+					</tr>
+				</tbody></table>
+				<If condition="'{{dp_abst}}' == 'yes'">
+					<p>{{abstractToDisplay}}</p>
+				</If>
+				<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+					<a href="{{hrefToDoc}}" class="btn btn-primary btn-sm legitRipple" role="button" tabindex="0">{{labelUserDefinedLink}}</a>
+				</If>
+			</div>
+			<Separator>
+			<If condition="'{{CurrentRecNr}}'%1 == '0'">
+			</div>
+			<div class="row">
+			</If>
+			</Separator>
+
+<Footer>
+		</div>
+	</div>
+</Footer>
+</Grid>
+</Grid>

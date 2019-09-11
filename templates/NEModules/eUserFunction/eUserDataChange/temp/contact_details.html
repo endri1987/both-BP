@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="form-group col-sm-4">
+		<label for="firs_name">* {{_firstname_mesg}} :</label>
+		<input id="firs_name" name="firs_name" type="text" value="{{first_name_regis}}" class="form-control required">
+	</div>
+	<div class="form-group col-sm-4">
+		<label for="last_name_regis">* {{_lastname_mesg}} :</label>
+		<input id="last_name_regis" name="last_name_regis" value="{{last_name_regis}}" type="text" class="form-control required">
+	</div>
+	<div class="form-group col-sm-4">
+		<label for="birthdate_regis">{{_date_of_birth_mesg}} :</label>
+         <input type="text" class="datepicker"  id="birthdate_regis" name="birthdate_regis" value="{{birthdate_regis}}" placeholder="{{birthdate_regis}}"/>
+        
+	</div>
+</div>
+<div class="row">
+	<div class="form-group col-lg-12">
+		<label for="usr_street">{{_address_mesg}} :</label>
+		<input id="usr_street" name="usr_street" value="{{usr_street}}" type="text" class="form-control">
+	</div>
+	<div class="form-group col-lg-4">
+		<label for="city_regis">* {{_city_mesg}} :</label>
+		<input id="city_regis" name="city_regis"  value="{{city_regis}}" type="text" class="form-control required">
+	</div>
+	<div class="form-group col-lg-3">
+		<label for="usr_postcode">{{_zip_mesg}} :</label>
+		<input id="usr_postcode" name="usr_postcode" value="{{usr_postcode}}" type="text" class="form-control">
+	</div>
+	<div class="form-group col-lg-5">
+		<label for="address_country">{{_country_mesg}} :</label>
+		<input id="address_country" name="address_country" value="{{address_country}}" type="text" class="form-control">
+	</div>
+	<div class="form-group col-lg-5">
+		<label for="phone_regis">{{_phone_number_mesg}} :</label>
+		<input id="phone_regis" name="phone_regis" value="{{usr_phone}}" type="text" class="form-control">
+	</div>
+
+
+</div>
+         
+<script>modules.push("datepicker");</script>     

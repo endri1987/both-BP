@@ -1,0 +1,58 @@
+<If condition="'{{displayFilter}}'=='yes'">
+</If>
+
+
+<If condition="'{{error_code_to_html}}'=='FoundResults'">
+
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+		<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+	</IfEmpty>
+	<Header>
+	<div id="accordion" role="tablist" aria-multiselectable="true">
+	</Header>
+
+	<Var name="target_val">('{{hrefToDocTargetOther}}' == '_blank' ? '_blank' : '_self')</Var>
+
+	<Var name="handle_editing_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+	<Var name="handle_editing_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? ' data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+	
+	
+	
+		<div class="card {{handle_editing_class}}" {{handle_editing_attr}}>
+			<div class="card-header" role="tab" id="heading{{CID}}">
+			  <h5 class="mb-0">
+				<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{CID}}" aria-expanded="false" aria-controls="collapseThree">
+				  {{titleToDisplay}}
+				</a>
+			  </h5>
+			</div>
+
+			<div id="collapse{{CID}}" class="collapse" role="tabpanel" aria-labelledby="heading{{CID}}">
+			  <div class="card-block">
+				<Include SRC="{{ASP_FRONT_PATH}}templates/MainContent/CiOnlyContent.html"/>
+			  </div>
+			</div>
+					
+	   </div>
+
+	<Footer>
+	</div>
+	</Footer>
+</Grid>
+
+
+</If>
+<If condition="'{{error_code_to_html}}'=='ResultsEmtpy'">
+<div class="list_error_message">{{_list_ResultsEmtpy}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='TermSearchEmpty'">
+<div class="list_error_message">{{_list_TermSearchEmpty}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='InvalidTerm'">
+<div class="list_error_message">{{_list_InvalidTerm}}</div>
+</If>
+<If condition="'{{error_code_to_html}}'=='SomeErrorOccurred'">
+<div class="list_error_message">{{_list_error_occured}}</div>
+</If>
+</If>

@@ -1,0 +1,68 @@
+<h3>{{slogan_title}}</h3>
+<If condition="'{{slogan_description_show}}' == 'yes'">
+	<div class="promo-description margin-top-10 margin-bottom-20">
+		<div class="row">
+			<div class="col col-xs-12">
+				{{slogan_description}}
+			</div>
+		</div>
+	</div>
+</If>
+
+<If condition="'{{slogan_icon_show}}' == 'yes'">
+<i class="{{slogan_icon}}"></i>
+</If>
+
+<If condition="'{{help_show}}' == 'yes'">
+	<div class="promo-description margin-top-10 margin-bottom-20">
+		<div class="row">
+			<div class="col col-xs-12">
+				{{help_description}}
+			</div>
+		</div>
+	</div>
+</If
+
+		<If condition="'{{block_link_show}}' == 'yes'">
+			<div class="text-center">
+				<a href="{{block_link_target_Href}}" role="button" class="btn btn-primary">{{block_link_label}}</a>
+			</div>
+		</If>
+
+
+
+
+<Grid gridId="Grid_StructuredContent">
+
+   <IfEmpty>
+   </IfEmpty>
+
+   <Header>
+   </Header>
+	<article id="{{key}}" class="csc-default frame_40">
+		<div class="container">
+			<div class="col-xs-16 col-lg-14 col-lg-offset-1">
+				<div class="csc-header csc-header-n2">
+					<h2>{{titulli}}</h2>
+				</div>
+				<div class="csc-text">
+					{{pershkrimi}}
+				</div>
+		<If condition="'{{exist_link_src}}' == 'yes'">
+			<div class="text-center">
+				<a href="{{link_src}}" role="button" class="btn btn-primary" target="{{link_target}}">{{link_lab}}</a>
+			</div>
+		</If>
+
+
+		   </div>
+		</div>
+	</article>
+
+	<Separator>
+   </Separator>
+
+   <Footer>
+   </Footer>
+
+</Grid>

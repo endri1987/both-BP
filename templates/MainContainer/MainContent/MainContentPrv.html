@@ -1,0 +1,9 @@
+<WebBox ID="MainContentPrv" Type="ContentTemplate" Case="Optional/Default" Editable="True" Region="Middle" Container="LeftMiddleRightContainer">
+{{contentToDisplayHtml}}
+<If condition="'{{media_gallery_isset}}' == 'yes' ">
+	<Include SRC="{{NEMODULES_PATH}}imageGallery/imageGalleryCI.html">
+</If>
+<If condition="'{{image_gallery_isset}}' == 'yes' ">
+	<Include SRC="{{NEMODULES_PATH}}imageGallery/mediaModuleCI.html">
+</If>
+</WebBox>

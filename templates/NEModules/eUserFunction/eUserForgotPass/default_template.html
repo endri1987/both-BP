@@ -1,0 +1,30 @@
+<div id="forgotPassModule">
+
+    <form  class ="wizard wizard-big forgot_form validate" role="form" name="forgotPass" id="forgotPass"  method="post"
+           data-bs-modal="true"
+           data-modal-size="modal-sm"
+           data-modal-ajax="true"
+           data-url="&apprcss=eUserForgotPass&idstemp={{idstempNl}}"
+           data-ajax-notify="{{_update_data}}"
+           data-notify-success="{{_update_item_success}}"
+    >
+        <div class="form-group">
+            <label for="email_regis">* {{_emailAdresse}}</label>
+
+            <input id="email" name="email" type="text" class="form-control email required"
+                   data-rule-remote="{{APP_URL}}ajxDt.php?uni={{uni}}&apprcss=validateEmailForgot"
+                   data-msg-email="{{_valid_email_address}}"
+                   data-msg-required="{{_empty_email_address}}"
+                   data-msg-remote="{{_mail_not_mach}}"
+            >
+        </div>
+        <button class="btn btn-brand btn-block btn-sm">{{_request_passFor}}</button>
+        <a class="btn btn-default btn-block btn-sm" data-dismiss="modal">Cancel</a>
+        <a href="javascript:void(0);" id="forgotpass-back-tologin" class="no-padding block margin-top-10 forgotpass-back-tologin"><i class="fa fa-angle-left"></i> {{_back_to_login}}</a>
+    </form>
+
+    <script>
+        modules.push('validate', 'forgotpass');
+    </script>
+
+</div>

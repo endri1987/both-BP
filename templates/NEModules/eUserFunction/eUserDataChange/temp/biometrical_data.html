@@ -1,0 +1,25 @@
+<div class="row">
+	 <div class="col-md-6">
+	 <h2>{{_user_photo_mesg}}</h2>
+	<div id="cameraInfo"></div>
+	<div class="camera_off" id="snapImageUpload">
+		<div style="width: 200px; height: 150px; margin-bottom: 10px; float: left; margin-right: 10px;" class="fileinput-preview thumbnail">
+			<video height="150" width="200" autoplay="" id="video"></video>
+		</div>
+
+		<canvas height="150" width="200" id="canvas"></canvas>
+		<div class="col-md-12">
+		<div class="btn btn-primary btn-xs" id="snap">{{_snap_photo_mesg}}</div>
+		<div class="btn btn-primary btn-xs" id="activateSnap">{{_uplod_photo_mesg}}</div>
+		</div>
+		<input type="hidden" name="canvasImgDataUrl" id="canvasImgDataUrl">
+	</div>
+	</div>
+	<div class="col-md-6">
+		<h2>{{_MyID}}</h2>
+		<div class="uploaded_id">
+		<h5>{{_uplod_photo_mesg}}</h5>
+		</div>
+	</div>
+ </div>
+ 

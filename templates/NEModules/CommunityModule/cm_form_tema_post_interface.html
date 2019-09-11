@@ -1,0 +1,64 @@
+<div id="addint" class="padding-left-10 padding-right-10">
+	<div class="page-header">
+		<h3 class="margin-top-15 margin-bottom-0">
+			<small>{{_fill_the_form_below}}</small><br>
+			{{_add_new_discussion}}
+		</h3>
+	</div>
+	<form class="no-padding validate" style="padding-bottom: 0 !important;" novalidate="novalidate"
+		data-modal-ajax="true"
+		data-url="&apprcss=cmFunctions&act={{post_type}}&step=3&selfId={{CMselfDocID}}&itemId={{CMmainDocID}}&itemSubId={{CMparentDocID}}&parSubId={{parSubId}}&lectureIDM={{lectureIDM}}#mainPostListCnt"
+		data-target="#mainPostListCntWrapper"
+		data-dismiss-modal="true"
+		data-bs-modal="true"
+		data-ajax-notify="{{_adding_new_post}}"
+		data-notify-success="{{_post_added_suc}}"
+		data-trigger-after="#mainPostListCnt .view-details:last">
+		<script type="text/jquery-validate-config">
+			{
+				"ignore": []
+			}
+		</script>
+		<fieldset class="no-padding">
+
+			<If condition="'{{ses_userid}}'==2">
+			<div class="form-group">
+				<label for="new_post_nick_name">
+					{{_nick_name}}
+				</label>
+				<input class="form-control" type="text" placeholder="{{_nick_name}}" id="new_post_nick_name" name="nick_name" value="">
+			</div>
+			<div class="form-group">
+				<label for="new_post_email">
+					{{_email_address}}
+				</label>
+				<input class="form-control" type="text" placeholder="{{_email_address}}" id="new_post_email" name="email" value="">
+			</div>
+			</If>
+			<div class="form-group">
+				<label for="new_post_title">
+					{{_title}}
+				</label>
+				<input class="form-control required" type="text" placeholder="{{_title}}" id="new_post_title" name="title" value=""
+				data-msg-required="Please provide a title for the new discussion">
+			</div>
+			<div class="form-group summernote-compact-toolbar">
+				<label for="new_post_comment">
+					{{_message}}
+				</label>
+				<textarea style="visibility:hidden;" placeholder="{{_message}}" class="form-control summernote" name="comment" id="new_post_comment"
+				data-msg-required="Please provide a message for the new discussion"></textarea>
+			</div>
+		</fieldset>
+		<footer class="form-group">
+			<button class="btn btn-primary" type="submit">
+				{{_save}}
+			</button>
+			<button type="button" class="btn btn-default close-details" data-dismiss="modal">{{_cancel}}</button>
+		</footer>
+	</form>
+<script type="text/javascript">
+  modules.push('summernote', 'validate');
+</script>
+
+</div>

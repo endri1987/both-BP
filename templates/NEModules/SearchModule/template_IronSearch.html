@@ -1,0 +1,18 @@
+<script>
+var mob_web = '{{mob_web}}';
+</script>
+<form class="search-box" role="search" {{search_form_attribut}}>
+<div id="searchModule" class="input-group search_bar search_bar_main marg_v_double alpha_v">
+<input class="form-control" autocomplete="off" type="text" {{search_input_attribut}} placeholder="{{search_default_vl_input_mesg}}" />
+      <span class="input-group-btn">
+      	<button class="btn btn-default" type="submit">
+             <span class="ti-search"></span>
+         </button>
+      </span>
+</div>
+      <div  id="id_{{search_suggest_idstemp}}"   class="search_suggest_wraper" style="display:none">
+          <ul id="body_{{search_suggest_idstemp}}" class="search_suggest_body"></ul>
+          <div id="head_{{search_suggest_idstemp}}" class="search_suggest_head"></div>
+      </div>
+</form>
+

@@ -1,0 +1,29 @@
+<Grid gridId="Grid_StructuredContent">
+
+   <IfEmpty>
+   </IfEmpty>
+
+   <Header>
+		<ul class="list-group list-group-insidepanel">
+   </Header>
+				<li class="list-group-item">
+               <If condition="'{{link_lab}}' != ''">
+               <i class="{{link_lab}} fa-fw"></i> 
+               </If>
+               <If condition="'{{pershkrimi}}' == ''">
+               <a href="javascript:void(0);">{{titulli}}</a>
+               </If>
+					<If condition="'{{pershkrimi}}' != ''">
+               {{pershkrimi}}
+               </If>
+				</li>
+   <Separator>
+   </Separator>
+
+   <Footer>
+		</ul>
+	</div>
+</div>
+   </Footer>
+
+</Grid>

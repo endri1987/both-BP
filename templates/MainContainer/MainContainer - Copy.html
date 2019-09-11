@@ -1,0 +1,78 @@
+<WebBox ID="MainContainer" Type="Container" Level="0" Case="Always" Editable="False">
+<div id="media-layout"></div>
+<div class="wrapper">
+	<header class="bg-header">
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <Include SRC="{{./}}LogoArea/LogoArea.html"/>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+						<Include SRC="{{./}}MainNavigationArea/MainNavigationArea.html"/>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>    
+	</header>
+	<If condition="'{{level_1}}' == '0'">
+		<Include SRC="{{./}}BannerArea/BannerArea.html"/>
+	</If>
+	<div class="container">
+		<div class="row">
+
+			<Var name="existLeftRow">(('{{level_1}}' !='0' || '{{exist_left}}' == 'no') ? 'no' : 'yes')</Var>
+			<If condition="'{{level_1}}' != '0'">
+				<div class="col-md-12">
+					<Include SRC="{{./}}LocationPathArea/LocationPathArea.html"/>
+				</div>
+			</If>
+			<If condition="'{{existLeftRow}}' == 'no'">
+			<div class="col-md-12">
+				<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+				<Include SRC="{{./}}MainContent/MainContent.html"/>
+				<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+			</div>
+			</If>
+			<If condition="'{{existLeftRow}}' == 'yes'">
+				<div class="col-md-3 hidden-sm hidden-xs">
+					<div class="side_menu">
+						<Include SRC="{{./}}LeftTopArea/LeftTopArea.html"/>
+						<Include SRC="{{./}}LeftMiddleArea/RightMiddleArea.html"/>
+						<Include SRC="{{./}}LeftBottomArea/RightBottomArea.html"/>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="content_container">
+						<Include SRC="{{./}}MiddleTopArea/MiddleTopArea.html"/>
+						<Include SRC="{{./}}MainContent/MainContent.html"/>
+						<Include SRC="{{./}}MiddleBottomArea/MiddleBottomArea.html"/>
+					</div>
+				</div>
+			</If>
+		</div>
+	</div>
+	<div id="footer">
+		<footer>
+				<div id="footer-panels" class="line_bottom">
+					<Include SRC="{{./}}BottomRowArea/BottomRowArea.html"/>
+				</div>
+					<div class="info_foot">
+						<Include SRC="{{./}}FooterNavigationArea/FooterNavigationArea.html"/>
+					</div>
+			<div class="container">
+						<Include SRC="{{./}}CopyrightArea/CopyrightArea.html"/>
+			</div>
+		</footer>
+	</div>
+</div>
+<Include SRC="{{./}}footer_includes.html"/>
+
+</WebBox>

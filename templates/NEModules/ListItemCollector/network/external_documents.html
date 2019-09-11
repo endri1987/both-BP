@@ -1,0 +1,65 @@
+<div class="list-template event-list-template list-template-icon external-document-big-item">
+	<Include SRC="{{NEMODULES_PATH}}partials/default_header_property_template.html"/>
+	<Grid gridId="firstGroupingGrid">
+		<IfEmpty>
+			<div class="list-wrapper">
+				<Grid gridId="gridDataSrc">
+					<IfEmpty>
+						<Include SRC="{{./}}partials/list_empty_message_template.html"/>
+					</IfEmpty>
+					<Header>
+					</Header>
+						<Include SRC="{{./}}partials/external_doc_item_big_icon.html"/>
+						<Separator>
+						<hr/>
+						</Separator>
+
+					<Footer>
+					<Include SRC="{{./}}footer_pagination.html"/>
+					<Include SRC="{{./}}partials/list_footer.html"/>
+					</Footer>
+				</Grid>
+			</div>
+		</IfEmpty>
+		<Header>
+		<div class="list-wrapper">
+		</Header>
+			<If condition="'{{existSubGroup}}'=='no'">
+				<div class="list-group-wrapper mb-3">
+					<h2 class="list-group-header">{{labelGroup}}</h2>
+					<Grid gridId="firstLevelGrid_CIINSIDE_key_{{keyGroup}}">
+						<Header>
+						</Header>
+							<Include SRC="{{./}}partials/external_doc_item_big_icon.html"/>
+							<Separator>
+							<div class="col-md-12"><hr></div>
+							</Separator>
+						<Footer>
+						</Footer>
+					</Grid>
+				</div>
+			</If>
+			<If condition="'{{existSubGroup}}'=='yes'">
+				<Grid gridId="secondLevelGrid_{{keyGroup}}">
+				<div class="list-group-wrapper mb-3">
+					<h2 class="list-group-header">{{labelSubGroupFull}}</h2>
+					<Grid gridId="{{keySubGroup}}">
+						<Header>
+						</Header>
+							<Include SRC="{{./}}partials/external_doc_item_big_icon.html"/>
+							<Separator>
+							<div class="col-md-12"><hr></div>
+							</Separator>
+						<Footer>
+						</Footer>
+					</Grid>
+				</div>
+				</Grid>
+			</If>
+		<Footer>
+		</div>
+		<Include SRC="{{./}}footer_pagination.html"/>
+		<Include SRC="{{./}}partials/list_footer.html"/>
+		</Footer>
+	</Grid>
+</div>

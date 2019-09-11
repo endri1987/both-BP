@@ -1,0 +1,54 @@
+<If condition="'{{error_code_to_html}}'=='FoundResults'">
+<Grid gridId="gridDataSrc">
+	<IfEmpty>
+		<div class="error_message">{{_list_ResultsEmtpy}}</div>
+	</IfEmpty>
+	<Header>
+		<div class="standart_list_template">
+	</Header>
+
+	<div class="list_item" style="width:100%;float:left;">
+	<div style="float:left;width:40%">
+		<If condition="'{{ew_ei_datefrom}}' != ''">
+			<div class="item_date">{{ew_ei_datefrom}}</div>
+		</If>
+	</div>
+	<div style="float:left;width:60%">
+		<If condition="'{{linkToTitle}}' == 'yes'">
+			<div class="item_title" ><a href="{{hrefToDoc}}" title="{{titleToAlt}}" target="{{hrefToDocTarget}}">{{titleToDisplay}}</a></div>
+		</If>
+		<If condition="'{{linkToTitle}}' != 'yes'">
+			 <div class="item_title">{{titleToDisplay}}</div>
+		</If>
+
+		<If condition="'{{ew_ei_time}}' != ''">
+			 <div class="item_title">{{ew_ei_time}}</div>
+		</If>
+		<If condition="'{{ew_ei_place}}' != ''">
+			 <div class="item_title">{{ew_ei_place}}</div>
+		</If>
+
+	</div>
+
+	</div>
+	<Separator>
+		<div class="item_separator" style="border-bottom:1px solid black">
+			<img src="{{GRAPHICS_PATH_APP}}spacer.gif" width="1" height="1" alt="" border="0" />
+		</div>
+	</Separator>
+
+	<Footer>
+
+	</div>
+	</Footer>
+
+</Grid>
+</If>
+<If condition="'{{error_code_to_html}}'=='ResultsEmtpy'">
+	<div class="error_message">{{_list_ResultsEmtpy}}</div>
+</If>
+
+<If condition="'{{error_code_to_html}}'=='SomeErrorOccurred'">
+	<div class="error_message">{{_list_error_occured}}</div>
+</If>
+</If>

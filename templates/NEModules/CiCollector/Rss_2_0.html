@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>{{_SYSTEM_NAME_DEFAULT}}-{{RSSLabelTitle}}</title>
+		<description>{{_RSS_DESCRIPTION}}</description>
+		<link>{{RSS_APP_URL}}</link>
+		<lastBuildDate>{{_lastBuildDate}}</lastBuildDate>
+		<If condition="'{{_RSS_LOGO_EXIST}}' == 'YES'">
+			<image>
+				<title>{{_SYSTEM_NAME_DEFAULT}}-{{RSSLabelTitle}}</title>
+				<link>{{RSS_APP_URL}}</link>
+				<url>{{_RSS_LOGO_PATH}}</url>
+			</image>
+		</If>
+
+			<Grid gridId="gridDataSrc">
+				<IfEmpty>
+				</IfEmpty>
+			<Header>
+			</Header>
+
+							<item>
+								<title><![CDATA[{{titleToDisplay}}]]></title>
+								<If condition="'{{linkToTitle}}' == 'yes'">
+									<link>{{APP_URL}}{{href_Crd}}</link>
+								</If>
+								<If condition="'{{dp_abst}}' == 'yes'">
+									<description><![CDATA[{{abstractToDisplay}}]]></description>
+								</If>
+								<If condition="'{{dp_author}}' == 'yes'">
+									<author>{{_SYSTEM_NAME_DEFAULT}}</author>
+								</If>
+								<If condition="'{{dp_date}}' == 'yes'">
+									<pubDate>{{date_Modified_rss}}</pubDate>
+								</If>
+							</item>
+
+			<Footer>
+			</Footer>
+			</Grid>
+
+	</channel>
+	</rss>
+
+
+

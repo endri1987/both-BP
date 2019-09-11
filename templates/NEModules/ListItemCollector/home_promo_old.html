@@ -1,0 +1,70 @@
+<Grid gridId="gridDataSrc">
+  <Header>
+<div class="block-wrapper">
+  <If condition="'{{slogan_title}}' != ''">
+  <div class="header_red_reds">
+  	<div class="header_title">{{slogan_title}}</div>
+  </div>
+  </If>
+  <ul class="list-unstyled pad_v_double-lg pad_v-sm clearfix omega_v marg-minus" style="width:auto;">
+   </Header>
+
+    <Var name="enable_edit_class">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'ew-block-content' : '')</Var>
+    <Var name="enable_edit_attr">('{{simpleEditAuthoring}}' == 't' && '{{simpleModePreview}}' == 'yes' ? 'data-ew-id="{{CID}}" data-ew-tool="0" data-ew-tag="all"' : '')</Var>
+
+   	<li class="li_grid {{enable_edit_class}}" {{enable_edit_attr}}>
+
+
+      <Grid gridId="DocCachedInfo_{{dp_image_ID}}">
+   		<div class="item_thumb">
+   			<div class="media_ratio_16_16 media_corner_gray">
+          <If condition="'{{linkToimage}}' == 'yes'">
+          <a href="{{hrefToDocOther}}"  title="{{titleToAlt}}">
+            <img src="{{link_url}}" alt=""/>
+          </a>
+          </If>
+          <If condition="'{{linkToimage}}' != 'yes'">
+            <img src="{{link_url}}" alt=""/>
+          </If>
+   			</div>
+   		</div>
+      </Grid>
+
+
+
+
+
+   		<div class="item_content">
+		<If condition="'{{linkToTitle}}' == 'yes'">
+   			<div class="item_title"><a href="{{hrefToDocOther}}" title="{{titleToAlt}}" >{{titleToDisplay}}</a></div>
+		</If>
+		<If condition="'{{linkToTitle}}' != 'yes'">
+   			<div class="item_title">{{titleToDisplay}}</div>
+		</If>
+
+
+
+
+
+   			<If condition="'{{dp_abst}}' == 'yes'">
+   			<div class="item_desc">
+				{{abstractToDisplay}}
+
+
+				<If condition="'{{dp_labelUserDefinedLink}}' == 'yes'">
+					<a href="{{hrefToDocOther}}" title="{{titleToAlt}}" ><span class="ti-new-window color_red"></span></a>
+				</If>
+   			</div>
+			</If>
+   		</div>
+   	</li>
+        <If condition=" '{{CurrentRecNr}}'%2 == '0' && '{{CurrentRecNr}}' > '1' ">
+            <li style="clear:left;height:0;width:0;"></li>
+        </If>
+	<Separator>
+	</Separator>
+   <Footer>
+	</ul>
+</div>
+   </Footer>
+</Grid>

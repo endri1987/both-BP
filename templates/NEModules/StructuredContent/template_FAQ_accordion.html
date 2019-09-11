@@ -1,0 +1,37 @@
+<Grid gridId="Grid_StructuredContent">
+
+	<Ifempty>
+	</Ifempty>
+
+	<Header>
+		<div class="faq-accordion">
+			<If condition="'{{slogan_title_exists}}' == 'yes'">
+				<h3>{{slogan_title}}</h3>
+			</If>
+	</Header>
+			<div class="fq-item">
+				<a class="collapsable collapsable_grey collapsed" role="button" data-target="#{{strc_objID}}-collapse{{itemID}}" data-toggle="collapse" aria-expanded="false">
+					<span class="ti-arrow-circle-down"></span>
+					<span class="ti-arrow-circle-right"></span>
+					<If condition="'{{display_title}}' == 'yes'">
+						<div class="item_title">{{titleToDisplay}}</div>	
+					</If>
+				</a>
+		
+
+				<div id="{{strc_objID}}-collapse{{itemID}}" class="collapse" aria-expanded="false">
+					<div class="collapsable-inner">
+						<If condition="'{{display_content}}' == 'yes'">
+							<div class="item_desc">{{fullcontent}}</div>
+						</If>
+					</div>
+	
+				</div>
+			</div>
+	<Footer>
+		
+		
+		</div>
+	</Footer>
+	
+</Grid>

@@ -1,0 +1,122 @@
+<div>
+<script type="text/javascript">
+var GRP = "{{APP_URL}}graphics/";
+var idstemp = '{{idstemp}}';
+var uniF = '{{uni}}';
+var	_forgot_pass_title_dialog = '{{_forgot_pass_title_dialog}}'
+var	_email_adrress_not_found = '{{_email_adrress_not_found}}'
+var	_email_sended = '{{_email_sended}}'
+var	_btn_ok = '{{_btn_ok}}'
+
+</script>
+
+<script type="text/javascript">
+function onCommentAdd() {
+}
+$(document).ready(function() {
+	//$('#cr_title').focus()
+});
+
+
+$(function (){
+
+	$("#updITem").validate({
+		submitHandler: function() { add_cr(); },
+		onkeyup: false,
+		highlight: function( element, errorClass, validClass ) {
+			$(element).parent().find('label').addClass('main_red')
+			$(element).addClass('error')
+		},
+		unhighlight: function( element, errorClass, validClass ) {
+			$(element).parent().find('label').removeClass('main_red')
+		    $(element).removeClass('error')
+
+		},
+		messages: {
+			cr_title: {
+				required: '{{_fill_title}}'
+			},
+			cr_text: {
+				required: '{{_fill_new_text}}'
+			}
+		}
+	});
+
+});
+</script>
+
+<form name="updITem" id="updITem" action="" onsubmit="">
+<div class="main_red" style="display:none;"> <span></span><br clear="all"/>  </div>
+
+<input type="hidden" name="crid" id="crid" value="{{crid}}">
+<input type="hidden" name="fci" id="fci" value="{{fci}}">
+<input type="hidden" name="fln" id="fln" value="{{fln}}">
+<input type="hidden" name="fu" id="fu" value="{{fu}}">
+<input type="hidden" name="uni" id="uni" value="{{uni}}">
+
+
+
+		<If condition="'{{publish_comments}}'=='yes'">
+<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+		<tr>
+			<td style="white-space: nowrap;">
+				<label for="cr_title" class="main">{{headline_cr}} <font class="asteriks">*</font></label>
+			</td>
+			<td width="100%">
+				<input type="text" name="cr_title" id="cr_title" value="{{cr_title}}" class="required normal" >
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top;white-space: nowrap;">
+				<label for="cr_text" class="main">{{description_cr}} <font class="asteriks">*</font></label>
+			</td>
+			<td width="100%">
+				<textarea id="cr_text" name="cr_text" class="required normal" style="height: 150px;">{{cr_text}}</textarea>
+			</td>
+		</tr>
+
+	</tbody>
+</table>
+		</If>
+
+		<If condition="'{{publish_comments}}'=='yes'">
+		<Grid gridId="grid_rating_dynamic_data">
+		<Header>
+<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+		</Header>
+		<tr>
+			<td style="white-space: nowrap;"><label>{{rate_description}}</label></td>
+			<td width="100%">
+				<input type="hidden" name="rating_{{rate_id}}" id="rating_{{rate_id}}"  />
+				<div  id="rate_{{rate_id}}" class="rating" inp="rating_{{rate_id}}"></div>
+			</td>
+		</tr>
+		<Footer>
+	</tbody>
+</table>
+		</Footer>
+		</Grid>
+		</If>
+
+	</tbody>
+</table>
+
+	<div class="cls">
+			<input name="send" type="submit" value="Shto komentin"  />
+			<input type="reset" style="text-align:center;" name="back" onclick="$('#messageBoxEditCR').dialog('close');" value="Mbyll" />
+	</div>
+
+</form>
+
+<If condition="'{{publish_comments}}'=='yes'">
+<script type="text/javascript">
+function addRateYll() {
+<Grid gridId="grid_rating_dynamic_data">
+	$('#rate_{{rate_id}}').rating(null, {cancel:false,maxvalue:5,curvalue:'{{rate_user}}'});
+</Grid>
+}
+</script>
+</If>
+</div>

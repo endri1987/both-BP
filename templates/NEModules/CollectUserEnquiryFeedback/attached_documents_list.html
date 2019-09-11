@@ -1,0 +1,39 @@
+<Grid gridId="attachedDocListGrid">
+	<Header>
+		<table id="DocRelTab" class="table table-bordred table-striped" width="100%" data-searching="false">
+			<tbody>
+	</Header>
+		<tr>
+			<td rowspan="1" width="30">
+				<Grid gridId="attachedDocListGrid_{{doc_id}}">
+					<strong>{{document_name}}</strong><br>
+				</Grid>
+
+			</td>
+			<td rowspan="1" width="30">
+				<a class="pull-right text-danger deleteRel " title="{{_delete_item}}"
+					data-ajax="true"
+					data-url="&apprcss=deleteAttachedDoc&doc_id={{doc_id}}&EF_id={{EF_id}}"
+					data-confirm-action="Are you sure to delete this attached document?"
+					data-ajax-notify="{{_rem_loading_item}}"
+					data-notify-success="{{_rem_success_item}}"
+					data-trigger-after="#refreshAttachedDocList"
+					><i class="fa fa-fw fa-trash-o"></i>
+				</a>
+			</td>
+		</tr>
+			
+	<Footer>
+			</tbody>
+		</table>
+	</Footer>
+	<IfEmpty>
+		<div class="text-center padding-10"><i class="fa fa-fw fa-exclamation-circle text-warning"></i> Please add some files in drop zone</div>
+	</IfEmpty>
+</Grid>
+
+
+
+
+
+

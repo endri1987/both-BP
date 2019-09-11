@@ -1,0 +1,28 @@
+<div>
+	<label>Attach file</label>
+	<a 	id="refreshAttachedDocList"
+		data-ajax="true"
+		data-target="#attachedDocListWrapper"
+		data-url="&apprcss=getAttachedDocList&EF_id={{EF_id}}"
+		style="display: none" 
+		>Refresh</a>
+	<section class="col col-12">
+		<div class="">
+			<div id="pre_resources_dropzone_{{EF_id}}" class="dropzone dz-clickable dropzone-previews multi_dropzone_form dz-small-multi"
+					data-drop-url-multi="ajxDt.php?idstemp={{idstemp}}&apprcss=saveAttachedFiles&EF_id={{EF_id}}"
+					data-allow=""
+					data-trigger-after="#refreshAttachedDocList"
+					style="width: 100%; max-height: 60px !important;">
+					<div class="dz-default dz-message"></div>
+			</div>
+		</div>
+	</section>
+	<script>
+		modules.push('multi_dropzone','my_dropzone');
+	</script>
+	<section class="col col-12" id="attachedDocListWrapper" style="padding:0 0 !important">
+		<div id="" class="section-table-wrapper">
+			<Include SRC="{{./}}attached_documents_list.html"/>
+		</div>
+	</section>
+</div>

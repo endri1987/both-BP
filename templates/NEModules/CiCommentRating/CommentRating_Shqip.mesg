@@ -1,0 +1,94 @@
+<Messages>
+<Message ID="_headline_rates">
+Komente dhe vlerësime
+</Message>
+<Message ID="_rates">
+Rates
+</Message>
+<Message ID="label_title">
+Titulli
+</Message>
+<Message ID="description_cr">
+Komenti
+</Message>
+<Message ID="label_comment">
+Komenti
+</Message>	 
+<Message ID="_Showing">
+Jane listuar
+</Message>
+<Message ID="_items">
+artikuj
+</Message>
+<Message ID="_of">
+prej
+</Message>
+<Message ID="_articles">
+Rezultate
+</Message>
+<Message ID="_page">
+Faqe
+</Message>
+<Message ID="_of">
+prej
+</Message>
+<Message ID="_next_page_alt">
+Faqja pasardhëse
+</Message>
+<Message ID="_previews_page_alt">
+Faqja paraardhëse
+</Message>
+<Message ID="_nr_articles_per_page">
+Nr. i rezultateve në faqe
+</Message>
+<Message ID="_contribute_edit">
+Ndrysho
+</Message>
+<Message ID="_contribute_delete">
+Fshi
+</Message>
+<Message ID="_contribute_add">
+Shto
+</Message>
+<Message ID="_contribute">
+Shto
+</Message>
+<Message ID="_add_comment">
+Ruaj
+</Message>
+<Message ID="_Close_comm">
+Mbyll
+</Message>
+<Message ID="__contribute_edit_mesg">
+Ndrysho komentin
+</Message>
+<Message ID="__contribute_delete_mesg">
+Fshi komentin
+</Message>
+<Message ID="_comment_title">
+Shto Komentin
+</Message>
+<Message ID="_comment_title_add">
+Shto Komentin
+</Message>
+<Message ID="_comment_title_modify">
+Ndrysho Komentin
+</Message>
+<Message ID="_fill_title">
+Ju lutem plotësoni titullin.
+</Message>
+<Message ID="_fill_new_text">
+Ju lutem plotësoni komentin.
+</Message>
+<Message ID="commentsRating_ResultsEmtpy">
+Nuk ka asnjë koment!
+</Message>
+ 
+<Message ID="_add_comment">
+Shto komentin
+</Message>
+<Message ID="_Close_comm">
+Mbyll
+</Message>
+ 
+</Messages> 

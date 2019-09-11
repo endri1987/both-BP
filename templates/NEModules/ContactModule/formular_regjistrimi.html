@@ -1,0 +1,108 @@
+<div class="contact_post_nem">
+	<form {{contact_form_attribut}} class="formular_contact_form validate"  dt-idstemp="{{idstemp}}" dt-id_nem="{{id_nem}}" dt-id_form_k="0">
+     <div class="form_item">
+		 <label>*{{contact_emri_mesg}}:</label>
+		 <input type="text" name="emri_cont" value=""  maxlength="50"  name_post="{{contact_emri_mesg}}" valid="0,0,0,0,0,0" etiketa="{{contact_emri_mesg}}"  data-msg-required="{{field_reqiured_mesg}}" class="required"/>
+	 </div>
+	 
+     <div class="form_item">
+		 <label>*{{contact_mbiemri_mesg}}:</label>
+		 <input type="text" name="mbiemri_cont" value=""  maxlength="50"  name_post="{{contact_mbiemri_mesg}}" valid="0,0,0,0,0,0" etiketa="{{contact_mbiemri_mesg}}" data-msg-required="{{field_reqiured_mesg}}" class="required"/>
+	 </div>
+	 
+     <div class="form_item">
+		 <label>*{{contact_titulli_mesg}}:</label>
+		 <input type="text" name="titulli_cont" name_post="{{contact_titulli_mesg}}" value=""  maxlength="50"  valid="0,0,0,0,0,0" etiketa="{{contact_titulli_mesg}}" data-msg-required="{{field_reqiured_mesg}}" class="required"/>
+	 </div>
+	 
+     <div class="form_item">
+		 <label>{{contact_kompania_mesg}}:</label>
+		 <input type="text" name="kompania_cont" name_post="{{contact_kompania_mesg}}" value=""  maxlength="50"  valid="0,0,0,0,0,0" etiketa="{{contact_kompania_mesg}}" />
+	 </div>
+	 
+     <div class="form_item">
+		 <label>{{contact_vendi_mesg}}:</label>
+		 <input type="text" name="vendi_cont" name_post="{{contact_vendi_mesg}}"  value=""  maxlength="100"  valid="0,0,0,0,0,0" etiketa="{{contact_vendi_mesg}}" />
+	 </div>
+	 	 
+     <div class="form_item">
+		 <label>{{contact_user_tel_mesg}}:</label>
+		 <input type="text" name="tel_cont" name_post="{{contact_user_tel_mesg}}" value=""  maxlength="100"  valid="0,0,0,0,0,0" etiketa="{{contact_user_tel_mesg}}" />
+	 </div>
+     
+	 <div class="form_item">
+		 <label>{{contact_user_cel_mesg}}:</label>
+		 <input type="text" name="cel_cont" name_post="{{contact_user_cel_mesg}}" value=""  maxlength="100"  valid="0,0,0,0,0,0" etiketa="{{contact_user_cel_mesg}}" />
+	 </div>
+	 	 
+	 <div class="form_item">
+		 <label>*{{contact_user_email_mesg}}:</label>
+		 <input type="text" name="email_cont" name_post="{{contact_user_email_mesg}}" {{id_user_name}} value=""  maxlength="100"  valid="0,0,0,0,0,0" etiketa="{{contact_user_email_mesg}}" data-msg-required="{{field_reqiured_mesg}}" class="required email" />
+	 </div>
+	 	 	 
+     <div class="form_item">
+	 <label>{{contact_other1_mesg}}:</label>
+         <select name="other1_cont" name_post="{{contact_other1_mesg}}" class='email_form_fusha' style='width:200px' valid='0,0,0,0,0,0' etiketa='{{contact_other1_mesg}}'>
+          <option value=""></option>
+          <option value="{{contact_other_value1_mesg}}">{{contact_other_value1_mesg}}</option>
+          <option value="{{contact_other_value2_mesg}}">{{contact_other_value2_mesg}}</option>
+         </select>
+     </div>
+     <div class="form_item"><label>{{contact_other2_mesg}}:</label>
+		<input type="text" name="other2_cont" name_post="{{contact_other2_mesg}}" value="" class="email_form_fusha" style='width:150px;' maxlength="100" valid="0,0,0,0,0,0" etiketa="{{contact_other2_mesg}}" />
+    </div>
+		 
+		 <div class="form_item"><label>{{contact_other3_mesg}}:</label>
+			<input type="hidden" name="other3_cont" value="" class="email_form_fusha" maxlength="100" valid="0,0,0,0,0,0" />
+		</div>
+	 
+
+		<div class="form_item">
+			<label  style='margin:-10px 50px 0 0'>&nbsp;&nbsp;&nbsp;
+				<input type='radio' name='other5_cont' name_post="{{contact_other3_mesg}}" valid='0,0,0,0,0,0' etiketa='{{contact_other3_mesg}}' value='{{contact_other5_mesg}}' />
+				&nbsp;{{contact_other5_mesg}}
+			</label>
+		</div>
+		<div class="form_item">
+			<label style='margin:-10px 50px 0 0'>&nbsp;&nbsp;&nbsp;
+				<input type='radio' name='other5_cont' name_post="{{contact_other3_mesg}}" valid='0,0,0,0,0,0' etiketa='{{contact_other3_mesg}}' value='{{contact_other6_mesg}}' />
+				&nbsp;{{contact_other6_mesg}}
+			</label>
+		</div>
+		<div class="form_item">
+			<label style='margin:-10px 50px 0 0'>&nbsp;&nbsp;&nbsp;
+				<input type='radio' name='other5_cont' name_post="{{contact_other3_mesg}}"  valid='0,0,0,0,0,0' etiketa='{{contact_other3_mesg}}' value='{{contact_other7_mesg}}'/>
+				&nbsp;{{contact_other7_mesg}}
+			</label>
+		</div>
+
+		<div class="form_item"><label>{{contact_other3_mesg}}:</label>
+			<input type="hidden" name="other3_cont2" name_post="{{contact_other3_mesg}}2" etiketa='{{contact_other3_mesg}}' value="" class="email_form_fusha" maxlength="100" valid="0,0,0,0,0,0" etiketa="{{contact_other3_mesg}}" />
+		</div>
+	 
+
+		<div class="form_item">
+			<label style='margin:-10px 50px 0 0'>&nbsp;&nbsp;&nbsp;
+				<input type='checkbox' name='other5_cont2' id="other5_cont" valid='0,0,0,0,0,0' value='{{contact_other4_mesg}}' />
+				&nbsp;{{contact_other4_mesg}}
+			</label>
+		</div>
+		<div class="form_item">
+			<label style='margin:-10px 50px 0 0'>&nbsp;&nbsp;&nbsp;
+				<input type='checkbox' name='other6_cont' id="other6_cont" valid='0,0,0,0,0,0' value='{{contact_other5_mesg}}' />
+				&nbsp;{{contact_other5_mesg}}
+			</label>
+		</div>
+		<div class="form_item">
+			<label style='margin:-10px 50px 0 0'>&nbsp;&nbsp;&nbsp;
+				<input type='checkbox' name='other7_cont' id="other7_cont"  valid='0,0,0,0,0,0' value='{{contact_other8_mesg}}' />
+				&nbsp;{{contact_other8_mesg}}
+			</label>
+		</div>
+
+		<div class="form_item">
+			<button class="email_buton" title="{{contact_but_send_mesg}}">{{contact_but_send_mesg}}</button>
+			<button class="clear_buton" title="{{contact_but_clear_mesg}}">{{contact_but_clear_mesg}}</button>					
+		</div>
+	</form>
+</div>
